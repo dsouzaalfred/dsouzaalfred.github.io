@@ -35,7 +35,7 @@ This will start a local dev server on your local host at port 3000 `http://local
 
 
 ## Our first component
-Open the *my-first-react-app* folder in your an editor of your choice. Under the **src** folder create a new file *FirstComponent.js*.
+Open the *my-first-react-app* folder in your an editor of your choice. Under the **src** folder create a new file `FirstComponent.js`.
 
 Add the following code to this file and save it:
 
@@ -48,8 +48,11 @@ const FirstComponent = () => {
 
 export default FirstComponent;
 ```
+As you can see, the component code is all JavaScript. We are importing react as it is required to render the component. We are using [arrow function](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions) in our code but you can use normal function syntax too.
 
-Now open *App.js* and remove all the code in the file and replace it with the following code.
+That HTML content we are returning from is [JSX](https://reactjs.org/docs/introducing-jsx.html), it looks very much like HTML but it is not.
+
+Now open `App.js` and remove all the code in the file and replace it with the following code.
 
 ```javascript
 import React from 'react';
