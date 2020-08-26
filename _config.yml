@@ -1,0 +1,9 @@
+remote_theme: 'mmistakes/so-simple-theme@3.2.0'
+title: "Alfred D'Souza"
+description: "There is always something new to learn!"
+skin: "/assets/css/skins/default.css"
+locale: en-GB
+permalink: /:categories/:title/
+markdown: kramdown
+comments: false
+share: false
