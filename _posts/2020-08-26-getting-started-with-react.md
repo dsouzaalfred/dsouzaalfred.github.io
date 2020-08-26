@@ -138,3 +138,5 @@ export default App;
 Now if you visit `http://localhost:3000/` you will see you different headings.
 
 In future lessons we will see how to add interactivity to our components.
+
+You can find the code on [GitHub](https://github.com/dsouzaalfred/blogdemos/tree/master/getting-started-with-react)
