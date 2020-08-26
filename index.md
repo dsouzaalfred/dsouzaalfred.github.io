@@ -3,7 +3,7 @@ layout: page
 ---
 Hi, I am **Alfred D'Souza**.
 
-Started of as a computer teacher. Moved on to working as Tech Support agent, got promoted as an Subject Matter Expert, finally got promoted as a Team Lead. But now I a Frontend developer and enjoying every bit of it. Have learnt a lot but there is a lot I still got to learn.
+Started out as a computer teacher. Moved on to working as Tech Support agent / Subject Matter Expert / Team Lead. But now I am a Frontend developer and enjoying every bit of it. Have learnt a lot but there is a lot I still got to learn.
 
 GitHub : [https://github.com/dsouzaalfred](https://github.com/dsouzaalfred 'Github Profile')
 
