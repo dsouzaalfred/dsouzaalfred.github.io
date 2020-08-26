@@ -1,6 +1,6 @@
 var store = [{
         "title": "Getting started with React",
-        "excerpt":"Let’s get started with React. What is react? What is react section will go here CRA - Create React App What is CRA and why to use it will go here Simple App A simple react App const test = () =&gt; {  return \"test\";}Local server Build ","categories": ["blog","react"],
+        "excerpt":"Let’s get started with React. What is react? React or ReactJS is a component-based JavaScript library for building user interfaces. It is one of the most popular JavaScript UI libraries.Component-based means a complex UI is broken down into small pieces called components. These small components can manage their own state...","categories": ["blog","react"],
         "tags": [],
         "url": "http://localhost:4000/blog/react/getting-started-with-react/"
       }]

@@ -108,22 +108,134 @@
           <p>Let’s get started with React.</p>
 
 <h2 id="what-is-react">What is react?</h2>
-<p>What is react section will go here</p>
+<p>React or ReactJS is a component-based JavaScript library for building user interfaces. It is one of the most popular JavaScript UI libraries.
+<em>Component-based</em> means a complex UI is broken down into small pieces called components. These small components can manage their own state and encapsulate their own logic.</p>
 
 <h2 id="cra---create-react-app">CRA - Create React App</h2>
-<p>What is CRA and why to use it will go here</p>
+<p><a href="https://github.com/facebook/create-react-app">Create React App</a> makes getting started with React very easy.
+You will need to have <strong><a href="https://nodejs.org/en/">Node &gt;= 8.10 and npm &gt;= 5.6</a></strong> installed on your machine. If you don’t already have it installed on your machine you can head over to <a href="https://nodejs.org/en/">nodejs.org</a> and download &amp; install it before moving forward.</p>
 
-<h2 id="simple-app">Simple App</h2>
-<p>A simple react App</p>
+<p>Assuming that you have <em>*<a href="https://nodejs.org/en/">Node &gt;= 8.10 and npm &gt;= 5.6</a>*</em> installed on your machine, open terminal/command line and run the following command.</p>
 
-<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">test</span> <span class="o">=</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="p">{</span>
-  <span class="k">return</span> <span class="dl">"</span><span class="s2">test</span><span class="dl">"</span><span class="p">;</span>
-<span class="p">}</span>
+<p><code class="language-plaintext highlighter-rouge">npx create-react-app my-first-react-app</code></p>
+
+<p>This will install</p>
+<ul>
+  <li>create a folder called <em>my-first-react-app</em></li>
+  <li>install all the dependencies required</li>
+</ul>
+
+<p>Once the installation is complete run the following commands</p>
+
+<p><code class="language-plaintext highlighter-rouge">cd my-first-react-app</code></p>
+
+<p>To move into the newly created folder</p>
+
+<p><code class="language-plaintext highlighter-rouge">yarn start</code></p>
+
+<p>This will start a local dev server on your local host at port 3000 <code class="language-plaintext highlighter-rouge">http://localhost:3000/</code></p>
+
+<h2 id="our-first-component">Our first component</h2>
+<p>Open the <em>my-first-react-app</em> folder in your an editor of your choice. Under the <strong>src</strong> folder create a new file <em>FirstComponent.js</em>.</p>
+
+<p>Add the following code to this file and save it:</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="nx">React</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">react</span><span class="dl">'</span><span class="p">;</span>
+
+<span class="kd">const</span> <span class="nx">FirstComponent</span> <span class="o">=</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="p">{</span>
+  <span class="k">return</span> <span class="o">&lt;</span><span class="nx">h1</span><span class="o">&gt;</span><span class="nx">This</span> <span class="nx">is</span> <span class="nx">my</span> <span class="nx">first</span> <span class="nx">component</span><span class="o">&lt;</span><span class="sr">/h1&gt;</span><span class="err">;
+</span><span class="p">};</span>
+
+<span class="k">export</span> <span class="k">default</span> <span class="nx">FirstComponent</span><span class="p">;</span>
 </code></pre></div></div>
 
-<h2 id="local-server">Local server</h2>
+<p>Now open <em>App.js</em> and remove all the code in the file and replace it with the following code.</p>
 
-<h2 id="build">Build</h2>
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="nx">React</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">react</span><span class="dl">'</span><span class="p">;</span>
+<span class="k">import</span> <span class="nx">FirstComponent</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">./FirstComponent</span><span class="dl">'</span><span class="p">;</span>
+<span class="k">import</span> <span class="dl">'</span><span class="s1">./App.css</span><span class="dl">'</span><span class="p">;</span>
+
+<span class="kd">function</span> <span class="nx">App</span><span class="p">()</span> <span class="p">{</span>
+  <span class="k">return</span> <span class="p">(</span>
+    <span class="o">&lt;</span><span class="nx">div</span> <span class="nx">className</span><span class="o">=</span><span class="dl">"</span><span class="s2">App</span><span class="dl">"</span><span class="o">&gt;</span>
+      <span class="o">&lt;</span><span class="nx">header</span> <span class="nx">className</span><span class="o">=</span><span class="dl">"</span><span class="s2">App-header</span><span class="dl">"</span><span class="o">&gt;</span>
+        <span class="o">&lt;</span><span class="nx">FirstComponent</span> <span class="o">/&gt;</span>
+      <span class="o">&lt;</span><span class="sr">/header</span><span class="err">&gt;
+</span>    <span class="o">&lt;</span><span class="sr">/div</span><span class="err">&gt;
+</span>  <span class="p">);</span>
+<span class="p">}</span>
+
+<span class="k">export</span> <span class="k">default</span> <span class="nx">App</span><span class="p">;</span>
+</code></pre></div></div>
+
+<p><code class="language-plaintext highlighter-rouge">import FirstComponent from './FirstComponent';</code> is used to import the component into the <code class="language-plaintext highlighter-rouge">App.js</code> file.
+<code class="language-plaintext highlighter-rouge">&lt;FirstComponent /&gt;</code> is how we use the component, basically telling react to render our component.</p>
+
+<p>Now if you visit <code class="language-plaintext highlighter-rouge">http://localhost:3000/</code> you should see <strong>This is my first component</strong> on the screen.</p>
+
+<p>Couple of things to note before we move forward:</p>
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">App</code> is also a component.</li>
+  <li>Both <code class="language-plaintext highlighter-rouge">App</code> and <code class="language-plaintext highlighter-rouge">FirstComponent</code> are function components.</li>
+</ul>
+
+<p>We can use the same component multiple times, add another <code class="language-plaintext highlighter-rouge">&lt;FirstComponent /&gt;</code> below the first one so our <code class="language-plaintext highlighter-rouge">App.js</code> file will look like this:</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="nx">React</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">react</span><span class="dl">'</span><span class="p">;</span>
+<span class="k">import</span> <span class="nx">FirstComponent</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">./FirstComponent</span><span class="dl">'</span><span class="p">;</span>
+<span class="k">import</span> <span class="dl">'</span><span class="s1">./App.css</span><span class="dl">'</span><span class="p">;</span>
+
+<span class="kd">function</span> <span class="nx">App</span><span class="p">()</span> <span class="p">{</span>
+  <span class="k">return</span> <span class="p">(</span>
+    <span class="o">&lt;</span><span class="nx">div</span> <span class="nx">className</span><span class="o">=</span><span class="dl">"</span><span class="s2">App</span><span class="dl">"</span><span class="o">&gt;</span>
+      <span class="o">&lt;</span><span class="nx">header</span> <span class="nx">className</span><span class="o">=</span><span class="dl">"</span><span class="s2">App-header</span><span class="dl">"</span><span class="o">&gt;</span>
+        <span class="o">&lt;</span><span class="nx">FirstComponent</span> <span class="o">/&gt;</span>
+        <span class="o">&lt;</span><span class="nx">FirstComponent</span> <span class="o">/&gt;</span>
+      <span class="o">&lt;</span><span class="sr">/header</span><span class="err">&gt;
+</span>    <span class="o">&lt;</span><span class="sr">/div</span><span class="err">&gt;
+</span>  <span class="p">);</span>
+<span class="p">}</span>
+
+<span class="k">export</span> <span class="k">default</span> <span class="nx">App</span><span class="p">;</span>
+</code></pre></div></div>
+
+<p>Our component is static as in it will show the same text everywhere, we can make dynamic by using <strong>props</strong>.</p>
+
+<h2 id="props">props</h2>
+<p>We can pass data to a component using props. In our case we want we would like our component to display some text that we want. Let’s update the <code class="language-plaintext highlighter-rouge">FirstComponent.js</code> file:</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="nx">React</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">react</span><span class="dl">'</span><span class="p">;</span>
+
+<span class="kd">const</span> <span class="nx">FirstComponent</span> <span class="o">=</span> <span class="p">({</span> <span class="nx">text</span> <span class="p">})</span> <span class="o">=&gt;</span> <span class="p">{</span>
+  <span class="k">return</span> <span class="o">&lt;</span><span class="nx">h1</span><span class="o">&gt;</span><span class="p">{</span><span class="nx">text</span><span class="p">}</span><span class="o">&lt;</span><span class="sr">/h1&gt;</span><span class="err">;
+</span><span class="p">};</span>
+
+<span class="k">export</span> <span class="k">default</span> <span class="nx">FirstComponent</span><span class="p">;</span>
+</code></pre></div></div>
+
+<p>Now our component will take a props called <strong>text</strong> and display the value that is passed to it within the <code class="language-plaintext highlighter-rouge">h1</code> tags.
+So let’s update <code class="language-plaintext highlighter-rouge">App.js</code> to reflect the changes we have made to <code class="language-plaintext highlighter-rouge">FirstComponent</code>.</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="nx">React</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">react</span><span class="dl">'</span><span class="p">;</span>
+<span class="k">import</span> <span class="nx">FirstComponent</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">./FirstComponent</span><span class="dl">'</span><span class="p">;</span>
+<span class="k">import</span> <span class="dl">'</span><span class="s1">./App.css</span><span class="dl">'</span><span class="p">;</span>
+
+<span class="kd">function</span> <span class="nx">App</span><span class="p">()</span> <span class="p">{</span>
+  <span class="k">return</span> <span class="p">(</span>
+    <span class="o">&lt;</span><span class="nx">div</span> <span class="nx">className</span><span class="o">=</span><span class="dl">"</span><span class="s2">App</span><span class="dl">"</span><span class="o">&gt;</span>
+      <span class="o">&lt;</span><span class="nx">header</span> <span class="nx">className</span><span class="o">=</span><span class="dl">"</span><span class="s2">App-header</span><span class="dl">"</span><span class="o">&gt;</span>
+        <span class="o">&lt;</span><span class="nx">FirstComponent</span> <span class="nx">text</span><span class="o">=</span><span class="dl">"</span><span class="s2">First Header</span><span class="dl">"</span> <span class="o">/&gt;</span>
+        <span class="o">&lt;</span><span class="nx">FirstComponent</span> <span class="nx">text</span><span class="o">=</span><span class="dl">"</span><span class="s2">Second Header</span><span class="dl">"</span> <span class="o">/&gt;</span>
+      <span class="o">&lt;</span><span class="sr">/header</span><span class="err">&gt;
+</span>    <span class="o">&lt;</span><span class="sr">/div</span><span class="err">&gt;
+</span>  <span class="p">);</span>
+<span class="p">}</span>
+
+<span class="k">export</span> <span class="k">default</span> <span class="nx">App</span><span class="p">;</span>
+</code></pre></div></div>
+<p>Now if you visit <code class="language-plaintext highlighter-rouge">http://localhost:3000/</code> you will see you different headings.</p>
+
+<p>In future lessons we will see how to add interactivity to our components.</p>
 
         </div>
 
