@@ -4,6 +4,34 @@ description: "There is always something new to learn!"
 skin: "/assets/css/skins/default.css"
 locale: en-GB
 permalink: /:categories/:title/
+read_time: true
+words_per_minute: 200
 markdown: kramdown
 comments: false
-share: false
+share: true
+footer_links:
+  - title: Twitter
+    url: https://twitter.com/dsouzaalfred
+    icon: fab fa-twitter-square
+  - title: GitHub
+    url: https://github.com/dsouzaalfred
+    icon: fab fa-github-square
+  - title: LinkedIn
+    url: https://linkedin.com/in/alfred-dsouza-53590b48
+    icon: fab fa-linkedin
+# Site Author
+author:
+  name: Alfred D'Souza
+  picture: /images/alfred-dsouza-photo.jpg
+  email:
+  twitter: dsouzaalfred
+  links:
+    - title: Twitter
+      url: https://twitter.com/dsouzaalfred
+      icon: fab fa-twitter-square
+    - title: GitHub
+      url: https://github.com/dsouzaalfred
+      icon: fab fa-github-square
+    - title: LinkedIn
+      url: https://linkedin.com/in/alfred-dsouza-53590b48
+      icon: fab fa-linkedin
