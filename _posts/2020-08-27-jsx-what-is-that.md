@@ -12,7 +12,7 @@ So what is JXS? JXS is like a template language or a form of markup like HTML th
 You can write [React without using JSX](https://reactjs.org/docs/react-without-jsx.html) but that become very complicated very fast and is not very intuitive.
 
 ## Getting started
-A very simple example will be `FirstComponent` that we created in the [last post](/blog/react/getting-started-with-react/#first-component).
+A very simple example will be `FirstComponent` that we created in the [last post](/blog/react/getting-started-with-react/#our-first-component).
 
 ```javascript
 import React from 'react';

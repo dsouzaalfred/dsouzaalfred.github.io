@@ -37,7 +37,7 @@ To move into the newly created folder
 This will start a local dev server on your local host at port 3000 `http://localhost:3000/`
 
 
-## <a name="first-component"></a>Our first component
+## Our first component  {#our-first-component}
 Open the *my-first-react-app* folder in your an editor of your choice. Under the **src** folder create a new file `FirstComponent.js`.
 
 Add the following code to this file and save it:
