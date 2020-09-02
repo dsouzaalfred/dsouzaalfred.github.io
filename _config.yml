@@ -1,6 +1,8 @@
 remote_theme: 'mmistakes/so-simple-theme@3.2.0'
 title: "Alfred D'Souza"
+tagline: "There is always something new to learn!"
 description: "There is always something new to learn!"
+url: "https://dsouzaalf.red/"
 skin: "/assets/css/skins/default.css"
 locale: en-GB
 permalink: /:categories/:title/
@@ -8,7 +10,6 @@ read_time: true
 words_per_minute: 200
 markdown: kramdown
 comments: false
-share: true
 footer_links:
   - title: Twitter
     url: https://twitter.com/dsouzaalfred
@@ -23,7 +24,6 @@ footer_links:
 author:
   name: Alfred D'Souza
   picture: /images/alfred-dsouza-photo.jpg
-  email:
   twitter: dsouzaalfred
   links:
     - title: Twitter

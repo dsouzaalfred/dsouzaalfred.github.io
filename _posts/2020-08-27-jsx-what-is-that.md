@@ -4,6 +4,7 @@ title: JSX - What is that?
 date: 2020-09-02 11:50 +0100
 author: alfred_dsouza
 categories: blog react
+share: true
 ---
 
 In the [last post](/blog/react/getting-started-with-react/) I briefly mentioned JSX, in this post we will have a detailed view of JSX.

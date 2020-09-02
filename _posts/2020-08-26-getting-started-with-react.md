@@ -4,6 +4,7 @@ title: Getting started with React
 date: 2020-08-26 11:15 +0100
 author: alfred_dsouza
 categories: blog react
+share: true
 ---
 
 ## What is react?
