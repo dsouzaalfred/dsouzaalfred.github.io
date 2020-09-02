@@ -10,10 +10,10 @@ share: true
 comments: true
 ---
 
-In the [last post](/blog/react/getting-started-with-react/) I briefly mentioned JSX, in this post we will have a detailed view of JSX.
+In the [last post](/blog/react/getting-started-with-react/) I briefly mentioned JSX. In this post we will have a detailed view of JSX.
 So what is JXS? JXS is like a template language or a form of markup like HTML that gets complied to JavaScript code by react. React components are all JavaScript, hence we need something that will help us with the markup for our UI that is where JSX comes in. JSX looks like HTML but is incredibly powerful since it is complied down to JavaScript.
 
-You can write [React without using JSX](https://reactjs.org/docs/react-without-jsx.html) but that become very complicated very fast and is not very intuitive.
+You can write [React without using JSX](https://reactjs.org/docs/react-without-jsx.html) but that becomes complicated very fast and is not very intuitive.
 
 ## Getting started
 A very simple example will be `FirstComponent` that we created in the [last post](/blog/react/getting-started-with-react/#our-first-component).
@@ -63,7 +63,7 @@ const StringLiterals = () => {
 
 export default StringLiterals;
 ```
-While this might look useless it can be very powerful when you want to concatenate two strings or display a value stored in a variable.
+While this might look useless, it can be very powerful when you want to concatenate two strings or display a value stored in a variable.
 ```javascript
 import React from 'react';
 
@@ -87,7 +87,7 @@ export default StringLiteralsThree;
 ```
 
 ## Conditions
-Want to display text based on some condition we can do that too.
+Want to display text based on some condition? we can do that too.
 ```javascript
 import React from 'react';
 
@@ -99,7 +99,7 @@ const Conditions = () => {
 
 export default Conditions;
 ```
-In the above example we are checking what [hour](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/getHours) it is and displaying a message accordingly using a [ternary operator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Conditional_Operator).
+In the above example we are checking what [hour](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/getHours) it is and displaying a message accordingly, using a [ternary operator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Conditional_Operator).
 
 ## Attributes
 We can also specify tag attributes.
@@ -151,7 +151,7 @@ const ParentNode = () => {
 export default ParentNode;
 ```
 
-But sometimes we don't want an addition `div` or any other tag as a wrapper, in such cases we can use [react fragments](https://reactjs.org/docs/fragments.html). Fragments are special react syntax(`<></>`) which will wrap you content and when the component is rendered only the content is shown and not the fragments.
+But sometimes we don't want an addition `div` or any other tag as a wrapper, in such cases we can use [react fragments](https://reactjs.org/docs/fragments.html). Fragments are special react syntax(`<></>`) which will wrap the content and when the component is rendered only the content is shown and not the fragments.
 ```javascript
 import React from 'react';
 
@@ -218,9 +218,9 @@ const LoopsMap = () => {
 export default LoopsMap;
 ```
 Our component will display an un-order list. There is a lot going on in our component to achieve this :
-- We have a variable data that is an array of object, each object has a `id` and a `label`.
-- We loop over data using the `map()` method.
-- Each object is referred to as `item`, you can call it anything you want, it's just a variable.
+- We have a variable `data` that is an array of object, each object has a `id` and a `label`.
+- We loop over `data` using the `map()` method.
+- Each object is referred to as `item`, you can call it anything you want as it's just a variable.
 - For each item we are returning an `li`. Note that there is no return statement since we are using [arrow function](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions).
 - Each tag/node that we return should have a unique `key`, we are using the `id` as key. We can use `index` as the key, while it works most of the time but you can run into bugs specially if you allow addition and deletion to you list.
 
@@ -249,8 +249,8 @@ const LoopsFilter = () => {
 
 export default LoopsFilter;
 ```
-In the above example we only want to print labels of values whose id's are divisible 2. So first we filter such values, since filter returns an array we map over the array and then print the values.
+In the above example, we only want to print labels of values whose id's are divisible by 2. So first we filter such values.  Since filter returns an array we map over the array and then print the values.
 
-Well that's' a lot for one post but I hope it helps you understand how to use JSX. In the next post we will cover props.
+Well that's a lot for one post but I hope it helps you understand how to use JSX. In the next post we will cover props.
 
 You can find the code on [GitHub](https://github.com/dsouzaalfred/blogdemos/tree/master/jsx-what-is-that)
