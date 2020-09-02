@@ -3,7 +3,9 @@ layout: post
 title: JSX - What is that?
 date: 2020-09-02 11:50 +0100
 author: alfred_dsouza
-categories: blog react
+categories:
+  - blog
+  - react
 share: true
 ---
 
