@@ -9,7 +9,8 @@ permalink: /:categories/:title/
 read_time: true
 words_per_minute: 200
 markdown: kramdown
-comments: false
+disqus:
+  shortname: dsouzaalfred
 footer_links:
   - title: Twitter
     url: https://twitter.com/dsouzaalfred

@@ -7,6 +7,7 @@ categories:
   - blog
   - react
 share: true
+comments: true
 ---
 
 ## What is react?

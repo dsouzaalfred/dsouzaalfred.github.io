@@ -7,6 +7,7 @@ categories:
   - blog
   - react
 share: true
+comments: true
 ---
 
 In the [last post](/blog/react/getting-started-with-react/) I briefly mentioned JSX, in this post we will have a detailed view of JSX.
