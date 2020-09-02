@@ -5,7 +5,6 @@ date: 2020-08-26 11:15 +0100
 author: alfred_dsouza
 categories: blog react
 ---
-Let's get started with React.
 
 ## What is react?
 React or ReactJS is a component-based JavaScript library for building user interfaces. It is one of the most popular JavaScript UI libraries.
@@ -13,9 +12,13 @@ React or ReactJS is a component-based JavaScript library for building user inter
 
 ## CRA - Create React App
 [Create React App](https://github.com/facebook/create-react-app) makes getting started with React very easy.
-You will need to have **[Node >= 8.10 and npm >= 5.6](https://nodejs.org/en/)** installed on your machine. If you don't already have it installed on your machine you can head over to [nodejs.org](https://nodejs.org/en/) and download & install it before moving forward.
+You will need to have [**Node >= 8.10 and npm >= 5.6**](https://nodejs.org/en/) installed on your machine. If you don't already have it installed on your machine you can head over to [nodejs.org](https://nodejs.org/en/) and download & install it before moving forward.
 
-Assuming that you have _*[Node >= 8.10 and npm >= 5.6](https://nodejs.org/en/)*_ installed on your machine, open terminal/command line and run the following command.
+Once you are done installing `Node`, you can either use the `npm` (comes bundled with node) or `yarn` package manager. I prefer [`yarn`](https://www.npmjs.com/package/yarn), let's go ahead and install it. Run the following command on your terminal/command line:
+
+`npm install --global yarn`
+
+Assuming that you have [`Node >= 8.10 and npm >= 5.6`](https://nodejs.org/en/) and [`yarn`](https://www.npmjs.com/package/yarn) installed on your machine, open terminal/command line and run the following command.
 
 `npx create-react-app my-first-react-app`
 
@@ -34,7 +37,7 @@ To move into the newly created folder
 This will start a local dev server on your local host at port 3000 `http://localhost:3000/`
 
 
-## Our first component
+## <a name="first-component"></a>Our first component
 Open the *my-first-react-app* folder in your an editor of your choice. Under the **src** folder create a new file `FirstComponent.js`.
 
 Add the following code to this file and save it:
@@ -140,6 +143,6 @@ export default App;
 ```
 Now if you visit `http://localhost:3000/` you will see you different headings.
 
-In future lessons we will see how to add interactivity to our components.
+In our next post we will have detailed look at [JSX](/blog/react/jsx-what-is-that/).
 
 You can find the code on [GitHub](https://github.com/dsouzaalfred/blogdemos/tree/master/getting-started-with-react)
