@@ -8,6 +8,9 @@ categories:
   - react
 share: true
 comments: true
+image:
+  path: /images/jsx-what-is-that-hero-image.jpg
+  caption: "JSX - What is that?"
 ---
 
 In the [last post](/blog/react/getting-started-with-react/) I briefly mentioned JSX. In this post we will have a detailed view of JSX.

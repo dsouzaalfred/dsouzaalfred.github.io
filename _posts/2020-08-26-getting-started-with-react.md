@@ -8,6 +8,9 @@ categories:
   - react
 share: true
 comments: true
+image:
+  path: /images/getting-started-with-react-hero-image.jpg
+  caption: "Getting started with React"
 ---
 
 ## What is react?
