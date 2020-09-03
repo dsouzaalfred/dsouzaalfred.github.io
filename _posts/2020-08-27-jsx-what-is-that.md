@@ -7,7 +7,6 @@ categories:
   - blog
   - react
 share: true
-comments: true
 image:
   path: /images/jsx-what-is-that-hero-image.jpg
   caption: "JSX - What is that?"

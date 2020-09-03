@@ -7,7 +7,6 @@ categories:
   - blog
   - react
 share: true
-comments: true
 ---
 
 Props or properties is data passed to a component. A parent component will pass data to a child component as a prop.
@@ -15,7 +14,7 @@ Couple of thinks to note about Props:
 - `props` is keyword is react and cannot be used as a variable name.
 - `props` are immutable i.e. they are read-only
 
-Now that we know a bit more about props lets start using them. When we define a component props are like function arguments in JavaScript.
+Now that we know a bit more about props lets start using it. When we define a component props are like function arguments in JavaScript.
 ```javascript
 import React from 'react';
 
@@ -45,6 +44,13 @@ export default App;
 ```
 
 In our App comment we are importing the PropsExample component and use it as an HTML tag then pass the title like an attribute.
+
+We can pass any type of data as a prop.
+- Strings
+- Numbers
+- Arrays
+- Objects
+- Boolean
 
 We covered using JSX in our [last post](/blog/react/jsx-what-is-that/).
 - Data
