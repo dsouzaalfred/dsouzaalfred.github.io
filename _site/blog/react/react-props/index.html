@@ -149,14 +149,41 @@ Couple of thinks to note about Props:</p>
 
 <p>In our App comment we are importing the PropsExample component and use it as an HTML tag then pass the title like an attribute.</p>
 
-<p>We can pass any type of data as a prop.</p>
+<p>In the above example the prop title is of type string but we can use other types too, like:</p>
 <ul>
-  <li>Strings</li>
   <li>Numbers</li>
   <li>Arrays</li>
   <li>Objects</li>
   <li>Boolean</li>
 </ul>
+
+<p>Let’s update our component to use different types:</p>
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="nx">React</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">react</span><span class="dl">'</span><span class="p">;</span>
+
+<span class="kd">const</span> <span class="nx">PropsExample</span> <span class="o">=</span> <span class="p">(</span><span class="nx">props</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+  <span class="k">return</span> <span class="p">(</span>
+    <span class="o">&lt;&gt;</span>
+      <span class="o">&lt;</span><span class="nx">h1</span><span class="o">&gt;</span><span class="nx">User</span> <span class="nx">details</span><span class="o">&lt;</span><span class="sr">/h1</span><span class="err">&gt;
+</span>      <span class="o">&lt;</span><span class="nx">p</span><span class="o">&gt;&lt;</span><span class="nx">strong</span><span class="o">&gt;</span><span class="nx">Name</span><span class="o">&lt;</span><span class="sr">/strong&gt;: {props.name}&lt;/</span><span class="nx">p</span><span class="o">&gt;</span>
+      <span class="o">&lt;</span><span class="nx">p</span><span class="o">&gt;&lt;</span><span class="nx">strong</span><span class="o">&gt;</span><span class="nx">User</span> <span class="nx">Id</span><span class="o">&lt;</span><span class="sr">/strong&gt;: {props.userId}&lt;/</span><span class="nx">p</span><span class="o">&gt;</span>
+      <span class="o">&lt;</span><span class="nx">p</span><span class="o">&gt;&lt;</span><span class="nx">strong</span><span class="o">&gt;</span><span class="nx">Roles</span><span class="o">&lt;</span><span class="sr">/strong&gt;: &lt;/</span><span class="nx">p</span><span class="o">&gt;</span>
+      <span class="o">&lt;</span><span class="nx">ul</span><span class="o">&gt;</span>
+        <span class="p">{</span><span class="nx">props</span><span class="p">.</span><span class="nx">roles</span><span class="p">.</span><span class="nx">map</span><span class="p">((</span><span class="nx">role</span><span class="p">,</span> <span class="nx">index</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">(</span><span class="o">&lt;</span><span class="nx">li</span> <span class="nx">key</span><span class="o">=</span><span class="p">{</span><span class="nx">index</span><span class="p">}</span><span class="o">&gt;</span><span class="p">{</span><span class="nx">role</span><span class="p">}</span><span class="o">&lt;</span><span class="sr">/li&gt;</span><span class="se">))</span><span class="err">}
+</span>      <span class="o">&lt;</span><span class="sr">/ul</span><span class="err">&gt;
+</span>      <span class="o">&lt;</span><span class="nx">p</span><span class="o">&gt;&lt;</span><span class="nx">strong</span><span class="o">&gt;</span><span class="nx">Last</span> <span class="nx">login</span><span class="o">&lt;</span><span class="sr">/strong&gt;: &lt;/</span><span class="nx">p</span><span class="o">&gt;</span>
+      <span class="o">&lt;</span><span class="nx">ul</span><span class="o">&gt;</span>
+        <span class="o">&lt;</span><span class="nx">li</span><span class="o">&gt;</span><span class="na">Date</span> <span class="p">:{</span><span class="nx">props</span><span class="p">.</span><span class="nx">lastLogin</span><span class="p">.</span><span class="nx">date</span><span class="p">}</span><span class="o">&lt;</span><span class="sr">/li</span><span class="err">&gt;
+</span>        <span class="o">&lt;</span><span class="nx">li</span><span class="o">&gt;</span><span class="na">Location</span> <span class="p">:{</span><span class="nx">props</span><span class="p">.</span><span class="nx">lastLogin</span><span class="p">.</span><span class="nx">location</span><span class="p">}</span><span class="o">&lt;</span><span class="sr">/li</span><span class="err">&gt;
+</span>        <span class="o">&lt;</span><span class="nx">li</span><span class="o">&gt;</span><span class="na">Device</span><span class="p">:</span> <span class="p">{</span><span class="nx">props</span><span class="p">.</span><span class="nx">lastLogin</span><span class="p">.</span><span class="nx">device</span><span class="p">}</span><span class="o">&lt;</span><span class="sr">/li</span><span class="err">&gt;
+</span>      <span class="o">&lt;</span><span class="sr">/ul</span><span class="err">&gt;
+</span>      <span class="o">&lt;</span><span class="nx">p</span><span class="o">&gt;&lt;</span><span class="nx">strong</span><span class="o">&gt;</span><span class="nx">Start</span> <span class="nb">Date</span><span class="o">&lt;</span><span class="sr">/strong&gt;: {props.dates.startDate}&lt;/</span><span class="nx">p</span><span class="o">&gt;</span>
+      <span class="o">&lt;</span><span class="nx">p</span><span class="o">&gt;&lt;</span><span class="nx">strong</span><span class="o">&gt;</span><span class="nx">Status</span><span class="o">&lt;</span><span class="sr">/strong&gt;: {props.isActive </span><span class="se">?</span><span class="sr"> 'Active' : 'Not active'</span><span class="err">}
+</span>    <span class="o">&lt;</span><span class="sr">/</span><span class="err">&gt;
+</span>  <span class="p">)</span>
+<span class="p">}</span>
+
+<span class="k">export</span> <span class="k">default</span> <span class="nx">PropsExample</span><span class="p">;</span>
+</code></pre></div></div>
 
 <p>We covered using JSX in our <a href="/blog/react/jsx-what-is-that/">last post</a>.</p>
 <ul>
@@ -167,6 +194,7 @@ Couple of thinks to note about Props:</p>
       <li>Children</li>
     </ul>
   </li>
+  <li>Descruture</li>
   <li>Proptypes
     <ul>
       <li>Types</li>

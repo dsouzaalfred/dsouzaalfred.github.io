@@ -45,18 +45,47 @@ export default App;
 
 In our App comment we are importing the PropsExample component and use it as an HTML tag then pass the title like an attribute.
 
-We can pass any type of data as a prop.
-- Strings
+In the above example the prop title is of type string but we can use other types too, like:
 - Numbers
 - Arrays
 - Objects
 - Boolean
+
+Let's update our component to use different types:
+```javascript
+import React from 'react';
+
+const PropsExample = (props) => {
+  return (
+    <>
+      <h1>User details</h1>
+      <p><strong>Name</strong>: {props.name}</p>
+      <p><strong>User Id</strong>: {props.userId}</p>
+      <p><strong>Roles</strong>: </p>
+      <ul>
+        {props.roles.map((role, index) => (<li key={index}>{role}</li>))}
+      </ul>
+      <p><strong>Last login</strong>: </p>
+      <ul>
+        <li>Date :{props.lastLogin.date}</li>
+        <li>Location :{props.lastLogin.location}</li>
+        <li>Device: {props.lastLogin.device}</li>
+      </ul>
+      <p><strong>Start Date</strong>: {props.dates.startDate}</p>
+      <p><strong>Status</strong>: {props.isActive ? 'Active' : 'Not active'}
+    </>
+  )
+}
+
+export default PropsExample;
+```
 
 We covered using JSX in our [last post](/blog/react/jsx-what-is-that/).
 - Data
 - Methods
 - Other components
   - Children
+- Descruture
 - Proptypes
     - Types
     - isRequired
