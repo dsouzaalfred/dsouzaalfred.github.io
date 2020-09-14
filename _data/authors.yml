@@ -7,3 +7,13 @@ alfred_dsouza:
   bio: "Software developer"
   twitter: dsouzaalfred
   picture: /images/alfred-dsouza-photo.jpg
+  links:
+    - title: Twitter
+      url: https://twitter.com/dsouzaalfred
+      icon: fab fa-twitter-square
+    - title: GitHub
+      url: https://github.com/dsouzaalfred
+      icon: fab fa-github-square
+    - title: LinkedIn
+      url: https://linkedin.com/in/alfred-dsouza-53590b48
+      icon: fab fa-linkedin

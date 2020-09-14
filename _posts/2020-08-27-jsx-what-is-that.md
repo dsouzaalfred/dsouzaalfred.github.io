@@ -7,7 +7,6 @@ categories:
   - blog
   - react
 share: true
-comments: true
 image:
   path: /images/jsx-what-is-that-hero-image.jpg
   caption: "JSX - What is that?"
@@ -196,7 +195,7 @@ export default ParentNodeThree;
 ## Loops
 The last thing we will cover is Loops. A lot of times we have display a list of something on the frontend and most of the times the data for the list will come from a service like an API or a JSON file, etc. Again, since we are using JavaScript we can take advantage of JavaScript array methods like [`map()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map) or [`filter()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter).
 
-### map()
+### map()   {#jsx-array-map}
 We can use `map()` when you want to display every element in an array.
 ```javascript
 import React from 'react';

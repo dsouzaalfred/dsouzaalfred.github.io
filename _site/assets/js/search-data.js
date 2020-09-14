@@ -8,4 +8,9 @@ var store = [{
         "excerpt":"In the last post I briefly mentioned JSX. In this post we will have a detailed view of JSX.So what is JXS? JXS is like a template language or a form of markup like HTML that gets complied to JavaScript code by react. React components are all JavaScript, hence we...","categories": ["blog","react"],
         "tags": [],
         "url": "http://localhost:4000/blog/react/jsx-what-is-that/"
+      },{
+        "title": "React - Props",
+        "excerpt":"What are props? Props or properties are data passed to a component. A parent component will pass data to a child component as a prop.There are a couple of things to note about Props: props is a keyword in React and cannot be used as a variable name. props are...","categories": ["blog","react"],
+        "tags": [],
+        "url": "http://localhost:4000/blog/react/react-props/"
       }]
