@@ -15,7 +15,7 @@
 
   
     <title>React - Props</title>
-    <meta name="description" content="Props or properties is data passed to a component. A parent component will pass data to a child component as a prop. Couple of thinks to note about Props: pr...">
+    <meta name="description" content="What are props? Props or properties is data passed to a component. A parent component will pass data to a child component as a prop. Couple of thinks to note...">
     <link rel="canonical" href="http://localhost:4000/blog/react/react-props/">
   
 
@@ -93,7 +93,7 @@
             <a class="u-url" rel="me" href="https://linkedin.com/in/alfred-dsouza-53590b48"><i class="fab fa-linkedin fa-lg" title="LinkedIn"></i></a>
           </li></ul>
 
-<span class="read-time">1 min read</span>
+<span class="read-time">6 min read</span>
 
     <time class="page-date dt-published" datetime="2020-09-03T09:47:00+01:00"><a class="u-url" href="">September 3, 2020</a>
 </time>
@@ -113,14 +113,17 @@
 
       <div class="page-content">
         <div class="e-content">
-          <p>Props or properties is data passed to a component. A parent component will pass data to a child component as a prop.
+          <h2 id="what-are-props">What are props?</h2>
+<p>Props or properties is data passed to a component. A parent component will pass data to a child component as a prop.
 Couple of thinks to note about Props:</p>
 <ul>
   <li><code class="language-plaintext highlighter-rouge">props</code> is keyword is react and cannot be used as a variable name.</li>
   <li><code class="language-plaintext highlighter-rouge">props</code> are immutable i.e. they are read-only</li>
 </ul>
 
-<p>Now that we know a bit more about props lets start using it. When we define a component props are like function arguments in JavaScript.</p>
+<p>When we define a component, props are like function arguments in JavaScript.</p>
+
+<p>Let’s start with a simple component.</p>
 <div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="nx">React</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">react</span><span class="dl">'</span><span class="p">;</span>
 
 <span class="kd">const</span> <span class="nx">PropsExample</span> <span class="o">=</span> <span class="p">(</span><span class="nx">props</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
@@ -130,9 +133,10 @@ Couple of thinks to note about Props:</p>
 <span class="k">export</span> <span class="k">default</span> <span class="nx">PropsExample</span><span class="p">;</span>
 </code></pre></div></div>
 
-<p>In the above component is expecting a parent component to pass data for the title props and it will display the value for title as a h1.</p>
+<p>Our <code class="language-plaintext highlighter-rouge">PropsExample</code> component is expecting a parent component to pass data for the title props and it will display the value for title as a h1.</p>
 
-<p>And when we have use our component in a parent component props will be like attributes in HTML.</p>
+<p>The next step would be to use the <code class="language-plaintext highlighter-rouge">PropsExample</code> component in our <code class="language-plaintext highlighter-rouge">App</code> component and pass it some data.</p>
+
 <div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="nx">React</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">react</span><span class="dl">'</span><span class="p">;</span>
 <span class="k">import</span> <span class="nx">PropsExample</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">./PropsExample</span><span class="dl">'</span><span class="p">;</span>
 
@@ -149,6 +153,7 @@ Couple of thinks to note about Props:</p>
 
 <p>In our App comment we are importing the PropsExample component and use it as an HTML tag then pass the title like an attribute.</p>
 
+<h2 id="types-of-props">Types of props</h2>
 <p>In the above example the prop title is of type string but we can use other types too, like:</p>
 <ul>
   <li>Numbers</li>
@@ -157,7 +162,8 @@ Couple of thinks to note about Props:</p>
   <li>Boolean</li>
 </ul>
 
-<p>Let’s update our component to use different types:</p>
+<p>Let’s update our component to use different types of props:</p>
+
 <div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="nx">React</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">react</span><span class="dl">'</span><span class="p">;</span>
 
 <span class="kd">const</span> <span class="nx">PropsExample</span> <span class="o">=</span> <span class="p">(</span><span class="nx">props</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
@@ -176,8 +182,7 @@ Couple of thinks to note about Props:</p>
 </span>        <span class="o">&lt;</span><span class="nx">li</span><span class="o">&gt;</span><span class="na">Location</span> <span class="p">:{</span><span class="nx">props</span><span class="p">.</span><span class="nx">lastLogin</span><span class="p">.</span><span class="nx">location</span><span class="p">}</span><span class="o">&lt;</span><span class="sr">/li</span><span class="err">&gt;
 </span>        <span class="o">&lt;</span><span class="nx">li</span><span class="o">&gt;</span><span class="na">Device</span><span class="p">:</span> <span class="p">{</span><span class="nx">props</span><span class="p">.</span><span class="nx">lastLogin</span><span class="p">.</span><span class="nx">device</span><span class="p">}</span><span class="o">&lt;</span><span class="sr">/li</span><span class="err">&gt;
 </span>      <span class="o">&lt;</span><span class="sr">/ul</span><span class="err">&gt;
-</span>      <span class="o">&lt;</span><span class="nx">p</span><span class="o">&gt;&lt;</span><span class="nx">strong</span><span class="o">&gt;</span><span class="nx">Start</span> <span class="nb">Date</span><span class="o">&lt;</span><span class="sr">/strong&gt;: {props.dates.startDate}&lt;/</span><span class="nx">p</span><span class="o">&gt;</span>
-      <span class="o">&lt;</span><span class="nx">p</span><span class="o">&gt;&lt;</span><span class="nx">strong</span><span class="o">&gt;</span><span class="nx">Status</span><span class="o">&lt;</span><span class="sr">/strong&gt;: {props.isActive </span><span class="se">?</span><span class="sr"> 'Active' : 'Not active'</span><span class="err">}
+</span>      <span class="o">&lt;</span><span class="nx">p</span><span class="o">&gt;&lt;</span><span class="nx">strong</span><span class="o">&gt;</span><span class="nx">Status</span><span class="o">&lt;</span><span class="sr">/strong&gt;: {props.isActive </span><span class="se">?</span><span class="sr"> 'Active' : 'Not active'</span><span class="err">}
 </span>    <span class="o">&lt;</span><span class="sr">/</span><span class="err">&gt;
 </span>  <span class="p">)</span>
 <span class="p">}</span>
@@ -185,25 +190,309 @@ Couple of thinks to note about Props:</p>
 <span class="k">export</span> <span class="k">default</span> <span class="nx">PropsExample</span><span class="p">;</span>
 </code></pre></div></div>
 
-<p>We covered using JSX in our <a href="/blog/react/jsx-what-is-that/">last post</a>.</p>
-<ul>
-  <li>Data</li>
-  <li>Methods</li>
-  <li>Other components
-    <ul>
-      <li>Children</li>
-    </ul>
-  </li>
-  <li>Descruture</li>
-  <li>Proptypes
-    <ul>
-      <li>Types</li>
-      <li>isRequired</li>
-      <li>https://reactjs.org/docs/typechecking-with-proptypes.html</li>
-    </ul>
-  </li>
-  <li>Default props</li>
-</ul>
+<p>And, now let’s update our <code class="language-plaintext highlighter-rouge">App</code> component to pass all the required values to the <code class="language-plaintext highlighter-rouge">PropsExample</code> component.</p>
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="nx">React</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">react</span><span class="dl">'</span><span class="p">;</span>
+<span class="k">import</span> <span class="nx">PropsExample</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">./PropsExample</span><span class="dl">'</span><span class="p">;</span>
+
+<span class="kd">const</span> <span class="nx">App</span> <span class="o">=</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="p">{</span>
+  <span class="k">return</span> <span class="p">(</span>
+    <span class="o">&lt;</span><span class="nx">div</span><span class="o">&gt;</span>
+      <span class="o">&lt;</span><span class="nx">PropsExample</span> <span class="nx">Name</span><span class="o">=</span><span class="dl">"</span><span class="s2">dsouzaalfred</span><span class="dl">"</span> <span class="nx">userId</span><span class="o">=</span><span class="p">{</span><span class="mi">3</span><span class="p">}</span> <span class="nx">roles</span><span class="o">=</span><span class="p">[</span><span class="dl">"</span><span class="s2">editor</span><span class="dl">"</span><span class="p">,</span> <span class="dl">"</span><span class="s2">admin</span><span class="dl">"</span><span class="p">]</span> <span class="nx">lastLogin</span><span class="o">=</span> <span class="nx">status</span>  <span class="o">/&gt;</span>
+    <span class="o">&lt;</span><span class="sr">/div</span><span class="err">&gt;
+</span>  <span class="p">);</span>
+<span class="p">}</span>
+
+<span class="k">export</span> <span class="k">default</span> <span class="nx">App</span><span class="p">;</span>
+</code></pre></div></div>
+
+<h2 id="function-as-props">Function as props</h2>
+<p>This takes care of the data, but what is we want to add some functionality to our component, like handling a button click or some other event. In such cases we can pass a function/method as a prop. Let’s update <code class="language-plaintext highlighter-rouge">PropsExample</code> component to we expect a function in it’s props to handle a button click.</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="nx">React</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">react</span><span class="dl">'</span><span class="p">;</span>
+
+<span class="kd">const</span> <span class="nx">PropsExample</span> <span class="o">=</span> <span class="p">(</span><span class="nx">props</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+  <span class="k">return</span> <span class="p">(</span>
+    <span class="o">&lt;&gt;</span>
+      <span class="o">&lt;</span><span class="nx">h1</span><span class="o">&gt;</span><span class="nx">User</span> <span class="nx">details</span><span class="o">&lt;</span><span class="sr">/h1</span><span class="err">&gt;
+</span>      <span class="o">&lt;</span><span class="nx">p</span><span class="o">&gt;&lt;</span><span class="nx">strong</span><span class="o">&gt;</span><span class="nx">Name</span><span class="o">&lt;</span><span class="sr">/strong&gt;: {props.name}&lt;/</span><span class="nx">p</span><span class="o">&gt;</span>
+      <span class="o">&lt;</span><span class="nx">p</span><span class="o">&gt;&lt;</span><span class="nx">strong</span><span class="o">&gt;</span><span class="nx">User</span> <span class="nx">Id</span><span class="o">&lt;</span><span class="sr">/strong&gt;: {props.userId}&lt;/</span><span class="nx">p</span><span class="o">&gt;</span>
+      <span class="o">&lt;</span><span class="nx">p</span><span class="o">&gt;&lt;</span><span class="nx">strong</span><span class="o">&gt;</span><span class="nx">Roles</span><span class="o">&lt;</span><span class="sr">/strong&gt;: &lt;/</span><span class="nx">p</span><span class="o">&gt;</span>
+      <span class="o">&lt;</span><span class="nx">ul</span><span class="o">&gt;</span>
+        <span class="p">{</span><span class="nx">props</span><span class="p">.</span><span class="nx">roles</span><span class="p">.</span><span class="nx">map</span><span class="p">((</span><span class="nx">role</span><span class="p">,</span> <span class="nx">index</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">(</span><span class="o">&lt;</span><span class="nx">li</span> <span class="nx">key</span><span class="o">=</span><span class="p">{</span><span class="nx">index</span><span class="p">}</span><span class="o">&gt;</span><span class="p">{</span><span class="nx">role</span><span class="p">}</span><span class="o">&lt;</span><span class="sr">/li&gt;</span><span class="se">))</span><span class="err">}
+</span>      <span class="o">&lt;</span><span class="sr">/ul</span><span class="err">&gt;
+</span>      <span class="o">&lt;</span><span class="nx">p</span><span class="o">&gt;&lt;</span><span class="nx">strong</span><span class="o">&gt;</span><span class="nx">Last</span> <span class="nx">login</span><span class="o">&lt;</span><span class="sr">/strong&gt;: &lt;/</span><span class="nx">p</span><span class="o">&gt;</span>
+      <span class="o">&lt;</span><span class="nx">ul</span><span class="o">&gt;</span>
+        <span class="o">&lt;</span><span class="nx">li</span><span class="o">&gt;</span><span class="na">Date</span> <span class="p">:{</span><span class="nx">props</span><span class="p">.</span><span class="nx">lastLogin</span><span class="p">.</span><span class="nx">date</span><span class="p">}</span><span class="o">&lt;</span><span class="sr">/li</span><span class="err">&gt;
+</span>        <span class="o">&lt;</span><span class="nx">li</span><span class="o">&gt;</span><span class="na">Location</span> <span class="p">:{</span><span class="nx">props</span><span class="p">.</span><span class="nx">lastLogin</span><span class="p">.</span><span class="nx">location</span><span class="p">}</span><span class="o">&lt;</span><span class="sr">/li</span><span class="err">&gt;
+</span>        <span class="o">&lt;</span><span class="nx">li</span><span class="o">&gt;</span><span class="na">Device</span><span class="p">:</span> <span class="p">{</span><span class="nx">props</span><span class="p">.</span><span class="nx">lastLogin</span><span class="p">.</span><span class="nx">device</span><span class="p">}</span><span class="o">&lt;</span><span class="sr">/li</span><span class="err">&gt;
+</span>      <span class="o">&lt;</span><span class="sr">/ul</span><span class="err">&gt;
+</span>      <span class="o">&lt;</span><span class="nx">p</span><span class="o">&gt;&lt;</span><span class="nx">strong</span><span class="o">&gt;</span><span class="nx">Status</span><span class="o">&lt;</span><span class="sr">/strong&gt;: {props.isActive </span><span class="se">?</span><span class="sr"> 'Active' : 'Not active'</span><span class="err">}
+</span>      <span class="o">&lt;</span><span class="nx">div</span><span class="o">&gt;&lt;</span><span class="nx">button</span> <span class="nx">onClick</span><span class="o">=</span><span class="p">{</span><span class="nx">props</span><span class="p">.</span><span class="nx">handleDisableClick</span><span class="p">}</span><span class="o">&gt;</span><span class="nx">Disable</span> <span class="nx">User</span><span class="o">&lt;</span><span class="sr">/button&gt;&lt;/</span><span class="nx">div</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="sr">/</span><span class="err">&gt;
+</span>  <span class="p">)</span>
+<span class="p">}</span>
+
+<span class="k">export</span> <span class="k">default</span> <span class="nx">PropsExample</span><span class="p">;</span>
+</code></pre></div></div>
+
+<p>Here we have a button to disable the user and the <code class="language-plaintext highlighter-rouge">handleDisableClick</code> which comes from the props will be called on button click.</p>
+
+<p>Next step would be to pass the <code class="language-plaintext highlighter-rouge">handleDisableClick</code> function as prop to the <code class="language-plaintext highlighter-rouge">PropsExample</code> component.</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="nx">React</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">react</span><span class="dl">'</span><span class="p">;</span>
+<span class="k">import</span> <span class="nx">PropsExample</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">./PropsExample</span><span class="dl">'</span><span class="p">;</span>
+
+<span class="kd">const</span> <span class="nx">App</span> <span class="o">=</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="p">{</span>
+  <span class="kd">const</span> <span class="nx">handleDisableClick</span> <span class="o">=</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="p">{</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="dl">'</span><span class="s1">Some action to disable user.</span><span class="dl">'</span><span class="p">);</span>
+  <span class="p">};</span>
+  <span class="k">return</span> <span class="p">(</span>
+    <span class="o">&lt;</span><span class="nx">div</span><span class="o">&gt;</span>
+      <span class="o">&lt;</span><span class="nx">PropsExample</span> <span class="nx">Name</span><span class="o">=</span><span class="dl">"</span><span class="s2">dsouzaalfred</span><span class="dl">"</span> <span class="nx">userId</span><span class="o">=</span><span class="p">{</span><span class="mi">3</span><span class="p">}</span> <span class="nx">roles</span><span class="o">=</span><span class="p">[</span><span class="dl">"</span><span class="s2">editor</span><span class="dl">"</span><span class="p">,</span> <span class="dl">"</span><span class="s2">admin</span><span class="dl">"</span><span class="p">]</span> <span class="nx">lastLogin</span><span class="o">=</span> <span class="nx">status</span> <span class="nx">handleDisableClick</span><span class="o">=</span><span class="p">{</span><span class="nx">handleDisableClick</span><span class="p">}</span>  <span class="sr">/</span><span class="err">&gt;
+</span>    <span class="o">&lt;</span><span class="sr">/div</span><span class="err">&gt;
+</span>  <span class="p">);</span>
+<span class="p">}</span>
+
+<span class="k">export</span> <span class="k">default</span> <span class="nx">App</span><span class="p">;</span>
+</code></pre></div></div>
+
+<h2 id="components-as-props">Components as props</h2>
+<p>Components can be passed as props to other components. For example we can have a <code class="language-plaintext highlighter-rouge">Card</code> component which will take in three more components and render them.</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="nx">React</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">react</span><span class="dl">'</span><span class="p">;</span>
+
+<span class="kd">const</span> <span class="nx">Card</span> <span class="o">=</span> <span class="p">(</span><span class="nx">props</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+  <span class="k">return</span> <span class="p">(</span>
+    <span class="o">&lt;</span><span class="nx">div</span><span class="o">&gt;</span>
+      <span class="o">&lt;</span><span class="nx">div</span><span class="o">&gt;</span>
+        <span class="p">{</span><span class="nx">props</span><span class="p">.</span><span class="nx">cardHeader</span><span class="p">}</span>
+      <span class="o">&lt;</span><span class="sr">/div</span><span class="err">&gt;
+</span>      <span class="o">&lt;</span><span class="nx">div</span><span class="o">&gt;</span>
+        <span class="p">{</span><span class="nx">props</span><span class="p">.</span><span class="nx">cardBody</span><span class="p">}</span>
+      <span class="o">&lt;</span><span class="sr">/div</span><span class="err">&gt;
+</span>      <span class="o">&lt;</span><span class="nx">div</span><span class="o">&gt;</span>
+        <span class="p">{</span><span class="nx">props</span><span class="p">.</span><span class="nx">cardFooter</span><span class="p">}</span>
+      <span class="o">&lt;</span><span class="sr">/div</span><span class="err">&gt;
+</span>    <span class="o">&lt;</span><span class="sr">/div</span><span class="err">&gt;
+</span>  <span class="p">);</span>
+<span class="p">}</span>
+
+<span class="k">export</span> <span class="k">default</span> <span class="nx">Card</span><span class="p">;</span>
+</code></pre></div></div>
+
+<p>Next we will build the three components required by the <code class="language-plaintext highlighter-rouge">Card</code> component.</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="nx">React</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">react</span><span class="dl">'</span><span class="p">;</span>
+
+<span class="kd">const</span> <span class="nx">Header</span> <span class="o">=</span> <span class="p">(</span><span class="nx">props</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+  <span class="k">return</span> <span class="p">(</span>
+    <span class="o">&lt;</span><span class="nx">h1</span><span class="o">&gt;</span><span class="p">{</span><span class="nx">props</span><span class="p">.</span><span class="nx">title</span><span class="p">}</span><span class="o">&lt;</span><span class="sr">/h1</span><span class="err">&gt;
+</span>  <span class="p">);</span>
+<span class="p">}</span>
+
+<span class="k">export</span> <span class="k">default</span> <span class="nx">Header</span><span class="p">;</span>
+</code></pre></div></div>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="nx">React</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">react</span><span class="dl">'</span><span class="p">;</span>
+
+<span class="kd">const</span> <span class="nx">Content</span> <span class="o">=</span> <span class="p">(</span><span class="nx">props</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+  <span class="k">return</span> <span class="p">(</span>
+    <span class="o">&lt;</span><span class="nx">p</span><span class="o">&gt;</span><span class="p">{</span><span class="nx">props</span><span class="p">.</span><span class="nx">text</span><span class="p">}</span><span class="o">&lt;</span><span class="sr">/p</span><span class="err">&gt;
+</span>  <span class="p">);</span>
+<span class="p">}</span>
+
+<span class="k">export</span> <span class="k">default</span> <span class="nx">Content</span><span class="p">;</span>
+</code></pre></div></div>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="nx">React</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">react</span><span class="dl">'</span><span class="p">;</span>
+
+<span class="kd">const</span> <span class="nx">Footer</span> <span class="o">=</span> <span class="p">(</span><span class="nx">props</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+  <span class="k">return</span> <span class="p">(</span>
+    <span class="o">&lt;</span><span class="nx">button</span> <span class="nx">onClick</span><span class="o">=</span><span class="p">{</span><span class="nx">props</span><span class="p">.</span><span class="nx">handleClick</span><span class="p">}</span><span class="o">&gt;</span><span class="p">{</span><span class="nx">props</span><span class="p">.</span><span class="nx">buttonText</span><span class="p">}</span><span class="o">&lt;</span><span class="nx">button</span><span class="o">&gt;</span>
+  <span class="p">);</span>
+<span class="p">}</span>
+
+<span class="k">export</span> <span class="k">default</span> <span class="nx">Footer</span><span class="p">;</span>
+</code></pre></div></div>
+
+<p>With the three components built, it’s time to see how we pass them to the <code class="language-plaintext highlighter-rouge">Card</code> component.
+Let’s use the <code class="language-plaintext highlighter-rouge">Card</code> component in our <code class="language-plaintext highlighter-rouge">PropsExample</code> component:</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="nx">React</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">react</span><span class="dl">'</span><span class="p">;</span>
+
+<span class="k">import</span> <span class="nx">Card</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">./Card</span><span class="dl">'</span><span class="p">;</span>
+<span class="k">import</span> <span class="nx">Header</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">./Header</span><span class="dl">'</span><span class="p">;</span>
+<span class="k">import</span> <span class="nx">Content</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">./Content</span><span class="dl">'</span><span class="p">;</span>
+<span class="k">import</span> <span class="nx">Footer</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">./Footer</span><span class="dl">'</span><span class="p">;</span>
+
+<span class="kd">const</span> <span class="nx">PropsExample</span> <span class="o">=</span> <span class="p">(</span><span class="nx">props</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+  <span class="k">return</span> <span class="p">(</span>
+    <span class="o">&lt;&gt;</span>
+      <span class="o">&lt;</span><span class="nx">h1</span><span class="o">&gt;</span><span class="nx">User</span> <span class="nx">details</span><span class="o">&lt;</span><span class="sr">/h1</span><span class="err">&gt;
+</span>      <span class="o">&lt;</span><span class="nx">Card</span> <span class="nx">cardHeader</span><span class="o">=</span><span class="p">{</span><span class="o">&lt;</span><span class="nx">Header</span> <span class="nx">title</span><span class="o">=</span><span class="p">{</span><span class="nx">props</span><span class="p">.</span><span class="nx">name</span><span class="p">}</span> <span class="sr">/&gt; } cardBody={&lt;Content text={props.userId} /</span><span class="o">&gt;</span><span class="p">}</span> <span class="nx">cardFooter</span><span class="o">=</span><span class="p">{</span><span class="o">&lt;</span><span class="nx">Footer</span> <span class="nx">handleClick</span><span class="o">=</span><span class="p">{</span><span class="nx">props</span><span class="p">.</span><span class="nx">handleDisableClick</span><span class="p">}</span> <span class="nx">buttonText</span><span class="o">=</span><span class="dl">"</span><span class="s2">Disable User</span><span class="dl">"</span> <span class="o">/&gt;</span><span class="p">}</span>  <span class="sr">/</span><span class="err">&gt;
+</span>      <span class="c1">// &lt;p&gt;&lt;strong&gt;Name&lt;/strong&gt;: {props.name}&lt;/p&gt;</span>
+      <span class="c1">// &lt;p&gt;&lt;strong&gt;User Id&lt;/strong&gt;: {props.userId}&lt;/p&gt;</span>
+      <span class="o">&lt;</span><span class="nx">p</span><span class="o">&gt;&lt;</span><span class="nx">strong</span><span class="o">&gt;</span><span class="nx">Roles</span><span class="o">&lt;</span><span class="sr">/strong&gt;: &lt;/</span><span class="nx">p</span><span class="o">&gt;</span>
+      <span class="o">&lt;</span><span class="nx">ul</span><span class="o">&gt;</span>
+        <span class="p">{</span><span class="nx">props</span><span class="p">.</span><span class="nx">roles</span><span class="p">.</span><span class="nx">map</span><span class="p">((</span><span class="nx">role</span><span class="p">,</span> <span class="nx">index</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">(</span><span class="o">&lt;</span><span class="nx">li</span> <span class="nx">key</span><span class="o">=</span><span class="p">{</span><span class="nx">index</span><span class="p">}</span><span class="o">&gt;</span><span class="p">{</span><span class="nx">role</span><span class="p">}</span><span class="o">&lt;</span><span class="sr">/li&gt;</span><span class="se">))</span><span class="err">}
+</span>      <span class="o">&lt;</span><span class="sr">/ul</span><span class="err">&gt;
+</span>      <span class="o">&lt;</span><span class="nx">p</span><span class="o">&gt;&lt;</span><span class="nx">strong</span><span class="o">&gt;</span><span class="nx">Last</span> <span class="nx">login</span><span class="o">&lt;</span><span class="sr">/strong&gt;: &lt;/</span><span class="nx">p</span><span class="o">&gt;</span>
+      <span class="o">&lt;</span><span class="nx">ul</span><span class="o">&gt;</span>
+        <span class="o">&lt;</span><span class="nx">li</span><span class="o">&gt;</span><span class="na">Date</span> <span class="p">:{</span><span class="nx">props</span><span class="p">.</span><span class="nx">lastLogin</span><span class="p">.</span><span class="nx">date</span><span class="p">}</span><span class="o">&lt;</span><span class="sr">/li</span><span class="err">&gt;
+</span>        <span class="o">&lt;</span><span class="nx">li</span><span class="o">&gt;</span><span class="na">Location</span> <span class="p">:{</span><span class="nx">props</span><span class="p">.</span><span class="nx">lastLogin</span><span class="p">.</span><span class="nx">location</span><span class="p">}</span><span class="o">&lt;</span><span class="sr">/li</span><span class="err">&gt;
+</span>        <span class="o">&lt;</span><span class="nx">li</span><span class="o">&gt;</span><span class="na">Device</span><span class="p">:</span> <span class="p">{</span><span class="nx">props</span><span class="p">.</span><span class="nx">lastLogin</span><span class="p">.</span><span class="nx">device</span><span class="p">}</span><span class="o">&lt;</span><span class="sr">/li</span><span class="err">&gt;
+</span>      <span class="o">&lt;</span><span class="sr">/ul</span><span class="err">&gt;
+</span>      <span class="o">&lt;</span><span class="nx">p</span><span class="o">&gt;&lt;</span><span class="nx">strong</span><span class="o">&gt;</span><span class="nx">Status</span><span class="o">&lt;</span><span class="sr">/strong&gt;: {props.isActive </span><span class="se">?</span><span class="sr"> 'Active' : 'Not active'</span><span class="err">}
+</span>      <span class="c1">// &lt;div&gt;&lt;button onClick={props.handleDisableClick}&gt;Disable User&lt;/button&gt;&lt;/div&gt;</span>
+    <span class="o">&lt;</span><span class="sr">/</span><span class="err">&gt;
+</span>  <span class="p">)</span>
+<span class="p">}</span>
+
+<span class="k">export</span> <span class="k">default</span> <span class="nx">PropsExample</span><span class="p">;</span>
+</code></pre></div></div>
+
+<h2 id="destructuring">Destructuring</h2>
+<p>Instead of writing <code class="language-plaintext highlighter-rouge">props</code> over and over again we can use <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment">Destructuring</a>. Destructuring helps us unpack values inside the props object.</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="nx">React</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">react</span><span class="dl">'</span><span class="p">;</span>
+
+<span class="k">import</span> <span class="nx">Card</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">./Card</span><span class="dl">'</span><span class="p">;</span>
+<span class="k">import</span> <span class="nx">Header</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">./Header</span><span class="dl">'</span><span class="p">;</span>
+<span class="k">import</span> <span class="nx">Content</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">./Content</span><span class="dl">'</span><span class="p">;</span>
+<span class="k">import</span> <span class="nx">Footer</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">./Footer</span><span class="dl">'</span><span class="p">;</span>
+
+<span class="kd">const</span> <span class="nx">PropsExample</span> <span class="o">=</span> <span class="p">({</span><span class="nx">name</span><span class="p">,</span> <span class="nx">userId</span><span class="p">,</span> <span class="nx">handleDisableClick</span><span class="p">,</span> <span class="nx">roles</span><span class="p">,</span> <span class="nx">lastLogin</span><span class="p">,</span> <span class="nx">isActive</span><span class="p">})</span> <span class="o">=&gt;</span> <span class="p">{</span>
+  <span class="k">return</span> <span class="p">(</span>
+    <span class="o">&lt;&gt;</span>
+      <span class="o">&lt;</span><span class="nx">h1</span><span class="o">&gt;</span><span class="nx">User</span> <span class="nx">details</span><span class="o">&lt;</span><span class="sr">/h1</span><span class="err">&gt;
+</span>      <span class="o">&lt;</span><span class="nx">Card</span> <span class="nx">cardHeader</span><span class="o">=</span><span class="p">{</span><span class="o">&lt;</span><span class="nx">Header</span> <span class="nx">title</span><span class="o">=</span><span class="p">{</span><span class="nx">name</span><span class="p">}</span> <span class="sr">/&gt; } cardBody={&lt;Content text={userId} /</span><span class="o">&gt;</span><span class="p">}</span> <span class="nx">cardFooter</span><span class="o">=</span><span class="p">{</span><span class="o">&lt;</span><span class="nx">Footer</span> <span class="nx">handleClick</span><span class="o">=</span><span class="p">{</span><span class="nx">handleDisableClick</span><span class="p">}</span> <span class="nx">buttonText</span><span class="o">=</span><span class="dl">"</span><span class="s2">Disable User</span><span class="dl">"</span> <span class="o">/&gt;</span><span class="p">}</span>  <span class="sr">/</span><span class="err">&gt;
+</span>      <span class="c1">// &lt;p&gt;&lt;strong&gt;Name&lt;/strong&gt;: {props.name}&lt;/p&gt;</span>
+      <span class="c1">// &lt;p&gt;&lt;strong&gt;User Id&lt;/strong&gt;: {props.userId}&lt;/p&gt;</span>
+      <span class="o">&lt;</span><span class="nx">p</span><span class="o">&gt;&lt;</span><span class="nx">strong</span><span class="o">&gt;</span><span class="nx">Roles</span><span class="o">&lt;</span><span class="sr">/strong&gt;: &lt;/</span><span class="nx">p</span><span class="o">&gt;</span>
+      <span class="o">&lt;</span><span class="nx">ul</span><span class="o">&gt;</span>
+        <span class="p">{</span><span class="nx">roles</span><span class="p">.</span><span class="nx">map</span><span class="p">((</span><span class="nx">role</span><span class="p">,</span> <span class="nx">index</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">(</span><span class="o">&lt;</span><span class="nx">li</span> <span class="nx">key</span><span class="o">=</span><span class="p">{</span><span class="nx">index</span><span class="p">}</span><span class="o">&gt;</span><span class="p">{</span><span class="nx">role</span><span class="p">}</span><span class="o">&lt;</span><span class="sr">/li&gt;</span><span class="se">))</span><span class="err">}
+</span>      <span class="o">&lt;</span><span class="sr">/ul</span><span class="err">&gt;
+</span>      <span class="o">&lt;</span><span class="nx">p</span><span class="o">&gt;&lt;</span><span class="nx">strong</span><span class="o">&gt;</span><span class="nx">Last</span> <span class="nx">login</span><span class="o">&lt;</span><span class="sr">/strong&gt;: &lt;/</span><span class="nx">p</span><span class="o">&gt;</span>
+      <span class="o">&lt;</span><span class="nx">ul</span><span class="o">&gt;</span>
+        <span class="o">&lt;</span><span class="nx">li</span><span class="o">&gt;</span><span class="na">Date</span> <span class="p">:{</span><span class="nx">lastLogin</span><span class="p">.</span><span class="nx">date</span><span class="p">}</span><span class="o">&lt;</span><span class="sr">/li</span><span class="err">&gt;
+</span>        <span class="o">&lt;</span><span class="nx">li</span><span class="o">&gt;</span><span class="na">Location</span> <span class="p">:{</span><span class="nx">lastLogin</span><span class="p">.</span><span class="nx">location</span><span class="p">}</span><span class="o">&lt;</span><span class="sr">/li</span><span class="err">&gt;
+</span>        <span class="o">&lt;</span><span class="nx">li</span><span class="o">&gt;</span><span class="na">Device</span><span class="p">:</span> <span class="p">{</span><span class="nx">lastLogin</span><span class="p">.</span><span class="nx">device</span><span class="p">}</span><span class="o">&lt;</span><span class="sr">/li</span><span class="err">&gt;
+</span>      <span class="o">&lt;</span><span class="sr">/ul</span><span class="err">&gt;
+</span>      <span class="o">&lt;</span><span class="nx">p</span><span class="o">&gt;&lt;</span><span class="nx">strong</span><span class="o">&gt;</span><span class="nx">Status</span><span class="o">&lt;</span><span class="sr">/strong&gt;: {isActive </span><span class="se">?</span><span class="sr"> 'Active' : 'Not active'</span><span class="err">}
+</span>      <span class="c1">// &lt;div&gt;&lt;button onClick={props.handleDisableClick}&gt;Disable User&lt;/button&gt;&lt;/div&gt;</span>
+    <span class="o">&lt;</span><span class="sr">/</span><span class="err">&gt;
+</span>  <span class="p">)</span>
+<span class="p">}</span>
+
+<span class="k">export</span> <span class="k">default</span> <span class="nx">PropsExample</span><span class="p">;</span>
+</code></pre></div></div>
+
+<p>As you can see, instead of using <code class="language-plaintext highlighter-rouge">props</code> all over the component we can Descruture props and use the prop names directly. What we are essitially doing is this:</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="p">{</span><span class="nx">name</span><span class="p">,</span> <span class="nx">userId</span><span class="p">,</span> <span class="nx">handleDisableClick</span><span class="p">,</span> <span class="nx">roles</span><span class="p">,</span> <span class="nx">lastLogin</span><span class="p">,</span> <span class="nx">isActive</span><span class="p">}</span> <span class="o">=</span> <span class="nx">props</span><span class="p">;</span>
+</code></pre></div></div>
+
+<h2 id="type-checking">Type checking</h2>
+<p>It is always a good idea to validate that the props a component gets are of the correct type. <a href="https://www.npmjs.com/package/prop-types"><code class="language-plaintext highlighter-rouge">prop-types</code></a> makes this very easy for us.
+First make sure you install the <code class="language-plaintext highlighter-rouge">prop-types</code> package in your project. Use the following command to install <code class="language-plaintext highlighter-rouge">npm i prop-types</code>, you might need to restart the dev server.</p>
+
+<p>Let’s add some type checking to the <code class="language-plaintext highlighter-rouge">PropsExample</code> component.</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="nx">React</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">react</span><span class="dl">'</span><span class="p">;</span>
+<span class="k">import</span> <span class="nx">PropTypes</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">prop-types</span><span class="dl">'</span><span class="p">;</span>
+
+<span class="k">import</span> <span class="nx">Card</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">./Card</span><span class="dl">'</span><span class="p">;</span>
+<span class="k">import</span> <span class="nx">Header</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">./Header</span><span class="dl">'</span><span class="p">;</span>
+<span class="k">import</span> <span class="nx">Content</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">./Content</span><span class="dl">'</span><span class="p">;</span>
+<span class="k">import</span> <span class="nx">Footer</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">./Footer</span><span class="dl">'</span><span class="p">;</span>
+
+<span class="kd">const</span> <span class="nx">PropsExample</span> <span class="o">=</span> <span class="p">({</span><span class="nx">name</span><span class="p">,</span> <span class="nx">userId</span><span class="p">,</span> <span class="nx">handleDisableClick</span><span class="p">,</span> <span class="nx">roles</span><span class="p">,</span> <span class="nx">lastLogin</span><span class="p">,</span> <span class="nx">isActive</span><span class="p">})</span> <span class="o">=&gt;</span> <span class="p">{</span>
+  <span class="k">return</span> <span class="p">(</span>
+    <span class="o">&lt;&gt;</span>
+      <span class="o">&lt;</span><span class="nx">h1</span><span class="o">&gt;</span><span class="nx">User</span> <span class="nx">details</span><span class="o">&lt;</span><span class="sr">/h1</span><span class="err">&gt;
+</span>      <span class="o">&lt;</span><span class="nx">Card</span> <span class="nx">cardHeader</span><span class="o">=</span><span class="p">{</span><span class="o">&lt;</span><span class="nx">Header</span> <span class="nx">title</span><span class="o">=</span><span class="p">{</span><span class="nx">name</span><span class="p">}</span> <span class="sr">/&gt; } cardBody={&lt;Content text={userId} /</span><span class="o">&gt;</span><span class="p">}</span> <span class="nx">cardFooter</span><span class="o">=</span><span class="p">{</span><span class="o">&lt;</span><span class="nx">Footer</span> <span class="nx">handleClick</span><span class="o">=</span><span class="p">{</span><span class="nx">handleDisableClick</span><span class="p">}</span> <span class="nx">buttonText</span><span class="o">=</span><span class="dl">"</span><span class="s2">Disable User</span><span class="dl">"</span> <span class="o">/&gt;</span><span class="p">}</span>  <span class="sr">/</span><span class="err">&gt;
+</span>      <span class="o">&lt;</span><span class="nx">p</span><span class="o">&gt;&lt;</span><span class="nx">strong</span><span class="o">&gt;</span><span class="nx">Roles</span><span class="o">&lt;</span><span class="sr">/strong&gt;: &lt;/</span><span class="nx">p</span><span class="o">&gt;</span>
+      <span class="o">&lt;</span><span class="nx">ul</span><span class="o">&gt;</span>
+        <span class="p">{</span><span class="nx">roles</span><span class="p">.</span><span class="nx">map</span><span class="p">((</span><span class="nx">role</span><span class="p">,</span> <span class="nx">index</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">(</span><span class="o">&lt;</span><span class="nx">li</span> <span class="nx">key</span><span class="o">=</span><span class="p">{</span><span class="nx">index</span><span class="p">}</span><span class="o">&gt;</span><span class="p">{</span><span class="nx">role</span><span class="p">}</span><span class="o">&lt;</span><span class="sr">/li&gt;</span><span class="se">))</span><span class="err">}
+</span>      <span class="o">&lt;</span><span class="sr">/ul</span><span class="err">&gt;
+</span>      <span class="o">&lt;</span><span class="nx">p</span><span class="o">&gt;&lt;</span><span class="nx">strong</span><span class="o">&gt;</span><span class="nx">Last</span> <span class="nx">login</span><span class="o">&lt;</span><span class="sr">/strong&gt;: &lt;/</span><span class="nx">p</span><span class="o">&gt;</span>
+      <span class="o">&lt;</span><span class="nx">ul</span><span class="o">&gt;</span>
+        <span class="o">&lt;</span><span class="nx">li</span><span class="o">&gt;</span><span class="na">Date</span> <span class="p">:{</span><span class="nx">lastLogin</span><span class="p">.</span><span class="nx">date</span><span class="p">}</span><span class="o">&lt;</span><span class="sr">/li</span><span class="err">&gt;
+</span>        <span class="o">&lt;</span><span class="nx">li</span><span class="o">&gt;</span><span class="na">Location</span> <span class="p">:{</span><span class="nx">lastLogin</span><span class="p">.</span><span class="nx">location</span><span class="p">}</span><span class="o">&lt;</span><span class="sr">/li</span><span class="err">&gt;
+</span>        <span class="o">&lt;</span><span class="nx">li</span><span class="o">&gt;</span><span class="na">Device</span><span class="p">:</span> <span class="p">{</span><span class="nx">lastLogin</span><span class="p">.</span><span class="nx">device</span><span class="p">}</span><span class="o">&lt;</span><span class="sr">/li</span><span class="err">&gt;
+</span>      <span class="o">&lt;</span><span class="sr">/ul</span><span class="err">&gt;
+</span>      <span class="o">&lt;</span><span class="nx">p</span><span class="o">&gt;&lt;</span><span class="nx">strong</span><span class="o">&gt;</span><span class="nx">Status</span><span class="o">&lt;</span><span class="sr">/strong&gt;: {isActive </span><span class="se">?</span><span class="sr"> 'Active' : 'Not active'</span><span class="err">}
+</span>    <span class="o">&lt;</span><span class="sr">/</span><span class="err">&gt;
+</span>  <span class="p">)</span>
+<span class="p">}</span>
+
+<span class="c1">// add type checks here</span>
+<span class="nx">PropsExample</span><span class="p">.</span><span class="nx">propTypes</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="na">name</span><span class="p">:</span> <span class="nx">PropTypes</span><span class="p">.</span><span class="nx">string</span><span class="p">,</span>
+  <span class="na">userId</span><span class="p">:</span> <span class="nx">PropTypes</span><span class="p">.</span><span class="nx">number</span><span class="p">,</span>
+  <span class="na">handleDisableClick</span><span class="p">:</span> <span class="nx">PropTypes</span><span class="p">.</span><span class="nx">func</span><span class="p">,</span>
+  <span class="na">roles</span><span class="p">:</span> <span class="nx">PropTypes</span><span class="p">.</span><span class="nx">array</span><span class="p">,</span>
+  <span class="na">lastLogin</span><span class="p">:</span> <span class="nx">PropTypes</span><span class="p">.</span><span class="nx">object</span><span class="p">,</span>
+  <span class="na">isActive</span><span class="p">:</span> <span class="nx">PropTypes</span><span class="p">.</span><span class="nx">bool</span>
+<span class="p">};</span>
+
+<span class="k">export</span> <span class="k">default</span> <span class="nx">PropsExample</span><span class="p">;</span>
+</code></pre></div></div>
+
+<p>We can do the same for our <code class="language-plaintext highlighter-rouge">Card</code> component.</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="nx">React</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">react</span><span class="dl">'</span><span class="p">;</span>
+<span class="k">import</span> <span class="nx">PropTypes</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">prop-types</span><span class="dl">'</span><span class="p">;</span>
+
+<span class="kd">const</span> <span class="nx">Card</span> <span class="o">=</span> <span class="p">(</span><span class="nx">props</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+  <span class="k">return</span> <span class="p">(</span>
+    <span class="o">&lt;</span><span class="nx">div</span><span class="o">&gt;</span>
+      <span class="o">&lt;</span><span class="nx">div</span><span class="o">&gt;</span>
+        <span class="p">{</span><span class="nx">props</span><span class="p">.</span><span class="nx">cardHeader</span><span class="p">}</span>
+      <span class="o">&lt;</span><span class="sr">/div</span><span class="err">&gt;
+</span>      <span class="o">&lt;</span><span class="nx">div</span><span class="o">&gt;</span>
+        <span class="p">{</span><span class="nx">props</span><span class="p">.</span><span class="nx">cardHeader</span><span class="p">}</span>
+      <span class="o">&lt;</span><span class="sr">/div</span><span class="err">&gt;
+</span>      <span class="o">&lt;</span><span class="nx">div</span><span class="o">&gt;</span>
+        <span class="p">{</span><span class="nx">props</span><span class="p">.</span><span class="nx">cardFooter</span><span class="p">}</span>
+      <span class="o">&lt;</span><span class="sr">/div</span><span class="err">&gt;
+</span>    <span class="o">&lt;</span><span class="sr">/div</span><span class="err">&gt;
+</span>  <span class="p">);</span>
+<span class="p">}</span>
+
+<span class="c1">// add type checks here</span>
+<span class="nx">Card</span><span class="p">.</span><span class="nx">propTypes</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="na">cardHeader</span><span class="p">:</span> <span class="nx">PropTypes</span><span class="p">.</span><span class="nx">element</span><span class="p">,</span>
+  <span class="na">cardHeader</span><span class="p">:</span> <span class="nx">PropTypes</span><span class="p">.</span><span class="nx">element</span><span class="p">,</span>
+  <span class="na">cardFooter</span><span class="p">:</span> <span class="nx">PropTypes</span><span class="p">.</span><span class="nx">element</span><span class="p">,</span>
+<span class="p">};</span>
+
+<span class="k">export</span> <span class="k">default</span> <span class="nx">Card</span><span class="p">;</span>
+</code></pre></div></div>
+
+<p>Additionally we can mark some props as required, using <code class="language-plaintext highlighter-rouge">isRequired</code>.</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="nx">React</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">react</span><span class="dl">'</span><span class="p">;</span>
+<span class="k">import</span> <span class="nx">PropTypes</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">prop-types</span><span class="dl">'</span><span class="p">;</span>
+
+<span class="kd">const</span> <span class="nx">Footer</span> <span class="o">=</span> <span class="p">(</span><span class="nx">props</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+  <span class="k">return</span> <span class="p">(</span>
+    <span class="o">&lt;</span><span class="nx">button</span> <span class="nx">onClick</span><span class="o">=</span><span class="p">{</span><span class="nx">props</span><span class="p">.</span><span class="nx">handleClick</span><span class="p">}</span><span class="o">&gt;</span><span class="p">{</span><span class="nx">props</span><span class="p">.</span><span class="nx">buttonText</span><span class="p">}</span><span class="o">&lt;</span><span class="nx">button</span><span class="o">&gt;</span>
+  <span class="p">);</span>
+<span class="p">}</span>
+
+<span class="c1">// add type checks here</span>
+<span class="nx">Footer</span><span class="p">.</span><span class="nx">propTypes</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="na">handleClick</span><span class="p">:</span> <span class="nx">PropTypes</span><span class="p">.</span><span class="nx">func</span><span class="p">.</span><span class="nx">isRequired</span><span class="p">,</span>
+  <span class="na">buttonText</span><span class="p">:</span> <span class="nx">PropTypes</span><span class="p">.</span><span class="nx">string</span><span class="p">.</span><span class="nx">isRequired</span><span class="p">,</span>
+<span class="p">};</span>
+
+<span class="k">export</span> <span class="k">default</span> <span class="nx">Footer</span><span class="p">;</span>
+</code></pre></div></div>
+
+<p>Using <code class="language-plaintext highlighter-rouge">prop-types</code> does not only help us with type checking but it’s also a type of documentation for our components.</p>
+
+<p>That’s all we got time for this time. And as always you can find the code on <a href="https://github.com/dsouzaalfred/blogdemos/tree/master/getting-started-with-react">GitHub</a></p>
 
         </div>
 
@@ -216,9 +505,6 @@ Couple of thinks to note about Props:</p>
 </div>
 
         
-
-        
-          
 
         
 
