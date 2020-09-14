@@ -218,7 +218,7 @@ export default App;
 
 We have defined the `handleDisableClick` function, it's a simple function that logs to the console. We pass this function as a prop to `PropsExample`.
 
-## Components as props
+## Component as props
 Components can also be passed as props to other components. For example, we can have a `Card` component which will take in three more components and render them.
 
 ```javascript
@@ -337,8 +337,8 @@ export default PropsExample;
 
 The `Header` & the `Footer` components can be assigned props like any other component. The `Content` component is like a wrapper around its content. And the content should have only one parent component, that is the reason we have wrapped the content in a [react fragment](https://reactjs.org/docs/fragments.html).
 
-## Destructuring
-Instead of writing `props` repeatedly we can use [Destructuring](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment). Destructuring helps us unpack values that are inside the props object.
+## Destructuring props
+Instead of writing `props` repeatedly, we can use [Destructuring](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment). Destructuring helps us unpack values that are inside the props object.
 
 ```javascript
 import React from 'react';
@@ -405,7 +405,7 @@ As you can see, instead of using `props` all over the component we can destructu
 const { name, userId, handleDisableClick, roles, lastLogin, isActive } = props;
 ```
 
-## Type checking
+## Type checking props
 It is always a good idea to validate that the props a component gets are of the correct type. [`prop-types`](https://www.npmjs.com/package/prop-types) makes this very easy for us.
 First make sure you install the `prop-types` package in your project. Use the following command to install `npm i prop-types`, you might need to restart the dev server.
 
@@ -540,4 +540,4 @@ In the above `Footer` component we have defined the types of both the props and 
 
 Using `prop-types` does not only help us with type checking but it's also a type of documentation for our components.
 
-That's all we got time for this time. And as always you can find the code on [GitHub](https://github.com/dsouzaalfred/blogdemos/tree/master/getting-started-with-react)
+That's all we got time for this time. And as always you can find the code on [GitHub](https://github.com/dsouzaalfred/blogdemos/tree/master/react-props)
