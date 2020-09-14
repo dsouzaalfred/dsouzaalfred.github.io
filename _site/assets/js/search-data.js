@@ -10,7 +10,7 @@ var store = [{
         "url": "http://localhost:4000/blog/react/jsx-what-is-that/"
       },{
         "title": "React - Props",
-        "excerpt":"What are props? Props or properties is data passed to a component. A parent component will pass data to a child component as a prop.Couple of thinks to note about Props: props is keyword is react and cannot be used as a variable name. props are immutable i.e. they are...","categories": ["blog","react"],
+        "excerpt":"What are props? Props or properties are data passed to a component. A parent component will pass data to a child component as a prop.There are a couple of things to note about Props: props is a keyword in React and cannot be used as a variable name. props are...","categories": ["blog","react"],
         "tags": [],
         "url": "http://localhost:4000/blog/react/react-props/"
       }]
