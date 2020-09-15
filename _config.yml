@@ -1,14 +1,39 @@
 remote_theme: 'mmistakes/so-simple-theme@3.2.0'
+
 title: "Alfred D'Souza"
 tagline: "There is always something new to learn!"
 description: "There is always something new to learn!"
 url: "https://dsouzaalf.red/"
+
 skin: "/assets/css/skins/default.css"
+
 locale: en-GB
+
 permalink: /:categories/:title/
+
 read_time: true
 words_per_minute: 200
+
+# Liquid
+liquid:
+  error_mode: strict
+
+# Build settings
 markdown: kramdown
+feed:
+  path: atom.xml
+
+# Taxonomy pages
+category_archive_path: "/categories/#"
+tag_archive_path: "/tags/#"
+
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap
+  - jekyll-feed
+  - jekyll-paginate
+
+# Footer Links
 footer_links:
   - title: Twitter
     url: https://twitter.com/dsouzaalfred
@@ -19,6 +44,7 @@ footer_links:
   - title: LinkedIn
     url: https://www.linkedin.com/in/dsouzaalfred/
     icon: fab fa-linkedin
+
 # Site Author
 author:
   name: Alfred D'Souza
