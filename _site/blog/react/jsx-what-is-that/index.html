@@ -120,13 +120,13 @@
 
       <div class="page-content">
         <div class="e-content">
-          <p>In the <a href="/blog/react/getting-started-with-react/">last post</a> I briefly mentioned JSX. In this post we will have a detailed view of JSX.
+          <p>In the <a href="/blog/react/getting-started-with-react/" title="Getting started with React">last post</a> I briefly mentioned JSX. In this post we will have a detailed view of JSX.
 So what is JXS? JXS is like a template language or a form of markup like HTML that gets complied to JavaScript code by react. React components are all JavaScript, hence we need something that will help us with the markup for our UI that is where JSX comes in. JSX looks like HTML but is incredibly powerful since it is complied down to JavaScript.</p>
 
-<p>You can write <a href="https://reactjs.org/docs/react-without-jsx.html">React without using JSX</a> but that becomes complicated very fast and is not very intuitive.</p>
+<p>You can write <a href="https://reactjs.org/docs/react-without-jsx.html" title="ReactJS page on JSX">React without using JSX</a> but that becomes complicated very fast and is not very intuitive.</p>
 
 <h2 id="getting-started">Getting started</h2>
-<p>A very simple example will be <code class="language-plaintext highlighter-rouge">FirstComponent</code> that we created in the <a href="/blog/react/getting-started-with-react/#our-first-component">last post</a>.</p>
+<p>A very simple example will be <code class="language-plaintext highlighter-rouge">FirstComponent</code> that we created in the <a href="/blog/react/getting-started-with-react/#our-first-component" title="First component">last post</a>.</p>
 
 <div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="nx">React</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">react</span><span class="dl">'</span><span class="p">;</span>
 
@@ -149,7 +149,7 @@ So what is JXS? JXS is like a template language or a form of markup like HTML th
 <span class="k">export</span> <span class="k">default</span> <span class="nx">MathAdd</span><span class="p">;</span>
 </code></pre></div></div>
 
-<p>Or use JavaScript built-in functions like <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/random">Math.random()</a> to display random number.</p>
+<p>Or use JavaScript built-in functions like <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/random" title="MDN - Math.random">Math.random()</a> to display random number.</p>
 <div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="nx">React</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">react</span><span class="dl">'</span><span class="p">;</span>
 
 <span class="kd">const</span> <span class="nx">MathRandom</span> <span class="o">=</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="p">{</span>
@@ -160,7 +160,7 @@ So what is JXS? JXS is like a template language or a form of markup like HTML th
 </code></pre></div></div>
 
 <h2 id="strings">Strings</h2>
-<p>We can use JavaScript <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals">string literals</a> to display content in our component.</p>
+<p>We can use JavaScript <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals" title="MDN - template literals">template literals</a> to display content in our component.</p>
 <div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="nx">React</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">react</span><span class="dl">'</span><span class="p">;</span>
 
 <span class="kd">const</span> <span class="nx">StringLiterals</span> <span class="o">=</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="p">{</span>
@@ -179,7 +179,7 @@ So what is JXS? JXS is like a template language or a form of markup like HTML th
 
 <span class="k">export</span> <span class="k">default</span> <span class="nx">StringLiteralsTwo</span><span class="p">;</span>
 </code></pre></div></div>
-<p>Or use a JavaScript string methods, for example <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/toUpperCase"><code class="language-plaintext highlighter-rouge">toUpperCase()</code></a>.</p>
+<p>Or use a JavaScript string methods, for example <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/toUpperCase" title="MDN - String.toUpperCase"><code class="language-plaintext highlighter-rouge">toUpperCase()</code></a>.</p>
 <div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="nx">React</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">react</span><span class="dl">'</span><span class="p">;</span>
 
 <span class="kd">const</span> <span class="nx">StringLiteralsThree</span> <span class="o">=</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="p">{</span>
@@ -202,7 +202,7 @@ So what is JXS? JXS is like a template language or a form of markup like HTML th
 
 <span class="k">export</span> <span class="k">default</span> <span class="nx">Conditions</span><span class="p">;</span>
 </code></pre></div></div>
-<p>In the above example we are checking what <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/getHours">hour</a> it is and displaying a message accordingly, using a <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Conditional_Operator">ternary operator</a>.</p>
+<p>In the above example we are checking what <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/getHours" title="MDN - Date.getHours">hour</a> it is and displaying a message accordingly, using a <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Conditional_Operator" title="MDN - Conditional operator">ternary operator</a>.</p>
 
 <h2 id="attributes">Attributes</h2>
 <p>We can also specify tag attributes.</p>
@@ -251,7 +251,7 @@ So what is JXS? JXS is like a template language or a form of markup like HTML th
 <span class="k">export</span> <span class="k">default</span> <span class="nx">ParentNode</span><span class="p">;</span>
 </code></pre></div></div>
 
-<p>But sometimes we don’t want an addition <code class="language-plaintext highlighter-rouge">div</code> or any other tag as a wrapper, in such cases we can use <a href="https://reactjs.org/docs/fragments.html">react fragments</a>. Fragments are special react syntax(<code class="language-plaintext highlighter-rouge">&lt;&gt;&lt;/&gt;</code>) which will wrap the content and when the component is rendered only the content is shown and not the fragments.</p>
+<p>But sometimes we don’t want an addition <code class="language-plaintext highlighter-rouge">div</code> or any other tag as a wrapper, in such cases we can use <a href="https://reactjs.org/docs/fragments.html" title="ReactJS - Fragments">react fragments</a>. Fragments are special react syntax(<code class="language-plaintext highlighter-rouge">&lt;&gt;&lt;/&gt;</code>) which will wrap the content and when the component is rendered only the content is shown and not the fragments.</p>
 <div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="nx">React</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">react</span><span class="dl">'</span><span class="p">;</span>
 
 <span class="kd">const</span> <span class="nx">ParentNodeTwo</span> <span class="o">=</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="p">{</span>
@@ -289,7 +289,7 @@ So what is JXS? JXS is like a template language or a form of markup like HTML th
 </code></pre></div></div>
 
 <h2 id="loops">Loops</h2>
-<p>The last thing we will cover is Loops. A lot of times we have display a list of something on the frontend and most of the times the data for the list will come from a service like an API or a JSON file, etc. Again, since we are using JavaScript we can take advantage of JavaScript array methods like <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map"><code class="language-plaintext highlighter-rouge">map()</code></a> or <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter"><code class="language-plaintext highlighter-rouge">filter()</code></a>.</p>
+<p>The last thing we will cover is Loops. A lot of times we have display a list of something on the frontend and most of the times the data for the list will come from a service like an API or a JSON file, etc. Again, since we are using JavaScript we can take advantage of JavaScript array methods like <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map" title="MDN - Array.map"><code class="language-plaintext highlighter-rouge">map()</code></a> or <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter" title="MDN - Array.filter"><code class="language-plaintext highlighter-rouge">filter()</code></a>.</p>
 
 <h3 id="jsx-array-map">map()</h3>
 <p>We can use <code class="language-plaintext highlighter-rouge">map()</code> when you want to display every element in an array.</p>
@@ -319,7 +319,7 @@ So what is JXS? JXS is like a template language or a form of markup like HTML th
   <li>We have a variable <code class="language-plaintext highlighter-rouge">data</code> that is an array of object, each object has a <code class="language-plaintext highlighter-rouge">id</code> and a <code class="language-plaintext highlighter-rouge">label</code>.</li>
   <li>We loop over <code class="language-plaintext highlighter-rouge">data</code> using the <code class="language-plaintext highlighter-rouge">map()</code> method.</li>
   <li>Each object is referred to as <code class="language-plaintext highlighter-rouge">item</code>, you can call it anything you want as it’s just a variable.</li>
-  <li>For each item we are returning an <code class="language-plaintext highlighter-rouge">li</code>. Note that there is no return statement since we are using <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions">arrow function</a>.</li>
+  <li>For each item we are returning an <code class="language-plaintext highlighter-rouge">li</code>. Note that there is no return statement since we are using <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions" title="MDN - Arrow functions">arrow function</a>.</li>
   <li>Each tag/node that we return should have a unique <code class="language-plaintext highlighter-rouge">key</code>, we are using the <code class="language-plaintext highlighter-rouge">id</code> as key. We can use <code class="language-plaintext highlighter-rouge">index</code> as the key, while it works most of the time but you can run into bugs specially if you allow addition and deletion to you list.</li>
 </ul>
 
@@ -351,7 +351,7 @@ So what is JXS? JXS is like a template language or a form of markup like HTML th
 
 <p>Well that’s a lot for one post but I hope it helps you understand how to use JSX. In the next post we will cover props.</p>
 
-<p>You can find the code on <a href="https://github.com/dsouzaalfred/blogdemos/tree/master/jsx-what-is-that">GitHub</a></p>
+<p>You can find the code on <a href="https://github.com/dsouzaalfred/blogdemos/tree/master/jsx-what-is-that" title="Github repo link">GitHub</a></p>
 
         </div>
 

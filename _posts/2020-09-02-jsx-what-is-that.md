@@ -12,13 +12,13 @@ image:
   caption: "JSX - What is that?"
 ---
 
-In the [last post](/blog/react/getting-started-with-react/) I briefly mentioned JSX. In this post we will have a detailed view of JSX.
+In the [last post](/blog/react/getting-started-with-react/ 'Getting started with React') I briefly mentioned JSX. In this post we will have a detailed view of JSX.
 So what is JXS? JXS is like a template language or a form of markup like HTML that gets complied to JavaScript code by react. React components are all JavaScript, hence we need something that will help us with the markup for our UI that is where JSX comes in. JSX looks like HTML but is incredibly powerful since it is complied down to JavaScript.
 
-You can write [React without using JSX](https://reactjs.org/docs/react-without-jsx.html) but that becomes complicated very fast and is not very intuitive.
+You can write [React without using JSX](https://reactjs.org/docs/react-without-jsx.html 'ReactJS page on JSX') but that becomes complicated very fast and is not very intuitive.
 
 ## Getting started
-A very simple example will be `FirstComponent` that we created in the [last post](/blog/react/getting-started-with-react/#our-first-component).
+A very simple example will be `FirstComponent` that we created in the [last post](/blog/react/getting-started-with-react/#our-first-component 'First component').
 
 ```javascript
 import React from 'react';
@@ -43,7 +43,7 @@ const MathAdd = () => {
 export default MathAdd;
 ```
 
-Or use JavaScript built-in functions like [Math.random()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/random) to display random number.
+Or use JavaScript built-in functions like [Math.random()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/random 'MDN - Math.random') to display random number.
 ```javascript
 import React from 'react';
 
@@ -55,7 +55,7 @@ export default MathRandom;
 ```
 
 ## Strings
-We can use JavaScript [string literals](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals) to display content in our component.
+We can use JavaScript [template literals](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals 'MDN - template literals') to display content in our component.
 ```javascript
 import React from 'react';
 
@@ -76,7 +76,7 @@ const StringLiteralsTwo = () => {
 
 export default StringLiteralsTwo;
 ```
-Or use a JavaScript string methods, for example [`toUpperCase()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/toUpperCase).
+Or use a JavaScript string methods, for example [`toUpperCase()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/toUpperCase 'MDN - String.toUpperCase').
 ```javascript
 import React from 'react';
 
@@ -101,7 +101,7 @@ const Conditions = () => {
 
 export default Conditions;
 ```
-In the above example we are checking what [hour](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/getHours) it is and displaying a message accordingly, using a [ternary operator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Conditional_Operator).
+In the above example we are checking what [hour](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/getHours 'MDN - Date.getHours') it is and displaying a message accordingly, using a [ternary operator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Conditional_Operator 'MDN - Conditional operator').
 
 ## Attributes
 We can also specify tag attributes.
@@ -153,7 +153,7 @@ const ParentNode = () => {
 export default ParentNode;
 ```
 
-But sometimes we don't want an addition `div` or any other tag as a wrapper, in such cases we can use [react fragments](https://reactjs.org/docs/fragments.html). Fragments are special react syntax(`<></>`) which will wrap the content and when the component is rendered only the content is shown and not the fragments.
+But sometimes we don't want an addition `div` or any other tag as a wrapper, in such cases we can use [react fragments](https://reactjs.org/docs/fragments.html 'ReactJS - Fragments'). Fragments are special react syntax(`<></>`) which will wrap the content and when the component is rendered only the content is shown and not the fragments.
 ```javascript
 import React from 'react';
 
@@ -193,7 +193,7 @@ export default ParentNodeThree;
 ```
 
 ## Loops
-The last thing we will cover is Loops. A lot of times we have display a list of something on the frontend and most of the times the data for the list will come from a service like an API or a JSON file, etc. Again, since we are using JavaScript we can take advantage of JavaScript array methods like [`map()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map) or [`filter()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter).
+The last thing we will cover is Loops. A lot of times we have display a list of something on the frontend and most of the times the data for the list will come from a service like an API or a JSON file, etc. Again, since we are using JavaScript we can take advantage of JavaScript array methods like [`map()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map 'MDN - Array.map') or [`filter()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter 'MDN - Array.filter').
 
 ### map()   {#jsx-array-map}
 We can use `map()` when you want to display every element in an array.
@@ -223,7 +223,7 @@ Our component will display an un-order list. There is a lot going on in our comp
 - We have a variable `data` that is an array of object, each object has a `id` and a `label`.
 - We loop over `data` using the `map()` method.
 - Each object is referred to as `item`, you can call it anything you want as it's just a variable.
-- For each item we are returning an `li`. Note that there is no return statement since we are using [arrow function](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions).
+- For each item we are returning an `li`. Note that there is no return statement since we are using [arrow function](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions 'MDN - Arrow functions').
 - Each tag/node that we return should have a unique `key`, we are using the `id` as key. We can use `index` as the key, while it works most of the time but you can run into bugs specially if you allow addition and deletion to you list.
 
 In the same way we can use the `filter()` method too.
@@ -255,4 +255,4 @@ In the above example, we only want to print labels of values whose id's are divi
 
 Well that's a lot for one post but I hope it helps you understand how to use JSX. In the next post we will cover props.
 
-You can find the code on [GitHub](https://github.com/dsouzaalfred/blogdemos/tree/master/jsx-what-is-that)
+You can find the code on [GitHub](https://github.com/dsouzaalfred/blogdemos/tree/master/jsx-what-is-that 'Github repo link')

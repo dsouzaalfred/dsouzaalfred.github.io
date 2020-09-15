@@ -111,7 +111,7 @@ We have updated `PropsExample` component and added a few more props.
 - `isActive` as a bollean
 
 Thinks to note:
-- `roles` is an array, we can `map` over it and display it's values, the previous post explains more about [`map()`](/blog/react/jsx-what-is-that/#jsx-array-map).
+- `roles` is an array, we can `map` over it and display it's values, the previous post explains more about [`map()`](/blog/react/jsx-what-is-that/#jsx-array-map 'JSX array.map').
 - `lastLogin` is an object and we can access the keys of this object like in normal JS.
 
 And, now let's update our `App` component to pass all the required values to the `PropsExample` component.
@@ -335,10 +335,10 @@ const PropsExample = (props) => {
 export default PropsExample;
 ```
 
-The `Header` & the `Footer` components can be assigned props like any other component. The `Content` component is like a wrapper around its content. And the content should have only one parent component, that is the reason we have wrapped the content in a [react fragment](https://reactjs.org/docs/fragments.html).
+The `Header` & the `Footer` components can be assigned props like any other component. The `Content` component is like a wrapper around its content. And the content should have only one parent component, that is the reason we have wrapped the content in a [react fragment](https://reactjs.org/docs/fragments.html 'ReactJS - Fragments').
 
 ## Destructuring props
-Instead of writing `props` repeatedly, we can use [Destructuring](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment). Destructuring helps us unpack values that are inside the props object.
+Instead of writing `props` repeatedly, we can use [Destructuring](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment 'MDN - Destructuring'). Destructuring helps us unpack values that are inside the props object.
 
 ```javascript
 import React from 'react';
@@ -406,7 +406,7 @@ const { name, userId, handleDisableClick, roles, lastLogin, isActive } = props;
 ```
 
 ## Type checking props
-It is always a good idea to validate that the props a component gets are of the correct type. [`prop-types`](https://www.npmjs.com/package/prop-types) makes this very easy for us.
+It is always a good idea to validate that the props a component gets are of the correct type. [`prop-types`](https://www.npmjs.com/package/prop-types 'PropTypes on npm') makes this very easy for us.
 First make sure you install the `prop-types` package in your project. Use the following command to install `npm i prop-types`, you might need to restart the dev server.
 
 Let's add some type checking to the `PropsExample` component.
@@ -540,4 +540,4 @@ In the above `Footer` component we have defined the types of both the props and 
 
 Using `prop-types` does not only help us with type checking but it's also a type of documentation for our components.
 
-That's all we got time for this time. And as always you can find the code on [GitHub](https://github.com/dsouzaalfred/blogdemos/tree/master/react-props)
+That's all we got time for this time. And as always you can find the code on [GitHub](https://github.com/dsouzaalfred/blogdemos/tree/master/react-props 'Github repo link')

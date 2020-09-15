@@ -223,7 +223,7 @@ There are a couple of things to note about Props:</p>
 
 <p>Thinks to note:</p>
 <ul>
-  <li><code class="language-plaintext highlighter-rouge">roles</code> is an array, we can <code class="language-plaintext highlighter-rouge">map</code> over it and display it’s values, the previous post explains more about <a href="/blog/react/jsx-what-is-that/#jsx-array-map"><code class="language-plaintext highlighter-rouge">map()</code></a>.</li>
+  <li><code class="language-plaintext highlighter-rouge">roles</code> is an array, we can <code class="language-plaintext highlighter-rouge">map</code> over it and display it’s values, the previous post explains more about <a href="/blog/react/jsx-what-is-that/#jsx-array-map" title="JSX array.map"><code class="language-plaintext highlighter-rouge">map()</code></a>.</li>
   <li><code class="language-plaintext highlighter-rouge">lastLogin</code> is an object and we can access the keys of this object like in normal JS.</li>
 </ul>
 
@@ -442,10 +442,10 @@ Let’s use the <code class="language-plaintext highlighter-rouge">Card</code> c
 <span class="k">export</span> <span class="k">default</span> <span class="nx">PropsExample</span><span class="p">;</span>
 </code></pre></div></div>
 
-<p>The <code class="language-plaintext highlighter-rouge">Header</code> &amp; the <code class="language-plaintext highlighter-rouge">Footer</code> components can be assigned props like any other component. The <code class="language-plaintext highlighter-rouge">Content</code> component is like a wrapper around its content. And the content should have only one parent component, that is the reason we have wrapped the content in a <a href="https://reactjs.org/docs/fragments.html">react fragment</a>.</p>
+<p>The <code class="language-plaintext highlighter-rouge">Header</code> &amp; the <code class="language-plaintext highlighter-rouge">Footer</code> components can be assigned props like any other component. The <code class="language-plaintext highlighter-rouge">Content</code> component is like a wrapper around its content. And the content should have only one parent component, that is the reason we have wrapped the content in a <a href="https://reactjs.org/docs/fragments.html" title="ReactJS - Fragments">react fragment</a>.</p>
 
 <h2 id="destructuring-props">Destructuring props</h2>
-<p>Instead of writing <code class="language-plaintext highlighter-rouge">props</code> repeatedly, we can use <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment">Destructuring</a>. Destructuring helps us unpack values that are inside the props object.</p>
+<p>Instead of writing <code class="language-plaintext highlighter-rouge">props</code> repeatedly, we can use <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment" title="MDN - Destructuring">Destructuring</a>. Destructuring helps us unpack values that are inside the props object.</p>
 
 <div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="nx">React</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">react</span><span class="dl">'</span><span class="p">;</span>
 
@@ -511,7 +511,7 @@ Let’s use the <code class="language-plaintext highlighter-rouge">Card</code> c
 </code></pre></div></div>
 
 <h2 id="type-checking-props">Type checking props</h2>
-<p>It is always a good idea to validate that the props a component gets are of the correct type. <a href="https://www.npmjs.com/package/prop-types"><code class="language-plaintext highlighter-rouge">prop-types</code></a> makes this very easy for us.
+<p>It is always a good idea to validate that the props a component gets are of the correct type. <a href="https://www.npmjs.com/package/prop-types" title="PropTypes on npm"><code class="language-plaintext highlighter-rouge">prop-types</code></a> makes this very easy for us.
 First make sure you install the <code class="language-plaintext highlighter-rouge">prop-types</code> package in your project. Use the following command to install <code class="language-plaintext highlighter-rouge">npm i prop-types</code>, you might need to restart the dev server.</p>
 
 <p>Let’s add some type checking to the <code class="language-plaintext highlighter-rouge">PropsExample</code> component.</p>
@@ -644,7 +644,7 @@ First make sure you install the <code class="language-plaintext highlighter-roug
 
 <p>Using <code class="language-plaintext highlighter-rouge">prop-types</code> does not only help us with type checking but it’s also a type of documentation for our components.</p>
 
-<p>That’s all we got time for this time. And as always you can find the code on <a href="https://github.com/dsouzaalfred/blogdemos/tree/master/react-props">GitHub</a></p>
+<p>That’s all we got time for this time. And as always you can find the code on <a href="https://github.com/dsouzaalfred/blogdemos/tree/master/react-props" title="Github repo link">GitHub</a></p>
 
         </div>
 

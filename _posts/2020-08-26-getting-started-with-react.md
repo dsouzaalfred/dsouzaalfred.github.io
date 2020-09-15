@@ -17,14 +17,14 @@ React or ReactJS is a component-based JavaScript library for building user inter
 *Component-based* means a complex UI is broken down into small pieces called components. These small components can manage their own state and encapsulate their own logic.
 
 ## CRA - Create React App
-[Create React App](https://github.com/facebook/create-react-app) makes getting started with React very easy.
-You will need to have [**Node >= 8.10 and npm >= 5.6**](https://nodejs.org/en/) installed on your machine. If you don't already have it installed on your machine you can head over to [nodejs.org](https://nodejs.org/en/) and download & install it before moving forward.
+[Create React App](https://github.com/facebook/create-react-app 'CRA GitHub page') makes getting started with React very easy.
+You will need to have [**Node >= 8.10 and npm >= 5.6**](https://nodejs.org/en/ 'Node.js homepage') installed on your machine. If you don't already have it installed on your machine you can head over to [nodejs.org](https://nodejs.org/en/) and download & install it before moving forward.
 
-Once you are done installing `Node`, you can either use the `npm` (comes bundled with node) or `yarn` package manager. I prefer [`yarn`](https://www.npmjs.com/package/yarn), let's go ahead and install it. Run the following command on your terminal/command line:
+Once you are done installing `Node`, you can either use the `npm` (comes bundled with node) or `yarn` package manager. I prefer [`yarn`](https://www.npmjs.com/package/yarn 'Yarn on npm'), let's go ahead and install it. Run the following command on your terminal/command line:
 
 `npm install --global yarn`
 
-Assuming that you have [`Node >= 8.10 and npm >= 5.6`](https://nodejs.org/en/) and [`yarn`](https://www.npmjs.com/package/yarn) installed on your machine, open terminal/command line and run the following command.
+Assuming that you have [`Node >= 8.10 and npm >= 5.6`](https://nodejs.org/en/ 'Node.js homepage') and [`yarn`](https://www.npmjs.com/package/yarn 'Yarn on npm') installed on your machine, open terminal/command line and run the following command.
 
 `npx create-react-app my-first-react-app`
 
@@ -57,9 +57,9 @@ const FirstComponent = () => {
 
 export default FirstComponent;
 ```
-As you can see, the component code is all JavaScript. We are importing react as it is required to render the component. We are using [arrow function](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions) in our code but you can use normal function syntax too.
+As you can see, the component code is all JavaScript. We are importing react as it is required to render the component. We are using [arrow function](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions 'MDN - Arrow functions') in our code but you can use normal function syntax too.
 
-That HTML content we are returning from is [JSX](https://reactjs.org/docs/introducing-jsx.html), it looks very much like HTML but it is not.
+That HTML content we are returning from is [JSX](https://reactjs.org/docs/introducing-jsx.html 'ReactJS page on JSX'), it looks very much like HTML but it is not.
 
 Now open `App.js` and remove all the code in the file and replace it with the following code.
 
@@ -149,6 +149,6 @@ export default App;
 ```
 Now if you visit `http://localhost:3000/` you will see you different headings.
 
-In our next post we will have detailed look at [JSX](/blog/react/jsx-what-is-that/).
+In our next post we will have detailed look at [JSX](/blog/react/jsx-what-is-that/ 'JSX - What is that?').
 
-You can find the code on [GitHub](https://github.com/dsouzaalfred/blogdemos/tree/master/getting-started-with-react)
+You can find the code on [GitHub](https://github.com/dsouzaalfred/blogdemos/tree/master/getting-started-with-react 'Github repo link')
