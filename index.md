@@ -13,6 +13,6 @@ This blog is an attempt to share my two bits with the world. I will share things
 
 GitHub : [https://github.com/dsouzaalfred](https://github.com/dsouzaalfred 'Github Profile')
 
-LinkedIn : [https://www.linkedin.com/in/alfred-dsouza-53590b48](https://www.linkedin.com/in/alfred-dsouza-53590b48)
+LinkedIn : [https://www.linkedin.com/in/dsouzaalfred/](https://www.linkedin.com/in/dsouzaalfred/ 'LinkedIn Profile')
 
 _There is always something new to learn!_
