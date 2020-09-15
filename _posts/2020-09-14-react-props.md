@@ -1,7 +1,7 @@
 ---
 layout: post
 title: React - Props
-date: 2020-09-03 09:47 +0100
+date: 2020-09-14 09:47 +0100
 author: alfred_dsouza
 categories:
   - blog
