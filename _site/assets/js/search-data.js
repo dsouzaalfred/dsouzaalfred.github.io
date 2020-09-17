@@ -13,4 +13,9 @@ var store = [{
         "excerpt":"What are props? Props or properties are data passed to a component. A parent component will pass data to a child component as a prop.There are a couple of things to note about Props: props is a keyword in React and cannot be used as a variable name. props are...","categories": ["blog","react"],
         "tags": [],
         "url": "http://localhost:4000/blog/react/react-props/"
+      },{
+        "title": "React - Styling",
+        "excerpt":"In the last two post we covered JSX and Props, now it’s time to move forward in our journey in learning React and the next stop is styling the components. There are various ways a component can be styled: Inline styles CSS file SASS file CSS modules CSS-in-JS librariesLet’s start...","categories": ["blog","react"],
+        "tags": [],
+        "url": "http://localhost:4000/blog/react/react-styling/"
       }]

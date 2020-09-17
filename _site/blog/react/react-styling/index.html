@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<!--
+    So Simple Jekyll Theme 3.2.0
+    Copyright 2013-2019 Michael Rose - mademistakes.com | @mmistakes
+    Free for personal and commercial use under the MIT license
+    https://github.com/mmistakes/so-simple-theme/blob/master/LICENSE
+-->
+<html lang="en-US" class="no-js">
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  
+
+  
+    
+    <!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>React - Styling | Alfred D’Souza</title>
+<meta name="generator" content="Jekyll v3.9.0" />
+<meta property="og:title" content="React - Styling" />
+<meta name="author" content="Alfred D'Souza" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="In the last two post we covered JSX and Props, now it’s time to move forward in our journey in learning React and the next stop is styling the components." />
+<meta property="og:description" content="In the last two post we covered JSX and Props, now it’s time to move forward in our journey in learning React and the next stop is styling the components." />
+<link rel="canonical" href="http://localhost:4000/blog/react/react-styling/" />
+<meta property="og:url" content="http://localhost:4000/blog/react/react-styling/" />
+<meta property="og:site_name" content="Alfred D’Souza" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2020-09-17T12:01:00+01:00" />
+<script type="application/ld+json">
+{"author":{"@type":"Person","name":"Alfred D'Souza"},"url":"http://localhost:4000/blog/react/react-styling/","headline":"React - Styling","dateModified":"2020-09-17T12:01:00+01:00","datePublished":"2020-09-17T12:01:00+01:00","description":"In the last two post we covered JSX and Props, now it’s time to move forward in our journey in learning React and the next stop is styling the components.","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/blog/react/react-styling/"},"@type":"BlogPosting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+
+  
+
+  <script>
+    /* Cut the mustard */
+    if ( 'querySelector' in document && 'addEventListener' in window ) {
+      document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + 'js';
+    }
+  </script>
+
+  <link rel="stylesheet" href="/assets/css/main.css">
+  <link rel="stylesheet" href="/assets/css/skins/default.css">
+  <link rel="alternate" type="application/atom+xml" title="Alfred D&#39;Souza" href="/atom.xml">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
+
+</head>
+
+
+  <body class="layout--post  react-styling">
+    <nav class="skip-links">
+  <h2 class="screen-reader-text">Skip links</h2>
+  <ul>
+    <li><a href="#primary-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    
+  <div class="navigation-wrapper">
+    <a href="#menu-toggle" id="menu-toggle">Menu</a>
+    <nav id="primary-nav" class="site-nav animated drop">
+      <ul><li><a href="/">Home</a></li><li><a href="/blog/">Blog</a></li><li><a href="/search/">Search</a></li></ul>
+    </nav>
+  </div><!-- /.navigation-wrapper -->
+
+
+    <header class="masthead">
+  <div class="wrap">
+    
+    
+    
+      
+        <div class="site-title animated fadeIn"><a href="/">Alfred D'Souza</a></div>
+      
+      <p class="site-description animated fadeIn" itemprop="description">There is always something new to learn!</p>
+    
+  </div>
+</header><!-- /.masthead -->
+
+
+    <main id="main" class="main-content" aria-label="Content">
+  <article class="h-entry">
+    
+
+    <div class="page-wrapper">
+      <header class="page-header">
+        
+        
+          <h1 id="page-title" class="page-title p-name">React - Styling
+</h1>
+        
+      </header>
+
+      <div class="page-sidebar">
+        <div class="page-author h-card p-author"><img src="/images/alfred-dsouza-photo.jpg" class="author-avatar u-photo" alt="Alfred D'Souza"><div class="author-info"><div class="author-name">
+        <span class="p-name">Alfred D'Souza</span>
+      </div><ul class="author-links"><li class="author-link">
+            <a class="u-url" rel="me" href="https://twitter.com/dsouzaalfred"><i class="fab fa-twitter-square fa-lg" title="Twitter"></i></a>
+          </li><li class="author-link">
+            <a class="u-url" rel="me" href="https://github.com/dsouzaalfred"><i class="fab fa-github-square fa-lg" title="GitHub"></i></a>
+          </li><li class="author-link">
+            <a class="u-url" rel="me" href="https://www.linkedin.com/in/dsouzaalfred/"><i class="fab fa-linkedin fa-lg" title="LinkedIn"></i></a>
+          </li></ul>
+
+<span class="read-time">1 min read</span>
+
+    <time class="page-date dt-published" datetime="2020-09-17T12:01:00+01:00"><a class="u-url" href="">September 17, 2020</a>
+</time>
+
+  </div>
+</div>
+
+        
+  <h3 class="page-taxonomies-title">Categories</h3>
+  <ul class="page-taxonomies"><li class="page-taxonomy"><a class="p-category" href="/categories/#blog" title="Pages filed under blog">blog</a></li><li class="page-taxonomy"><a class="p-category" href="/categories/#react" title="Pages filed under react">react</a></li>
+  </ul>
+
+
+        
+
+      </div>
+
+      <div class="page-content">
+        <div class="e-content">
+          <p>In the last two post we covered JSX and Props, now it’s time to move forward in our journey in learning React and the next stop is styling the components.</p>
+
+<p>There are various ways a component can be styled:</p>
+<ul>
+  <li>Inline styles</li>
+  <li>CSS file</li>
+  <li>SASS file</li>
+  <li>CSS modules</li>
+  <li>CSS-in-JS libraries</li>
+</ul>
+
+<p>Let’s start by setting up a new project using CRA. Open a terminal/command prompt and navigate to the folder you want to setup the new project and use the following command:</p>
+
+<p><code class="language-plaintext highlighter-rouge">npx create-react-app react-styling</code></p>
+
+<p>Once all the dependencies are installed, navigate into the react-styling folder and start the local dev server using yarn start.</p>
+
+<h2 id="inline-styles">Inline styles</h2>
+
+<p>In HTML when we use inline styles you would do something like this:</p>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;p</span> <span class="na">style=</span><span class="s">"color: green"</span> <span class="nt">&gt;</span>This text will be green<span class="nt">&lt;/p&gt;</span>
+</code></pre></div></div>
+
+<p>The same can be achieved with JSX. In JSX instead of passing the style as a string we pass it as a object.</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&lt;</span><span class="nx">p</span> <span class="nx">style</span><span class="o">=</span><span class="p">{</span> <span class="p">{</span><span class="na">color</span><span class="p">:</span> <span class="dl">'</span><span class="s1">green</span><span class="dl">'</span><span class="p">}</span> <span class="p">}</span><span class="o">&gt;</span><span class="nx">This</span> <span class="nx">text</span> <span class="nx">will</span> <span class="nx">be</span> <span class="nx">green</span><span class="o">&lt;</span><span class="sr">/p</span><span class="err">&gt;
+</span></code></pre></div></div>
+
+<p>When we want to pass a value to a prop we use {} braces, this is exactly what we are doing, we are passing value to the style prop. To demostrate this we can write the above example as:</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">pTagStyle</span> <span class="o">=</span> <span class="p">{</span><span class="na">color</span><span class="p">:</span> <span class="dl">'</span><span class="s1">green</span><span class="dl">'</span><span class="p">};</span>
+
+<span class="o">&lt;</span><span class="nx">p</span> <span class="nx">style</span><span class="o">=</span><span class="p">{</span><span class="nx">pTagStyle</span><span class="p">}</span><span class="o">&gt;</span><span class="nx">This</span> <span class="nx">text</span> <span class="nx">will</span> <span class="nx">be</span> <span class="nx">green</span><span class="o">&lt;</span><span class="sr">/p</span><span class="err">&gt;
+</span></code></pre></div></div>
+
+<p>Let’s see some more css properties:</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&lt;</span><span class="nx">p</span>
+  <span class="nx">style</span><span class="o">=</span><span class="p">{</span> <span class="p">{</span>
+    <span class="na">padding</span><span class="p">:</span> <span class="dl">'</span><span class="s1">20px</span><span class="dl">'</span><span class="p">,</span>
+    <span class="na">marginBottom</span><span class="p">:</span> <span class="dl">'</span><span class="s1">20px</span><span class="dl">'</span><span class="p">,</span>
+    <span class="na">fontSize</span><span class="p">:</span> <span class="dl">'</span><span class="s1">2rem</span><span class="dl">'</span><span class="p">,</span>
+    <span class="na">color</span><span class="p">:</span> <span class="dl">'</span><span class="s1">darkorange</span><span class="dl">'</span><span class="p">,</span>
+    <span class="na">border</span><span class="p">:</span> <span class="dl">'</span><span class="s1">1px solid darkgrey</span><span class="dl">'</span><span class="p">,</span>
+  <span class="p">}</span> <span class="p">}</span>
+<span class="o">&gt;</span>
+  <span class="nx">Multiple</span> <span class="nx">CSS</span> <span class="nx">Properties</span>
+<span class="o">&lt;</span><span class="sr">/p</span><span class="err">&gt;
+</span></code></pre></div></div>
+
+<p>Adding condition</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&lt;</span><span class="nx">p</span> <span class="nx">style</span><span class="o">=</span><span class="p">{</span> <span class="p">{</span> <span class="na">color</span><span class="p">:</span> <span class="nx">isActive</span> <span class="p">?</span> <span class="dl">'</span><span class="s1">yellowgreen</span><span class="dl">'</span> <span class="p">:</span> <span class="dl">'</span><span class="s1">darkgrey</span><span class="dl">'</span> <span class="p">}</span> <span class="p">}</span><span class="o">&gt;</span>
+  <span class="nx">Based</span> <span class="nx">on</span> <span class="nx">condition</span>
+<span class="o">&lt;</span><span class="sr">/p</span><span class="err">&gt;
+</span></code></pre></div></div>
+
+<h2 id="css-files">CSS files</h2>
+<p>We can import a CSS file directly into our component and all the classes defined in our CSS file will be available to us in JSX.</p>
+
+<p>className instead of class, that is the JSX syntax (<a href="https://www.quora.com/Why-do-I-have-to-use-className-instead-of-class-in-ReactJs-components-done-in-JSX-JSX-is-preprocessed-so-shouldnt-that-conversion-happen-when-JSX-is-converted-to-JavaScript?share=1" title="Quora link">Read more here</a>)</p>
+
+<h2 id="sass-files">SASS files</h2>
+
+<p>CRA supports SASS files out of the box.</p>
+
+<h2 id="css-modules">CSS modules</h2>
+
+<p>CRA supports CSS modules out of the box.</p>
+
+<h2 id="clsx">CLSX</h2>
+
+<h2 id="css-in-js-libraries">CSS-in-JS libraries</h2>
+
+        </div>
+
+        
+          <div class="page-share">
+  <a href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Flocalhost%3A4000%2Fblog%2Freact%2Freact-styling%2F" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" class="btn btn--facebook btn--small"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i> <span>Share</span></a>
+  <a href="https://twitter.com/intent/tweet?text=React+-+Styling%20http%3A%2F%2Flocalhost%3A4000%2Fblog%2Freact%2Freact-styling%2F" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" class="btn btn--twitter btn--small"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i> <span>Tweet</span></a>
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=http%3A%2F%2Flocalhost%3A4000%2Fblog%2Freact%2Freact-styling%2F" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" class="btn btn--linkedin btn--small"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i> <span>LinkedIn</span></a>
+  <a href="https://reddit.com/submit?title=React+-+Styling&url=http%3A%2F%2Flocalhost%3A4000%2Fblog%2Freact%2Freact-styling%2F" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" class="btn btn--reddit btn--small"><i class="fab fa-fw fa-reddit" aria-hidden="true"></i> <span>Reddit</span></a>
+</div>
+
+        
+
+        
+
+        <nav class="page-pagination" role="navigation">
+  
+    <a class="page-previous" href="/blog/react/react-props/">
+      <h4 class="page-pagination-label">Previous</h4>
+      <span class="page-pagination-title">
+        <i class="fas fa-arrow-left"></i> React - Props
+
+      </span>
+    </a>
+  
+
+  
+</nav>
+
+      </div>
+    </div>
+  </article>
+</main>
+
+
+    <footer id="footer" class="site-footer">
+  <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+<div class="social-icons"><a class="social-icon" href="https://twitter.com/dsouzaalfred"><i class="fab fa-twitter-square fa-2x" title="Twitter"></i></a><a class="social-icon" href="https://github.com/dsouzaalfred"><i class="fab fa-github-square fa-2x" title="GitHub"></i></a><a class="social-icon" href="https://www.linkedin.com/in/dsouzaalfred/"><i class="fab fa-linkedin fa-2x" title="LinkedIn"></i></a></div><div class="copyright">
+    
+      <p>&copy; 2020 Alfred D'Souza. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://github.com/mmistakes/so-simple-theme" rel="nofollow">So Simple</a>.</p>
+    
+  </div>
+</footer>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+  <script src="/assets/js/main.min.js"></script>
+  <script src="https://use.fontawesome.com/releases/v5.0.12/js/all.js"></script>
+
+
+  </body>
+
+</html>
