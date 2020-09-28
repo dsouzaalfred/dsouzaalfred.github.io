@@ -110,7 +110,7 @@
             <a class="u-url" rel="me" href="https://www.linkedin.com/in/dsouzaalfred/"><i class="fab fa-linkedin fa-lg" title="LinkedIn"></i></a>
           </li></ul>
 
-<span class="read-time">1 min read</span>
+<span class="read-time">7 min read</span>
 
     <time class="page-date dt-published" datetime="2020-09-17T12:01:00+01:00"><a class="u-url" href="">September 17, 2020</a>
 </time>
@@ -141,12 +141,6 @@
   <li>CSS-in-JS libraries</li>
 </ul>
 
-<p>Let’s start by setting up a new project using CRA. Open a terminal/command prompt and navigate to the folder you want to setup the new project and use the following command:</p>
-
-<p><code class="language-plaintext highlighter-rouge">npx create-react-app react-styling</code></p>
-
-<p>Once all the dependencies are installed, navigate into the react-styling folder and start the local dev server using yarn start.</p>
-
 <h2 id="inline-styles">Inline styles</h2>
 
 <p>In HTML when we use inline styles you would do something like this:</p>
@@ -170,8 +164,8 @@
 
 <div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&lt;</span><span class="nx">p</span>
   <span class="nx">style</span><span class="o">=</span><span class="p">{</span> <span class="p">{</span>
-    <span class="na">padding</span><span class="p">:</span> <span class="dl">'</span><span class="s1">20px</span><span class="dl">'</span><span class="p">,</span>
-    <span class="na">marginBottom</span><span class="p">:</span> <span class="dl">'</span><span class="s1">20px</span><span class="dl">'</span><span class="p">,</span>
+    <span class="na">padding</span><span class="p">:</span> <span class="mi">20</span><span class="p">,</span>
+    <span class="na">margin</span><span class="p">:</span> <span class="dl">'</span><span class="s1">20px 15px</span><span class="dl">'</span><span class="p">,</span>
     <span class="na">fontSize</span><span class="p">:</span> <span class="dl">'</span><span class="s1">2rem</span><span class="dl">'</span><span class="p">,</span>
     <span class="na">color</span><span class="p">:</span> <span class="dl">'</span><span class="s1">darkorange</span><span class="dl">'</span><span class="p">,</span>
     <span class="na">border</span><span class="p">:</span> <span class="dl">'</span><span class="s1">1px solid darkgrey</span><span class="dl">'</span><span class="p">,</span>
@@ -181,29 +175,366 @@
 <span class="o">&lt;</span><span class="sr">/p</span><span class="err">&gt;
 </span></code></pre></div></div>
 
-<p>Adding condition</p>
+<p>Lot of things going on there:</p>
+<ul>
+  <li>Like we seen before you have to pass values as strings</li>
+  <li>If you want to pass a <code class="language-plaintext highlighter-rouge">px</code> value to a CSS property just pass the number value. Like we are doing for <code class="language-plaintext highlighter-rouge">padding</code>.</li>
+  <li>If you have to pass multiple values with <code class="language-plaintext highlighter-rouge">px</code> then you have to mention the whole things as a string like <code class="language-plaintext highlighter-rouge">margin</code></li>
+  <li>CSS properties that have a <code class="language-plaintext highlighter-rouge">-</code>, have to be written in camel case. That’s why we have <code class="language-plaintext highlighter-rouge">fontSize</code> instead of <code class="language-plaintext highlighter-rouge">font-size</code>. So, if you want to use the <code class="language-plaintext highlighter-rouge">margin-bottom</code> property, we will have to use <code class="language-plaintext highlighter-rouge">marginBottom</code>.</li>
+  <li>We can pass multiple values as a string when required like the <code class="language-plaintext highlighter-rouge">border</code> or <code class="language-plaintext highlighter-rouge">margin</code> properties in our example.</li>
+</ul>
+
+<p>We can also set styling based on conditions, here is an example</p>
 
 <div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&lt;</span><span class="nx">p</span> <span class="nx">style</span><span class="o">=</span><span class="p">{</span> <span class="p">{</span> <span class="na">color</span><span class="p">:</span> <span class="nx">isActive</span> <span class="p">?</span> <span class="dl">'</span><span class="s1">yellowgreen</span><span class="dl">'</span> <span class="p">:</span> <span class="dl">'</span><span class="s1">darkgrey</span><span class="dl">'</span> <span class="p">}</span> <span class="p">}</span><span class="o">&gt;</span>
   <span class="nx">Based</span> <span class="nx">on</span> <span class="nx">condition</span>
 <span class="o">&lt;</span><span class="sr">/p</span><span class="err">&gt;
 </span></code></pre></div></div>
 
-<h2 id="css-files">CSS files</h2>
-<p>We can import a CSS file directly into our component and all the classes defined in our CSS file will be available to us in JSX.</p>
+<p>We are setting the <code class="language-plaintext highlighter-rouge">color</code> property based on a condition. But, you can see the disadvantage of this right, we have use the condition on every property. Classes would be very helpful here.</p>
 
-<p>className instead of class, that is the JSX syntax (<a href="https://www.quora.com/Why-do-I-have-to-use-className-instead-of-class-in-ReactJs-components-done-in-JSX-JSX-is-preprocessed-so-shouldnt-that-conversion-happen-when-JSX-is-converted-to-JavaScript?share=1" title="Quora link">Read more here</a>)</p>
+<h2 id="css-files">CSS files</h2>
+
+<p>Out of the box, CRA supports importing CSS files. We can import a CSS file directly into our component and all the classes defined in our CSS file will be available to us in JSX.</p>
+
+<p>And it’s very easy too. Make a css file and import it into your component.</p>
+
+<p>Let’s say we had a css file called <code class="language-plaintext highlighter-rouge">CssFileComponent.css</code>.</p>
+
+<div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">.wrapper</span> <span class="p">{</span>
+  <span class="nl">background-color</span><span class="p">:</span> <span class="no">antiquewhite</span><span class="p">;</span>
+  <span class="nl">padding</span><span class="p">:</span> <span class="m">15px</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nc">.greenText</span> <span class="p">{</span>
+  <span class="nl">color</span><span class="p">:</span> <span class="no">green</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nc">.multiple-properties</span> <span class="p">{</span>
+  <span class="nl">padding</span><span class="p">:</span> <span class="m">20px</span><span class="p">;</span>
+  <span class="nl">margin</span><span class="p">:</span> <span class="m">20px</span> <span class="m">15px</span><span class="p">;</span>
+  <span class="nl">font-size</span><span class="p">:</span> <span class="m">2rem</span><span class="p">;</span>
+  <span class="nl">color</span><span class="p">:</span> <span class="no">darkorange</span><span class="p">;</span>
+  <span class="nl">border</span><span class="p">:</span> <span class="m">1px</span> <span class="nb">solid</span> <span class="n">darkgrey</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nc">.active</span> <span class="p">{</span>
+  <span class="nl">color</span><span class="p">:</span> <span class="no">blue</span><span class="p">;</span>
+  <span class="nl">cursor</span><span class="p">:</span> <span class="nb">pointer</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nc">.disabled</span> <span class="p">{</span>
+  <span class="nl">color</span><span class="p">:</span> <span class="n">grey</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
+<p>It’s a normal CSS file nothing fancy going on here.
+Now import this css file into our component file</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="nx">React</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">react</span><span class="dl">'</span><span class="p">;</span>
+<span class="k">import</span> <span class="dl">'</span><span class="s1">./CssFileComponent.css</span><span class="dl">'</span><span class="p">;</span>
+
+<span class="kd">const</span> <span class="nx">CssFileComponent</span> <span class="o">=</span> <span class="p">({</span> <span class="nx">isActive</span> <span class="p">})</span> <span class="o">=&gt;</span> <span class="p">{</span>
+  <span class="k">return</span> <span class="p">(</span>
+    <span class="o">&lt;</span><span class="nx">div</span> <span class="nx">className</span><span class="o">=</span><span class="dl">"</span><span class="s2">wrapper</span><span class="dl">"</span><span class="o">&gt;</span>
+      <span class="o">&lt;</span><span class="nx">p</span> <span class="nx">className</span><span class="o">=</span><span class="dl">"</span><span class="s2">greenText</span><span class="dl">"</span><span class="o">&gt;</span><span class="nx">This</span> <span class="nx">text</span> <span class="nx">will</span> <span class="nx">be</span> <span class="nx">green</span><span class="o">&lt;</span><span class="sr">/p</span><span class="err">&gt;
+</span>      <span class="o">&lt;</span><span class="nx">p</span> <span class="nx">className</span><span class="o">=</span><span class="dl">"</span><span class="s2">multiple-properties</span><span class="dl">"</span><span class="o">&gt;</span><span class="nx">Multiple</span> <span class="nx">CSS</span> <span class="nx">Properties</span><span class="o">&lt;</span><span class="sr">/p</span><span class="err">&gt;
+</span>      <span class="o">&lt;</span><span class="nx">p</span> <span class="nx">className</span><span class="o">=</span><span class="p">{</span><span class="nx">isActive</span> <span class="p">?</span> <span class="dl">'</span><span class="s1">active</span><span class="dl">'</span> <span class="p">:</span> <span class="dl">'</span><span class="s1">disabled</span><span class="dl">'</span><span class="p">}</span><span class="o">&gt;</span><span class="nx">Based</span> <span class="nx">on</span> <span class="nx">condition</span><span class="o">&lt;</span><span class="sr">/p</span><span class="err">&gt;
+</span>    <span class="o">&lt;</span><span class="sr">/div</span><span class="err">&gt;
+</span>  <span class="p">);</span>
+<span class="p">};</span>
+
+<span class="k">export</span> <span class="k">default</span> <span class="nx">CssFileComponent</span><span class="p">;</span>
+</code></pre></div></div>
+
+<p>As you can see we can import the css file directly into our component and then use our classes. And the other thing is that we use <code class="language-plaintext highlighter-rouge">className</code> instead of <code class="language-plaintext highlighter-rouge">class</code> when we have to apply the a CSS class. You can read this post on <a href="https://www.quora.com/Why-do-I-have-to-use-className-instead-of-class-in-ReactJs-components-done-in-JSX-JSX-is-preprocessed-so-shouldnt-that-conversion-happen-when-JSX-is-converted-to-JavaScript?share=1" title="Quora link">Quora</a> to understand why.</p>
 
 <h2 id="sass-files">SASS files</h2>
 
-<p>CRA supports SASS files out of the box.</p>
+<p><a href="https://sass-lang.com/documentation">SASS</a> stands for Syntactically Awesome Stylesheet.</p>
+<blockquote>
+  <p>Sass is a stylesheet language that’s compiled to CSS</p>
+</blockquote>
+
+<p>You can check out more about SASS on it’s <a href="https://sass-lang.com/documentation" title="SAS documentation">official page</a>.
+To start using SASS in a CRA project you will only have to install one dependency <code class="language-plaintext highlighter-rouge">node-sass</code>;</p>
+
+<p>Run the following command in your project directly:
+<code class="language-plaintext highlighter-rouge">npm install node-sass</code> or <code class="language-plaintext highlighter-rouge">yarn add node-sass</code></p>
+
+<p>Once the installation is done we can start using SASS in our project. SASS files have <code class="language-plaintext highlighter-rouge">.scss</code> extension. Here is an example of a <code class="language-plaintext highlighter-rouge">.scss</code> file let’s call it <code class="language-plaintext highlighter-rouge">SassStyleComponent.scss</code></p>
+
+<div class="language-scss highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">@import</span> <span class="s1">'./variables.scss'</span><span class="p">;</span>
+
+<span class="nt">ul</span> <span class="p">{</span>
+  <span class="nl">margin</span><span class="p">:</span> <span class="m">0</span><span class="p">;</span>
+  <span class="nl">padding</span><span class="p">:</span> <span class="m">0</span><span class="p">;</span>
+  <span class="nl">list-style</span><span class="p">:</span> <span class="nb">none</span><span class="p">;</span>
+  <span class="nt">li</span> <span class="p">{</span>
+    <span class="nl">display</span><span class="p">:</span> <span class="n">inline-block</span><span class="p">;</span>
+
+    <span class="nt">a</span> <span class="p">{</span>
+      <span class="nl">display</span><span class="p">:</span> <span class="nb">block</span><span class="p">;</span>
+      <span class="nl">padding</span><span class="p">:</span> <span class="m">6px</span> <span class="m">12px</span><span class="p">;</span>
+      <span class="nl">text-decoration</span><span class="p">:</span> <span class="nb">none</span><span class="p">;</span>
+      <span class="nl">color</span><span class="p">:</span> <span class="nv">$primary-color</span><span class="p">;</span>
+      <span class="k">&amp;</span><span class="nd">:hover</span> <span class="p">{</span>
+        <span class="nl">color</span><span class="p">:</span> <span class="nv">$secondary-color</span><span class="p">;</span>
+      <span class="p">}</span>
+    <span class="p">}</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>And here is the code for the <code class="language-plaintext highlighter-rouge">variable.scss</code> file we are importing. We are just declaring variables here.</p>
+
+<div class="language-scss highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$primary-color</span><span class="p">:</span> <span class="mh">#b2d534</span><span class="p">;</span>
+<span class="nv">$secondary-color</span><span class="p">:</span> <span class="mh">#ff8c00</span><span class="p">;</span>
+</code></pre></div></div>
+
+<p>Now to use this in our component file.</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="nx">React</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">react</span><span class="dl">'</span><span class="p">;</span>
+<span class="k">import</span> <span class="dl">'</span><span class="s1">./SassStyleComponent.scss</span><span class="dl">'</span><span class="p">;</span>
+
+<span class="kd">const</span> <span class="nx">SassStyleComponent</span> <span class="o">=</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="p">{</span>
+  <span class="k">return</span> <span class="p">(</span>
+    <span class="o">&lt;</span><span class="nx">div</span><span class="o">&gt;</span>
+      <span class="o">&lt;</span><span class="nx">ul</span><span class="o">&gt;</span>
+        <span class="o">&lt;</span><span class="nx">li</span><span class="o">&gt;</span>
+          <span class="o">&lt;</span><span class="nx">a</span> <span class="nx">href</span><span class="o">=</span><span class="dl">"</span><span class="s2">#</span><span class="dl">"</span><span class="o">&gt;</span><span class="nx">This</span> <span class="nx">is</span> <span class="nx">a</span> <span class="nx">link</span><span class="o">&lt;</span><span class="sr">/a</span><span class="err">&gt;
+</span>        <span class="o">&lt;</span><span class="sr">/li</span><span class="err">&gt;
+</span>        <span class="o">&lt;</span><span class="nx">li</span><span class="o">&gt;</span><span class="nx">This</span> <span class="nx">is</span> <span class="nx">not</span> <span class="nx">a</span> <span class="nx">link</span><span class="o">&lt;</span><span class="sr">/li</span><span class="err">&gt;
+</span>      <span class="o">&lt;</span><span class="sr">/ul</span><span class="err">&gt;
+</span>    <span class="o">&lt;</span><span class="sr">/div</span><span class="err">&gt;
+</span>  <span class="p">);</span>
+<span class="p">};</span>
+
+<span class="k">export</span> <span class="k">default</span> <span class="nx">SassStyleComponent</span><span class="p">;</span>
+</code></pre></div></div>
+
+<p>We import the <code class="language-plaintext highlighter-rouge">scss</code> file just like we would a <code class="language-plaintext highlighter-rouge">css</code> file.</p>
 
 <h2 id="css-modules">CSS modules</h2>
 
+<p>With CSS modules we can define styles that are scoped at component level. This solves the problem of styles defined using <code class="language-plaintext highlighter-rouge">css</code> or <code class="language-plaintext highlighter-rouge">scss</code> file being global and applied to all components.</p>
+
+<blockquote>
+  <p>CSS Modules allows the scoping of CSS by automatically creating a unique classname of the format [filename]_[classname]__[hash].</p>
+</blockquote>
+
 <p>CRA supports CSS modules out of the box.</p>
 
-<h2 id="clsx">CLSX</h2>
+<p>To start using CSS module use the following naming convention <code class="language-plaintext highlighter-rouge">[name].module.css</code>.</p>
+
+<p>Let’s create a CSS module file and call it <code class="language-plaintext highlighter-rouge">CSSModule.module.css</code>.</p>
+
+<div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">.container</span> <span class="p">{</span>
+  <span class="nl">display</span><span class="p">:</span> <span class="n">flex</span><span class="p">;</span>
+  <span class="nl">flex-flow</span><span class="p">:</span> <span class="n">column</span><span class="p">;</span>
+  <span class="nl">align-items</span><span class="p">:</span> <span class="nb">center</span><span class="p">;</span>
+  <span class="nl">justify-content</span><span class="p">:</span> <span class="nb">center</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nc">.text</span> <span class="p">{</span>
+  <span class="nl">color</span><span class="p">:</span> <span class="nb">rgb</span><span class="p">(</span><span class="m">95</span><span class="p">,</span> <span class="m">158</span><span class="p">,</span> <span class="m">160</span><span class="p">);</span>
+  <span class="nl">font-size</span><span class="p">:</span> <span class="m">16px</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>Let’s see how to include this file into our component.</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="nx">React</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">react</span><span class="dl">'</span><span class="p">;</span>
+<span class="k">import</span> <span class="nx">styles</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">./CSSModule.module.css</span><span class="dl">'</span><span class="p">;</span>
+
+<span class="kd">const</span> <span class="nx">CSSModuleComponent</span> <span class="o">=</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="p">{</span>
+  <span class="k">return</span> <span class="p">(</span>
+    <span class="o">&lt;</span><span class="nx">div</span> <span class="nx">className</span><span class="o">=</span><span class="p">{</span><span class="nx">styles</span><span class="p">.</span><span class="nx">container</span><span class="p">}</span><span class="o">&gt;</span>
+      <span class="o">&lt;</span><span class="nx">p</span> <span class="nx">className</span><span class="o">=</span><span class="p">{</span><span class="nx">styles</span><span class="p">.</span><span class="nx">text</span><span class="p">}</span><span class="o">&gt;</span><span class="nx">Test</span><span class="o">&lt;</span><span class="sr">/p</span><span class="err">&gt;
+</span>    <span class="o">&lt;</span><span class="sr">/div</span><span class="err">&gt;
+</span>  <span class="p">);</span>
+<span class="p">};</span>
+
+<span class="k">export</span> <span class="k">default</span> <span class="nx">CSSModuleComponent</span><span class="p">;</span>
+</code></pre></div></div>
+
+<p>We get a JavaScript object style from CSS module, hence we have to specify what we want to call this object. I have called it <code class="language-plaintext highlighter-rouge">styles</code> you can call it anything you want.
+Inside this object we will have access to all our classes.</p>
+
+<p>If you have a look at the DOM using the browser dev tools, our component will look something like this.</p>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"CSSModule_container__2iMh-"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"CSSModule_text__37hvW"</span><span class="nt">&gt;</span>Test<span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+</code></pre></div></div>
+<p>Note that I had named the component <code class="language-plaintext highlighter-rouge">CSSModuleComponent.js</code> hence the first part of the class name.</p>
+
+<p>We can combine the power of SASS and CSS modules. Make sure you have <code class="language-plaintext highlighter-rouge">node-sass</code> installed as a dependency and name the file <code class="language-plaintext highlighter-rouge">.scss</code> instead of <code class="language-plaintext highlighter-rouge">.css</code>.</p>
+
+<h3 id="clsx">CLSX</h3>
+<p>Earlier in this post we had seen how to apply classes based on a condition. But what if we have multiple conditions instead of one. For example we have a <code class="language-plaintext highlighter-rouge">Alert</code> component and this component takes in two props <code class="language-plaintext highlighter-rouge">text</code> and <code class="language-plaintext highlighter-rouge">type</code>. Now <code class="language-plaintext highlighter-rouge">type</code> can be <code class="language-plaintext highlighter-rouge">success</code>, <code class="language-plaintext highlighter-rouge">error</code> or <code class="language-plaintext highlighter-rouge">warning</code>.</p>
+
+<p>Let’s start with the component first.</p>
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="nx">React</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">react</span><span class="dl">'</span><span class="p">;</span>
+
+<span class="kd">const</span> <span class="nx">Alert</span> <span class="o">=</span> <span class="p">({</span> <span class="nx">text</span><span class="p">,</span> <span class="nx">type</span> <span class="p">})</span> <span class="o">=&gt;</span> <span class="p">{</span>
+  <span class="k">return</span> <span class="o">&lt;</span><span class="nx">div</span><span class="o">&gt;</span><span class="p">{</span><span class="nx">text</span><span class="p">}</span><span class="o">&lt;</span><span class="sr">/div&gt;</span><span class="err">;
+</span><span class="p">};</span>
+
+<span class="k">export</span> <span class="k">default</span> <span class="nx">Alert</span><span class="p">;</span>
+</code></pre></div></div>
+<p>And the CSS.</p>
+<div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">.container</span> <span class="p">{</span>
+  <span class="nl">display</span><span class="p">:</span> <span class="n">flex</span><span class="p">;</span>
+  <span class="nl">flex-flow</span><span class="p">:</span> <span class="n">column</span><span class="p">;</span>
+  <span class="nl">align-items</span><span class="p">:</span> <span class="nb">center</span><span class="p">;</span>
+  <span class="nl">justify-content</span><span class="p">:</span> <span class="nb">center</span><span class="p">;</span>
+  <span class="nl">padding</span><span class="p">:</span> <span class="m">20px</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nc">.alert-success</span> <span class="p">{</span>
+  <span class="nl">border</span><span class="p">:</span> <span class="m">1px</span> <span class="nb">solid</span> <span class="no">green</span><span class="p">;</span>
+  <span class="nl">color</span><span class="p">:</span> <span class="no">green</span><span class="p">;</span>
+  <span class="nl">background-color</span><span class="p">:</span> <span class="no">greenyellow</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nc">.alert-error</span> <span class="p">{</span>
+  <span class="nl">border</span><span class="p">:</span> <span class="m">1px</span> <span class="nb">solid</span> <span class="no">red</span><span class="p">;</span>
+  <span class="nl">color</span><span class="p">:</span> <span class="no">red</span><span class="p">;</span>
+  <span class="nl">background-color</span><span class="p">:</span> <span class="no">salmon</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nc">.alert-warning</span> <span class="p">{</span>
+  <span class="nl">border</span><span class="p">:</span> <span class="m">1px</span> <span class="nb">solid</span> <span class="no">orange</span><span class="p">;</span>
+  <span class="nl">color</span><span class="p">:</span> <span class="no">orange</span><span class="p">;</span>
+  <span class="nl">background-color</span><span class="p">:</span> <span class="no">orangered</span><span class="p">;</span>
+<span class="p">}</span>
+
+</code></pre></div></div>
+<p>We can handle the condition inside our component like this:</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="nx">React</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">react</span><span class="dl">'</span><span class="p">;</span>
+<span class="k">import</span> <span class="dl">'</span><span class="s1">./Alert.css</span><span class="dl">'</span><span class="p">;</span>
+
+<span class="kd">const</span> <span class="nx">Alert</span> <span class="o">=</span> <span class="p">({</span> <span class="nx">text</span><span class="p">,</span> <span class="nx">type</span> <span class="p">})</span> <span class="o">=&gt;</span> <span class="p">{</span>
+  <span class="kd">const</span> <span class="nx">classToApply</span> <span class="o">=</span> <span class="p">(</span><span class="nx">type</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+    <span class="k">if</span> <span class="p">(</span><span class="nx">type</span> <span class="o">===</span> <span class="dl">'</span><span class="s1">success</span><span class="dl">'</span><span class="p">)</span> <span class="k">return</span> <span class="dl">'</span><span class="s1">alert-success</span><span class="dl">'</span><span class="p">;</span>
+    <span class="k">if</span> <span class="p">(</span><span class="nx">type</span> <span class="o">===</span> <span class="dl">'</span><span class="s1">error</span><span class="dl">'</span><span class="p">)</span> <span class="k">return</span> <span class="dl">'</span><span class="s1">alert-error</span><span class="dl">'</span><span class="p">;</span>
+    <span class="k">if</span> <span class="p">(</span><span class="nx">type</span> <span class="o">===</span> <span class="dl">'</span><span class="s1">warning</span><span class="dl">'</span><span class="p">)</span> <span class="k">return</span> <span class="dl">'</span><span class="s1">alert-warning</span><span class="dl">'</span><span class="p">;</span>
+    <span class="k">return</span> <span class="dl">''</span><span class="p">;</span>
+  <span class="p">};</span>
+
+  <span class="k">return</span> <span class="o">&lt;</span><span class="nx">div</span> <span class="nx">className</span><span class="o">=</span><span class="p">{</span><span class="s2">`container </span><span class="p">${</span><span class="nx">classToApply</span><span class="p">(</span><span class="nx">type</span><span class="p">)}</span><span class="s2">`</span><span class="p">}</span><span class="o">&gt;</span><span class="p">{</span><span class="nx">text</span><span class="p">}</span><span class="o">&lt;</span><span class="sr">/div&gt;</span><span class="err">;
+</span><span class="p">};</span>
+
+<span class="k">export</span> <span class="k">default</span> <span class="nx">Alert</span><span class="p">;</span>
+</code></pre></div></div>
+
+<p>And this works perfectly fine but we will have to write these conditions in every component we want to have classes based on conditions. Or we could use the <a href="https://www.npmjs.com/package/clsx" title="CLSX npm page"><code class="language-plaintext highlighter-rouge">clsx</code></a> npm package to help us with it. <code class="language-plaintext highlighter-rouge">clsx</code> allows us to apply classes based on conditions.</p>
+
+<p>First let’s install <code class="language-plaintext highlighter-rouge">clsx</code> as a dependency in our project.</p>
+
+<p><code class="language-plaintext highlighter-rouge">npm install clsx</code> or <code class="language-plaintext highlighter-rouge">yarn add clsx</code></p>
+
+<p>Next we update our <code class="language-plaintext highlighter-rouge">Alert</code> component.</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="nx">React</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">react</span><span class="dl">'</span><span class="p">;</span>
+<span class="k">import</span> <span class="nx">clsx</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">clsx</span><span class="dl">'</span><span class="p">;</span>
+<span class="k">import</span> <span class="dl">'</span><span class="s1">./Alert.css</span><span class="dl">'</span><span class="p">;</span>
+
+<span class="kd">const</span> <span class="nx">Alert</span> <span class="o">=</span> <span class="p">({</span> <span class="nx">text</span><span class="p">,</span> <span class="nx">type</span> <span class="p">})</span> <span class="o">=&gt;</span> <span class="p">{</span>
+  <span class="k">return</span> <span class="p">(</span>
+    <span class="o">&lt;</span><span class="nx">div</span>
+      <span class="nx">className</span><span class="o">=</span><span class="p">{</span><span class="nx">clsx</span><span class="p">(</span><span class="dl">'</span><span class="s1">container</span><span class="dl">'</span><span class="p">,</span> <span class="p">{</span>
+        <span class="dl">'</span><span class="s1">alert-success</span><span class="dl">'</span><span class="p">:</span> <span class="nx">type</span> <span class="o">===</span> <span class="dl">'</span><span class="s1">success</span><span class="dl">'</span><span class="p">,</span>
+        <span class="dl">'</span><span class="s1">alert-error</span><span class="dl">'</span><span class="p">:</span> <span class="nx">type</span> <span class="o">===</span> <span class="dl">'</span><span class="s1">error</span><span class="dl">'</span><span class="p">,</span>
+        <span class="dl">'</span><span class="s1">alert-warning</span><span class="dl">'</span><span class="p">:</span> <span class="nx">type</span> <span class="o">===</span> <span class="dl">'</span><span class="s1">warning</span><span class="dl">'</span><span class="p">,</span>
+      <span class="p">})}</span>
+    <span class="o">&gt;</span>
+      <span class="p">{</span><span class="nx">text</span><span class="p">}</span>
+    <span class="o">&lt;</span><span class="sr">/div</span><span class="err">&gt;
+</span>  <span class="p">);</span>
+<span class="p">};</span>
+
+<span class="k">export</span> <span class="k">default</span> <span class="nx">Alert</span><span class="p">;</span>
+</code></pre></div></div>
+
+<p>We have a default class <code class="language-plaintext highlighter-rouge">container</code> that is applied always. The other tree classes are applied based on if they meet the condition.</p>
 
 <h2 id="css-in-js-libraries">CSS-in-JS libraries</h2>
+<p>CSS-in-JS libraries let you write CSS using JavaScript syntax. They allow you to write CSS in the same file as the component file and another advantage is they abstract CSS to the component level.
+They are quite a few libraries that can be used to wirte CSS-in-JS.
+We will have a look at <a href="https://styled-components.com/" title="Styled components"><code class="language-plaintext highlighter-rouge">styled-components</code></a>.</p>
+
+<p>We will start with installingn<code class="language-plaintext highlighter-rouge">styled-components</code></p>
+
+<p><code class="language-plaintext highlighter-rouge">npm install styled-components</code> or <code class="language-plaintext highlighter-rouge">yarn add styled-components</code></p>
+
+<p>Let’s start with a component that renders a button.</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="nx">styled</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">styled-components</span><span class="dl">'</span><span class="p">;</span>
+<span class="k">import</span> <span class="nx">React</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">react</span><span class="dl">'</span><span class="p">;</span>
+
+<span class="kd">const</span> <span class="nx">Container</span> <span class="o">=</span> <span class="nx">styled</span><span class="p">.</span><span class="nx">div</span><span class="s2">`
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+`</span><span class="p">;</span>
+
+<span class="kd">const</span> <span class="nx">Text</span> <span class="o">=</span> <span class="nx">styled</span><span class="p">.</span><span class="nx">p</span><span class="s2">`
+  color: rgb(95, 158, 160);
+  font-size: 16px;
+`</span><span class="p">;</span>
+
+<span class="kd">const</span> <span class="nx">ScComponent</span> <span class="o">=</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="p">{</span>
+  <span class="k">return</span> <span class="p">(</span>
+    <span class="o">&lt;</span><span class="nx">Container</span><span class="o">&gt;</span>
+      <span class="o">&lt;</span><span class="nx">Text</span><span class="o">&gt;</span><span class="nx">Not</span> <span class="nx">Primary</span><span class="o">&lt;</span><span class="sr">/Text</span><span class="err">&gt;
+</span>    <span class="o">&lt;</span><span class="sr">/Container</span><span class="err">&gt;
+</span>  <span class="p">);</span>
+<span class="p">};</span>
+
+<span class="k">export</span> <span class="k">default</span> <span class="nx">ScComponent</span><span class="p">;</span>
+</code></pre></div></div>
+
+<p><code class="language-plaintext highlighter-rouge">Container</code> and <code class="language-plaintext highlighter-rouge">Text</code> are components we define using styled components. As you see we are using CSS in JS.</p>
+
+<p>Component style can be changed based on props the component gets/</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="nx">styled</span><span class="p">,</span> <span class="p">{</span> <span class="nx">css</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">styled-components</span><span class="dl">'</span><span class="p">;</span>
+<span class="k">import</span> <span class="nx">React</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">react</span><span class="dl">'</span><span class="p">;</span>
+
+<span class="kd">const</span> <span class="nx">Container</span> <span class="o">=</span> <span class="nx">styled</span><span class="p">.</span><span class="nx">div</span><span class="s2">`
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+`</span><span class="p">;</span>
+
+<span class="kd">const</span> <span class="nx">Text</span> <span class="o">=</span> <span class="nx">styled</span><span class="p">.</span><span class="nx">p</span><span class="s2">`
+  color: rgb(95, 158, 160);
+  font-size: 16px;
+
+  </span><span class="p">${(</span><span class="nx">props</span><span class="p">)</span> <span class="o">=&gt;</span>
+    <span class="nx">props</span><span class="p">.</span><span class="nx">primary</span> <span class="o">&amp;&amp;</span>
+    <span class="nx">css</span><span class="s2">`
+      color: rgb(177 218 54);
+      font-size: 18px;
+    `</span><span class="p">}</span><span class="s2">;
+`</span><span class="p">;</span>
+
+<span class="kd">const</span> <span class="nx">ScComponent</span> <span class="o">=</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="p">{</span>
+  <span class="k">return</span> <span class="p">(</span>
+    <span class="o">&lt;</span><span class="nx">Container</span><span class="o">&gt;</span>
+      <span class="o">&lt;</span><span class="nx">Text</span><span class="o">&gt;</span><span class="nx">Not</span> <span class="nx">Primary</span><span class="o">&lt;</span><span class="sr">/Text</span><span class="err">&gt;
+</span>      <span class="o">&lt;</span><span class="nx">Text</span> <span class="nx">primary</span><span class="o">&gt;</span><span class="nx">Primary</span><span class="o">&lt;</span><span class="sr">/Text</span><span class="err">&gt;
+</span>    <span class="o">&lt;</span><span class="sr">/Container</span><span class="err">&gt;
+</span>  <span class="p">);</span>
+<span class="p">};</span>
+
+<span class="k">export</span> <span class="k">default</span> <span class="nx">ScComponent</span><span class="p">;</span>
+
+</code></pre></div></div>
 
         </div>
 

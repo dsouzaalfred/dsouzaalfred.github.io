@@ -15,7 +15,7 @@ var store = [{
         "url": "http://localhost:4000/blog/react/react-props/"
       },{
         "title": "React - Styling",
-        "excerpt":"In the last two post we covered JSX and Props, now it’s time to move forward in our journey in learning React and the next stop is styling the components. There are various ways a component can be styled: Inline styles CSS file SASS file CSS modules CSS-in-JS librariesLet’s start...","categories": ["blog","react"],
+        "excerpt":"In the last two post we covered JSX and Props, now it’s time to move forward in our journey in learning React and the next stop is styling the components. There are various ways a component can be styled: Inline styles CSS file SASS file CSS modules CSS-in-JS librariesInline styles...","categories": ["blog","react"],
         "tags": [],
         "url": "http://localhost:4000/blog/react/react-styling/"
       }]
