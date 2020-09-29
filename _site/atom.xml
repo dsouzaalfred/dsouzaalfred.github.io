@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="http://localhost:4000/atom.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-09-29T09:48:11+01:00</updated><id>http://localhost:4000/atom.xml</id><title type="html">Alfred D’Souza</title><subtitle>There is always something new to learn!</subtitle><author><name>Alfred D'Souza</name></author><entry><title type="html">React - Styling</title><link href="http://localhost:4000/blog/react/react-styling/" rel="alternate" type="text/html" title="React - Styling" /><published>2020-09-17T12:01:00+01:00</published><updated>2020-09-17T12:01:00+01:00</updated><id>http://localhost:4000/blog/react/react-styling</id><content type="html" xml:base="http://localhost:4000/blog/react/react-styling/">&lt;p&gt;In the last two post we covered JSX and Props, now it’s time to move forward in our journey in React and the next stop is styling the components.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="http://localhost:4000/atom.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-09-29T17:42:06+01:00</updated><id>http://localhost:4000/atom.xml</id><title type="html">Alfred D’Souza</title><subtitle>There is always something new to learn!</subtitle><author><name>Alfred D'Souza</name></author><entry><title type="html">React - Styling</title><link href="http://localhost:4000/blog/react/react-styling/" rel="alternate" type="text/html" title="React - Styling" /><published>2020-09-26T12:01:00+01:00</published><updated>2020-09-26T12:01:00+01:00</updated><id>http://localhost:4000/blog/react/react-styling</id><content type="html" xml:base="http://localhost:4000/blog/react/react-styling/">&lt;p&gt;In the last two posts we covered JSX and Props, now it’s time to move forward in our journey in React and the next stop is styling the components.&lt;/p&gt;
 
 &lt;p&gt;There are various ways to style a component in React :&lt;/p&gt;
 &lt;ul&gt;
@@ -30,7 +30,7 @@
 &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;p&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;style&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;pTagStyle&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;This&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;text&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;will&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;be&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;green&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;sr&quot;&gt;/p&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;&amp;gt;
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;Let’s see some more css properties:&lt;/p&gt;
+&lt;p&gt;Let’s see some more CSS properties:&lt;/p&gt;
 
 &lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;p&lt;/span&gt;
   &lt;span class=&quot;nx&quot;&gt;style&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
@@ -67,9 +67,9 @@
 
 &lt;p&gt;Out of the box, CRA supports importing CSS files. We can import a CSS file directly into our component and all the classes defined in our CSS file will be available to us in JSX.&lt;/p&gt;
 
-&lt;p&gt;And it’s very easy too. Make a css file and import it into your component.&lt;/p&gt;
+&lt;p&gt;And it’s very easy too. Make a CSS file and import it into your component.&lt;/p&gt;
 
-&lt;p&gt;Let’s say we have a css file called &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;CssFileComponent.css&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;Let’s say we have a CSS file called &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;CssFileComponent.css&lt;/code&gt;.&lt;/p&gt;
 
 &lt;div class=&quot;language-css highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nc&quot;&gt;.wrapper&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
   &lt;span class=&quot;nl&quot;&gt;background-color&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;antiquewhite&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
@@ -96,9 +96,9 @@
   &lt;span class=&quot;nl&quot;&gt;color&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;grey&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
 &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;It’s a CSS file nothing fancy going on here.&lt;/p&gt;
+&lt;p&gt;It’s just a CSS file, nothing fancy going on here.&lt;/p&gt;
 
-&lt;p&gt;Now import this css file into our component file&lt;/p&gt;
+&lt;p&gt;Now import this CSS file into our component file&lt;/p&gt;
 
 &lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;React&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;react&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
 &lt;span class=&quot;k&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;./CssFileComponent.css&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
@@ -330,7 +330,7 @@ Inside this object we will have access to all our classes.&lt;/p&gt;
 
 &lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;npm install clsx&lt;/code&gt; or &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;yarn add clsx&lt;/code&gt;&lt;/p&gt;
 
-&lt;p&gt;Next we update our &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Alert&lt;/code&gt; component.&lt;/p&gt;
+&lt;p&gt;Next we update our &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Alert&lt;/code&gt; component to use &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;clsx&lt;/code&gt;.&lt;/p&gt;
 
 &lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;React&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;react&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
 &lt;span class=&quot;k&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;clsx&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;clsx&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
@@ -353,18 +353,19 @@ Inside this object we will have access to all our classes.&lt;/p&gt;
 &lt;span class=&quot;k&quot;&gt;export&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;default&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;Alert&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;We have a default class &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;container&lt;/code&gt; that is applied always. The other tree classes are applied based on if they meet the condition.&lt;/p&gt;
+&lt;p&gt;We have a default class &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;container&lt;/code&gt; that is always, applied. The other three classes are applied only if they meet a condition.&lt;/p&gt;
 
 &lt;h2 id=&quot;css-in-js-libraries&quot;&gt;CSS-in-JS libraries&lt;/h2&gt;
-&lt;p&gt;CSS-in-JS libraries let you write CSS using JavaScript syntax. They allow you to write CSS in the same file as the component file and another advantage is they abstract CSS to the component level.
-They are quite a few libraries that can be used to wirte CSS-in-JS.
+
+&lt;p&gt;CSS-in-JS libraries let you write CSS using JavaScript syntax. They allow you to write CSS in the same file as the component file and they abstract CSS to the component level.
+There are quite a few libraries that can be used to write CSS-in-JS.
 We will have a look at &lt;a href=&quot;https://styled-components.com/&quot; title=&quot;Styled components&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;styled-components&lt;/code&gt;&lt;/a&gt;.&lt;/p&gt;
 
-&lt;p&gt;We will start with installingn&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;styled-components&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;We will start by installing &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;styled-components&lt;/code&gt;:&lt;/p&gt;
 
 &lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;npm install styled-components&lt;/code&gt; or &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;yarn add styled-components&lt;/code&gt;&lt;/p&gt;
 
-&lt;p&gt;Let’s start with a component that renders a button.&lt;/p&gt;
+&lt;p&gt;And now let’s dive into writing a component using &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;styled-components&lt;/code&gt;.&lt;/p&gt;
 
 &lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;styled&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;styled-components&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
 &lt;span class=&quot;k&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;React&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;react&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
@@ -394,7 +395,7 @@ We will have a look at &lt;a href=&quot;https://styled-components.com/&quot; tit
 
 &lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Container&lt;/code&gt; and &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Text&lt;/code&gt; are components we define using styled components. As you see we are using CSS in JS.&lt;/p&gt;
 
-&lt;p&gt;Component style can be changed based on props the component gets/&lt;/p&gt;
+&lt;p&gt;Component style can be changed based on props:&lt;/p&gt;
 
 &lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;styled&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;css&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;styled-components&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
 &lt;span class=&quot;k&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;React&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;react&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
@@ -429,7 +430,15 @@ We will have a look at &lt;a href=&quot;https://styled-components.com/&quot; tit
 
 &lt;span class=&quot;k&quot;&gt;export&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;default&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;ScComponent&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
 
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>Alfred D'Souza</name><email>dsouzaalfred@gmail.com</email></author><summary type="html">In the last two post we covered JSX and Props, now it’s time to move forward in our journey in React and the next stop is styling the components.</summary></entry><entry><title type="html">React - Props</title><link href="http://localhost:4000/blog/react/react-props/" rel="alternate" type="text/html" title="React - Props" /><published>2020-09-14T09:47:00+01:00</published><updated>2020-09-14T09:47:00+01:00</updated><id>http://localhost:4000/blog/react/react-props</id><content type="html" xml:base="http://localhost:4000/blog/react/react-props/">&lt;h2 id=&quot;what-are-props&quot;&gt;What are props?&lt;/h2&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;There are other ways to style component, like using a &lt;a href=&quot;https://tailwindcss.com/&quot; title=&quot;tailwind css homepage&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;TailwindCss&lt;/code&gt;&lt;/a&gt; which is utility-first CSS framework. Tailwind gives us utility classes that we can use in our components. It comes with a lot of configuration and theming options.&lt;/p&gt;
+
+&lt;p&gt;Another option is to use a component library, like &lt;a href=&quot;https://material-ui.com/&quot; title=&quot;material ui homepage&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Material UI&lt;/code&gt;&lt;/a&gt;. Material-ui is based on google’s material design, it provides a lot of ready made components which we can use in our App. It also comes with hooks for styling and theming.&lt;/p&gt;
+
+&lt;p&gt;We have covered quite a lot in this post, until next time take care :).&lt;/p&gt;
+
+&lt;p&gt;Lastly you can find the code on &lt;a href=&quot;https://github.com/dsouzaalfred/blogdemos/tree/master/react-styling&quot; title=&quot;React - styling repo&quot;&gt;github&lt;/a&gt;&lt;/p&gt;</content><author><name>Alfred D'Souza</name><email>dsouzaalfred@gmail.com</email></author><summary type="html">In the last two posts we covered JSX and Props, now it’s time to move forward in our journey in React and the next stop is styling the components.</summary></entry><entry><title type="html">React - Props</title><link href="http://localhost:4000/blog/react/react-props/" rel="alternate" type="text/html" title="React - Props" /><published>2020-09-14T09:47:00+01:00</published><updated>2020-09-14T09:47:00+01:00</updated><id>http://localhost:4000/blog/react/react-props</id><content type="html" xml:base="http://localhost:4000/blog/react/react-props/">&lt;h2 id=&quot;what-are-props&quot;&gt;What are props?&lt;/h2&gt;
 &lt;p&gt;Props or properties are data passed to a component. A parent component will pass data to a child component as a prop.
 There are a couple of things to note about Props:&lt;/p&gt;
 &lt;ul&gt;

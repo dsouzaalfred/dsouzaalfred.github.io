@@ -1,14 +1,14 @@
 ---
 layout: post
 title: React - Styling
-date: 2020-29-17 12:01 +0100
+date: 2020-09-26 12:01 +0100
 author: alfred_dsouza
 categories:
   - blog
   - react
 share: true
 ---
-In the last two post we covered JSX and Props, now it’s time to move forward in our journey in React and the next stop is styling the components.
+In the last two posts we covered JSX and Props, now it’s time to move forward in our journey in React and the next stop is styling the components.
 
 There are various ways to style a component in React :
 - Inline styles
@@ -41,7 +41,7 @@ const pTagStyle = {color: 'green'};
 <p style={pTagStyle}>This text will be green</p>
 ```
 
-Let's see some more css properties:
+Let's see some more CSS properties:
 
 ```javascript
 <p
@@ -78,9 +78,9 @@ In the above example we are setting the `color` property based on a condition. W
 
 Out of the box, CRA supports importing CSS files. We can import a CSS file directly into our component and all the classes defined in our CSS file will be available to us in JSX.
 
-And it's very easy too. Make a css file and import it into your component.
+And it's very easy too. Make a CSS file and import it into your component.
 
-Let's say we have a css file called `CssFileComponent.css`.
+Let's say we have a CSS file called `CssFileComponent.css`.
 
 ```css
 .wrapper {
@@ -108,9 +108,9 @@ Let's say we have a css file called `CssFileComponent.css`.
   color: grey;
 }
 ```
-It's a CSS file nothing fancy going on here.
+It's just a CSS file, nothing fancy going on here.
 
-Now import this css file into our component file
+Now import this CSS file into our component file
 
 ```javascript
 import React from 'react';

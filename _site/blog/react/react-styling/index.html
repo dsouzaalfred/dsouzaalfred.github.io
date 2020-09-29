@@ -21,15 +21,15 @@
 <meta property="og:title" content="React - Styling" />
 <meta name="author" content="Alfred D'Souza" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="In the last two post we covered JSX and Props, now it’s time to move forward in our journey in React and the next stop is styling the components." />
-<meta property="og:description" content="In the last two post we covered JSX and Props, now it’s time to move forward in our journey in React and the next stop is styling the components." />
+<meta name="description" content="In the last two posts we covered JSX and Props, now it’s time to move forward in our journey in React and the next stop is styling the components." />
+<meta property="og:description" content="In the last two posts we covered JSX and Props, now it’s time to move forward in our journey in React and the next stop is styling the components." />
 <link rel="canonical" href="http://localhost:4000/blog/react/react-styling/" />
 <meta property="og:url" content="http://localhost:4000/blog/react/react-styling/" />
 <meta property="og:site_name" content="Alfred D’Souza" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2020-09-17T12:01:00+01:00" />
+<meta property="article:published_time" content="2020-09-26T12:01:00+01:00" />
 <script type="application/ld+json">
-{"author":{"@type":"Person","name":"Alfred D'Souza"},"url":"http://localhost:4000/blog/react/react-styling/","headline":"React - Styling","dateModified":"2020-09-17T12:01:00+01:00","datePublished":"2020-09-17T12:01:00+01:00","description":"In the last two post we covered JSX and Props, now it’s time to move forward in our journey in React and the next stop is styling the components.","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/blog/react/react-styling/"},"@type":"BlogPosting","@context":"https://schema.org"}</script>
+{"author":{"@type":"Person","name":"Alfred D'Souza"},"url":"http://localhost:4000/blog/react/react-styling/","headline":"React - Styling","dateModified":"2020-09-26T12:01:00+01:00","datePublished":"2020-09-26T12:01:00+01:00","description":"In the last two posts we covered JSX and Props, now it’s time to move forward in our journey in React and the next stop is styling the components.","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/blog/react/react-styling/"},"@type":"BlogPosting","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -110,9 +110,9 @@
             <a class="u-url" rel="me" href="https://www.linkedin.com/in/dsouzaalfred/"><i class="fab fa-linkedin fa-lg" title="LinkedIn"></i></a>
           </li></ul>
 
-<span class="read-time">8 min read</span>
+<span class="read-time">9 min read</span>
 
-    <time class="page-date dt-published" datetime="2020-09-17T12:01:00+01:00"><a class="u-url" href="">September 17, 2020</a>
+    <time class="page-date dt-published" datetime="2020-09-26T12:01:00+01:00"><a class="u-url" href="">September 26, 2020</a>
 </time>
 
   </div>
@@ -130,7 +130,7 @@
 
       <div class="page-content">
         <div class="e-content">
-          <p>In the last two post we covered JSX and Props, now it’s time to move forward in our journey in React and the next stop is styling the components.</p>
+          <p>In the last two posts we covered JSX and Props, now it’s time to move forward in our journey in React and the next stop is styling the components.</p>
 
 <p>There are various ways to style a component in React :</p>
 <ul>
@@ -162,7 +162,7 @@
 <span class="o">&lt;</span><span class="nx">p</span> <span class="nx">style</span><span class="o">=</span><span class="p">{</span><span class="nx">pTagStyle</span><span class="p">}</span><span class="o">&gt;</span><span class="nx">This</span> <span class="nx">text</span> <span class="nx">will</span> <span class="nx">be</span> <span class="nx">green</span><span class="o">&lt;</span><span class="sr">/p</span><span class="err">&gt;
 </span></code></pre></div></div>
 
-<p>Let’s see some more css properties:</p>
+<p>Let’s see some more CSS properties:</p>
 
 <div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&lt;</span><span class="nx">p</span>
   <span class="nx">style</span><span class="o">=</span><span class="p">{</span> <span class="p">{</span>
@@ -199,9 +199,9 @@
 
 <p>Out of the box, CRA supports importing CSS files. We can import a CSS file directly into our component and all the classes defined in our CSS file will be available to us in JSX.</p>
 
-<p>And it’s very easy too. Make a css file and import it into your component.</p>
+<p>And it’s very easy too. Make a CSS file and import it into your component.</p>
 
-<p>Let’s say we have a css file called <code class="language-plaintext highlighter-rouge">CssFileComponent.css</code>.</p>
+<p>Let’s say we have a CSS file called <code class="language-plaintext highlighter-rouge">CssFileComponent.css</code>.</p>
 
 <div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">.wrapper</span> <span class="p">{</span>
   <span class="nl">background-color</span><span class="p">:</span> <span class="no">antiquewhite</span><span class="p">;</span>
@@ -228,9 +228,9 @@
   <span class="nl">color</span><span class="p">:</span> <span class="n">grey</span><span class="p">;</span>
 <span class="p">}</span>
 </code></pre></div></div>
-<p>It’s a CSS file nothing fancy going on here.</p>
+<p>It’s just a CSS file, nothing fancy going on here.</p>
 
-<p>Now import this css file into our component file</p>
+<p>Now import this CSS file into our component file</p>
 
 <div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="nx">React</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">react</span><span class="dl">'</span><span class="p">;</span>
 <span class="k">import</span> <span class="dl">'</span><span class="s1">./CssFileComponent.css</span><span class="dl">'</span><span class="p">;</span>
@@ -462,7 +462,7 @@ Inside this object we will have access to all our classes.</p>
 
 <p><code class="language-plaintext highlighter-rouge">npm install clsx</code> or <code class="language-plaintext highlighter-rouge">yarn add clsx</code></p>
 
-<p>Next we update our <code class="language-plaintext highlighter-rouge">Alert</code> component.</p>
+<p>Next we update our <code class="language-plaintext highlighter-rouge">Alert</code> component to use <code class="language-plaintext highlighter-rouge">clsx</code>.</p>
 
 <div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="nx">React</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">react</span><span class="dl">'</span><span class="p">;</span>
 <span class="k">import</span> <span class="nx">clsx</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">clsx</span><span class="dl">'</span><span class="p">;</span>
@@ -485,18 +485,19 @@ Inside this object we will have access to all our classes.</p>
 <span class="k">export</span> <span class="k">default</span> <span class="nx">Alert</span><span class="p">;</span>
 </code></pre></div></div>
 
-<p>We have a default class <code class="language-plaintext highlighter-rouge">container</code> that is applied always. The other tree classes are applied based on if they meet the condition.</p>
+<p>We have a default class <code class="language-plaintext highlighter-rouge">container</code> that is always, applied. The other three classes are applied only if they meet a condition.</p>
 
 <h2 id="css-in-js-libraries">CSS-in-JS libraries</h2>
-<p>CSS-in-JS libraries let you write CSS using JavaScript syntax. They allow you to write CSS in the same file as the component file and another advantage is they abstract CSS to the component level.
-They are quite a few libraries that can be used to wirte CSS-in-JS.
+
+<p>CSS-in-JS libraries let you write CSS using JavaScript syntax. They allow you to write CSS in the same file as the component file and they abstract CSS to the component level.
+There are quite a few libraries that can be used to write CSS-in-JS.
 We will have a look at <a href="https://styled-components.com/" title="Styled components"><code class="language-plaintext highlighter-rouge">styled-components</code></a>.</p>
 
-<p>We will start with installingn<code class="language-plaintext highlighter-rouge">styled-components</code></p>
+<p>We will start by installing <code class="language-plaintext highlighter-rouge">styled-components</code>:</p>
 
 <p><code class="language-plaintext highlighter-rouge">npm install styled-components</code> or <code class="language-plaintext highlighter-rouge">yarn add styled-components</code></p>
 
-<p>Let’s start with a component that renders a button.</p>
+<p>And now let’s dive into writing a component using <code class="language-plaintext highlighter-rouge">styled-components</code>.</p>
 
 <div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="nx">styled</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">styled-components</span><span class="dl">'</span><span class="p">;</span>
 <span class="k">import</span> <span class="nx">React</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">react</span><span class="dl">'</span><span class="p">;</span>
@@ -526,7 +527,7 @@ We will have a look at <a href="https://styled-components.com/" title="Styled co
 
 <p><code class="language-plaintext highlighter-rouge">Container</code> and <code class="language-plaintext highlighter-rouge">Text</code> are components we define using styled components. As you see we are using CSS in JS.</p>
 
-<p>Component style can be changed based on props the component gets/</p>
+<p>Component style can be changed based on props:</p>
 
 <div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="nx">styled</span><span class="p">,</span> <span class="p">{</span> <span class="nx">css</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">styled-components</span><span class="dl">'</span><span class="p">;</span>
 <span class="k">import</span> <span class="nx">React</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">react</span><span class="dl">'</span><span class="p">;</span>
@@ -562,6 +563,14 @@ We will have a look at <a href="https://styled-components.com/" title="Styled co
 <span class="k">export</span> <span class="k">default</span> <span class="nx">ScComponent</span><span class="p">;</span>
 
 </code></pre></div></div>
+
+<p>There are other ways to style component, like using a <a href="https://tailwindcss.com/" title="tailwind css homepage"><code class="language-plaintext highlighter-rouge">TailwindCss</code></a> which is utility-first CSS framework. Tailwind gives us utility classes that we can use in our components. It comes with a lot of configuration and theming options.</p>
+
+<p>Another option is to use a component library, like <a href="https://material-ui.com/" title="material ui homepage"><code class="language-plaintext highlighter-rouge">Material UI</code></a>. Material-ui is based on google’s material design, it provides a lot of ready made components which we can use in our App. It also comes with hooks for styling and theming.</p>
+
+<p>We have covered quite a lot in this post, until next time take care :).</p>
+
+<p>Lastly you can find the code on <a href="https://github.com/dsouzaalfred/blogdemos/tree/master/react-styling" title="React - styling repo">github</a></p>
 
         </div>
 
