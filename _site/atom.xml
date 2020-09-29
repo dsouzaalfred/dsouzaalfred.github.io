@@ -1,6 +1,6 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="http://localhost:4000/atom.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-09-28T15:45:48+01:00</updated><id>http://localhost:4000/atom.xml</id><title type="html">Alfred D’Souza</title><subtitle>There is always something new to learn!</subtitle><author><name>Alfred D'Souza</name></author><entry><title type="html">React - Styling</title><link href="http://localhost:4000/blog/react/react-styling/" rel="alternate" type="text/html" title="React - Styling" /><published>2020-09-17T12:01:00+01:00</published><updated>2020-09-17T12:01:00+01:00</updated><id>http://localhost:4000/blog/react/react-styling</id><content type="html" xml:base="http://localhost:4000/blog/react/react-styling/">&lt;p&gt;In the last two post we covered JSX and Props, now it’s time to move forward in our journey in learning React and the next stop is styling the components.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="http://localhost:4000/atom.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-09-29T09:48:11+01:00</updated><id>http://localhost:4000/atom.xml</id><title type="html">Alfred D’Souza</title><subtitle>There is always something new to learn!</subtitle><author><name>Alfred D'Souza</name></author><entry><title type="html">React - Styling</title><link href="http://localhost:4000/blog/react/react-styling/" rel="alternate" type="text/html" title="React - Styling" /><published>2020-09-17T12:01:00+01:00</published><updated>2020-09-17T12:01:00+01:00</updated><id>http://localhost:4000/blog/react/react-styling</id><content type="html" xml:base="http://localhost:4000/blog/react/react-styling/">&lt;p&gt;In the last two post we covered JSX and Props, now it’s time to move forward in our journey in React and the next stop is styling the components.&lt;/p&gt;
 
-&lt;p&gt;There are various ways a component can be styled:&lt;/p&gt;
+&lt;p&gt;There are various ways to style a component in React :&lt;/p&gt;
 &lt;ul&gt;
   &lt;li&gt;Inline styles&lt;/li&gt;
   &lt;li&gt;CSS file&lt;/li&gt;
@@ -9,19 +9,21 @@
   &lt;li&gt;CSS-in-JS libraries&lt;/li&gt;
 &lt;/ul&gt;
 
+&lt;p&gt;We will cover all these topics and will also have a look at applying styles based on conditions.&lt;/p&gt;
+
 &lt;h2 id=&quot;inline-styles&quot;&gt;Inline styles&lt;/h2&gt;
 
-&lt;p&gt;In HTML when we use inline styles you would do something like this:&lt;/p&gt;
+&lt;p&gt;Inline style in HTML looks something like this:&lt;/p&gt;
 
 &lt;div class=&quot;language-html highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;p&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;style=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;color: green&quot;&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;This text will be green&lt;span class=&quot;nt&quot;&gt;&amp;lt;/p&amp;gt;&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;The same can be achieved with JSX. In JSX instead of passing the style as a string we pass it as a object.&lt;/p&gt;
+&lt;p&gt;The same can be achieved with JSX. In JSX, instead of passing the style as a string we pass it as an object.&lt;/p&gt;
 
 &lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;p&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;style&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;color&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;green&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;This&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;text&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;will&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;be&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;green&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;sr&quot;&gt;/p&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;&amp;gt;
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;When we want to pass a value to a prop we use {} braces, this is exactly what we are doing, we are passing value to the style prop. To demostrate this we can write the above example as:&lt;/p&gt;
+&lt;p&gt;We use {} braces to pass a value to a prop, this is exactly what we are doing, we are passing value to the style prop. To demonstrate this we can write the above example as:&lt;/p&gt;
 
 &lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;pTagStyle&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;color&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;green&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;
 
@@ -45,21 +47,21 @@
 
 &lt;p&gt;Lot of things going on there:&lt;/p&gt;
 &lt;ul&gt;
-  &lt;li&gt;Like we seen before you have to pass values as strings&lt;/li&gt;
+  &lt;li&gt;We have to pass values as strings&lt;/li&gt;
   &lt;li&gt;If you want to pass a &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;px&lt;/code&gt; value to a CSS property just pass the number value. Like we are doing for &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;padding&lt;/code&gt;.&lt;/li&gt;
   &lt;li&gt;If you have to pass multiple values with &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;px&lt;/code&gt; then you have to mention the whole things as a string like &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;margin&lt;/code&gt;&lt;/li&gt;
-  &lt;li&gt;CSS properties that have a &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;-&lt;/code&gt;, have to be written in camel case. That’s why we have &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;fontSize&lt;/code&gt; instead of &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;font-size&lt;/code&gt;. So, if you want to use the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;margin-bottom&lt;/code&gt; property, we will have to use &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;marginBottom&lt;/code&gt;.&lt;/li&gt;
+  &lt;li&gt;CSS properties that have a &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;-&lt;/code&gt;, have to be written in camel case. That’s why we have &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;fontSize&lt;/code&gt; instead of &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;font-size&lt;/code&gt;. Another example would be, if we want to use the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;margin-bottom&lt;/code&gt; property, we will have to write &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;marginBottom&lt;/code&gt; instead.&lt;/li&gt;
   &lt;li&gt;We can pass multiple values as a string when required like the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;border&lt;/code&gt; or &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;margin&lt;/code&gt; properties in our example.&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;We can also set styling based on conditions, here is an example&lt;/p&gt;
+&lt;p&gt;Lastly we can have a look at assigning a value to a CSS property based on a condition. Here is an example&lt;/p&gt;
 
 &lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;p&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;style&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;color&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;isActive&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;?&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;yellowgreen&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;darkgrey&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;
   &lt;span class=&quot;nx&quot;&gt;Based&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;on&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;condition&lt;/span&gt;
 &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;sr&quot;&gt;/p&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;&amp;gt;
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;We are setting the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;color&lt;/code&gt; property based on a condition. But, you can see the disadvantage of this right, we have use the condition on every property. Classes would be very helpful here.&lt;/p&gt;
+&lt;p&gt;In the above example we are setting the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;color&lt;/code&gt; property based on a condition. While this is an amazing feature, the disadvantage of this is that we have to use the condition on every property. Classes would be very helpful here.&lt;/p&gt;
 
 &lt;h2 id=&quot;css-files&quot;&gt;CSS files&lt;/h2&gt;
 
@@ -67,7 +69,7 @@
 
 &lt;p&gt;And it’s very easy too. Make a css file and import it into your component.&lt;/p&gt;
 
-&lt;p&gt;Let’s say we had a css file called &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;CssFileComponent.css&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;Let’s say we have a css file called &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;CssFileComponent.css&lt;/code&gt;.&lt;/p&gt;
 
 &lt;div class=&quot;language-css highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nc&quot;&gt;.wrapper&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
   &lt;span class=&quot;nl&quot;&gt;background-color&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;antiquewhite&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
@@ -82,7 +84,6 @@
   &lt;span class=&quot;nl&quot;&gt;padding&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;20px&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
   &lt;span class=&quot;nl&quot;&gt;margin&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;20px&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;15px&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
   &lt;span class=&quot;nl&quot;&gt;font-size&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;2rem&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-  &lt;span class=&quot;nl&quot;&gt;color&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;darkorange&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
   &lt;span class=&quot;nl&quot;&gt;border&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;1px&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;solid&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;darkgrey&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
 &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
 
@@ -95,8 +96,9 @@
   &lt;span class=&quot;nl&quot;&gt;color&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;grey&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
 &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;It’s a normal CSS file nothing fancy going on here.
-Now import this css file into our component file&lt;/p&gt;
+&lt;p&gt;It’s a CSS file nothing fancy going on here.&lt;/p&gt;
+
+&lt;p&gt;Now import this css file into our component file&lt;/p&gt;
 
 &lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;React&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;react&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
 &lt;span class=&quot;k&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;./CssFileComponent.css&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
@@ -105,7 +107,7 @@ Now import this css file into our component file&lt;/p&gt;
   &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;
     &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;div&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;className&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;wrapper&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;
       &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;p&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;className&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;greenText&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;This&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;text&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;will&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;be&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;green&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;sr&quot;&gt;/p&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;&amp;gt;
-&lt;/span&gt;      &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;p&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;className&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;multiple-properties&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;Multiple&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;CSS&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;Properties&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;sr&quot;&gt;/p&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;&amp;gt;
+&lt;/span&gt;      &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;p&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;className&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;greenText multiple-properties&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;Multiple&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;classes&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;sr&quot;&gt;/p&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;&amp;gt;
 &lt;/span&gt;      &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;p&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;className&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;isActive&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;?&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;active&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;disabled&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;Based&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;on&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;condition&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;sr&quot;&gt;/p&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;&amp;gt;
 &lt;/span&gt;    &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;sr&quot;&gt;/div&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;&amp;gt;
 &lt;/span&gt;  &lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
@@ -114,7 +116,14 @@ Now import this css file into our component file&lt;/p&gt;
 &lt;span class=&quot;k&quot;&gt;export&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;default&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;CssFileComponent&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;As you can see we can import the css file directly into our component and then use our classes. And the other thing is that we use &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;className&lt;/code&gt; instead of &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;class&lt;/code&gt; when we have to apply the a CSS class. You can read this post on &lt;a href=&quot;https://www.quora.com/Why-do-I-have-to-use-className-instead-of-class-in-ReactJs-components-done-in-JSX-JSX-is-preprocessed-so-shouldnt-that-conversion-happen-when-JSX-is-converted-to-JavaScript?share=1&quot; title=&quot;Quora link&quot;&gt;Quora&lt;/a&gt; to understand why.&lt;/p&gt;
+&lt;p&gt;Quite a few things going on here:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Import the css file directly into our component and then use our classes.&lt;/li&gt;
+  &lt;li&gt;Use &lt;strong&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;className&lt;/code&gt;&lt;/strong&gt; instead of &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;class&lt;/code&gt; when we have to apply a CSS class. Why do we have to do it, short answer &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;class&lt;/code&gt; is a keyword in JavaScript, and our components are JavaScript functions hence we can’t use it, but to get a better understanding you can read this post on &lt;a href=&quot;https://www.quora.com/Why-do-I-have-to-use-className-instead-of-class-in-ReactJs-components-done-in-JSX-JSX-is-preprocessed-so-shouldnt-that-conversion-happen-when-JSX-is-converted-to-JavaScript?share=1&quot; title=&quot;Quora link&quot;&gt;Quora&lt;/a&gt;.&lt;/li&gt;
+  &lt;li&gt;We can use apply multiple classes to an element, just like in HTML.&lt;/li&gt;
+  &lt;li&gt;Applying classes based on a condition can also be achieved.&lt;/li&gt;
+&lt;/ul&gt;
 
 &lt;h2 id=&quot;sass-files&quot;&gt;SASS files&lt;/h2&gt;
 
@@ -123,16 +132,23 @@ Now import this css file into our component file&lt;/p&gt;
   &lt;p&gt;Sass is a stylesheet language that’s compiled to CSS&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;p&gt;You can check out more about SASS on it’s &lt;a href=&quot;https://sass-lang.com/documentation&quot; title=&quot;SAS documentation&quot;&gt;official page&lt;/a&gt;.
-To start using SASS in a CRA project you will only have to install one dependency &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;node-sass&lt;/code&gt;;&lt;/p&gt;
+&lt;p&gt;You can read more about SASS, on it’s &lt;a href=&quot;https://sass-lang.com/documentation&quot; title=&quot;SASS documentation&quot;&gt;official page&lt;/a&gt;.&lt;/p&gt;
 
-&lt;p&gt;Run the following command in your project directly:
-&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;npm install node-sass&lt;/code&gt; or &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;yarn add node-sass&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;To start using SASS in a CRA project we will have to install one dependency &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;node-sass&lt;/code&gt;. CRA takes care of rest of the things for us.&lt;/p&gt;
 
-&lt;p&gt;Once the installation is done we can start using SASS in our project. SASS files have &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;.scss&lt;/code&gt; extension. Here is an example of a &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;.scss&lt;/code&gt; file let’s call it &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;SassStyleComponent.scss&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Run the following command in your project directory:&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;npm install node-sass&lt;/code&gt; or &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;yarn add node-sass&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;Once the installation is done we can start using SASS in our project. SASS files have &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;.scss&lt;/code&gt; extension. Here is an example of a &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;.scss&lt;/code&gt; file let’s call it &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;SassStyleComponent.scss&lt;/code&gt;.&lt;/p&gt;
 
 &lt;div class=&quot;language-scss highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;@import&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'./variables.scss'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
 
+&lt;span class=&quot;nc&quot;&gt;.sass-wrapper&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;nl&quot;&gt;display&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;flex&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;nl&quot;&gt;padding&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;20px&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;nl&quot;&gt;border&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;1px&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;solid&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$secondary-color&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
 &lt;span class=&quot;nt&quot;&gt;ul&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
   &lt;span class=&quot;nl&quot;&gt;margin&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
   &lt;span class=&quot;nl&quot;&gt;padding&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
@@ -153,7 +169,14 @@ To start using SASS in a CRA project you will only have to install one dependenc
 &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;And here is the code for the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;variable.scss&lt;/code&gt; file we are importing. We are just declaring variables here.&lt;/p&gt;
+&lt;p&gt;SASS helps us write CSS in a more intuitive way.&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;We can import styling code from other files.&lt;/li&gt;
+  &lt;li&gt;Styles can be nested as per our markup, like in our example. &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;ul&lt;/code&gt; -&amp;gt; &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;li&lt;/code&gt; -&amp;gt; &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;a&lt;/code&gt;.&lt;/li&gt;
+  &lt;li&gt;Pseudo-classes can also be nested, like in our example &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;:hover&lt;/code&gt; is nested inside &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;a&lt;/code&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;And here is the code for the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;variable.scss&lt;/code&gt; file we are importing. This file hold two variables that can be used by importing in any other SCSS file.&lt;/p&gt;
 
 &lt;div class=&quot;language-scss highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$primary-color&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mh&quot;&gt;#b2d534&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
 &lt;span class=&quot;nv&quot;&gt;$secondary-color&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mh&quot;&gt;#ff8c00&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
@@ -166,10 +189,10 @@ To start using SASS in a CRA project you will only have to install one dependenc
 
 &lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;SassStyleComponent&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
   &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;
-    &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;div&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;div&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;className&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;sass-wrapper&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;
       &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;ul&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;
         &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;li&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;
-          &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;a&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;href&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;#&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;This&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;is&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;a&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;link&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;sr&quot;&gt;/a&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;&amp;gt;
+          &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;a&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;href&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;https://dsouzaalf.red/&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;This&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;is&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;a&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;link&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;sr&quot;&gt;/a&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;&amp;gt;
 &lt;/span&gt;        &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;sr&quot;&gt;/li&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;&amp;gt;
 &lt;/span&gt;        &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;li&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;This&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;is&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;not&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;a&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;link&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;sr&quot;&gt;/li&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;&amp;gt;
 &lt;/span&gt;      &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;sr&quot;&gt;/ul&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;&amp;gt;
@@ -180,19 +203,17 @@ To start using SASS in a CRA project you will only have to install one dependenc
 &lt;span class=&quot;k&quot;&gt;export&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;default&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;SassStyleComponent&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;We import the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;scss&lt;/code&gt; file just like we would a &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;css&lt;/code&gt; file.&lt;/p&gt;
+&lt;p&gt;We import the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;scss&lt;/code&gt; file just like we would a &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;css&lt;/code&gt; file. CRA takes care of compiling &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;SASS&lt;/code&gt; down to &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;CSS&lt;/code&gt; for us. In the component things don’t change, we can use classes defined in our &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;scss&lt;/code&gt; file.&lt;/p&gt;
 
 &lt;h2 id=&quot;css-modules&quot;&gt;CSS modules&lt;/h2&gt;
 
-&lt;p&gt;With CSS modules we can define styles that are scoped at component level. This solves the problem of styles defined using &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;css&lt;/code&gt; or &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;scss&lt;/code&gt; file being global and applied to all components.&lt;/p&gt;
+&lt;p&gt;With CSS modules we can define styles that are scoped at component level. This is useful as this solves the problem of styles defined using &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;css&lt;/code&gt; or &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;scss&lt;/code&gt; file being global and applied to all components.&lt;/p&gt;
 
 &lt;blockquote&gt;
   &lt;p&gt;CSS Modules allows the scoping of CSS by automatically creating a unique classname of the format [filename]_[classname]__[hash].&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;p&gt;CRA supports CSS modules out of the box.&lt;/p&gt;
-
-&lt;p&gt;To start using CSS module use the following naming convention &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;[name].module.css&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;CRA supports CSS modules out of the box. To start using CSS module use the following naming convention &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;[name].module.css&lt;/code&gt;.&lt;/p&gt;
 
 &lt;p&gt;Let’s create a CSS module file and call it &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;CSSModule.module.css&lt;/code&gt;.&lt;/p&gt;
 
@@ -236,9 +257,9 @@ Inside this object we will have access to all our classes.&lt;/p&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 &lt;p&gt;Note that I had named the component &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;CSSModuleComponent.js&lt;/code&gt; hence the first part of the class name.&lt;/p&gt;
 
-&lt;p&gt;We can combine the power of SASS and CSS modules. Make sure you have &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;node-sass&lt;/code&gt; installed as a dependency and name the file &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;.scss&lt;/code&gt; instead of &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;.css&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;We can combine the power of SASS and CSS modules. Make sure you have &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;node-sass&lt;/code&gt; installed as a dependency and name the file &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;.module.scss&lt;/code&gt; instead of &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;.module.css&lt;/code&gt;.&lt;/p&gt;
 
-&lt;h3 id=&quot;clsx&quot;&gt;CLSX&lt;/h3&gt;
+&lt;h2 id=&quot;styles-based-on-conditions&quot;&gt;Styles based on conditions&lt;/h2&gt;
 &lt;p&gt;Earlier in this post we had seen how to apply classes based on a condition. But what if we have multiple conditions instead of one. For example we have a &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Alert&lt;/code&gt; component and this component takes in two props &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;text&lt;/code&gt; and &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;type&lt;/code&gt;. Now &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;type&lt;/code&gt; can be &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;success&lt;/code&gt;, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;error&lt;/code&gt; or &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;warning&lt;/code&gt;.&lt;/p&gt;
 
 &lt;p&gt;Let’s start with the component first.&lt;/p&gt;
@@ -250,7 +271,11 @@ Inside this object we will have access to all our classes.&lt;/p&gt;
 
 &lt;span class=&quot;k&quot;&gt;export&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;default&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;Alert&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;And the CSS.&lt;/p&gt;
+
+&lt;p&gt;A simple component that takes in the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;text&lt;/code&gt; for the alert and the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;type&lt;/code&gt; of the alert.&lt;/p&gt;
+
+&lt;p&gt;And now the CSS.&lt;/p&gt;
+
 &lt;div class=&quot;language-css highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nc&quot;&gt;.container&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
   &lt;span class=&quot;nl&quot;&gt;display&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;flex&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
   &lt;span class=&quot;nl&quot;&gt;flex-flow&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;column&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
@@ -278,6 +303,8 @@ Inside this object we will have access to all our classes.&lt;/p&gt;
 &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
 
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;We have a default container style and one class for each type of alert.&lt;/p&gt;
+
 &lt;p&gt;We can handle the condition inside our component like this:&lt;/p&gt;
 
 &lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;React&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;react&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
@@ -402,7 +429,7 @@ We will have a look at &lt;a href=&quot;https://styled-components.com/&quot; tit
 
 &lt;span class=&quot;k&quot;&gt;export&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;default&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;ScComponent&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
 
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>Alfred D'Souza</name><email>dsouzaalfred@gmail.com</email></author><summary type="html">In the last two post we covered JSX and Props, now it’s time to move forward in our journey in learning React and the next stop is styling the components.</summary></entry><entry><title type="html">React - Props</title><link href="http://localhost:4000/blog/react/react-props/" rel="alternate" type="text/html" title="React - Props" /><published>2020-09-14T09:47:00+01:00</published><updated>2020-09-14T09:47:00+01:00</updated><id>http://localhost:4000/blog/react/react-props</id><content type="html" xml:base="http://localhost:4000/blog/react/react-props/">&lt;h2 id=&quot;what-are-props&quot;&gt;What are props?&lt;/h2&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>Alfred D'Souza</name><email>dsouzaalfred@gmail.com</email></author><summary type="html">In the last two post we covered JSX and Props, now it’s time to move forward in our journey in React and the next stop is styling the components.</summary></entry><entry><title type="html">React - Props</title><link href="http://localhost:4000/blog/react/react-props/" rel="alternate" type="text/html" title="React - Props" /><published>2020-09-14T09:47:00+01:00</published><updated>2020-09-14T09:47:00+01:00</updated><id>http://localhost:4000/blog/react/react-props</id><content type="html" xml:base="http://localhost:4000/blog/react/react-props/">&lt;h2 id=&quot;what-are-props&quot;&gt;What are props?&lt;/h2&gt;
 &lt;p&gt;Props or properties are data passed to a component. A parent component will pass data to a child component as a prop.
 There are a couple of things to note about Props:&lt;/p&gt;
 &lt;ul&gt;
