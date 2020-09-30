@@ -7,6 +7,9 @@ categories:
   - blog
   - react
 share: true
+image:
+  path: /images/react-styling-hero-image.jpg
+  caption: "React - Styling"
 ---
 In the last two posts we covered [JSX](https://dsouzaalf.red/blog/react/jsx-what-is-that/ "JSX - What is that") and [Props](https://dsouzaalf.red/blog/react/react-props/ "React - Props"), now it’s time to move forward in our journey in React and the next stop is styling the components.
 There are various ways to style a component in React :
