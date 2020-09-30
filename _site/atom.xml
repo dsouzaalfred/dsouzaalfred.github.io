@@ -1,15 +1,14 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="http://localhost:4000/atom.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-09-29T17:42:06+01:00</updated><id>http://localhost:4000/atom.xml</id><title type="html">Alfred D’Souza</title><subtitle>There is always something new to learn!</subtitle><author><name>Alfred D'Souza</name></author><entry><title type="html">React - Styling</title><link href="http://localhost:4000/blog/react/react-styling/" rel="alternate" type="text/html" title="React - Styling" /><published>2020-09-26T12:01:00+01:00</published><updated>2020-09-26T12:01:00+01:00</updated><id>http://localhost:4000/blog/react/react-styling</id><content type="html" xml:base="http://localhost:4000/blog/react/react-styling/">&lt;p&gt;In the last two posts we covered JSX and Props, now it’s time to move forward in our journey in React and the next stop is styling the components.&lt;/p&gt;
-
-&lt;p&gt;There are various ways to style a component in React :&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="http://localhost:4000/atom.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-09-30T18:07:58+01:00</updated><id>http://localhost:4000/atom.xml</id><title type="html">Alfred D’Souza</title><subtitle>There is always something new to learn!</subtitle><author><name>Alfred D'Souza</name></author><entry><title type="html">React - Styling</title><link href="http://localhost:4000/blog/react/react-styling/" rel="alternate" type="text/html" title="React - Styling" /><published>2020-09-30T12:01:00+01:00</published><updated>2020-09-30T12:01:00+01:00</updated><id>http://localhost:4000/blog/react/react-styling</id><content type="html" xml:base="http://localhost:4000/blog/react/react-styling/">&lt;p&gt;In the last two posts we covered &lt;a href=&quot;https://dsouzaalf.red/blog/react/jsx-what-is-that/&quot; title=&quot;JSX - What is that&quot;&gt;JSX&lt;/a&gt; and &lt;a href=&quot;https://dsouzaalf.red/blog/react/react-props/&quot; title=&quot;React - Props&quot;&gt;Props&lt;/a&gt;, now it’s time to move forward in our journey in React and the next stop is styling the components.
+There are various ways to style a component in React :&lt;/p&gt;
 &lt;ul&gt;
-  &lt;li&gt;Inline styles&lt;/li&gt;
-  &lt;li&gt;CSS file&lt;/li&gt;
-  &lt;li&gt;SASS file&lt;/li&gt;
-  &lt;li&gt;CSS modules&lt;/li&gt;
-  &lt;li&gt;CSS-in-JS libraries&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#inline-styles&quot; title=&quot;Inline Styles&quot;&gt;Inline styles&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#css-file&quot; title=&quot;CSS File&quot;&gt;CSS file&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#sass-file&quot; title=&quot;SASS File&quot;&gt;SASS file&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#css-modules&quot; title=&quot;CSS Modules&quot;&gt;CSS modules&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#css-in-js&quot; title=&quot;CSS-in_JS Libraries&quot;&gt;CSS-in-JS libraries&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;We will cover all these topics and will also have a look at applying styles based on conditions.&lt;/p&gt;
+&lt;p&gt;We will cover all these topics and will also have a look at &lt;a href=&quot;#conditional-styles&quot;&gt;applying styles based on conditions&lt;/a&gt;.&lt;/p&gt;
 
 &lt;h2 id=&quot;inline-styles&quot;&gt;Inline styles&lt;/h2&gt;
 
@@ -63,7 +62,7 @@
 
 &lt;p&gt;In the above example we are setting the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;color&lt;/code&gt; property based on a condition. While this is an amazing feature, the disadvantage of this is that we have to use the condition on every property. Classes would be very helpful here.&lt;/p&gt;
 
-&lt;h2 id=&quot;css-files&quot;&gt;CSS files&lt;/h2&gt;
+&lt;h2 id=&quot;css-file&quot;&gt;CSS files&lt;/h2&gt;
 
 &lt;p&gt;Out of the box, CRA supports importing CSS files. We can import a CSS file directly into our component and all the classes defined in our CSS file will be available to us in JSX.&lt;/p&gt;
 
@@ -96,9 +95,9 @@
   &lt;span class=&quot;nl&quot;&gt;color&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;grey&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
 &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;It’s just a CSS file, nothing fancy going on here.&lt;/p&gt;
+&lt;p&gt;It’s just a CSS file, nothing fancy.&lt;/p&gt;
 
-&lt;p&gt;Now import this CSS file into our component file&lt;/p&gt;
+&lt;p&gt;Next, import this CSS file into our component file&lt;/p&gt;
 
 &lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;React&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;react&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
 &lt;span class=&quot;k&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;./CssFileComponent.css&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
@@ -116,16 +115,16 @@
 &lt;span class=&quot;k&quot;&gt;export&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;default&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;CssFileComponent&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;Quite a few things going on here:&lt;/p&gt;
+&lt;p&gt;Few things going on here:&lt;/p&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;Import the css file directly into our component and then use our classes.&lt;/li&gt;
-  &lt;li&gt;Use &lt;strong&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;className&lt;/code&gt;&lt;/strong&gt; instead of &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;class&lt;/code&gt; when we have to apply a CSS class. Why do we have to do it, short answer &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;class&lt;/code&gt; is a keyword in JavaScript, and our components are JavaScript functions hence we can’t use it, but to get a better understanding you can read this post on &lt;a href=&quot;https://www.quora.com/Why-do-I-have-to-use-className-instead-of-class-in-ReactJs-components-done-in-JSX-JSX-is-preprocessed-so-shouldnt-that-conversion-happen-when-JSX-is-converted-to-JavaScript?share=1&quot; title=&quot;Quora link&quot;&gt;Quora&lt;/a&gt;.&lt;/li&gt;
-  &lt;li&gt;We can use apply multiple classes to an element, just like in HTML.&lt;/li&gt;
-  &lt;li&gt;Applying classes based on a condition can also be achieved.&lt;/li&gt;
+  &lt;li&gt;We have imported the CSS file directly into our component and then use our classes.&lt;/li&gt;
+  &lt;li&gt;Using &lt;strong&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;className&lt;/code&gt;&lt;/strong&gt; instead of &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;class&lt;/code&gt; when we have to apply a CSS class. Why do we have to do it? Short answer &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;class&lt;/code&gt; is a keyword in JavaScript, and our components are JavaScript functions hence we can’t use it, but to get a better understanding you can read this post on &lt;a href=&quot;https://www.quora.com/Why-do-I-have-to-use-className-instead-of-class-in-ReactJs-components-done-in-JSX-JSX-is-preprocessed-so-shouldnt-that-conversion-happen-when-JSX-is-converted-to-JavaScript?share=1&quot; title=&quot;Quora link&quot;&gt;Quora&lt;/a&gt;.&lt;/li&gt;
+  &lt;li&gt;We can apply multiple classes to an element, just like in HTML.&lt;/li&gt;
+  &lt;li&gt;We can also apply classes based on a condition.&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h2 id=&quot;sass-files&quot;&gt;SASS files&lt;/h2&gt;
+&lt;h2 id=&quot;sass-file&quot;&gt;SASS files&lt;/h2&gt;
 
 &lt;p&gt;&lt;a href=&quot;https://sass-lang.com/documentation&quot;&gt;SASS&lt;/a&gt; stands for Syntactically Awesome Stylesheet.&lt;/p&gt;
 &lt;blockquote&gt;
@@ -176,7 +175,7 @@
   &lt;li&gt;Pseudo-classes can also be nested, like in our example &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;:hover&lt;/code&gt; is nested inside &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;a&lt;/code&gt;.&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;And here is the code for the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;variable.scss&lt;/code&gt; file we are importing. This file hold two variables that can be used by importing in any other SCSS file.&lt;/p&gt;
+&lt;p&gt;And here is the code for the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;variable.scss&lt;/code&gt; file we are importing. This file holds two variables that can be used by importing in any other SCSS file.&lt;/p&gt;
 
 &lt;div class=&quot;language-scss highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$primary-color&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mh&quot;&gt;#b2d534&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
 &lt;span class=&quot;nv&quot;&gt;$secondary-color&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mh&quot;&gt;#ff8c00&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
@@ -203,7 +202,7 @@
 &lt;span class=&quot;k&quot;&gt;export&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;default&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;SassStyleComponent&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;We import the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;scss&lt;/code&gt; file just like we would a &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;css&lt;/code&gt; file. CRA takes care of compiling &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;SASS&lt;/code&gt; down to &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;CSS&lt;/code&gt; for us. In the component things don’t change, we can use classes defined in our &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;scss&lt;/code&gt; file.&lt;/p&gt;
+&lt;p&gt;We import the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;scss&lt;/code&gt; file just like we would a &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;css&lt;/code&gt; file. CRA takes care of compiling SASS down to CSS for us. In the component, things don’t change. We can use the styles defined in our &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;scss&lt;/code&gt; file.&lt;/p&gt;
 
 &lt;h2 id=&quot;css-modules&quot;&gt;CSS modules&lt;/h2&gt;
 
@@ -259,7 +258,8 @@ Inside this object we will have access to all our classes.&lt;/p&gt;
 
 &lt;p&gt;We can combine the power of SASS and CSS modules. Make sure you have &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;node-sass&lt;/code&gt; installed as a dependency and name the file &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;.module.scss&lt;/code&gt; instead of &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;.module.css&lt;/code&gt;.&lt;/p&gt;
 
-&lt;h2 id=&quot;styles-based-on-conditions&quot;&gt;Styles based on conditions&lt;/h2&gt;
+&lt;h2 id=&quot;conditional-styles&quot;&gt;Styles based on conditions&lt;/h2&gt;
+
 &lt;p&gt;Earlier in this post we had seen how to apply classes based on a condition. But what if we have multiple conditions instead of one. For example we have a &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Alert&lt;/code&gt; component and this component takes in two props &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;text&lt;/code&gt; and &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;type&lt;/code&gt;. Now &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;type&lt;/code&gt; can be &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;success&lt;/code&gt;, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;error&lt;/code&gt; or &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;warning&lt;/code&gt;.&lt;/p&gt;
 
 &lt;p&gt;Let’s start with the component first.&lt;/p&gt;
@@ -355,7 +355,7 @@ Inside this object we will have access to all our classes.&lt;/p&gt;
 
 &lt;p&gt;We have a default class &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;container&lt;/code&gt; that is always, applied. The other three classes are applied only if they meet a condition.&lt;/p&gt;
 
-&lt;h2 id=&quot;css-in-js-libraries&quot;&gt;CSS-in-JS libraries&lt;/h2&gt;
+&lt;h2 id=&quot;css-in-js&quot;&gt;CSS-in-JS libraries&lt;/h2&gt;
 
 &lt;p&gt;CSS-in-JS libraries let you write CSS using JavaScript syntax. They allow you to write CSS in the same file as the component file and they abstract CSS to the component level.
 There are quite a few libraries that can be used to write CSS-in-JS.
@@ -438,7 +438,7 @@ We will have a look at &lt;a href=&quot;https://styled-components.com/&quot; tit
 
 &lt;p&gt;We have covered quite a lot in this post, until next time take care :).&lt;/p&gt;
 
-&lt;p&gt;Lastly you can find the code on &lt;a href=&quot;https://github.com/dsouzaalfred/blogdemos/tree/master/react-styling&quot; title=&quot;React - styling repo&quot;&gt;github&lt;/a&gt;&lt;/p&gt;</content><author><name>Alfred D'Souza</name><email>dsouzaalfred@gmail.com</email></author><summary type="html">In the last two posts we covered JSX and Props, now it’s time to move forward in our journey in React and the next stop is styling the components.</summary></entry><entry><title type="html">React - Props</title><link href="http://localhost:4000/blog/react/react-props/" rel="alternate" type="text/html" title="React - Props" /><published>2020-09-14T09:47:00+01:00</published><updated>2020-09-14T09:47:00+01:00</updated><id>http://localhost:4000/blog/react/react-props</id><content type="html" xml:base="http://localhost:4000/blog/react/react-props/">&lt;h2 id=&quot;what-are-props&quot;&gt;What are props?&lt;/h2&gt;
+&lt;p&gt;Lastly you can find the code on &lt;a href=&quot;https://github.com/dsouzaalfred/blogdemos/tree/master/react-styling&quot; title=&quot;React - styling repo&quot;&gt;github&lt;/a&gt;.&lt;/p&gt;</content><author><name>Alfred D'Souza</name><email>dsouzaalfred@gmail.com</email></author><summary type="html">In the last two posts we covered JSX and Props, now it’s time to move forward in our journey in React and the next stop is styling the components. There are various ways to style a component in React : Inline styles CSS file SASS file CSS modules CSS-in-JS libraries</summary></entry><entry><title type="html">React - Props</title><link href="http://localhost:4000/blog/react/react-props/" rel="alternate" type="text/html" title="React - Props" /><published>2020-09-14T09:47:00+01:00</published><updated>2020-09-14T09:47:00+01:00</updated><id>http://localhost:4000/blog/react/react-props</id><content type="html" xml:base="http://localhost:4000/blog/react/react-props/">&lt;h2 id=&quot;what-are-props&quot;&gt;What are props?&lt;/h2&gt;
 &lt;p&gt;Props or properties are data passed to a component. A parent component will pass data to a child component as a prop.
 There are a couple of things to note about Props:&lt;/p&gt;
 &lt;ul&gt;

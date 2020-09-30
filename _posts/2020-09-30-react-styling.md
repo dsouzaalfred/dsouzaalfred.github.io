@@ -1,25 +1,24 @@
 ---
 layout: post
 title: React - Styling
-date: 2020-09-26 12:01 +0100
+date: 2020-09-30 12:01 +0100
 author: alfred_dsouza
 categories:
   - blog
   - react
 share: true
 ---
-In the last two posts we covered JSX and Props, now it’s time to move forward in our journey in React and the next stop is styling the components.
-
+In the last two posts we covered [JSX](https://dsouzaalf.red/blog/react/jsx-what-is-that/ "JSX - What is that") and [Props](https://dsouzaalf.red/blog/react/react-props/ "React - Props"), now it’s time to move forward in our journey in React and the next stop is styling the components.
 There are various ways to style a component in React :
-- Inline styles
-- CSS file
-- SASS file
-- CSS modules
-- CSS-in-JS libraries
+- [Inline styles](#inline-styles "Inline Styles")
+- [CSS file](#css-file "CSS File")
+- [SASS file](#sass-file "SASS File")
+- [CSS modules](#css-modules "CSS Modules")
+- [CSS-in-JS libraries](#css-in-js "CSS-in_JS Libraries")
 
-We will cover all these topics and will also have a look at applying styles based on conditions.
+We will cover all these topics and will also have a look at [applying styles based on conditions](#conditional-styles).
 
-## Inline styles
+## Inline styles  {#inline-styles}
 
 Inline style in HTML looks something like this:
 
@@ -74,7 +73,7 @@ Lastly we can have a look at assigning a value to a CSS property based on a cond
 
 In the above example we are setting the `color` property based on a condition. While this is an amazing feature, the disadvantage of this is that we have to use the condition on every property. Classes would be very helpful here.  
 
-## CSS files
+## CSS files  {#css-file}
 
 Out of the box, CRA supports importing CSS files. We can import a CSS file directly into our component and all the classes defined in our CSS file will be available to us in JSX.
 
@@ -108,9 +107,9 @@ Let's say we have a CSS file called `CssFileComponent.css`.
   color: grey;
 }
 ```
-It's just a CSS file, nothing fancy going on here.
+It's just a CSS file, nothing fancy.
 
-Now import this CSS file into our component file
+Next, import this CSS file into our component file
 
 ```javascript
 import React from 'react';
@@ -129,14 +128,14 @@ const CssFileComponent = ({ isActive }) => {
 export default CssFileComponent;
 ```
 
-Quite a few things going on here:
+Few things going on here:
 
-- Import the css file directly into our component and then use our classes.
-- Use __`className`__ instead of `class` when we have to apply a CSS class. Why do we have to do it, short answer `class` is a keyword in JavaScript, and our components are JavaScript functions hence we can't use it, but to get a better understanding you can read this post on [Quora](https://www.quora.com/Why-do-I-have-to-use-className-instead-of-class-in-ReactJs-components-done-in-JSX-JSX-is-preprocessed-so-shouldnt-that-conversion-happen-when-JSX-is-converted-to-JavaScript?share=1 "Quora link").
-- We can use apply multiple classes to an element, just like in HTML.
-- Applying classes based on a condition can also be achieved.
+- We have imported the CSS file directly into our component and then use our classes.
+- Using __`className`__ instead of `class` when we have to apply a CSS class. Why do we have to do it? Short answer `class` is a keyword in JavaScript, and our components are JavaScript functions hence we can't use it, but to get a better understanding you can read this post on [Quora](https://www.quora.com/Why-do-I-have-to-use-className-instead-of-class-in-ReactJs-components-done-in-JSX-JSX-is-preprocessed-so-shouldnt-that-conversion-happen-when-JSX-is-converted-to-JavaScript?share=1 "Quora link").
+- We can apply multiple classes to an element, just like in HTML.
+- We can also apply classes based on a condition.
 
-## SASS files
+## SASS files  {#sass-file}
 
 [SASS](https://sass-lang.com/documentation) stands for Syntactically Awesome Stylesheet.
 > Sass is a stylesheet language that’s compiled to CSS
@@ -184,7 +183,7 @@ SASS helps us write CSS in a more intuitive way.
 - Styles can be nested as per our markup, like in our example. `ul` -> `li` -> `a`.
 - Pseudo-classes can also be nested, like in our example `:hover` is nested inside `a`.
 
-And here is the code for the `variable.scss` file we are importing. This file hold two variables that can be used by importing in any other SCSS file.
+And here is the code for the `variable.scss` file we are importing. This file holds two variables that can be used by importing in any other SCSS file.
 
 ```scss
 $primary-color: #b2d534;
@@ -213,9 +212,9 @@ const SassStyleComponent = () => {
 export default SassStyleComponent;
 ```
 
-We import the `scss` file just like we would a `css` file. CRA takes care of compiling `SASS` down to `CSS` for us. In the component things don't change, we can use classes defined in our `scss` file.
+We import the `scss` file just like we would a `css` file. CRA takes care of compiling SASS down to CSS for us. In the component, things don't change. We can use the styles defined in our `scss` file.
 
-## CSS modules
+## CSS modules  {#css-modules}
 
 With CSS modules we can define styles that are scoped at component level. This is useful as this solves the problem of styles defined using `css` or `scss` file being global and applied to all components.
 
@@ -270,7 +269,8 @@ Note that I had named the component `CSSModuleComponent.js` hence the first part
 
 We can combine the power of SASS and CSS modules. Make sure you have `node-sass` installed as a dependency and name the file `.module.scss` instead of `.module.css`.
 
-## Styles based on conditions
+## Styles based on conditions  {#conditional-styles}
+
 Earlier in this post we had seen how to apply classes based on a condition. But what if we have multiple conditions instead of one. For example we have a `Alert` component and this component takes in two props `text` and `type`. Now `type` can be `success`, `error` or `warning`.
 
 Let's start with the component first.
@@ -370,7 +370,7 @@ export default Alert;
 
 We have a default class `container` that is always, applied. The other three classes are applied only if they meet a condition.
 
-## CSS-in-JS libraries
+## CSS-in-JS libraries  {#css-in-js}
 
 CSS-in-JS libraries let you write CSS using JavaScript syntax. They allow you to write CSS in the same file as the component file and they abstract CSS to the component level.
 There are quite a few libraries that can be used to write CSS-in-JS.
@@ -455,4 +455,4 @@ Another option is to use a component library, like [`Material UI`](https://mater
 
 We have covered quite a lot in this post, until next time take care :).
 
-Lastly you can find the code on [github](https://github.com/dsouzaalfred/blogdemos/tree/master/react-styling "React - styling repo")
+Lastly you can find the code on [github](https://github.com/dsouzaalfred/blogdemos/tree/master/react-styling "React - styling repo").
