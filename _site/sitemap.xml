@@ -1,6 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
+<loc>http://localhost:4000/blog/jquery/dynamically-add-content-to-dom-using-jquery/</loc>
+<lastmod>2015-07-01T11:15:00+01:00</lastmod>
+</url>
+<url>
+<loc>http://localhost:4000/blog/javascript/dynamically-add-content-to-dom-using-javascript/</loc>
+<lastmod>2015-07-02T11:15:00+01:00</lastmod>
+</url>
+<url>
+<loc>http://localhost:4000/blog/jquery/dynamically-remove-content-from-dom-using-jquery/</loc>
+<lastmod>2015-07-07T11:15:00+01:00</lastmod>
+</url>
+<url>
+<loc>http://localhost:4000/blog/javascript/dynamically-remove-content-from-dom-using-javascript/</loc>
+<lastmod>2015-07-16T11:15:00+01:00</lastmod>
+</url>
+<url>
+<loc>http://localhost:4000/blog/jquery/jquery-event-delegation/</loc>
+<lastmod>2015-07-23T11:15:00+01:00</lastmod>
+</url>
+<url>
+<loc>http://localhost:4000/blog/javascript/javascript-event-delegation/</loc>
+<lastmod>2015-08-12T11:15:00+01:00</lastmod>
+</url>
+<url>
 <loc>http://localhost:4000/blog/react/getting-started-with-react/</loc>
 <lastmod>2020-08-26T11:15:00+01:00</lastmod>
 </url>
