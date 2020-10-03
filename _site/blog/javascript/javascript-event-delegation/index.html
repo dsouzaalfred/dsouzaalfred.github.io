@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<!--
+    So Simple Jekyll Theme 3.2.0
+    Copyright 2013-2019 Michael Rose - mademistakes.com | @mmistakes
+    Free for personal and commercial use under the MIT license
+    https://github.com/mmistakes/so-simple-theme/blob/master/LICENSE
+-->
+<html lang="en-US" class="no-js">
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  
+
+  
+    
+    <!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>JavaScript Event Delegation | Alfred D’Souza</title>
+<meta name="generator" content="Jekyll v3.9.0" />
+<meta property="og:title" content="JavaScript Event Delegation" />
+<meta name="author" content="Alfred D'Souza" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="In our previous post we saw event delegation using jQuery, in this post we will see JavaScript event delegation." />
+<meta property="og:description" content="In our previous post we saw event delegation using jQuery, in this post we will see JavaScript event delegation." />
+<link rel="canonical" href="http://localhost:4000/blog/javascript/javascript-event-delegation/" />
+<meta property="og:url" content="http://localhost:4000/blog/javascript/javascript-event-delegation/" />
+<meta property="og:site_name" content="Alfred D’Souza" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2015-08-12T11:15:00+01:00" />
+<script type="application/ld+json">
+{"author":{"@type":"Person","name":"Alfred D'Souza"},"url":"http://localhost:4000/blog/javascript/javascript-event-delegation/","headline":"JavaScript Event Delegation","dateModified":"2015-08-12T11:15:00+01:00","datePublished":"2015-08-12T11:15:00+01:00","description":"In our previous post we saw event delegation using jQuery, in this post we will see JavaScript event delegation.","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/blog/javascript/javascript-event-delegation/"},"@type":"BlogPosting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+
+  
+
+  <script>
+    /* Cut the mustard */
+    if ( 'querySelector' in document && 'addEventListener' in window ) {
+      document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + 'js';
+    }
+  </script>
+
+  <link rel="stylesheet" href="/assets/css/main.css">
+  <link rel="stylesheet" href="/assets/css/skins/default.css">
+  <link rel="alternate" type="application/atom+xml" title="Alfred D&#39;Souza" href="/atom.xml">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
+
+</head>
+
+
+  <body class="layout--post  javascript-event-delegation">
+    <nav class="skip-links">
+  <h2 class="screen-reader-text">Skip links</h2>
+  <ul>
+    <li><a href="#primary-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    
+  <div class="navigation-wrapper">
+    <a href="#menu-toggle" id="menu-toggle">Menu</a>
+    <nav id="primary-nav" class="site-nav animated drop">
+      <ul><li><a href="/">Home</a></li><li><a href="/blog/">Blog</a></li><li><a href="/search/">Search</a></li></ul>
+    </nav>
+  </div><!-- /.navigation-wrapper -->
+
+
+    <header class="masthead">
+  <div class="wrap">
+    
+    
+    
+      
+        <div class="site-title animated fadeIn"><a href="/">Alfred D'Souza</a></div>
+      
+      <p class="site-description animated fadeIn" itemprop="description">There is always something new to learn!</p>
+    
+  </div>
+</header><!-- /.masthead -->
+
+
+    <main id="main" class="main-content" aria-label="Content">
+  <article class="h-entry">
+    
+
+    <div class="page-wrapper">
+      <header class="page-header">
+        
+        
+          <h1 id="page-title" class="page-title p-name">JavaScript Event Delegation
+</h1>
+        
+      </header>
+
+      <div class="page-sidebar">
+        <div class="page-author h-card p-author"><img src="/images/alfred-dsouza-photo.jpg" class="author-avatar u-photo" alt="Alfred D'Souza"><div class="author-info"><div class="author-name">
+        <span class="p-name">Alfred D'Souza</span>
+      </div><ul class="author-links"><li class="author-link">
+            <a class="u-url" rel="me" href="https://twitter.com/dsouzaalfred"><i class="fab fa-twitter-square fa-lg" title="Twitter"></i></a>
+          </li><li class="author-link">
+            <a class="u-url" rel="me" href="https://github.com/dsouzaalfred"><i class="fab fa-github-square fa-lg" title="GitHub"></i></a>
+          </li><li class="author-link">
+            <a class="u-url" rel="me" href="https://www.linkedin.com/in/dsouzaalfred/"><i class="fab fa-linkedin fa-lg" title="LinkedIn"></i></a>
+          </li></ul>
+
+<span class="read-time">2 min read</span>
+
+    <time class="page-date dt-published" datetime="2015-08-12T11:15:00+01:00"><a class="u-url" href="">August 12, 2015</a>
+</time>
+
+  </div>
+</div>
+
+        
+  <h3 class="page-taxonomies-title">Categories</h3>
+  <ul class="page-taxonomies"><li class="page-taxonomy"><a class="p-category" href="/categories/#blog" title="Pages filed under blog">blog</a></li><li class="page-taxonomy"><a class="p-category" href="/categories/#javascript" title="Pages filed under javascript">javascript</a></li>
+  </ul>
+
+
+        
+
+      </div>
+
+      <div class="page-content">
+        <div class="e-content">
+          <p>In our previous post we saw event <a href="https://dsouzaalf.red/blog/jquery/jquery-event-delegation/" title="jQuery Event Delegation "><code class="language-plaintext highlighter-rouge">delegation using jQuery</code></a>, in this post we will see JavaScript event delegation.</p>
+
+<p>Make sure you check these two posts before we start with this one.</p>
+
+<p>Dynamically Add content to <a href="https://dsouzaalf.red/blog/javascript/dynamically-add-content-to-dom-using-javascript/" title="Dynamically Add content to DOM using JavaScript "><code class="language-plaintext highlighter-rouge">DOM using JavaScript</code></a>
+Dynamically remove content from <a href="https://dsouzaalf.red/blog/javascript/dynamically-remove-content-from-dom-using-javascript/" title="Dynamically remove content from DOM using JavaScript "><code class="language-plaintext highlighter-rouge">DOM using JavaScript</code></a></p>
+
+<p>Let’s get started with our HTML :</p>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="nt">&lt;html</span> <span class="na">lang=</span><span class="s">"en"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;head&gt;</span>
+        <span class="nt">&lt;meta</span> <span class="na">charset=</span><span class="s">"utf-8"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;title&gt;</span>Add Remove Text-boxes<span class="nt">&lt;/title&gt;</span>
+    <span class="nt">&lt;/head&gt;</span>
+    <span class="nt">&lt;body&gt;</span>
+        <span class="nt">&lt;H1&gt;</span>Add Remove Text-boxes<span class="nt">&lt;/H1&gt;</span>
+        <span class="nt">&lt;button</span> <span class="na">id=</span><span class="s">"btn-add-textbox"</span><span class="nt">&gt;</span>Add Textbox<span class="nt">&lt;/button&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">"div-add-remove"</span><span class="nt">&gt;</span>
+
+        <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/body&gt;</span>
+<span class="nt">&lt;/html&gt;</span>
+</code></pre></div></div>
+
+<p>We have a button(<code class="language-plaintext highlighter-rouge">btn-add-textbox</code>) to add text-boxes to our div(<code class="language-plaintext highlighter-rouge">div-add-remove</code>). That’s about it with HTML. Next we will add JavaScript to add text-boxes.</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">var</span> <span class="nx">getButton</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="dl">'</span><span class="s1">btn-add-textbox</span><span class="dl">'</span><span class="p">);</span>
+<span class="kd">var</span> <span class="nx">getDiv</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="dl">'</span><span class="s1">div-add-remove</span><span class="dl">'</span><span class="p">);</span>
+<span class="nx">getButton</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="dl">'</span><span class="s1">click</span><span class="dl">'</span><span class="p">,</span><span class="kd">function</span><span class="p">(</span><span class="nx">e</span><span class="p">){</span>
+    <span class="kd">var</span> <span class="nx">divToAdd</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">createElement</span><span class="p">(</span><span class="dl">'</span><span class="s1">div</span><span class="dl">'</span><span class="p">);</span>
+    <span class="nx">divToAdd</span><span class="p">.</span><span class="nx">className</span> <span class="o">=</span> <span class="dl">'</span><span class="s1">magic-div</span><span class="dl">'</span><span class="p">;</span>
+    <span class="kd">var</span> <span class="nx">inputToAdd</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">createElement</span><span class="p">(</span><span class="dl">'</span><span class="s1">input</span><span class="dl">'</span><span class="p">);</span>
+    <span class="nx">inputToAdd</span><span class="p">.</span><span class="nx">type</span> <span class="o">=</span> <span class="dl">'</span><span class="s1">text</span><span class="dl">'</span><span class="p">;</span>
+    <span class="nx">inputToAdd</span><span class="p">.</span><span class="nx">className</span> <span class="o">=</span> <span class="dl">'</span><span class="s1">magic-text-box</span><span class="dl">'</span><span class="p">;</span>
+    <span class="kd">var</span> <span class="nx">spanToAdd</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">createElement</span><span class="p">(</span><span class="dl">'</span><span class="s1">span</span><span class="dl">'</span><span class="p">);</span>
+    <span class="nx">spanToAdd</span><span class="p">.</span><span class="nx">className</span> <span class="o">=</span> <span class="dl">'</span><span class="s1">remove-textbox</span><span class="dl">'</span><span class="p">;</span>
+    <span class="nx">spanToAdd</span><span class="p">.</span><span class="nx">innerHTML</span>  <span class="o">=</span> <span class="dl">'</span><span class="s1"> x</span><span class="dl">'</span><span class="p">;</span>
+    <span class="nx">divToAdd</span><span class="p">.</span><span class="nx">appendChild</span><span class="p">(</span><span class="nx">inputToAdd</span><span class="p">);</span>
+    <span class="nx">divToAdd</span><span class="p">.</span><span class="nx">appendChild</span><span class="p">(</span><span class="nx">spanToAdd</span><span class="p">);</span>
+    <span class="nx">getDiv</span><span class="p">.</span><span class="nx">appendChild</span><span class="p">(</span><span class="nx">divToAdd</span><span class="p">);</span>
+<span class="p">});</span>
+</code></pre></div></div>
+
+<p>That looks like lot of code for adding a simple text-box, but all we are doing is constructing a template and adding it to our div.</p>
+
+<p>First we get our button (<code class="language-plaintext highlighter-rouge">getButton</code>) and div (<code class="language-plaintext highlighter-rouge">getDiv</code>). Next we ask our button(<code class="language-plaintext highlighter-rouge">getButton</code>) to listen for a click. Here is what we do once our button hears a click :</p>
+
+<p>We create(<a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/createElement" title="MDN .createElement documentation"><code class="language-plaintext highlighter-rouge">createElement</code></a>) a <code class="language-plaintext highlighter-rouge">div</code> element(divToAdd) and give it a class(<a href="https://developer.mozilla.org/en-US/docs/Web/API/Element/className" title="MDN .className documentation"><code class="language-plaintext highlighter-rouge">className</code></a>) of <code class="language-plaintext highlighter-rouge">magic-div</code>
+Next we create(<a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/createElement" title="MDN .createElement documentation"><code class="language-plaintext highlighter-rouge">createElement</code></a>) a ‘input’ element(inputToAdd), give it a type of ‘text’ and class(<a href="https://developer.mozilla.org/en-US/docs/Web/API/Element/className" title="MDN .className documentation"><code class="language-plaintext highlighter-rouge">className</code></a>) of ‘magic-text-box’
+Then we create(<a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/createElement" title="MDN .createElement documentation"><code class="language-plaintext highlighter-rouge">createElement</code></a>) a ‘span’ element(spanToAdd), give it a class(<a href="https://developer.mozilla.org/en-US/docs/Web/API/Element/className" title="MDN .className documentation"><code class="language-plaintext highlighter-rouge">className</code></a>) of <code class="language-plaintext highlighter-rouge">remove-textbox</code> and add text(‘x’)(innerHTML) to this span.
+Then we append(<a href="https://developer.mozilla.org/en-US/docs/Web/API/Node/appendChild" title="MDN .appendChild documentation"><code class="language-plaintext highlighter-rouge">appendChild</code></a>) the ‘input’ element(inputToAdd) and ‘span’ element(spanToAdd) to the ‘div’ element(divToAdd).
+Lastly we append(<a href="https://developer.mozilla.org/en-US/docs/Web/API/Node/appendChild" title="MDN .appendChild documentation"><code class="language-plaintext highlighter-rouge">appendChild</code></a>) the ‘div’ element(divToAdd) to getDiv(div-add-remove).</p>
+
+<p>In short we create a template and append the template to the div. Now let’s look at the next part of our problem, removing text-boxes.</p>
+
+<p>According to the template structure, we will have to click on the span(<code class="language-plaintext highlighter-rouge">spanToAdd</code>) to remove the text-box (we will remove the entire template div for that text-box). This span(<code class="language-plaintext highlighter-rouge">spanToAdd</code>) does not exist on page load, hence JavaScript does not know that it exist. So we will use event delegation to make sure this span can listen for an event.</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">var</span> <span class="nx">getDiv</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="dl">'</span><span class="s1">div-add-remove</span><span class="dl">'</span><span class="p">);</span>
+<span class="nx">getDiv</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="dl">'</span><span class="s1">click</span><span class="dl">'</span><span class="p">,</span><span class="kd">function</span><span class="p">(</span><span class="nx">e</span><span class="p">){</span>
+    <span class="k">if</span><span class="p">(</span> <span class="nx">e</span><span class="p">.</span><span class="nx">target</span><span class="p">.</span><span class="nx">className</span> <span class="o">==</span> <span class="dl">'</span><span class="s1">remove-textbox</span><span class="dl">'</span> <span class="p">)</span> <span class="p">{</span>
+        <span class="kd">var</span> <span class="nx">getParentElement</span> <span class="o">=</span> <span class="nx">e</span><span class="p">.</span><span class="nx">target</span><span class="p">.</span><span class="nx">parentElement</span><span class="p">;</span>
+        <span class="nx">getParentElement</span><span class="p">.</span><span class="nx">remove</span><span class="p">();</span>
+    <span class="p">}</span>
+<span class="p">});</span>
+</code></pre></div></div>
+
+<h2 id="javascript-event-delegation">JAVASCRIPT EVENT DELEGATION</h2>
+
+<p>In event delegation, we have to add the event listener to an element closest to the ‘span’ and this element should exist in the DOM on document load. In our example ‘div-add-remove’ will be that element. So we ask ‘div-add-remove’(getDiv) to listen for a click. Once it hears a click we</p>
+
+<p>check if the target class is <code class="language-plaintext highlighter-rouge">remove-textbox</code> (that’s the class given to our span)
+If that is the case we get the <a href="https://developer.mozilla.org/en/docs/Web/API/Node/parentElement" title="MDN .parentElement documentation"><code class="language-plaintext highlighter-rouge">parentElement</code></a> of this element (to get the complete template) remove parentElement.
+And that is all there is to JavaScript Event Delegation. We can also do something like, at a time max 10 text-boxes can only exists in the div. And when removing at-least one text-box should always exist in the div</p>
+
+<p>Get full code on <a href="https://github.com/dsouzaalfred/blogdemos/blob/master/add_remove_element/js.html" title="Github link">github</a>.</p>
+
+        </div>
+
+        
+          <div class="page-share">
+  <a href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Flocalhost%3A4000%2Fblog%2Fjavascript%2Fjavascript-event-delegation%2F" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" class="btn btn--facebook btn--small"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i> <span>Share</span></a>
+  <a href="https://twitter.com/intent/tweet?text=JavaScript+Event+Delegation%20http%3A%2F%2Flocalhost%3A4000%2Fblog%2Fjavascript%2Fjavascript-event-delegation%2F" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" class="btn btn--twitter btn--small"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i> <span>Tweet</span></a>
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=http%3A%2F%2Flocalhost%3A4000%2Fblog%2Fjavascript%2Fjavascript-event-delegation%2F" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" class="btn btn--linkedin btn--small"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i> <span>LinkedIn</span></a>
+  <a href="https://reddit.com/submit?title=JavaScript+Event+Delegation&url=http%3A%2F%2Flocalhost%3A4000%2Fblog%2Fjavascript%2Fjavascript-event-delegation%2F" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" class="btn btn--reddit btn--small"><i class="fab fa-fw fa-reddit" aria-hidden="true"></i> <span>Reddit</span></a>
+</div>
+
+        
+
+        
+
+        <nav class="page-pagination" role="navigation">
+  
+    <a class="page-previous" href="/blog/jquery/jquery-event-delegation/">
+      <h4 class="page-pagination-label">Previous</h4>
+      <span class="page-pagination-title">
+        <i class="fas fa-arrow-left"></i> jQuery Event Delegation
+
+      </span>
+    </a>
+  
+
+  
+    <a class="page-next" href="/blog/react/getting-started-with-react/">
+      <h4 class="page-pagination-label">Next</h4>
+      <span class="page-pagination-title">
+        Getting started with React
+ <i class="fas fa-arrow-right"></i>
+      </span>
+    </a>
+  
+</nav>
+
+      </div>
+    </div>
+  </article>
+</main>
+
+
+    <footer id="footer" class="site-footer">
+  <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+<div class="social-icons"><a class="social-icon" href="https://twitter.com/dsouzaalfred"><i class="fab fa-twitter-square fa-2x" title="Twitter"></i></a><a class="social-icon" href="https://github.com/dsouzaalfred"><i class="fab fa-github-square fa-2x" title="GitHub"></i></a><a class="social-icon" href="https://www.linkedin.com/in/dsouzaalfred/"><i class="fab fa-linkedin fa-2x" title="LinkedIn"></i></a></div><div class="copyright">
+    
+      <p>&copy; 2020 Alfred D'Souza. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://github.com/mmistakes/so-simple-theme" rel="nofollow">So Simple</a>.</p>
+    
+  </div>
+</footer>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+  <script src="/assets/js/main.min.js"></script>
+  <script src="https://use.fontawesome.com/releases/v5.0.12/js/all.js"></script>
+
+
+  </body>
+
+</html>

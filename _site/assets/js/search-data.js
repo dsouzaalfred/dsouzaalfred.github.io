@@ -1,4 +1,34 @@
 var store = [{
+        "title": "Dynamically Add content to DOM using jQuery",
+        "excerpt":"I love it when magicians conjure things out of thin air. A dove, a rabbit you name it and it’s there. Sure they have their tricks but what’s amazing is how it’s presented. As web developers, sometimes we are required to conjure elements and add them to the DOM. Be...","categories": ["blog","jQuery"],
+        "tags": [],
+        "url": "http://localhost:4000/blog/jquery/dynamically-add-content-to-dom-using-jquery/"
+      },{
+        "title": "Dynamically Add content to DOM using JavaScript",
+        "excerpt":"We have seen how our wand (jQuery) can be used to Dynamically Add content to DOM. But then there are powerful wizards who do not like to use wands for such small tricks. Here is how you perform the same trick with pure magic (JavaScript). First things first, lets start...","categories": ["blog","javascript"],
+        "tags": [],
+        "url": "http://localhost:4000/blog/javascript/dynamically-add-content-to-dom-using-javascript/"
+      },{
+        "title": "Dynamically remove content from DOM using jQuery",
+        "excerpt":"Another magic trick that I love most is when objects disappear. Specially pretty ladies, I wonder what magicians do with them. If magicians can make objects disappear, so can we. But we can only make elements disappear from our DOM using jQuery. Check this post to see how this can...","categories": ["blog","jQuery"],
+        "tags": [],
+        "url": "http://localhost:4000/blog/jquery/dynamically-remove-content-from-dom-using-jquery/"
+      },{
+        "title": "Dynamically remove content from DOM using JavaScript",
+        "excerpt":"We have seen how jQuery can be used to remove elements from DOM. Now let us see how we can Dynamically remove content from DOM using JavaScript. Like always let us start with HTML &lt;!DOCTYPE html&gt;&lt;html lang='en'&gt; &lt;head&gt; &lt;meta charset='utf-8'&gt; &lt;title&gt;Remove textboxes&lt;/title&gt; &lt;/head&gt; &lt;body&gt; &lt;h1&gt;Remove Textboxes&lt;/h1&gt; &lt;div id='div-textbox-here'&gt; &lt;input type='text'...","categories": ["blog","javascript"],
+        "tags": [],
+        "url": "http://localhost:4000/blog/javascript/dynamically-remove-content-from-dom-using-javascript/"
+      },{
+        "title": "jQuery Event Delegation",
+        "excerpt":"jQuery Event Delegation allows us to attach an event listener to a parent element, and this event will fire for all descendants matching the selector we pass. The example in this post, will use concepts from our previous posts about dynamically adding and removing content from DOM using jQuery. And...","categories": ["blog","jQuery"],
+        "tags": [],
+        "url": "http://localhost:4000/blog/jquery/jquery-event-delegation/"
+      },{
+        "title": "JavaScript Event Delegation",
+        "excerpt":"In our previous post we saw event delegation using jQuery, in this post we will see JavaScript event delegation. Make sure you check these two posts before we start with this one. Dynamically Add content to DOM using JavaScriptDynamically remove content from DOM using JavaScript Let’s get started with our...","categories": ["blog","javascript"],
+        "tags": [],
+        "url": "http://localhost:4000/blog/javascript/javascript-event-delegation/"
+      },{
         "title": "Getting started with React",
         "excerpt":"What is react? React or ReactJS is a component-based JavaScript library for building user interfaces. It is one of the most popular JavaScript UI libraries.Component-based means a complex UI is broken down into small pieces called components. These small components can manage their own state and encapsulate their own logic....","categories": ["blog","react"],
         "tags": [],
