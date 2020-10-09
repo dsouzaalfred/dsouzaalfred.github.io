@@ -12,8 +12,21 @@ image:
   caption: "JavaScript array methods"
 ---
 
+JavaScript has a lot of built in array methods. Let's have a look at some that will help us in our journey with React. We will be looking at :
+- [.map()](#array-map)
+- [.filter()](#array-filter)
+- [.reduce()](#array-reduce)
+- [.includes()](#array-includes)
+- [.find()](#array-find)
+- [.findIndex()](#array-findIndex)
+- [.some()](#array-some)
+- [.every()](#array-every)
 
-## .map()
+I love to eat and have tried to explain each of these methods in relation to that since that helps me remember what they do.
+
+Let's get started
+
+## .map()  {#array-map}
 
 The [`map()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map "MDN .map documentation") method takes a function and will call the function once for every element in the array and return a new array with the updated values.
 
@@ -33,7 +46,7 @@ Remember
 - `.map()` will not run the test function on empty elements.
 - `.map()` returns a new array, the original array is not changed.
 
-## filter
+## filter  {#array-filter}
 
 The [`.filter()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter "MDN .filter documentation") method takes a test function and will call the function once on each array and returns a new array of elements that passed the test.
 
@@ -57,7 +70,7 @@ Remember
 - `.filter()` will return an empty array if non of the elements pass the test.
 - `.filter()` returns a new array, the original array is not changed.
 
-## reduce
+## reduce  {#array-reduce}
 The [`.reduce()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/Reduce "MDN .reduce documentation") method takes a function (called reducer) and uses it on every element of the array and outputs a single value.
 
 After eating a huge spread at the restaurant you want to calculate the total you will have to pay. So you take the price of each dish and keep adding till you are done with all the dishes and the final number is the total you will have to pay.
@@ -72,7 +85,7 @@ const total = dishesToTotal.reduce(reducer);
 console.log(total);
 ```
 
-## includes
+## includes  {#array-includes}
 The [`.includes()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/includes "MDN .include documentation") method can be used when you want to check if a value exists in an array.
 
 Say you want to check if a restaurant servers your favourite dish.
@@ -84,7 +97,7 @@ const restaurantMenu = ['steak', 'biryani', 'kebbabs'];
 console.log(restaurantMenu.includes('biryani'));
 ```
 
-## find
+## find  {#array-find}
 The [`.find()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/find "MDN .find documentation") method takes a test function and returns the value of the first element that passes the test.
 
 Where `.includes()` tells you if a restaurant servers your favourite dish, `.find()` will get you the dish if the restaurant servers it.
@@ -97,7 +110,7 @@ const findBiryani = (dish) => dish === 'biryani';
 console.log(restaurant2Menu.find(findBiryani));
 ```
 
-## findIndex
+## findIndex  {#array-findIndex}
 The [`.fndIndex()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/findIndex "MDN .findIndex documentation") method takes a test function and returns the index of the first element that passes the test.
 
 This time you are at a buffet and want to with chocolate cake. So you ask one of the waiters to point you in the direction of chocolate cake.
@@ -116,7 +129,7 @@ const findChocolateCake = (dish) => dish === 'chocolate cake';
 console.log(restaurant3Menu.findIndex(findChocolateCake));
 ```
 
-## some
+## some  {#array-some}
 The [`.some()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/some "MDN .some documentation") method takes a test function and returns true if at-least one element in the array passes the test.
 
 Today you are in the mood to eat some potato dishes. So want to check if a restaurant has some potato based dishes. So you check the ingredients of each of the items on the menu to find dishes that have potato in them.
@@ -133,9 +146,7 @@ const hasDishesWithPotatoes = (dish) => dish.hasPotatoes;
 console.log(restaurant4Menu.some(hasDishesWithPotatoes));
 ```
 
-https://medium.com/@d7k/js-includes-vs-some-b3cd546a7bc3
-
-## every
+## every  {#array-every}
 The [`.every()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/every "MDN .every documentation") method takes a test function and returns true only if all the element in the array pass the test.
 
 So a friend has invited you for a dinner but you have condition you will only go if all the dishes are meat bases. So you confirm the menu with your friend and only when you confirm all the dishes are meat based you go for dinner.
@@ -143,8 +154,12 @@ So a friend has invited you for a dinner but you have condition you will only go
 So the dishes are our elements inside an array. Checking if a dishes are meat based is the function. `.every()` will take this function and test each of the dishes and only if all the dishes pass the test it will return true.
 
 ```javascript
-
+const dinnerDishes = [
+  { name: 'biryani', hasMeat: true },
+  { name: 'french fries', hasMeat: false },
+  { name: 'jeera rice', hasMeat: false },
+  { name: 'butter chicken', hasMeat: true },
+];
+const dishesWithMeat = (dish) => dish.hasMeat;
+console.log(dinnerDishes.every(dishesWithMeat));
 ```
-
-
-https://www.javatpoint.com/es6-array-methods

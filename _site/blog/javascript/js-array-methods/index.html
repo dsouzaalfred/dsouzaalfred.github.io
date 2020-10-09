@@ -16,13 +16,13 @@
   
     
     <!-- Begin Jekyll SEO tag v2.6.1 -->
-<title>JavaScript array methods | Alfred D’Souza</title>
+<title>A foodies guide to JavaScript array methods | Alfred D’Souza</title>
 <meta name="generator" content="Jekyll v3.9.0" />
-<meta property="og:title" content="JavaScript array methods" />
+<meta property="og:title" content="A foodies guide to JavaScript array methods" />
 <meta name="author" content="Alfred D'Souza" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content=".map()" />
-<meta property="og:description" content=".map()" />
+<meta name="description" content="JavaScript has a lot of built in array methods. Let’s have a look at some that will help us in our journey with React. We will be looking at : .map() .filter() .reduce() .includes() .find() .findIndex() .some() .every()" />
+<meta property="og:description" content="JavaScript has a lot of built in array methods. Let’s have a look at some that will help us in our journey with React. We will be looking at : .map() .filter() .reduce() .includes() .find() .findIndex() .some() .every()" />
 <link rel="canonical" href="http://localhost:4000/blog/javascript/js-array-methods/" />
 <meta property="og:url" content="http://localhost:4000/blog/javascript/js-array-methods/" />
 <meta property="og:site_name" content="Alfred D’Souza" />
@@ -30,7 +30,7 @@
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2020-10-04T12:01:00+01:00" />
 <script type="application/ld+json">
-{"image":{"caption":"JavaScript array methods","url":"http://localhost:4000/images/react-styling-hero-image.jpg","@type":"imageObject"},"author":{"@type":"Person","name":"Alfred D'Souza"},"url":"http://localhost:4000/blog/javascript/js-array-methods/","headline":"JavaScript array methods","dateModified":"2020-10-04T12:01:00+01:00","datePublished":"2020-10-04T12:01:00+01:00","description":".map()","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/blog/javascript/js-array-methods/"},"@type":"BlogPosting","@context":"https://schema.org"}</script>
+{"image":{"caption":"JavaScript array methods","url":"http://localhost:4000/images/react-styling-hero-image.jpg","@type":"imageObject"},"author":{"@type":"Person","name":"Alfred D'Souza"},"url":"http://localhost:4000/blog/javascript/js-array-methods/","headline":"A foodies guide to JavaScript array methods","dateModified":"2020-10-04T12:01:00+01:00","datePublished":"2020-10-04T12:01:00+01:00","description":"JavaScript has a lot of built in array methods. Let’s have a look at some that will help us in our journey with React. We will be looking at : .map() .filter() .reduce() .includes() .find() .findIndex() .some() .every()","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/blog/javascript/js-array-methods/"},"@type":"BlogPosting","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -54,7 +54,7 @@
 </head>
 
 
-  <body class="layout--post  javascript-array-methods">
+  <body class="layout--post  a-foodies-guide-to-javascript-array-methods">
     <nav class="skip-links">
   <h2 class="screen-reader-text">Skip links</h2>
   <ul>
@@ -90,7 +90,7 @@
   
 
   <div class="page-image">
-    <img src="/images/react-styling-hero-image.jpg" class="entry-feature-image u-photo" alt="JavaScript array methods" style="margin-top: 0;">
+    <img src="/images/react-styling-hero-image.jpg" class="entry-feature-image u-photo" alt="A foodies guide to JavaScript array methods" style="margin-top: 0;">
     
       <div class="page-image-caption"><p>JavaScript array methods</p>
 </div>
@@ -102,7 +102,7 @@
       <header class="page-header">
         
         
-          <h1 id="page-title" class="page-title p-name">JavaScript array methods
+          <h1 id="page-title" class="page-title p-name">A foodies guide to JavaScript array methods
 </h1>
         
       </header>
@@ -118,7 +118,7 @@
             <a class="u-url" rel="me" href="https://www.linkedin.com/in/dsouzaalfred/"><i class="fab fa-linkedin fa-lg" title="LinkedIn"></i></a>
           </li></ul>
 
-<span class="read-time">1 min read</span>
+<span class="read-time">5 min read</span>
 
     <time class="page-date dt-published" datetime="2020-10-04T12:01:00+01:00"><a class="u-url" href="">October 4, 2020</a>
 </time>
@@ -138,7 +138,23 @@
 
       <div class="page-content">
         <div class="e-content">
-          <h2 id="map">.map()</h2>
+          <p>JavaScript has a lot of built in array methods. Let’s have a look at some that will help us in our journey with React. We will be looking at :</p>
+<ul>
+  <li><a href="#array-map">.map()</a></li>
+  <li><a href="#array-filter">.filter()</a></li>
+  <li><a href="#array-reduce">.reduce()</a></li>
+  <li><a href="#array-includes">.includes()</a></li>
+  <li><a href="#array-find">.find()</a></li>
+  <li><a href="#array-findIndex">.findIndex()</a></li>
+  <li><a href="#array-some">.some()</a></li>
+  <li><a href="#array-every">.every()</a></li>
+</ul>
+
+<p>I love to eat and have tried to explain each of these methods in relation to that since that helps me remember what they do.</p>
+
+<p>Let’s get started</p>
+
+<h2 id="array-map">.map()</h2>
 
 <p>The <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map" title="MDN .map documentation"><code class="language-plaintext highlighter-rouge">map()</code></a> method takes a function and will call the function once for every element in the array and return a new array with the updated values.</p>
 
@@ -146,82 +162,140 @@
 
 <p>So the dishes are our elements inside an array. Frying the egg and putting it on a dish is the function. And <code class="language-plaintext highlighter-rouge">.map()</code> will repeat the process for us for each dishes.</p>
 
-<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">dishesToMap</span> <span class="o">=</span> <span class="p">[</span><span class="dl">'</span><span class="s1">steak</span><span class="dl">'</span><span class="p">,</span> <span class="dl">'</span><span class="s1">fried rice</span><span class="dl">'</span><span class="p">,</span> <span class="dl">'</span><span class="s1">clear soup</span><span class="dl">'</span><span class="p">];</span>
+<span class="kd">const</span> <span class="nx">addEggs</span> <span class="o">=</span> <span class="p">(</span><span class="nx">dish</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="dl">'</span><span class="s1">fried egg + </span><span class="dl">'</span> <span class="o">+</span> <span class="nx">dish</span><span class="p">;</span>
+
+<span class="kd">const</span> <span class="nx">updatedDishesToMap</span> <span class="o">=</span> <span class="nx">dishes</span><span class="p">.</span><span class="nx">map</span><span class="p">(</span><span class="nx">addEggs</span><span class="p">);</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">updatedDishesToMap</span><span class="p">);</span>
 </code></pre></div></div>
 
 <p>Remember</p>
 <ul>
-  <li><code class="language-plaintext highlighter-rouge">.map()</code> is smart it will not put an egg on an empty plate, there should be a dish there.</li>
-  <li>It create a totally new dish so your original dishes (array) is untouched.</li>
+  <li><code class="language-plaintext highlighter-rouge">.map()</code> will not run the test function on empty elements.</li>
+  <li><code class="language-plaintext highlighter-rouge">.map()</code> returns a new array, the original array is not changed.</li>
 </ul>
 
-<h2 id="filter">filter</h2>
+<h2 id="array-filter">filter</h2>
 
-<p>The <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter"><code class="language-plaintext highlighter-rouge">.filter()</code></a> method takes a test function and will call the function once on each array and returns a new array of elements that passed the test.</p>
+<p>The <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter" title="MDN .filter documentation"><code class="language-plaintext highlighter-rouge">.filter()</code></a> method takes a test function and will call the function once on each array and returns a new array of elements that passed the test.</p>
 
 <p>This time you are served a few dishes but you are in no mood to each vegetables. So you check each dish and see if they have vegetables, if they do you don’t eat them.</p>
 
 <p>So the dishes are our elements inside an array. Checking each dish if it has vegetables is a function. And <code class="language-plaintext highlighter-rouge">.filter()</code> will repeat the process on each dish and return all the dishes without vegetables.</p>
 
-<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">dishesToFilter</span> <span class="o">=</span> <span class="p">[</span>
+  <span class="p">{</span> <span class="na">name</span><span class="p">:</span> <span class="dl">'</span><span class="s1">steak</span><span class="dl">'</span><span class="p">,</span> <span class="na">hasVeggies</span><span class="p">:</span> <span class="kc">false</span> <span class="p">},</span>
+  <span class="p">{</span> <span class="na">name</span><span class="p">:</span> <span class="dl">'</span><span class="s1">fried rice</span><span class="dl">'</span><span class="p">,</span> <span class="na">hasVeggies</span><span class="p">:</span> <span class="kc">false</span> <span class="p">},</span>
+  <span class="p">{</span> <span class="na">name</span><span class="p">:</span> <span class="dl">'</span><span class="s1">stir fried vegetables</span><span class="dl">'</span><span class="p">,</span> <span class="na">hasVeggies</span><span class="p">:</span> <span class="kc">true</span> <span class="p">},</span>
+<span class="p">];</span>
+<span class="kd">const</span> <span class="nx">removeDishesWithVeggies</span> <span class="o">=</span> <span class="p">(</span><span class="nx">dish</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="o">!</span><span class="nx">dish</span><span class="p">.</span><span class="nx">hasVeggies</span><span class="p">;</span>
+
+<span class="kd">const</span> <span class="nx">updatedDishesToFilter</span> <span class="o">=</span> <span class="nx">dishesToFilter</span><span class="p">.</span><span class="nx">filter</span><span class="p">(</span><span class="nx">removeDishesWithVeggies</span><span class="p">);</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">updatedDishesToFilter</span><span class="p">);</span>
 </code></pre></div></div>
 
 <p>Remember</p>
 <ul>
-  <li>If none of the dishes pass your test you can an empty plate(empty array).</li>
+  <li><code class="language-plaintext highlighter-rouge">.filter()</code> will return an empty array if non of the elements pass the test.</li>
+  <li><code class="language-plaintext highlighter-rouge">.filter()</code> returns a new array, the original array is not changed.</li>
 </ul>
 
-<h2 id="include">include</h2>
-<p>The <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/includes"><code class="language-plaintext highlighter-rouge">.include()</code></a> method</p>
-<blockquote>
-  <p>The includes() method determines whether an array includes a certain value among its entries, returning true or false as appropriate.</p>
-</blockquote>
+<h2 id="array-reduce">reduce</h2>
+<p>The <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/Reduce" title="MDN .reduce documentation"><code class="language-plaintext highlighter-rouge">.reduce()</code></a> method takes a function (called reducer) and uses it on every element of the array and outputs a single value.</p>
 
-<p>https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/includes</p>
+<p>After eating a huge spread at the restaurant you want to calculate the total you will have to pay. So you take the price of each dish and keep adding till you are done with all the dishes and the final number is the total you will have to pay.</p>
 
-<p>Check if there is any sweet dish =&gt; find/include</p>
+<p>So the dishes are our elements inside an array. Adding up cost of each dish is the reducer. You pass this reducer to <code class="language-plaintext highlighter-rouge">.reduce()</code> and it gives you the total.</p>
 
-<h2 id="find">find</h2>
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">dishesToTotal</span> <span class="o">=</span> <span class="p">[</span><span class="mi">30</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">15</span><span class="p">,</span> <span class="mi">40</span><span class="p">];</span>
+<span class="kd">const</span> <span class="nx">reducer</span> <span class="o">=</span> <span class="p">(</span><span class="nx">accumulator</span><span class="p">,</span> <span class="nx">currentValue</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="nx">accumulator</span> <span class="o">+</span> <span class="nx">currentValue</span><span class="p">;</span>
 
-<blockquote>
-  <p>The find() method returns the value of the first element in the provided array that satisfies the provided testing function.</p>
-</blockquote>
+<span class="kd">const</span> <span class="nx">total</span> <span class="o">=</span> <span class="nx">dishesToTotal</span><span class="p">.</span><span class="nx">reduce</span><span class="p">(</span><span class="nx">reducer</span><span class="p">);</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">total</span><span class="p">);</span>
+</code></pre></div></div>
 
-<p>https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/find</p>
+<h2 id="array-includes">includes</h2>
+<p>The <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/includes" title="MDN .include documentation"><code class="language-plaintext highlighter-rouge">.includes()</code></a> method can be used when you want to check if a value exists in an array.</p>
 
-<p>The value of the first element in the array that satisfies the provided testing function. Otherwise, undefined is returned.</p>
+<p>Say you want to check if a restaurant servers your favourite dish.</p>
 
-<p>Check if there is any sweet dish =&gt; find/include</p>
+<p>So the dishes are our elements inside an array. You tell <code class="language-plaintext highlighter-rouge">.includes()</code> which dish you are looking for and it will tell you yes(<code class="language-plaintext highlighter-rouge">true</code>) or no(<code class="language-plaintext highlighter-rouge">false</code>).</p>
 
-<h2 id="some">some</h2>
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">restaurantMenu</span> <span class="o">=</span> <span class="p">[</span><span class="dl">'</span><span class="s1">steak</span><span class="dl">'</span><span class="p">,</span> <span class="dl">'</span><span class="s1">biryani</span><span class="dl">'</span><span class="p">,</span> <span class="dl">'</span><span class="s1">kebbabs</span><span class="dl">'</span><span class="p">];</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">restaurantMenu</span><span class="p">.</span><span class="nx">includes</span><span class="p">(</span><span class="dl">'</span><span class="s1">biryani</span><span class="dl">'</span><span class="p">));</span>
+</code></pre></div></div>
 
-<p>Does any dish have potatoes =&gt; some</p>
+<h2 id="array-find">find</h2>
+<p>The <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/find" title="MDN .find documentation"><code class="language-plaintext highlighter-rouge">.find()</code></a> method takes a test function and returns the value of the first element that passes the test.</p>
 
-<h2 id="every">every</h2>
-<p>Are all the dishes spicy =&gt; every</p>
+<p>Where <code class="language-plaintext highlighter-rouge">.includes()</code> tells you if a restaurant servers your favourite dish, <code class="language-plaintext highlighter-rouge">.find()</code> will get you the dish if the restaurant servers it.</p>
 
-<h2 id="reduce">reduce</h2>
-<p>After eating all dishes =&gt; reduce</p>
+<p>So the dishes are our elements inside an array. Checking if the restaurant serves your favourite dish is a function. And <code class="language-plaintext highlighter-rouge">.find()</code> check each dish and first instance it comes across your favourite dish it will get it for you.</p>
 
-<h2 id="findindex">findIndex</h2>
-<p>You are at a buffet and want to start with dessert.</p>
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">restaurant2Menu</span> <span class="o">=</span> <span class="p">[</span><span class="dl">'</span><span class="s1">steak</span><span class="dl">'</span><span class="p">,</span> <span class="dl">'</span><span class="s1">biryani</span><span class="dl">'</span><span class="p">,</span> <span class="dl">'</span><span class="s1">kebbabs</span><span class="dl">'</span><span class="p">];</span>
+<span class="kd">const</span> <span class="nx">findBiryani</span> <span class="o">=</span> <span class="p">(</span><span class="nx">dish</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="nx">dish</span> <span class="o">===</span> <span class="dl">'</span><span class="s1">biryani</span><span class="dl">'</span><span class="p">;</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">restaurant2Menu</span><span class="p">.</span><span class="nx">find</span><span class="p">(</span><span class="nx">findBiryani</span><span class="p">));</span>
+</code></pre></div></div>
 
-<p>Point me to the sweet dish =&gt; findIndex</p>
+<h2 id="array-findIndex">findIndex</h2>
+<p>The <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/findIndex" title="MDN .findIndex documentation"><code class="language-plaintext highlighter-rouge">.fndIndex()</code></a> method takes a test function and returns the index of the first element that passes the test.</p>
 
-<h2 id="spread-operator">spread operator</h2>
-<p>Pot luck
-spread operator</p>
+<p>This time you are at a buffet and want to with chocolate cake. So you ask one of the waiters to point you in the direction of chocolate cake.</p>
 
-<p>https://www.javatpoint.com/es6-array-methods</p>
+<p>So the dishes are our elements inside an array. <code class="language-plaintext highlighter-rouge">.findIndex()</code> is the waiter who takes in what you want and points you to the location where it is.</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">restaurant3Menu</span> <span class="o">=</span> <span class="p">[</span>
+  <span class="dl">'</span><span class="s1">steak</span><span class="dl">'</span><span class="p">,</span>
+  <span class="dl">'</span><span class="s1">biryani</span><span class="dl">'</span><span class="p">,</span>
+  <span class="dl">'</span><span class="s1">kebbabs</span><span class="dl">'</span><span class="p">,</span>
+  <span class="dl">'</span><span class="s1">vanilla cake</span><span class="dl">'</span><span class="p">,</span>
+  <span class="dl">'</span><span class="s1">chocolate cake</span><span class="dl">'</span><span class="p">,</span>
+<span class="p">];</span>
+<span class="kd">const</span> <span class="nx">findChocolateCake</span> <span class="o">=</span> <span class="p">(</span><span class="nx">dish</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="nx">dish</span> <span class="o">===</span> <span class="dl">'</span><span class="s1">chocolate cake</span><span class="dl">'</span><span class="p">;</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">restaurant3Menu</span><span class="p">.</span><span class="nx">findIndex</span><span class="p">(</span><span class="nx">findChocolateCake</span><span class="p">));</span>
+</code></pre></div></div>
+
+<h2 id="array-some">some</h2>
+<p>The <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/some" title="MDN .some documentation"><code class="language-plaintext highlighter-rouge">.some()</code></a> method takes a test function and returns true if at-least one element in the array passes the test.</p>
+
+<p>Today you are in the mood to eat some potato dishes. So want to check if a restaurant has some potato based dishes. So you check the ingredients of each of the items on the menu to find dishes that have potato in them.</p>
+
+<p>So the dishes are our elements inside an array. Checking if a dish has potato is the function. <code class="language-plaintext highlighter-rouge">.some()</code> will take this function and test each of the dishes and in the end if at least one dish passes the test it will return true.</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">restaurant4Menu</span> <span class="o">=</span> <span class="p">[</span>
+  <span class="p">{</span> <span class="na">name</span><span class="p">:</span> <span class="dl">'</span><span class="s1">fried rice</span><span class="dl">'</span><span class="p">,</span> <span class="na">hasPotatoes</span><span class="p">:</span> <span class="kc">false</span> <span class="p">},</span>
+  <span class="p">{</span> <span class="na">name</span><span class="p">:</span> <span class="dl">'</span><span class="s1">french fries</span><span class="dl">'</span><span class="p">,</span> <span class="na">hasPotatoes</span><span class="p">:</span> <span class="kc">true</span> <span class="p">},</span>
+  <span class="p">{</span> <span class="na">name</span><span class="p">:</span> <span class="dl">'</span><span class="s1">stir fried vegetables</span><span class="dl">'</span><span class="p">,</span> <span class="na">hasPotatoes</span><span class="p">:</span> <span class="kc">true</span> <span class="p">},</span>
+<span class="p">];</span>
+<span class="kd">const</span> <span class="nx">hasDishesWithPotatoes</span> <span class="o">=</span> <span class="p">(</span><span class="nx">dish</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="nx">dish</span><span class="p">.</span><span class="nx">hasPotatoes</span><span class="p">;</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">restaurant4Menu</span><span class="p">.</span><span class="nx">some</span><span class="p">(</span><span class="nx">hasDishesWithPotatoes</span><span class="p">));</span>
+</code></pre></div></div>
+
+<h2 id="array-every">every</h2>
+<p>The <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/every" title="MDN .every documentation"><code class="language-plaintext highlighter-rouge">.every()</code></a> method takes a test function and returns true only if all the element in the array pass the test.</p>
+
+<p>So a friend has invited you for a dinner but you have condition you will only go if all the dishes are meat bases. So you confirm the menu with your friend and only when you confirm all the dishes are meat based you go for dinner.</p>
+
+<p>So the dishes are our elements inside an array. Checking if a dishes are meat based is the function. <code class="language-plaintext highlighter-rouge">.every()</code> will take this function and test each of the dishes and only if all the dishes pass the test it will return true.</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">dinnerDishes</span> <span class="o">=</span> <span class="p">[</span>
+  <span class="p">{</span> <span class="na">name</span><span class="p">:</span> <span class="dl">'</span><span class="s1">biryani</span><span class="dl">'</span><span class="p">,</span> <span class="na">hasMeat</span><span class="p">:</span> <span class="kc">true</span> <span class="p">},</span>
+  <span class="p">{</span> <span class="na">name</span><span class="p">:</span> <span class="dl">'</span><span class="s1">french fries</span><span class="dl">'</span><span class="p">,</span> <span class="na">hasMeat</span><span class="p">:</span> <span class="kc">false</span> <span class="p">},</span>
+  <span class="p">{</span> <span class="na">name</span><span class="p">:</span> <span class="dl">'</span><span class="s1">jeera rice</span><span class="dl">'</span><span class="p">,</span> <span class="na">hasMeat</span><span class="p">:</span> <span class="kc">false</span> <span class="p">},</span>
+  <span class="p">{</span> <span class="na">name</span><span class="p">:</span> <span class="dl">'</span><span class="s1">butter chicken</span><span class="dl">'</span><span class="p">,</span> <span class="na">hasMeat</span><span class="p">:</span> <span class="kc">true</span> <span class="p">},</span>
+<span class="p">];</span>
+<span class="kd">const</span> <span class="nx">dishesWithMeat</span> <span class="o">=</span> <span class="p">(</span><span class="nx">dish</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="nx">dish</span><span class="p">.</span><span class="nx">hasMeat</span><span class="p">;</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">dinnerDishes</span><span class="p">.</span><span class="nx">every</span><span class="p">(</span><span class="nx">dishesWithMeat</span><span class="p">));</span>
+</code></pre></div></div>
 
         </div>
 
         
           <div class="page-share">
   <a href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Flocalhost%3A4000%2Fblog%2Fjavascript%2Fjs-array-methods%2F" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" class="btn btn--facebook btn--small"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i> <span>Share</span></a>
-  <a href="https://twitter.com/intent/tweet?text=JavaScript+array+methods%20http%3A%2F%2Flocalhost%3A4000%2Fblog%2Fjavascript%2Fjs-array-methods%2F" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" class="btn btn--twitter btn--small"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i> <span>Tweet</span></a>
+  <a href="https://twitter.com/intent/tweet?text=A+foodies+guide+to+JavaScript+array+methods%20http%3A%2F%2Flocalhost%3A4000%2Fblog%2Fjavascript%2Fjs-array-methods%2F" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" class="btn btn--twitter btn--small"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i> <span>Tweet</span></a>
   <a href="https://www.linkedin.com/shareArticle?mini=true&url=http%3A%2F%2Flocalhost%3A4000%2Fblog%2Fjavascript%2Fjs-array-methods%2F" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" class="btn btn--linkedin btn--small"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i> <span>LinkedIn</span></a>
-  <a href="https://reddit.com/submit?title=JavaScript+array+methods&url=http%3A%2F%2Flocalhost%3A4000%2Fblog%2Fjavascript%2Fjs-array-methods%2F" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" class="btn btn--reddit btn--small"><i class="fab fa-fw fa-reddit" aria-hidden="true"></i> <span>Reddit</span></a>
+  <a href="https://reddit.com/submit?title=A+foodies+guide+to+JavaScript+array+methods&url=http%3A%2F%2Flocalhost%3A4000%2Fblog%2Fjavascript%2Fjs-array-methods%2F" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" class="btn btn--reddit btn--small"><i class="fab fa-fw fa-reddit" aria-hidden="true"></i> <span>Reddit</span></a>
 </div>
 
         

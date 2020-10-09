@@ -49,8 +49,8 @@ var store = [{
         "tags": [],
         "url": "http://localhost:4000/blog/react/react-styling/"
       },{
-        "title": "JavaScript array methods",
-        "excerpt":".map() The map() method takes a function and will call the function once for every element in the array and return a new array with the updated values. Let’s say you are have five dishes served but you like eggs with everything, so you decide to fry eggs and put...","categories": ["blog","javascript"],
+        "title": "A foodies guide to JavaScript array methods",
+        "excerpt":"JavaScript has a lot of built in array methods. Let’s have a look at some that will help us in our journey with React. We will be looking at : .map() .filter() .reduce() .includes() .find() .findIndex() .some() .every()I love to eat and have tried to explain each of these methods...","categories": ["blog","javascript"],
         "tags": [],
         "url": "http://localhost:4000/blog/javascript/js-array-methods/"
       }]
