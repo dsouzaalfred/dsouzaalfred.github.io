@@ -48,4 +48,9 @@ var store = [{
         "excerpt":"In the last two posts we covered JSX and Props, now it’s time to move forward in our journey in React and the next stop is styling the components.There are various ways to style a component in React : Inline styles CSS file SASS file CSS modules CSS-in-JS librariesWe will...","categories": ["blog","react"],
         "tags": [],
         "url": "http://localhost:4000/blog/react/react-styling/"
+      },{
+        "title": "JavaScript array methods",
+        "excerpt":".map() The map() method takes a function and will call the function once for every element in the array and return a new array with the updated values. Let’s say you are have five dishes served but you like eggs with everything, so you decide to fry eggs and put...","categories": ["blog","javascript"],
+        "tags": [],
+        "url": "http://localhost:4000/blog/javascript/js-array-methods/"
       }]

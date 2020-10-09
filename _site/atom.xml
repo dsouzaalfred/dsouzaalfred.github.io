@@ -1,4 +1,78 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="http://localhost:4000/atom.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-10-03T23:01:58+01:00</updated><id>http://localhost:4000/atom.xml</id><title type="html">Alfred D’Souza</title><subtitle>There is always something new to learn!</subtitle><author><name>Alfred D'Souza</name></author><entry><title type="html">React - Styling</title><link href="http://localhost:4000/blog/react/react-styling/" rel="alternate" type="text/html" title="React - Styling" /><published>2020-09-30T12:01:00+01:00</published><updated>2020-09-30T12:01:00+01:00</updated><id>http://localhost:4000/blog/react/react-styling</id><content type="html" xml:base="http://localhost:4000/blog/react/react-styling/">&lt;p&gt;In the last two posts we covered &lt;a href=&quot;https://dsouzaalf.red/blog/react/jsx-what-is-that/&quot; title=&quot;JSX - What is that&quot;&gt;JSX&lt;/a&gt; and &lt;a href=&quot;https://dsouzaalf.red/blog/react/react-props/&quot; title=&quot;React - Props&quot;&gt;Props&lt;/a&gt;, now it’s time to move forward in our journey in React and the next stop is styling the components.
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="http://localhost:4000/atom.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-10-04T12:07:43+01:00</updated><id>http://localhost:4000/atom.xml</id><title type="html">Alfred D’Souza</title><subtitle>There is always something new to learn!</subtitle><author><name>Alfred D'Souza</name></author><entry><title type="html">JavaScript array methods</title><link href="http://localhost:4000/blog/javascript/js-array-methods/" rel="alternate" type="text/html" title="JavaScript array methods" /><published>2020-10-04T12:01:00+01:00</published><updated>2020-10-04T12:01:00+01:00</updated><id>http://localhost:4000/blog/javascript/js-array-methods</id><content type="html" xml:base="http://localhost:4000/blog/javascript/js-array-methods/">&lt;h2 id=&quot;map&quot;&gt;.map()&lt;/h2&gt;
+
+&lt;p&gt;The &lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map&quot; title=&quot;MDN .map documentation&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;map()&lt;/code&gt;&lt;/a&gt; method takes a function and will call the function once for every element in the array and return a new array with the updated values.&lt;/p&gt;
+
+&lt;p&gt;Let’s say you are have five dishes served but you like eggs with everything, so you decide to fry eggs and put them on all the dishes. After all eggs make everything good.&lt;/p&gt;
+
+&lt;p&gt;So the dishes are our elements inside an array. Frying the egg and putting it on a dish is the function. And &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;.map()&lt;/code&gt; will repeat the process for us for each dishes.&lt;/p&gt;
+
+&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Remember&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;.map()&lt;/code&gt; is smart it will not put an egg on an empty plate, there should be a dish there.&lt;/li&gt;
+  &lt;li&gt;It create a totally new dish so your original dishes (array) is untouched.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;filter&quot;&gt;filter&lt;/h2&gt;
+
+&lt;p&gt;The &lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;.filter()&lt;/code&gt;&lt;/a&gt; method takes a test function and will call the function once on each array and returns a new array of elements that passed the test.&lt;/p&gt;
+
+&lt;p&gt;This time you are served a few dishes but you are in no mood to each vegetables. So you check each dish and see if they have vegetables, if they do you don’t eat them.&lt;/p&gt;
+
+&lt;p&gt;So the dishes are our elements inside an array. Checking each dish if it has vegetables is a function. And &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;.filter()&lt;/code&gt; will repeat the process on each dish and return all the dishes without vegetables.&lt;/p&gt;
+
+&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Remember&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;If none of the dishes pass your test you can an empty plate(empty array).&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;include&quot;&gt;include&lt;/h2&gt;
+&lt;p&gt;The &lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/includes&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;.include()&lt;/code&gt;&lt;/a&gt; method&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;The includes() method determines whether an array includes a certain value among its entries, returning true or false as appropriate.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/includes&lt;/p&gt;
+
+&lt;p&gt;Check if there is any sweet dish =&amp;gt; find/include&lt;/p&gt;
+
+&lt;h2 id=&quot;find&quot;&gt;find&lt;/h2&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;The find() method returns the value of the first element in the provided array that satisfies the provided testing function.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/find&lt;/p&gt;
+
+&lt;p&gt;The value of the first element in the array that satisfies the provided testing function. Otherwise, undefined is returned.&lt;/p&gt;
+
+&lt;p&gt;Check if there is any sweet dish =&amp;gt; find/include&lt;/p&gt;
+
+&lt;h2 id=&quot;some&quot;&gt;some&lt;/h2&gt;
+
+&lt;p&gt;Does any dish have potatoes =&amp;gt; some&lt;/p&gt;
+
+&lt;h2 id=&quot;every&quot;&gt;every&lt;/h2&gt;
+&lt;p&gt;Are all the dishes spicy =&amp;gt; every&lt;/p&gt;
+
+&lt;h2 id=&quot;reduce&quot;&gt;reduce&lt;/h2&gt;
+&lt;p&gt;After eating all dishes =&amp;gt; reduce&lt;/p&gt;
+
+&lt;h2 id=&quot;findindex&quot;&gt;findIndex&lt;/h2&gt;
+&lt;p&gt;You are at a buffet and want to start with dessert.&lt;/p&gt;
+
+&lt;p&gt;Point me to the sweet dish =&amp;gt; findIndex&lt;/p&gt;
+
+&lt;h2 id=&quot;spread-operator&quot;&gt;spread operator&lt;/h2&gt;
+&lt;p&gt;Pot luck
+spread operator&lt;/p&gt;
+
+&lt;p&gt;https://www.javatpoint.com/es6-array-methods&lt;/p&gt;</content><author><name>Alfred D'Souza</name><email>dsouzaalfred@gmail.com</email></author><summary type="html">.map()</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/images/react-styling-hero-image.jpg" /><media:content medium="image" url="http://localhost:4000/images/react-styling-hero-image.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">React - Styling</title><link href="http://localhost:4000/blog/react/react-styling/" rel="alternate" type="text/html" title="React - Styling" /><published>2020-09-30T12:01:00+01:00</published><updated>2020-09-30T12:01:00+01:00</updated><id>http://localhost:4000/blog/react/react-styling</id><content type="html" xml:base="http://localhost:4000/blog/react/react-styling/">&lt;p&gt;In the last two posts we covered &lt;a href=&quot;https://dsouzaalf.red/blog/react/jsx-what-is-that/&quot; title=&quot;JSX - What is that&quot;&gt;JSX&lt;/a&gt; and &lt;a href=&quot;https://dsouzaalf.red/blog/react/react-props/&quot; title=&quot;React - Props&quot;&gt;Props&lt;/a&gt;, now it’s time to move forward in our journey in React and the next stop is styling the components.
 There are various ways to style a component in React :&lt;/p&gt;
 &lt;ul&gt;
   &lt;li&gt;&lt;a href=&quot;#inline-styles&quot; title=&quot;Inline Styles&quot;&gt;Inline styles&lt;/a&gt;&lt;/li&gt;
@@ -1715,74 +1789,4 @@ Lastly we tell the element what its value will be.&lt;/p&gt;
 
 &lt;p&gt;Here before adding a textbox we check if the number of elements inside &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;getDiv&lt;/code&gt; (&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;getDiv.children.length&lt;/code&gt;) is less then 10 only then we add the textbox.&lt;/p&gt;
 
-&lt;p&gt;Get full code on &lt;a href=&quot;https://github.com/dsouzaalfred/blogdemos/blob/master/add_element/js.html&quot; title=&quot;Github link&quot;&gt;github&lt;/a&gt;.&lt;/p&gt;</content><author><name>Alfred D'Souza</name><email>dsouzaalfred@gmail.com</email></author><summary type="html">We have seen how our wand (jQuery) can be used to Dynamically Add content to DOM. But then there are powerful wizards who do not like to use wands for such small tricks. Here is how you perform the same trick with pure magic (JavaScript).</summary></entry><entry><title type="html">Dynamically Add content to DOM using jQuery</title><link href="http://localhost:4000/blog/jquery/dynamically-add-content-to-dom-using-jquery/" rel="alternate" type="text/html" title="Dynamically Add content to DOM using jQuery" /><published>2015-07-01T11:15:00+01:00</published><updated>2015-07-01T11:15:00+01:00</updated><id>http://localhost:4000/blog/jquery/dynamically-add-content-to-dom-using-jquery</id><content type="html" xml:base="http://localhost:4000/blog/jquery/dynamically-add-content-to-dom-using-jquery/">&lt;p&gt;I love it when magicians conjure things out of thin air. A dove, a rabbit you name it and it’s there. Sure they have their tricks but what’s amazing is how it’s presented.&lt;/p&gt;
-
-&lt;p&gt;As web developers, sometimes we are required to conjure elements and add them to the DOM. Be it  an error span or an addition textbox or an additional div, using our wand (jQuery) we can perform this trick with ease.&lt;/p&gt;
-
-&lt;p&gt;Powerful wizards can even perform magic without wands (using only JavaScript).&lt;/p&gt;
-
-&lt;p&gt;How to perform this WAND-LESS magic see &lt;a href=&quot;https://dsouzaalf.red/blog/javascript/dynamically-add-content-to-dom-using-javascript/&quot; title=&quot;Dynamically Add content to DOM using JavaScript&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;Let me  first define our trick, so we know exactly what we are to do. We will add a textbox to a div every time a button is clicked.&lt;/p&gt;
-
-&lt;p&gt;Lets have our DOM ready.&lt;/p&gt;
-
-&lt;div class=&quot;language-html highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;cp&quot;&gt;&amp;lt;!DOCTYPE html&amp;gt;&lt;/span&gt;
-&lt;span class=&quot;nt&quot;&gt;&amp;lt;html&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;lang=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;en&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
-  &lt;span class=&quot;nt&quot;&gt;&amp;lt;head&amp;gt;&lt;/span&gt;
-    &lt;span class=&quot;nt&quot;&gt;&amp;lt;meta&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;charset=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;utf-8&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
-    &lt;span class=&quot;nt&quot;&gt;&amp;lt;title&amp;gt;&lt;/span&gt;Add textboxes&lt;span class=&quot;nt&quot;&gt;&amp;lt;/title&amp;gt;&lt;/span&gt;
-    &lt;span class=&quot;nt&quot;&gt;&amp;lt;script &lt;/span&gt;&lt;span class=&quot;na&quot;&gt;src=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;http://code.jquery.com/jquery-2.1.4.min.js&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&amp;lt;/script&amp;gt;&lt;/span&gt;
-  &lt;span class=&quot;nt&quot;&gt;&amp;lt;/head&amp;gt;&lt;/span&gt;
-  &lt;span class=&quot;nt&quot;&gt;&amp;lt;body&amp;gt;&lt;/span&gt;
-    &lt;span class=&quot;nt&quot;&gt;&amp;lt;h1&amp;gt;&lt;/span&gt;Add Textboxes&lt;span class=&quot;nt&quot;&gt;&amp;lt;/h1&amp;gt;&lt;/span&gt;
-    &lt;span class=&quot;nt&quot;&gt;&amp;lt;div&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;id=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;div-add-textbox-here&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
-
-    &lt;span class=&quot;nt&quot;&gt;&amp;lt;/div&amp;gt;&lt;/span&gt;
-  &lt;span class=&quot;nt&quot;&gt;&amp;lt;button&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;id=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;btn-add-textbox&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;Add Textbox&lt;span class=&quot;nt&quot;&gt;&amp;lt;/button&amp;gt;&lt;/span&gt;
-  &lt;span class=&quot;nt&quot;&gt;&amp;lt;/body&amp;gt;&lt;/span&gt;
-&lt;span class=&quot;nt&quot;&gt;&amp;lt;/html&amp;gt;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;Nothing fancy here. We have an empty div and a button. So we have two parts of our trick in place: a button and a div. We have also kept our wand ready. Pretty neat, we are all set to start our trick.&lt;/p&gt;
-
-&lt;p&gt;First listen for the button click. We will need a magic spell &lt;a href=&quot;https://api.jquery.com/on/&quot; title=&quot;jQuery .on documentation&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;.on()&lt;/code&gt;&lt;/a&gt;.&lt;/p&gt;
-
-&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nx&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;#btn-add-textbox&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;on&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;click&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;event&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;){&lt;/span&gt;
-
-&lt;span class=&quot;p&quot;&gt;});&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;We are using jQuery’s &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;.on()&lt;/code&gt; method to handle the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;click&lt;/code&gt; event on our button &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;btn-add-textbox&lt;/code&gt;.&lt;/p&gt;
-
-&lt;p&gt;Now that we are listening for a click, what should we do when the user clicks? Add a text box! Time for another magic spell &lt;a href=&quot;https://api.jquery.com/append/&quot; title=&quot;jQuery .append documentation&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;.append()&lt;/code&gt;&lt;/a&gt;.&lt;/p&gt;
-
-&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nx&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;#btn-add-textbox&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;on&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;click&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;event&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;){&lt;/span&gt;
-  &lt;span class=&quot;nx&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;#div-add-textbox-here&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;append&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;lt;input type=&quot;text&quot; class=&quot;magic-text-box&quot; /&amp;gt;&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;});&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;.append()&lt;/code&gt; will insert content to the end of our div.&lt;/p&gt;
-
-&lt;p&gt;Thats it! we append a textbox to our div &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;div-add-textbox-here&lt;/code&gt;. So every time a user clicks on the button a text box will be added to the div.&lt;/p&gt;
-
-&lt;p&gt;We can do a few more tricks here like, limiting the number of textboxes to ten.&lt;/p&gt;
-
-&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nx&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;#btn-add-textbox&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;on&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;click&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;event&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;){&lt;/span&gt;
-  &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;#div-add-textbox-here&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;find&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;input&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;length&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;){&lt;/span&gt;
-    &lt;span class=&quot;nx&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;#div-add-textbox-here&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;append&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;lt;input type=&quot;text&quot; class=&quot;magic-text-box&quot; /&amp;gt;&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-  &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;});&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://api.jquery.com/length/&quot; title=&quot;jQuery .length documentation&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;.length&lt;/code&gt;&lt;/a&gt; returns the number of elements currently matched.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://api.jquery.com/find/&quot; title=&quot;jQuery .find documentation&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;.find()&lt;/code&gt;&lt;/a&gt; method will get descendants and filter the elements we want.&lt;/p&gt;
-
-&lt;p&gt;So we ask jQuery to find all inputs (textboxes) inside our div. And if the number of textboxes (.length will give the count) is less than 10 only then will we add another textbox. Neat little trick rite?.&lt;/p&gt;
-
-&lt;p&gt;We can use this same trick to add ‘options’ to ‘select’ or add any other element to the DOM.&lt;/p&gt;
-
-&lt;p&gt;With your wand (jQuery) and a few magic spells we can do all possible tricks.&lt;/p&gt;
-
-&lt;p&gt;Get full code on &lt;a href=&quot;https://github.com/dsouzaalfred/blogdemos/blob/master/add_element/jQuery.html&quot; title=&quot;Github link&quot;&gt;github&lt;/a&gt;.&lt;/p&gt;</content><author><name>Alfred D'Souza</name><email>dsouzaalfred@gmail.com</email></author><summary type="html">I love it when magicians conjure things out of thin air. A dove, a rabbit you name it and it’s there. Sure they have their tricks but what’s amazing is how it’s presented.</summary></entry></feed>
+&lt;p&gt;Get full code on &lt;a href=&quot;https://github.com/dsouzaalfred/blogdemos/blob/master/add_element/js.html&quot; title=&quot;Github link&quot;&gt;github&lt;/a&gt;.&lt;/p&gt;</content><author><name>Alfred D'Souza</name><email>dsouzaalfred@gmail.com</email></author><summary type="html">We have seen how our wand (jQuery) can be used to Dynamically Add content to DOM. But then there are powerful wizards who do not like to use wands for such small tricks. Here is how you perform the same trick with pure magic (JavaScript).</summary></entry></feed>
