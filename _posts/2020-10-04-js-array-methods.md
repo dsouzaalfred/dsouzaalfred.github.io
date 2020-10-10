@@ -8,10 +8,9 @@ categories:
   - javascript
 share: true
 image:
-  path: /images/react-styling-hero-image.jpg
-  caption: "JavaScript array methods"
+  path: /images/a-foodies-guide-to-javascript-array-methods.jpg
+  caption: "A foodies guide to JavaScript array methods"
 ---
-
 JavaScript has a lot of built in array methods. Let's have a look at some that will help us in our journey with React. We will be looking at :
 - [.map()](#array-map)
 - [.filter()](#array-filter)
@@ -163,3 +162,5 @@ const dinnerDishes = [
 const dishesWithMeat = (dish) => dish.hasMeat;
 console.log(dinnerDishes.every(dishesWithMeat));
 ```
+<hr>
+<span>Photo by <a href="https://unsplash.com/photos/yvzzemH8-J0">Haryo Setyadi</a> on <a href="https://unsplash.com/">Unsplash</a></span>
