@@ -150,7 +150,7 @@
   <li><a href="#array-every">.every()</a></li>
 </ul>
 
-<p>I love to eat and have tried to explain each of these methods in relation to that since that helps me remember what they do.</p>
+<p>I love to eat and try to remember each method by associating it with food. Let me show you how I remember these array methods.</p>
 
 <p>Let’s get started</p>
 
@@ -158,9 +158,9 @@
 
 <p>The <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map" title="MDN .map documentation"><code class="language-plaintext highlighter-rouge">map()</code></a> method takes a function and will call the function once for every element in the array and return a new array with the updated values.</p>
 
-<p>Let’s say you are have five dishes served but you like eggs with everything, so you decide to fry eggs and put them on all the dishes. After all eggs make everything good.</p>
+<p>Let’s say you are have five dishes served but you like eggs with everything, so you decide to fry eggs and put them on all the dishes. After all, eggs make everything good.</p>
 
-<p>So the dishes are our elements inside an array. Frying the egg and putting it on a dish is the function. And <code class="language-plaintext highlighter-rouge">.map()</code> will repeat the process for us for each dishes.</p>
+<p>So the dishes are our elements inside an array. Frying the egg and putting it on a dish is the function. And <code class="language-plaintext highlighter-rouge">.map()</code> will repeat the process for us for each dish.</p>
 
 <div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">dishesToMap</span> <span class="o">=</span> <span class="p">[</span><span class="dl">'</span><span class="s1">steak</span><span class="dl">'</span><span class="p">,</span> <span class="dl">'</span><span class="s1">fried rice</span><span class="dl">'</span><span class="p">,</span> <span class="dl">'</span><span class="s1">clear soup</span><span class="dl">'</span><span class="p">];</span>
 <span class="kd">const</span> <span class="nx">addEggs</span> <span class="o">=</span> <span class="p">(</span><span class="nx">dish</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="dl">'</span><span class="s1">fried egg + </span><span class="dl">'</span> <span class="o">+</span> <span class="nx">dish</span><span class="p">;</span>
@@ -179,7 +179,7 @@
 
 <p>The <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter" title="MDN .filter documentation"><code class="language-plaintext highlighter-rouge">.filter()</code></a> method takes a test function and will call the function once on each array and returns a new array of elements that passed the test.</p>
 
-<p>This time you are served a few dishes but you are in no mood to each vegetables. So you check each dish and see if they have vegetables, if they do you don’t eat them.</p>
+<p>This time you are served a few dishes but you are in no mood to eat vegetables. So you check each dish and see if they have vegetables, if they do you don’t eat them.</p>
 
 <p>So the dishes are our elements inside an array. Checking each dish if it has vegetables is a function. And <code class="language-plaintext highlighter-rouge">.filter()</code> will repeat the process on each dish and return all the dishes without vegetables.</p>
 
@@ -217,7 +217,7 @@
 <h2 id="array-includes">includes</h2>
 <p>The <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/includes" title="MDN .include documentation"><code class="language-plaintext highlighter-rouge">.includes()</code></a> method can be used when you want to check if a value exists in an array.</p>
 
-<p>Say you want to check if a restaurant servers your favourite dish.</p>
+<p>Say you want to check if a restaurant serves your favourite dish.</p>
 
 <p>So the dishes are our elements inside an array. You tell <code class="language-plaintext highlighter-rouge">.includes()</code> which dish you are looking for and it will tell you yes(<code class="language-plaintext highlighter-rouge">true</code>) or no(<code class="language-plaintext highlighter-rouge">false</code>).</p>
 
@@ -228,7 +228,7 @@
 <h2 id="array-find">find</h2>
 <p>The <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/find" title="MDN .find documentation"><code class="language-plaintext highlighter-rouge">.find()</code></a> method takes a test function and returns the value of the first element that passes the test.</p>
 
-<p>Where <code class="language-plaintext highlighter-rouge">.includes()</code> tells you if a restaurant servers your favourite dish, <code class="language-plaintext highlighter-rouge">.find()</code> will get you the dish if the restaurant servers it.</p>
+<p>Where <code class="language-plaintext highlighter-rouge">.includes()</code> tells you if a restaurant serves your favourite dish, <code class="language-plaintext highlighter-rouge">.find()</code> will get you the dish if the restaurant serves it.</p>
 
 <p>So the dishes are our elements inside an array. Checking if the restaurant serves your favourite dish is a function. And <code class="language-plaintext highlighter-rouge">.find()</code> check each dish and first instance it comes across your favourite dish it will get it for you.</p>
 
@@ -240,7 +240,7 @@
 <h2 id="array-findIndex">findIndex</h2>
 <p>The <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/findIndex" title="MDN .findIndex documentation"><code class="language-plaintext highlighter-rouge">.fndIndex()</code></a> method takes a test function and returns the index of the first element that passes the test.</p>
 
-<p>This time you are at a buffet and want to with chocolate cake. So you ask one of the waiters to point you in the direction of chocolate cake.</p>
+<p>This time you are at a buffet and want to eat chocolate cake. So you ask one of the waiters to point you in the direction of chocolate cake.</p>
 
 <p>So the dishes are our elements inside an array. <code class="language-plaintext highlighter-rouge">.findIndex()</code> is the waiter who takes in what you want and points you to the location where it is.</p>
 
@@ -258,7 +258,7 @@
 <h2 id="array-some">some</h2>
 <p>The <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/some" title="MDN .some documentation"><code class="language-plaintext highlighter-rouge">.some()</code></a> method takes a test function and returns true if at-least one element in the array passes the test.</p>
 
-<p>Today you are in the mood to eat some potato dishes. So want to check if a restaurant has some potato based dishes. So you check the ingredients of each of the items on the menu to find dishes that have potato in them.</p>
+<p>Today you are in the mood to eat some potato dishes. So want to check if a restaurant has some potato based dishes. So you check the ingredients of each of the items on the menu to find dishes that have potatoes in them.</p>
 
 <p>So the dishes are our elements inside an array. Checking if a dish has potato is the function. <code class="language-plaintext highlighter-rouge">.some()</code> will take this function and test each of the dishes and in the end if at least one dish passes the test it will return true.</p>
 
@@ -274,9 +274,9 @@
 <h2 id="array-every">every</h2>
 <p>The <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/every" title="MDN .every documentation"><code class="language-plaintext highlighter-rouge">.every()</code></a> method takes a test function and returns true only if all the element in the array pass the test.</p>
 
-<p>So a friend has invited you for a dinner but you have condition you will only go if all the dishes are meat bases. So you confirm the menu with your friend and only when you confirm all the dishes are meat based you go for dinner.</p>
+<p>So a friend has invited you for a dinner but you have condition you will only go if all the dishes are meat based. So you confirm the menu with your friend and only when you confirm all the dishes are meat based you go for dinner.</p>
 
-<p>So the dishes are our elements inside an array. Checking if a dishes are meat based is the function. <code class="language-plaintext highlighter-rouge">.every()</code> will take this function and test each of the dishes and only if all the dishes pass the test it will return true.</p>
+<p>So the dishes are our elements inside an array. Checking if a dish is meat based is the function. <code class="language-plaintext highlighter-rouge">.every()</code> will take this function and test each of the dishes and only if all the dishes pass the test it will return true.</p>
 
 <div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">dinnerDishes</span> <span class="o">=</span> <span class="p">[</span>
   <span class="p">{</span> <span class="na">name</span><span class="p">:</span> <span class="dl">'</span><span class="s1">biryani</span><span class="dl">'</span><span class="p">,</span> <span class="na">hasMeat</span><span class="p">:</span> <span class="kc">true</span> <span class="p">},</span>
@@ -289,7 +289,9 @@
 </code></pre></div></div>
 <hr />
 
-<p><span>Photo by <a href="https://unsplash.com/photos/yvzzemH8-J0">Haryo Setyadi</a> on <a href="https://unsplash.com/">Unsplash</a></span></p>
+<blockquote>
+  <p><span>Cover photo by <a href="https://unsplash.com/photos/yvzzemH8-J0">Haryo Setyadi</a> on <a href="https://unsplash.com/">Unsplash</a></span></p>
+</blockquote>
 
         </div>
 

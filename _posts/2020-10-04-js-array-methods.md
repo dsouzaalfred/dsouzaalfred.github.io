@@ -21,7 +21,7 @@ JavaScript has a lot of built in array methods. Let's have a look at some that w
 - [.some()](#array-some)
 - [.every()](#array-every)
 
-I love to eat and have tried to explain each of these methods in relation to that since that helps me remember what they do.
+I love to eat and try to remember each method by associating it with food. Let me show you how I remember these array methods.
 
 Let's get started
 
@@ -29,9 +29,9 @@ Let's get started
 
 The [`map()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map "MDN .map documentation") method takes a function and will call the function once for every element in the array and return a new array with the updated values.
 
-Let's say you are have five dishes served but you like eggs with everything, so you decide to fry eggs and put them on all the dishes. After all eggs make everything good.
+Let's say you are have five dishes served but you like eggs with everything, so you decide to fry eggs and put them on all the dishes. After all, eggs make everything good.
 
-So the dishes are our elements inside an array. Frying the egg and putting it on a dish is the function. And `.map()` will repeat the process for us for each dishes.
+So the dishes are our elements inside an array. Frying the egg and putting it on a dish is the function. And `.map()` will repeat the process for us for each dish.
 
 ```javascript
 const dishesToMap = ['steak', 'fried rice', 'clear soup'];
@@ -49,7 +49,7 @@ Remember
 
 The [`.filter()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter "MDN .filter documentation") method takes a test function and will call the function once on each array and returns a new array of elements that passed the test.
 
-This time you are served a few dishes but you are in no mood to each vegetables. So you check each dish and see if they have vegetables, if they do you don't eat them.
+This time you are served a few dishes but you are in no mood to eat vegetables. So you check each dish and see if they have vegetables, if they do you don't eat them.
 
 So the dishes are our elements inside an array. Checking each dish if it has vegetables is a function. And `.filter()` will repeat the process on each dish and return all the dishes without vegetables.
 
@@ -87,7 +87,7 @@ console.log(total);
 ## includes  {#array-includes}
 The [`.includes()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/includes "MDN .include documentation") method can be used when you want to check if a value exists in an array.
 
-Say you want to check if a restaurant servers your favourite dish.
+Say you want to check if a restaurant serves your favourite dish.
 
 So the dishes are our elements inside an array. You tell `.includes()` which dish you are looking for and it will tell you yes(`true`) or no(`false`).
 
@@ -99,7 +99,7 @@ console.log(restaurantMenu.includes('biryani'));
 ## find  {#array-find}
 The [`.find()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/find "MDN .find documentation") method takes a test function and returns the value of the first element that passes the test.
 
-Where `.includes()` tells you if a restaurant servers your favourite dish, `.find()` will get you the dish if the restaurant servers it.
+Where `.includes()` tells you if a restaurant serves your favourite dish, `.find()` will get you the dish if the restaurant serves it.
 
 So the dishes are our elements inside an array. Checking if the restaurant serves your favourite dish is a function. And `.find()` check each dish and first instance it comes across your favourite dish it will get it for you.
 
@@ -112,7 +112,7 @@ console.log(restaurant2Menu.find(findBiryani));
 ## findIndex  {#array-findIndex}
 The [`.fndIndex()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/findIndex "MDN .findIndex documentation") method takes a test function and returns the index of the first element that passes the test.
 
-This time you are at a buffet and want to with chocolate cake. So you ask one of the waiters to point you in the direction of chocolate cake.
+This time you are at a buffet and want to eat chocolate cake. So you ask one of the waiters to point you in the direction of chocolate cake.
 
 So the dishes are our elements inside an array. `.findIndex()` is the waiter who takes in what you want and points you to the location where it is.
 
@@ -131,7 +131,7 @@ console.log(restaurant3Menu.findIndex(findChocolateCake));
 ## some  {#array-some}
 The [`.some()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/some "MDN .some documentation") method takes a test function and returns true if at-least one element in the array passes the test.
 
-Today you are in the mood to eat some potato dishes. So want to check if a restaurant has some potato based dishes. So you check the ingredients of each of the items on the menu to find dishes that have potato in them.
+Today you are in the mood to eat some potato dishes. So want to check if a restaurant has some potato based dishes. So you check the ingredients of each of the items on the menu to find dishes that have potatoes in them.
 
 So the dishes are our elements inside an array. Checking if a dish has potato is the function. `.some()` will take this function and test each of the dishes and in the end if at least one dish passes the test it will return true.
 
@@ -148,9 +148,9 @@ console.log(restaurant4Menu.some(hasDishesWithPotatoes));
 ## every  {#array-every}
 The [`.every()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/every "MDN .every documentation") method takes a test function and returns true only if all the element in the array pass the test.
 
-So a friend has invited you for a dinner but you have condition you will only go if all the dishes are meat bases. So you confirm the menu with your friend and only when you confirm all the dishes are meat based you go for dinner.
+So a friend has invited you for a dinner but you have condition you will only go if all the dishes are meat based. So you confirm the menu with your friend and only when you confirm all the dishes are meat based you go for dinner.
 
-So the dishes are our elements inside an array. Checking if a dishes are meat based is the function. `.every()` will take this function and test each of the dishes and only if all the dishes pass the test it will return true.
+So the dishes are our elements inside an array. Checking if a dish is meat based is the function. `.every()` will take this function and test each of the dishes and only if all the dishes pass the test it will return true.
 
 ```javascript
 const dinnerDishes = [
@@ -163,4 +163,4 @@ const dishesWithMeat = (dish) => dish.hasMeat;
 console.log(dinnerDishes.every(dishesWithMeat));
 ```
 <hr>
-<span>Photo by <a href="https://unsplash.com/photos/yvzzemH8-J0">Haryo Setyadi</a> on <a href="https://unsplash.com/">Unsplash</a></span>
+> <span>Cover photo by <a href="https://unsplash.com/photos/yvzzemH8-J0">Haryo Setyadi</a> on <a href="https://unsplash.com/">Unsplash</a></span>
