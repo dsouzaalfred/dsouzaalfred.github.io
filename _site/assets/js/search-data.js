@@ -48,4 +48,9 @@ var store = [{
         "excerpt":"In the last two posts we covered JSX and Props, now it’s time to move forward in our journey in React and the next stop is styling the components.There are various ways to style a component in React : Inline styles CSS file SASS file CSS modules CSS-in-JS librariesWe will...","categories": ["blog","react"],
         "tags": [],
         "url": "http://localhost:4000/blog/react/react-styling/"
+      },{
+        "title": "A foodies guide to JavaScript array methods",
+        "excerpt":"JavaScript has a lot of built in array methods. Let’s have a look at some that will help us in our journey with React. We will be looking at : .map() .filter() .reduce() .includes() .find() .findIndex() .some() .every()I love to eat and try to remember each method by associating it...","categories": ["blog","javascript"],
+        "tags": [],
+        "url": "http://localhost:4000/blog/javascript/a-foodies-guide-to-javascript-array-methods/"
       }]

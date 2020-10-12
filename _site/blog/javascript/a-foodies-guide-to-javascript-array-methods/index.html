@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<!--
+    So Simple Jekyll Theme 3.2.0
+    Copyright 2013-2019 Michael Rose - mademistakes.com | @mmistakes
+    Free for personal and commercial use under the MIT license
+    https://github.com/mmistakes/so-simple-theme/blob/master/LICENSE
+-->
+<html lang="en-US" class="no-js">
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  
+
+  
+    
+    <!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>A foodies guide to JavaScript array methods | Alfred D’Souza</title>
+<meta name="generator" content="Jekyll v3.9.0" />
+<meta property="og:title" content="A foodies guide to JavaScript array methods" />
+<meta name="author" content="Alfred D'Souza" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="JavaScript has a lot of built in array methods. Let’s have a look at some that will help us in our journey with React. We will be looking at : .map() .filter() .reduce() .includes() .find() .findIndex() .some() .every()" />
+<meta property="og:description" content="JavaScript has a lot of built in array methods. Let’s have a look at some that will help us in our journey with React. We will be looking at : .map() .filter() .reduce() .includes() .find() .findIndex() .some() .every()" />
+<link rel="canonical" href="http://localhost:4000/blog/javascript/a-foodies-guide-to-javascript-array-methods/" />
+<meta property="og:url" content="http://localhost:4000/blog/javascript/a-foodies-guide-to-javascript-array-methods/" />
+<meta property="og:site_name" content="Alfred D’Souza" />
+<meta property="og:image" content="http://localhost:4000/images/a-foodies-guide-to-javascript-array-methods.jpg" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2020-10-12T12:01:00+01:00" />
+<script type="application/ld+json">
+{"image":{"caption":"A foodies guide to JavaScript array methods","url":"http://localhost:4000/images/a-foodies-guide-to-javascript-array-methods.jpg","@type":"imageObject"},"author":{"@type":"Person","name":"Alfred D'Souza"},"url":"http://localhost:4000/blog/javascript/a-foodies-guide-to-javascript-array-methods/","headline":"A foodies guide to JavaScript array methods","dateModified":"2020-10-12T12:01:00+01:00","datePublished":"2020-10-12T12:01:00+01:00","description":"JavaScript has a lot of built in array methods. Let’s have a look at some that will help us in our journey with React. We will be looking at : .map() .filter() .reduce() .includes() .find() .findIndex() .some() .every()","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/blog/javascript/a-foodies-guide-to-javascript-array-methods/"},"@type":"BlogPosting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+
+  
+
+  <script>
+    /* Cut the mustard */
+    if ( 'querySelector' in document && 'addEventListener' in window ) {
+      document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + 'js';
+    }
+  </script>
+
+  <link rel="stylesheet" href="/assets/css/main.css">
+  <link rel="stylesheet" href="/assets/css/skins/default.css">
+  <link rel="alternate" type="application/atom+xml" title="Alfred D&#39;Souza" href="/atom.xml">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
+
+</head>
+
+
+  <body class="layout--post  a-foodies-guide-to-javascript-array-methods">
+    <nav class="skip-links">
+  <h2 class="screen-reader-text">Skip links</h2>
+  <ul>
+    <li><a href="#primary-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    
+  <div class="navigation-wrapper">
+    <a href="#menu-toggle" id="menu-toggle">Menu</a>
+    <nav id="primary-nav" class="site-nav animated drop">
+      <ul><li><a href="/">Home</a></li><li><a href="/blog/">Blog</a></li><li><a href="/search/">Search</a></li></ul>
+    </nav>
+  </div><!-- /.navigation-wrapper -->
+
+
+    <header class="masthead">
+  <div class="wrap">
+    
+    
+    
+  </div>
+</header><!-- /.masthead -->
+
+
+    <main id="main" class="main-content" aria-label="Content">
+  <article class="h-entry">
+    
+  
+  
+  
+
+  <div class="page-image">
+    <img src="/images/a-foodies-guide-to-javascript-array-methods.jpg" class="entry-feature-image u-photo" alt="A foodies guide to JavaScript array methods" style="margin-top: 0;">
+    
+      <div class="page-image-caption"><p>A foodies guide to JavaScript array methods</p>
+</div>
+    
+  </div>
+
+
+    <div class="page-wrapper">
+      <header class="page-header">
+        
+        
+          <h1 id="page-title" class="page-title p-name">A foodies guide to JavaScript array methods
+</h1>
+        
+      </header>
+
+      <div class="page-sidebar">
+        <div class="page-author h-card p-author"><img src="/images/alfred-dsouza-photo.jpg" class="author-avatar u-photo" alt="Alfred D'Souza"><div class="author-info"><div class="author-name">
+        <span class="p-name">Alfred D'Souza</span>
+      </div><ul class="author-links"><li class="author-link">
+            <a class="u-url" rel="me" href="https://twitter.com/dsouzaalfred"><i class="fab fa-twitter-square fa-lg" title="Twitter"></i></a>
+          </li><li class="author-link">
+            <a class="u-url" rel="me" href="https://github.com/dsouzaalfred"><i class="fab fa-github-square fa-lg" title="GitHub"></i></a>
+          </li><li class="author-link">
+            <a class="u-url" rel="me" href="https://www.linkedin.com/in/dsouzaalfred/"><i class="fab fa-linkedin fa-lg" title="LinkedIn"></i></a>
+          </li></ul>
+
+<span class="read-time">6 min read</span>
+
+    <time class="page-date dt-published" datetime="2020-10-12T12:01:00+01:00"><a class="u-url" href="">October 12, 2020</a>
+</time>
+
+  </div>
+</div>
+
+        
+  <h3 class="page-taxonomies-title">Categories</h3>
+  <ul class="page-taxonomies"><li class="page-taxonomy"><a class="p-category" href="/categories/#blog" title="Pages filed under blog">blog</a></li><li class="page-taxonomy"><a class="p-category" href="/categories/#javascript" title="Pages filed under javascript">javascript</a></li>
+  </ul>
+
+
+        
+
+      </div>
+
+      <div class="page-content">
+        <div class="e-content">
+          <p>JavaScript has a lot of built in array methods. Let’s have a look at some that will help us in our journey with React. We will be looking at :</p>
+<ul>
+  <li><a href="#array-map">.map()</a></li>
+  <li><a href="#array-filter">.filter()</a></li>
+  <li><a href="#array-reduce">.reduce()</a></li>
+  <li><a href="#array-includes">.includes()</a></li>
+  <li><a href="#array-find">.find()</a></li>
+  <li><a href="#array-findIndex">.findIndex()</a></li>
+  <li><a href="#array-some">.some()</a></li>
+  <li><a href="#array-every">.every()</a></li>
+</ul>
+
+<p>I love to eat and try to remember each method by associating it with food. Let me show you how I remember these array methods.</p>
+
+<p>Let’s get started</p>
+
+<h2 id="array-map">.map()</h2>
+
+<p>The <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map" title="MDN .map documentation"><code class="language-plaintext highlighter-rouge">map()</code></a> method takes a function and will call the function once for every element in the array and return a new array with the updated values.</p>
+
+<p>Let’s say you are served five dishes but you like eggs with everything, so you decide to fry eggs and put them on all the dishes. After all, eggs make everything good.</p>
+
+<p>So the dishes are our elements inside an array. Frying the egg and putting it on a dish is the function. And <code class="language-plaintext highlighter-rouge">.map()</code> will repeat the process for us for each dish.</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// array-map.js</span>
+
+<span class="c1">// dishes</span>
+<span class="kd">const</span> <span class="nx">dishesToMap</span> <span class="o">=</span> <span class="p">[</span><span class="dl">'</span><span class="s1">steak</span><span class="dl">'</span><span class="p">,</span> <span class="dl">'</span><span class="s1">fried rice</span><span class="dl">'</span><span class="p">,</span> <span class="dl">'</span><span class="s1">clear soup</span><span class="dl">'</span><span class="p">];</span>
+
+<span class="c1">// function to add fried egg</span>
+<span class="kd">const</span> <span class="nx">addEggs</span> <span class="o">=</span> <span class="p">(</span><span class="nx">dish</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="dl">'</span><span class="s1">fried egg + </span><span class="dl">'</span> <span class="o">+</span> <span class="nx">dish</span><span class="p">;</span>
+
+<span class="c1">// updated dishes</span>
+<span class="kd">const</span> <span class="nx">updatedDishesToMap</span> <span class="o">=</span> <span class="nx">dishesToMap</span><span class="p">.</span><span class="nx">map</span><span class="p">(</span><span class="nx">addEggs</span><span class="p">);</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">updatedDishesToMap</span><span class="p">);</span>
+
+<span class="c1">// output: ["fried egg + steak", "fried egg + fried rice", "fried egg + clear soup"]</span>
+</code></pre></div></div>
+
+<p>Remember</p>
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">.map()</code> will not run the test function on empty elements.</li>
+  <li><code class="language-plaintext highlighter-rouge">.map()</code> returns a new array, the original array is not changed.</li>
+</ul>
+
+<h2 id="array-filter">filter</h2>
+
+<p>The <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter" title="MDN .filter documentation"><code class="language-plaintext highlighter-rouge">.filter()</code></a> method takes a test function and will call the function once on each element in the array and returns a new array of elements that pass the test.</p>
+
+<p>This time you are served a few dishes but you are in no mood to eat vegetables. So you check each dish and see if they have vegetables, if they do you don’t eat them.</p>
+
+<p>Again the dishes are our elements inside an array. Checking each dish if it has vegetables is a function. And <code class="language-plaintext highlighter-rouge">.filter()</code> will repeat the process on each dish and return all the dishes without vegetables.</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">//array-filter.js</span>
+
+<span class="c1">// dishes</span>
+<span class="kd">const</span> <span class="nx">dishesToFilter</span> <span class="o">=</span> <span class="p">[</span>
+  <span class="p">{</span> <span class="na">name</span><span class="p">:</span> <span class="dl">'</span><span class="s1">steak</span><span class="dl">'</span><span class="p">,</span> <span class="na">hasVeggies</span><span class="p">:</span> <span class="kc">false</span> <span class="p">},</span>
+  <span class="p">{</span> <span class="na">name</span><span class="p">:</span> <span class="dl">'</span><span class="s1">fried rice</span><span class="dl">'</span><span class="p">,</span> <span class="na">hasVeggies</span><span class="p">:</span> <span class="kc">false</span> <span class="p">},</span>
+  <span class="p">{</span> <span class="na">name</span><span class="p">:</span> <span class="dl">'</span><span class="s1">stir fried vegetables</span><span class="dl">'</span><span class="p">,</span> <span class="na">hasVeggies</span><span class="p">:</span> <span class="kc">true</span> <span class="p">},</span>
+<span class="p">];</span>
+
+<span class="c1">// function to filter dishes with vegetables</span>
+<span class="kd">const</span> <span class="nx">removeDishesWithVeggies</span> <span class="o">=</span> <span class="p">(</span><span class="nx">dish</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="o">!</span><span class="nx">dish</span><span class="p">.</span><span class="nx">hasVeggies</span><span class="p">;</span>
+
+<span class="c1">// filtering dishes</span>
+<span class="kd">const</span> <span class="nx">updatedDishesToFilter</span> <span class="o">=</span> <span class="nx">dishesToFilter</span><span class="p">.</span><span class="nx">filter</span><span class="p">(</span><span class="nx">removeDishesWithVeggies</span><span class="p">);</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">updatedDishesToFilter</span><span class="p">);</span>
+
+<span class="c1">// output: [{ name: "steak", hasVeggies: false }, { name: "fried rice", hasVeggies: false }]</span>
+</code></pre></div></div>
+
+<p>Remember</p>
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">.filter()</code> will return an empty array if non of the elements pass the test.</li>
+  <li><code class="language-plaintext highlighter-rouge">.filter()</code> returns a new array, the original array is not changed.</li>
+</ul>
+
+<h2 id="array-reduce">reduce</h2>
+<p>The <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/Reduce" title="MDN .reduce documentation"><code class="language-plaintext highlighter-rouge">.reduce()</code></a> method takes a function (called reducer) and uses it on every element of the array and outputs a single value.</p>
+
+<p>Alright so after eating a huge spread at the restaurant you want to calculate the total you will have to pay. So you take the price of each dish and keep adding till you are done with all the dishes and the final number is the total you will have to pay.</p>
+
+<p>Once again, the dishes are our elements inside an array. Adding up cost of each dish is the reducer. You pass this reducer to <code class="language-plaintext highlighter-rouge">.reduce()</code> and it gives you the total.</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// array-reduce.js</span>
+
+<span class="c1">// cost of each dish</span>
+<span class="kd">const</span> <span class="nx">dishesToTotal</span> <span class="o">=</span> <span class="p">[</span><span class="mi">30</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">15</span><span class="p">,</span> <span class="mi">40</span><span class="p">];</span>
+
+<span class="c1">// reducer: accumulator =&gt; stores the total, currentValue =&gt; price of the current dish</span>
+<span class="kd">const</span> <span class="nx">reducer</span> <span class="o">=</span> <span class="p">(</span><span class="nx">accumulator</span><span class="p">,</span> <span class="nx">currentValue</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="nx">accumulator</span> <span class="o">+</span> <span class="nx">currentValue</span><span class="p">;</span>
+
+<span class="c1">// calculate the total</span>
+<span class="kd">const</span> <span class="nx">total</span> <span class="o">=</span> <span class="nx">dishesToTotal</span><span class="p">.</span><span class="nx">reduce</span><span class="p">(</span><span class="nx">reducer</span><span class="p">);</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">total</span><span class="p">);</span>
+
+<span class="c1">// output: 105</span>
+</code></pre></div></div>
+
+<h2 id="array-includes">includes</h2>
+<p>The <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/includes" title="MDN .includes documentation"><code class="language-plaintext highlighter-rouge">.includes()</code></a> method can be used when you want to check if a value exists in an array.</p>
+
+<p>Say you want to check if a restaurant serves your favourite dish.</p>
+
+<p>This time the dishes served by the restaurant are the items inside an array. You tell <code class="language-plaintext highlighter-rouge">.includes()</code> which dish you are looking for and it will tell you yes(<code class="language-plaintext highlighter-rouge">true</code>) if the restaurant serves the dish or no(<code class="language-plaintext highlighter-rouge">false</code>) if it does not.</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// array-includes.js</span>
+
+<span class="c1">// dishes served by a restaurant</span>
+<span class="kd">const</span> <span class="nx">restaurantMenu</span> <span class="o">=</span> <span class="p">[</span><span class="dl">'</span><span class="s1">steak</span><span class="dl">'</span><span class="p">,</span> <span class="dl">'</span><span class="s1">biryani</span><span class="dl">'</span><span class="p">,</span> <span class="dl">'</span><span class="s1">kebbabs</span><span class="dl">'</span><span class="p">];</span>
+
+<span class="c1">// checking if it serves your favourite dish</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">restaurantMenu</span><span class="p">.</span><span class="nx">includes</span><span class="p">(</span><span class="dl">'</span><span class="s1">biryani</span><span class="dl">'</span><span class="p">));</span>
+
+<span class="c1">// output: true</span>
+</code></pre></div></div>
+
+<h2 id="array-find">find</h2>
+<p>The <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/find" title="MDN .find documentation"><code class="language-plaintext highlighter-rouge">.find()</code></a> method takes a test function and returns the value of the first element that passes the test.</p>
+
+<p>Where <code class="language-plaintext highlighter-rouge">.includes()</code> tells you if a restaurant serves your favourite dish, <code class="language-plaintext highlighter-rouge">.find()</code> will get you the dish if the restaurant serves it.</p>
+
+<p>Again, the dishes served by the restaurant are the items inside an array. Checking if the restaurant serves your favourite dish is a function. And <code class="language-plaintext highlighter-rouge">.find()</code> check each dish and the first instance it comes across your favourite dish it will get it for you.</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// array-find.js</span>
+
+<span class="c1">// dishes served by a restaurant</span>
+<span class="kd">const</span> <span class="nx">restaurant2Menu</span> <span class="o">=</span> <span class="p">[</span><span class="dl">'</span><span class="s1">steak</span><span class="dl">'</span><span class="p">,</span> <span class="dl">'</span><span class="s1">biryani</span><span class="dl">'</span><span class="p">,</span> <span class="dl">'</span><span class="s1">kebbabs</span><span class="dl">'</span><span class="p">];</span>
+
+<span class="c1">// dish you want to find</span>
+<span class="kd">const</span> <span class="nx">findBiryani</span> <span class="o">=</span> <span class="p">(</span><span class="nx">dish</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="nx">dish</span> <span class="o">===</span> <span class="dl">'</span><span class="s1">biryani</span><span class="dl">'</span><span class="p">;</span>
+
+<span class="c1">// find the dish</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">restaurant2Menu</span><span class="p">.</span><span class="nx">find</span><span class="p">(</span><span class="nx">findBiryani</span><span class="p">));</span>
+
+<span class="c1">// output: biryani</span>
+</code></pre></div></div>
+
+<h2 id="array-findIndex">findIndex</h2>
+<p>The <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/findIndex" title="MDN .findIndex documentation"><code class="language-plaintext highlighter-rouge">.fndIndex()</code></a> method takes a test function and returns the index of the first element that passes the test.</p>
+
+<p>This time you are at a buffet and want to eat chocolate cake. So you ask one of the waiters to point you in the direction of chocolate cake.</p>
+
+<p>All the dishes on the buffet are our elements inside an array. <code class="language-plaintext highlighter-rouge">.findIndex()</code> is the waiter who takes in what you want and points you to the location where it is.</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// array-findIndex.js</span>
+
+<span class="c1">// dishes on the buffet</span>
+<span class="kd">const</span> <span class="nx">dishesOnTheBuffet</span> <span class="o">=</span> <span class="p">[</span>
+  <span class="dl">'</span><span class="s1">steak</span><span class="dl">'</span><span class="p">,</span>
+  <span class="dl">'</span><span class="s1">biryani</span><span class="dl">'</span><span class="p">,</span>
+  <span class="dl">'</span><span class="s1">kebbabs</span><span class="dl">'</span><span class="p">,</span>
+  <span class="dl">'</span><span class="s1">vanilla cake</span><span class="dl">'</span><span class="p">,</span>
+  <span class="dl">'</span><span class="s1">chocolate cake</span><span class="dl">'</span><span class="p">,</span>
+<span class="p">];</span>
+
+<span class="c1">// dish you want to find</span>
+<span class="kd">const</span> <span class="nx">findChocolateCake</span> <span class="o">=</span> <span class="p">(</span><span class="nx">dish</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="nx">dish</span> <span class="o">===</span> <span class="dl">'</span><span class="s1">chocolate cake</span><span class="dl">'</span><span class="p">;</span>
+
+<span class="c1">// getting the location of the dish</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">dishesOnTheBuffet</span><span class="p">.</span><span class="nx">findIndex</span><span class="p">(</span><span class="nx">findChocolateCake</span><span class="p">));</span>
+
+<span class="c1">// output: 4</span>
+</code></pre></div></div>
+
+<h2 id="array-some">some</h2>
+<p>The <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/some" title="MDN .some documentation"><code class="language-plaintext highlighter-rouge">.some()</code></a> method takes a test function and returns true if at-least one element in the array passes the test.</p>
+
+<p>Today you are in the mood to eat some potato dishes. So you check if a restaurant has some potato based dishes. You check the ingredients of each of the items on the menu to find dishes that have potatoes in them.</p>
+
+<p>The dishes are our elements inside an array. Checking if a dish has potato is the function. <code class="language-plaintext highlighter-rouge">.some()</code> will take this function and test each of the dishes and in the end if at least one dish passes the test(has potato) it will return <code class="language-plaintext highlighter-rouge">true</code>.</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// array-some.js</span>
+
+<span class="c1">// dishes</span>
+<span class="kd">const</span> <span class="nx">restaurant4Menu</span> <span class="o">=</span> <span class="p">[</span>
+  <span class="p">{</span> <span class="na">name</span><span class="p">:</span> <span class="dl">'</span><span class="s1">fried rice</span><span class="dl">'</span><span class="p">,</span> <span class="na">hasPotatoes</span><span class="p">:</span> <span class="kc">false</span> <span class="p">},</span>
+  <span class="p">{</span> <span class="na">name</span><span class="p">:</span> <span class="dl">'</span><span class="s1">french fries</span><span class="dl">'</span><span class="p">,</span> <span class="na">hasPotatoes</span><span class="p">:</span> <span class="kc">true</span> <span class="p">},</span>
+  <span class="p">{</span> <span class="na">name</span><span class="p">:</span> <span class="dl">'</span><span class="s1">stir fried vegetables</span><span class="dl">'</span><span class="p">,</span> <span class="na">hasPotatoes</span><span class="p">:</span> <span class="kc">true</span> <span class="p">},</span>
+<span class="p">];</span>
+
+<span class="c1">// function to check if a dish has potato</span>
+<span class="kd">const</span> <span class="nx">hasDishesWithPotatoes</span> <span class="o">=</span> <span class="p">(</span><span class="nx">dish</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="nx">dish</span><span class="p">.</span><span class="nx">hasPotatoes</span><span class="p">;</span>
+
+<span class="c1">// checking all the dishes in the restaurant</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">restaurant4Menu</span><span class="p">.</span><span class="nx">some</span><span class="p">(</span><span class="nx">hasDishesWithPotatoes</span><span class="p">));</span>
+
+<span class="c1">// output: true</span>
+</code></pre></div></div>
+
+<h2 id="array-every">every</h2>
+<p>The <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/every" title="MDN .every documentation"><code class="language-plaintext highlighter-rouge">.every()</code></a> method takes a test function and returns true only if all the element in the array pass the test.</p>
+
+<p>This time a friend has invited you for a dinner but you have a condition, you will only go if all the dishes are meat based. You confirm the menu with your friend and only when you are sure all the dishes are meat based you go for dinner.</p>
+
+<p>The dishes are our elements inside an array. Checking if a dish is meat based is the function. <code class="language-plaintext highlighter-rouge">.every()</code> will take this function and test each of the dishes and only if all the dishes pass the test it will return <code class="language-plaintext highlighter-rouge">true</code>.</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// array-every.js</span>
+
+<span class="c1">// dishes served at dinner</span>
+<span class="kd">const</span> <span class="nx">dinnerDishes</span> <span class="o">=</span> <span class="p">[</span>
+  <span class="p">{</span> <span class="na">name</span><span class="p">:</span> <span class="dl">'</span><span class="s1">biryani</span><span class="dl">'</span><span class="p">,</span> <span class="na">hasMeat</span><span class="p">:</span> <span class="kc">true</span> <span class="p">},</span>
+  <span class="p">{</span> <span class="na">name</span><span class="p">:</span> <span class="dl">'</span><span class="s1">french fries</span><span class="dl">'</span><span class="p">,</span> <span class="na">hasMeat</span><span class="p">:</span> <span class="kc">false</span> <span class="p">},</span>
+  <span class="p">{</span> <span class="na">name</span><span class="p">:</span> <span class="dl">'</span><span class="s1">jeera rice</span><span class="dl">'</span><span class="p">,</span> <span class="na">hasMeat</span><span class="p">:</span> <span class="kc">false</span> <span class="p">},</span>
+  <span class="p">{</span> <span class="na">name</span><span class="p">:</span> <span class="dl">'</span><span class="s1">butter chicken</span><span class="dl">'</span><span class="p">,</span> <span class="na">hasMeat</span><span class="p">:</span> <span class="kc">true</span> <span class="p">},</span>
+<span class="p">];</span>
+
+<span class="c1">// function to check if they have meat.</span>
+<span class="kd">const</span> <span class="nx">dishesWithMeat</span> <span class="o">=</span> <span class="p">(</span><span class="nx">dish</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="nx">dish</span><span class="p">.</span><span class="nx">hasMeat</span><span class="p">;</span>
+
+<span class="c1">// checking if all dishes have meat.</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">dinnerDishes</span><span class="p">.</span><span class="nx">every</span><span class="p">(</span><span class="nx">dishesWithMeat</span><span class="p">));</span>
+
+<span class="c1">// output: false</span>
+</code></pre></div></div>
+
+<p>That’s all for today, until next time take care :).</p>
+
+<p>Lastly you can find the code on <a href="https://github.com/dsouzaalfred/blogdemos/tree/master/a-foodies-guide-to-javascript-array-methods" title="A foodies guide to JavaScript array methods repo">github</a>.</p>
+
+<hr />
+
+<blockquote>
+  <p><span>Cover photo by <a href="https://unsplash.com/photos/yvzzemH8-J0">Haryo Setyadi</a> on <a href="https://unsplash.com/">Unsplash</a></span></p>
+</blockquote>
+
+        </div>
+
+        
+          <div class="page-share">
+  <a href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Flocalhost%3A4000%2Fblog%2Fjavascript%2Fa-foodies-guide-to-javascript-array-methods%2F" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" class="btn btn--facebook btn--small"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i> <span>Share</span></a>
+  <a href="https://twitter.com/intent/tweet?text=A+foodies+guide+to+JavaScript+array+methods%20http%3A%2F%2Flocalhost%3A4000%2Fblog%2Fjavascript%2Fa-foodies-guide-to-javascript-array-methods%2F" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" class="btn btn--twitter btn--small"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i> <span>Tweet</span></a>
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=http%3A%2F%2Flocalhost%3A4000%2Fblog%2Fjavascript%2Fa-foodies-guide-to-javascript-array-methods%2F" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" class="btn btn--linkedin btn--small"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i> <span>LinkedIn</span></a>
+  <a href="https://reddit.com/submit?title=A+foodies+guide+to+JavaScript+array+methods&url=http%3A%2F%2Flocalhost%3A4000%2Fblog%2Fjavascript%2Fa-foodies-guide-to-javascript-array-methods%2F" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" class="btn btn--reddit btn--small"><i class="fab fa-fw fa-reddit" aria-hidden="true"></i> <span>Reddit</span></a>
+</div>
+
+        
+
+        
+
+        <nav class="page-pagination" role="navigation">
+  
+    <a class="page-previous" href="/blog/react/react-styling/">
+      <h4 class="page-pagination-label">Previous</h4>
+      <span class="page-pagination-title">
+        <i class="fas fa-arrow-left"></i> React - Styling
+
+      </span>
+    </a>
+  
+
+  
+</nav>
+
+      </div>
+    </div>
+  </article>
+</main>
+
+
+    <footer id="footer" class="site-footer">
+  <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+<div class="social-icons"><a class="social-icon" href="https://twitter.com/dsouzaalfred"><i class="fab fa-twitter-square fa-2x" title="Twitter"></i></a><a class="social-icon" href="https://github.com/dsouzaalfred"><i class="fab fa-github-square fa-2x" title="GitHub"></i></a><a class="social-icon" href="https://www.linkedin.com/in/dsouzaalfred/"><i class="fab fa-linkedin fa-2x" title="LinkedIn"></i></a></div><div class="copyright">
+    
+      <p>&copy; 2020 Alfred D'Souza. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://github.com/mmistakes/so-simple-theme" rel="nofollow">So Simple</a>.</p>
+    
+  </div>
+</footer>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+  <script src="/assets/js/main.min.js"></script>
+  <script src="https://use.fontawesome.com/releases/v5.0.12/js/all.js"></script>
+
+
+  </body>
+
+</html>
