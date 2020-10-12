@@ -52,5 +52,5 @@ var store = [{
         "title": "A foodies guide to JavaScript array methods",
         "excerpt":"JavaScript has a lot of built in array methods. Let’s have a look at some that will help us in our journey with React. We will be looking at : .map() .filter() .reduce() .includes() .find() .findIndex() .some() .every()I love to eat and try to remember each method by associating it...","categories": ["blog","javascript"],
         "tags": [],
-        "url": "http://localhost:4000/blog/javascript/js-array-methods/"
+        "url": "http://localhost:4000/blog/javascript/a-foodies-guide-to-javascript-array-methods/"
       }]

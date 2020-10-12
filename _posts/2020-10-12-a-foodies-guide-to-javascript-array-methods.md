@@ -232,6 +232,7 @@ console.log(dinnerDishes.every(dishesWithMeat));
 
 That's all for today, until next time take care :).
 
-Lastly you can find the code on [github](https://github.com/dsouzaalfred/blogdemos/tree/master/react-styling "React - styling repo").
+Lastly you can find the code on [github](https://github.com/dsouzaalfred/blogdemos/tree/master/a-foodies-guide-to-javascript-array-methods "A foodies guide to JavaScript array methods repo").
+
 <hr>
 > <span>Cover photo by <a href="https://unsplash.com/photos/yvzzemH8-J0">Haryo Setyadi</a> on <a href="https://unsplash.com/">Unsplash</a></span>
