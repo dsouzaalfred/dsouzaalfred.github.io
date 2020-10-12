@@ -1,7 +1,7 @@
 ---
 layout: post
 title: A foodies guide to JavaScript array methods
-date: 2020-10-04 12:01 +0100
+date: 2020-10-12 12:01 +0100
 author: alfred_dsouza
 categories:
   - blog
