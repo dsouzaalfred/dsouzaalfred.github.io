@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<!--
+    So Simple Jekyll Theme 3.2.0
+    Copyright 2013-2019 Michael Rose - mademistakes.com | @mmistakes
+    Free for personal and commercial use under the MIT license
+    https://github.com/mmistakes/so-simple-theme/blob/master/LICENSE
+-->
+<html lang="en-US" class="no-js">
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  
+
+  
+    
+    <!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>What is state | Alfred D’Souza</title>
+<meta name="generator" content="Jekyll v3.9.0" />
+<meta property="og:title" content="What is state" />
+<meta name="author" content="Alfred D'Souza" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="As frontend developers we keep hearing about state, and it can be confusing to begin with. When I started out I had no clue that such a thing existed. It took me sometime to figure out this state thing. In this post, let’s try and understand what is state." />
+<meta property="og:description" content="As frontend developers we keep hearing about state, and it can be confusing to begin with. When I started out I had no clue that such a thing existed. It took me sometime to figure out this state thing. In this post, let’s try and understand what is state." />
+<link rel="canonical" href="http://localhost:4000/blog/react/what-is-state/" />
+<meta property="og:url" content="http://localhost:4000/blog/react/what-is-state/" />
+<meta property="og:site_name" content="Alfred D’Souza" />
+<meta property="og:image" content="http://localhost:4000/images/what-is-state.jpg" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2020-12-20T11:01:00+00:00" />
+<script type="application/ld+json">
+{"image":{"caption":"What is state","url":"http://localhost:4000/images/what-is-state.jpg","@type":"imageObject"},"author":{"@type":"Person","name":"Alfred D'Souza"},"url":"http://localhost:4000/blog/react/what-is-state/","headline":"What is state","dateModified":"2020-12-20T11:01:00+00:00","datePublished":"2020-12-20T11:01:00+00:00","description":"As frontend developers we keep hearing about state, and it can be confusing to begin with. When I started out I had no clue that such a thing existed. It took me sometime to figure out this state thing. In this post, let’s try and understand what is state.","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/blog/react/what-is-state/"},"@type":"BlogPosting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+
+  
+
+  <script>
+    /* Cut the mustard */
+    if ( 'querySelector' in document && 'addEventListener' in window ) {
+      document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + 'js';
+    }
+  </script>
+
+  <link rel="stylesheet" href="/assets/css/main.css">
+  <link rel="stylesheet" href="/assets/css/skins/default.css">
+  <link rel="alternate" type="application/atom+xml" title="Alfred D&#39;Souza" href="/atom.xml">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
+
+</head>
+
+
+  <body class="layout--post  what-is-state">
+    <nav class="skip-links">
+  <h2 class="screen-reader-text">Skip links</h2>
+  <ul>
+    <li><a href="#primary-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    
+  <div class="navigation-wrapper">
+    <a href="#menu-toggle" id="menu-toggle">Menu</a>
+    <nav id="primary-nav" class="site-nav animated drop">
+      <ul><li><a href="/">Home</a></li><li><a href="/blog/">Blog</a></li><li><a href="/search/">Search</a></li></ul>
+    </nav>
+  </div><!-- /.navigation-wrapper -->
+
+
+    <header class="masthead">
+  <div class="wrap">
+    
+    
+    
+  </div>
+</header><!-- /.masthead -->
+
+
+    <main id="main" class="main-content" aria-label="Content">
+  <article class="h-entry">
+    
+  
+  
+  
+
+  <div class="page-image">
+    <img src="/images/what-is-state.jpg" class="entry-feature-image u-photo" alt="What is state" style="margin-top: 0;">
+    
+      <div class="page-image-caption"><p>What is state</p>
+</div>
+    
+  </div>
+
+
+    <div class="page-wrapper">
+      <header class="page-header">
+        
+        
+          <h1 id="page-title" class="page-title p-name">What is state
+</h1>
+        
+      </header>
+
+      <div class="page-sidebar">
+        <div class="page-author h-card p-author"><img src="/images/alfred-dsouza-photo.jpg" class="author-avatar u-photo" alt="Alfred D'Souza"><div class="author-info"><div class="author-name">
+        <span class="p-name">Alfred D'Souza</span>
+      </div><ul class="author-links"><li class="author-link">
+            <a class="u-url" rel="me" href="https://twitter.com/dsouzaalfred"><i class="fab fa-twitter-square fa-lg" title="Twitter"></i></a>
+          </li><li class="author-link">
+            <a class="u-url" rel="me" href="https://github.com/dsouzaalfred"><i class="fab fa-github-square fa-lg" title="GitHub"></i></a>
+          </li><li class="author-link">
+            <a class="u-url" rel="me" href="https://www.linkedin.com/in/dsouzaalfred/"><i class="fab fa-linkedin fa-lg" title="LinkedIn"></i></a>
+          </li></ul>
+
+<span class="read-time">1 min read</span>
+
+    <time class="page-date dt-published" datetime="2020-12-20T11:01:00+00:00"><a class="u-url" href="">December 20, 2020</a>
+</time>
+
+  </div>
+</div>
+
+        
+  <h3 class="page-taxonomies-title">Categories</h3>
+  <ul class="page-taxonomies"><li class="page-taxonomy"><a class="p-category" href="/categories/#blog" title="Pages filed under blog">blog</a></li><li class="page-taxonomy"><a class="p-category" href="/categories/#react" title="Pages filed under react">react</a></li>
+  </ul>
+
+
+        
+
+      </div>
+
+      <div class="page-content">
+        <div class="e-content">
+          <p>As frontend developers we keep hearing about <strong>state</strong>, and it can be confusing to begin with. When I started out I had no clue that such a thing existed. It took me sometime to figure out this <strong>state</strong> thing. In this post, let’s try and understand what is <strong>state</strong>.</p>
+
+<h2 id="so-what-is-state">So what is state?</h2>
+<p><strong>State</strong> is the data that represents the current state of your UI. Key thing to note is that it is the <strong>data</strong> not the actual UI(DOM). This <strong>data</strong> is then used to render the UI correctly.</p>
+
+<h2 id="examples">Examples</h2>
+<p>Let’s take a look at couple of examples:</p>
+<h4 id="network-call-">Network call :</h4>
+<p>The App will go through these states:</p>
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">isLoading</code> (is the network call in progress)</li>
+  <li><code class="language-plaintext highlighter-rouge">isSuccess</code> (is the network call a success)</li>
+  <li><code class="language-plaintext highlighter-rouge">isError</code> (if the call returned an error)</li>
+</ul>
+
+<p>Now depending on any of these states our UI will change, as an example</p>
+<ul>
+  <li>if <code class="language-plaintext highlighter-rouge">isLoading</code> is <code class="language-plaintext highlighter-rouge">true</code> we show the loading animation</li>
+  <li>if <code class="language-plaintext highlighter-rouge">isSuccess</code> is <code class="language-plaintext highlighter-rouge">true</code> we hide the loading animation and show the response</li>
+  <li>if <code class="language-plaintext highlighter-rouge">isError</code> is <code class="language-plaintext highlighter-rouge">true</code> we hide the loading animation and show the error message</li>
+</ul>
+
+<h4 id="form-submission-">Form submission :</h4>
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">isValid</code> (is the form valid/all the fields are filled in correctly)</li>
+  <li><code class="language-plaintext highlighter-rouge">isSubmitted</code> (is the form submitted)</li>
+</ul>
+
+<p>When the user clicks on submit</p>
+<ul>
+  <li>If <code class="language-plaintext highlighter-rouge">isValid</code> is <code class="language-plaintext highlighter-rouge">true</code> we submit the form else show an error</li>
+  <li>If <code class="language-plaintext highlighter-rouge">isSubmitted</code> is true we hide the form and show a message that form is submitted
+  (This is just an example, in the real world you might submit the form by making a network call
+or each field can have it’s own state to check if it’s valid and capture the value.)</li>
+</ul>
+
+<h2 id="when-does-the-state-update">When does the state update?</h2>
+<ol>
+  <li>Every action that the user performs in your app, will update the <strong>state</strong> and this in turn will update the UI.
+Examples of user actions:
+    <ul>
+      <li>route change</li>
+      <li>focus on a input field</li>
+      <li>submit a form</li>
+    </ul>
+  </li>
+  <li>Side effects after the initial <strong>state</strong> change, like network call after route change.</li>
+  <li>Push notification, to show the user that there is a new notification or update.</li>
+</ol>
+
+<p>That’s all for today, next time we have a look at state management.</p>
+
+<hr />
+
+<blockquote>
+  <p><span>Cover photo by <a href="https://unsplash.com/@nate_dumlao?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Nathan Dumlao
+</a> on <a href="https://unsplash.com/">Unsplash</a></span></p>
+</blockquote>
+
+        </div>
+
+        
+          <div class="page-share">
+  <a href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Flocalhost%3A4000%2Fblog%2Freact%2Fwhat-is-state%2F" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" class="btn btn--facebook btn--small"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i> <span>Share</span></a>
+  <a href="https://twitter.com/intent/tweet?text=What+is+state%20http%3A%2F%2Flocalhost%3A4000%2Fblog%2Freact%2Fwhat-is-state%2F" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" class="btn btn--twitter btn--small"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i> <span>Tweet</span></a>
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=http%3A%2F%2Flocalhost%3A4000%2Fblog%2Freact%2Fwhat-is-state%2F" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" class="btn btn--linkedin btn--small"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i> <span>LinkedIn</span></a>
+  <a href="https://reddit.com/submit?title=What+is+state&url=http%3A%2F%2Flocalhost%3A4000%2Fblog%2Freact%2Fwhat-is-state%2F" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" class="btn btn--reddit btn--small"><i class="fab fa-fw fa-reddit" aria-hidden="true"></i> <span>Reddit</span></a>
+</div>
+
+        
+
+        
+
+        <nav class="page-pagination" role="navigation">
+  
+    <a class="page-previous" href="/blog/javascript/a-foodies-guide-to-javascript-array-methods/">
+      <h4 class="page-pagination-label">Previous</h4>
+      <span class="page-pagination-title">
+        <i class="fas fa-arrow-left"></i> A foodies guide to JavaScript array methods
+
+      </span>
+    </a>
+  
+
+  
+</nav>
+
+      </div>
+    </div>
+  </article>
+</main>
+
+
+    <footer id="footer" class="site-footer">
+  <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+<div class="social-icons"><a class="social-icon" href="https://twitter.com/dsouzaalfred"><i class="fab fa-twitter-square fa-2x" title="Twitter"></i></a><a class="social-icon" href="https://github.com/dsouzaalfred"><i class="fab fa-github-square fa-2x" title="GitHub"></i></a><a class="social-icon" href="https://www.linkedin.com/in/dsouzaalfred/"><i class="fab fa-linkedin fa-2x" title="LinkedIn"></i></a></div><div class="copyright">
+    
+      <p>&copy; 2020 Alfred D'Souza. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://github.com/mmistakes/so-simple-theme" rel="nofollow">So Simple</a>.</p>
+    
+  </div>
+</footer>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+  <script src="/assets/js/main.min.js"></script>
+  <script src="https://use.fontawesome.com/releases/v5.0.12/js/all.js"></script>
+
+
+  </body>
+
+</html>

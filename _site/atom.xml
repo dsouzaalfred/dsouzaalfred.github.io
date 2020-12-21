@@ -1,4 +1,61 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="http://localhost:4000/atom.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-10-12T14:46:18+01:00</updated><id>http://localhost:4000/atom.xml</id><title type="html">Alfred D’Souza</title><subtitle>There is always something new to learn!</subtitle><author><name>Alfred D'Souza</name></author><entry><title type="html">A foodies guide to JavaScript array methods</title><link href="http://localhost:4000/blog/javascript/a-foodies-guide-to-javascript-array-methods/" rel="alternate" type="text/html" title="A foodies guide to JavaScript array methods" /><published>2020-10-12T12:01:00+01:00</published><updated>2020-10-12T12:01:00+01:00</updated><id>http://localhost:4000/blog/javascript/a-foodies-guide-to-javascript-array-methods</id><content type="html" xml:base="http://localhost:4000/blog/javascript/a-foodies-guide-to-javascript-array-methods/">&lt;p&gt;JavaScript has a lot of built in array methods. Let’s have a look at some that will help us in our journey with React. We will be looking at :&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="http://localhost:4000/atom.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-12-21T11:00:50+00:00</updated><id>http://localhost:4000/atom.xml</id><title type="html">Alfred D’Souza</title><subtitle>There is always something new to learn!</subtitle><author><name>Alfred D'Souza</name></author><entry><title type="html">What is state</title><link href="http://localhost:4000/blog/react/what-is-state/" rel="alternate" type="text/html" title="What is state" /><published>2020-12-20T11:01:00+00:00</published><updated>2020-12-20T11:01:00+00:00</updated><id>http://localhost:4000/blog/react/what-is-state</id><content type="html" xml:base="http://localhost:4000/blog/react/what-is-state/">&lt;p&gt;As frontend developers we keep hearing about &lt;strong&gt;state&lt;/strong&gt;, and it can be confusing to begin with. When I started out I had no clue that such a thing existed. It took me sometime to figure out this &lt;strong&gt;state&lt;/strong&gt; thing. In this post, let’s try and understand what is &lt;strong&gt;state&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;h2 id=&quot;so-what-is-state&quot;&gt;So what is state?&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;State&lt;/strong&gt; is the data that represents the current state of your UI. Key thing to note is that it is the &lt;strong&gt;data&lt;/strong&gt; not the actual UI(DOM). This &lt;strong&gt;data&lt;/strong&gt; is then used to render the UI correctly.&lt;/p&gt;
+
+&lt;h2 id=&quot;examples&quot;&gt;Examples&lt;/h2&gt;
+&lt;p&gt;Let’s take a look at couple of examples:&lt;/p&gt;
+&lt;h4 id=&quot;network-call-&quot;&gt;Network call :&lt;/h4&gt;
+&lt;p&gt;The App will go through these states:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;isLoading&lt;/code&gt; (is the network call in progress)&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;isSuccess&lt;/code&gt; (is the network call a success)&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;isError&lt;/code&gt; (if the call returned an error)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Now depending on any of these states our UI will change, as an example&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;if &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;isLoading&lt;/code&gt; is &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;true&lt;/code&gt; we show the loading animation&lt;/li&gt;
+  &lt;li&gt;if &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;isSuccess&lt;/code&gt; is &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;true&lt;/code&gt; we hide the loading animation and show the response&lt;/li&gt;
+  &lt;li&gt;if &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;isError&lt;/code&gt; is &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;true&lt;/code&gt; we hide the loading animation and show the error message&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;form-submission-&quot;&gt;Form submission :&lt;/h4&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;isValid&lt;/code&gt; (is the form valid/all the fields are filled in correctly)&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;isSubmitted&lt;/code&gt; (is the form submitted)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;When the user clicks on submit&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;If &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;isValid&lt;/code&gt; is &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;true&lt;/code&gt; we submit the form else show an error&lt;/li&gt;
+  &lt;li&gt;If &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;isSubmitted&lt;/code&gt; is true we hide the form and show a message that form is submitted
+  (This is just an example, in the real world you might submit the form by making a network call
+or each field can have it’s own state to check if it’s valid and capture the value.)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;when-does-the-state-update&quot;&gt;When does the state update?&lt;/h2&gt;
+&lt;ol&gt;
+  &lt;li&gt;Every action that the user performs in your app, will update the &lt;strong&gt;state&lt;/strong&gt; and this in turn will update the UI.
+Examples of user actions:
+    &lt;ul&gt;
+      &lt;li&gt;route change&lt;/li&gt;
+      &lt;li&gt;focus on a input field&lt;/li&gt;
+      &lt;li&gt;submit a form&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Side effects after the initial &lt;strong&gt;state&lt;/strong&gt; change, like network call after route change.&lt;/li&gt;
+  &lt;li&gt;Push notification, to show the user that there is a new notification or update.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;That’s all for today, next time we have a look at state management.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;span&gt;Cover photo by &lt;a href=&quot;https://unsplash.com/@nate_dumlao?utm_source=unsplash&amp;amp;utm_medium=referral&amp;amp;utm_content=creditCopyText&quot;&gt;Nathan Dumlao
+&lt;/a&gt; on &lt;a href=&quot;https://unsplash.com/&quot;&gt;Unsplash&lt;/a&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;/blockquote&gt;</content><author><name>Alfred D'Souza</name><email>dsouzaalfred@gmail.com</email></author><summary type="html">As frontend developers we keep hearing about state, and it can be confusing to begin with. When I started out I had no clue that such a thing existed. It took me sometime to figure out this state thing. In this post, let’s try and understand what is state.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/images/what-is-state.jpg" /><media:content medium="image" url="http://localhost:4000/images/what-is-state.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">A foodies guide to JavaScript array methods</title><link href="http://localhost:4000/blog/javascript/a-foodies-guide-to-javascript-array-methods/" rel="alternate" type="text/html" title="A foodies guide to JavaScript array methods" /><published>2020-10-12T12:01:00+01:00</published><updated>2020-10-12T12:01:00+01:00</updated><id>http://localhost:4000/blog/javascript/a-foodies-guide-to-javascript-array-methods</id><content type="html" xml:base="http://localhost:4000/blog/javascript/a-foodies-guide-to-javascript-array-methods/">&lt;p&gt;JavaScript has a lot of built in array methods. Let’s have a look at some that will help us in our journey with React. We will be looking at :&lt;/p&gt;
 &lt;ul&gt;
   &lt;li&gt;&lt;a href=&quot;#array-map&quot;&gt;.map()&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;#array-filter&quot;&gt;.filter()&lt;/a&gt;&lt;/li&gt;
@@ -1867,77 +1924,4 @@ Remove the parent div, since our text-box and span are inside the div&lt;/p&gt;
   &lt;li&gt;And &lt;a href=&quot;https://api.jquery.com/remove/&quot; title=&quot;jQuery .remove documentation&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;remove()&lt;/code&gt;&lt;/a&gt; it&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;Get full code on &lt;a href=&quot;https://github.com/dsouzaalfred/blogdemos/blob/master/remove_element/jQuery.html&quot; title=&quot;Github link&quot;&gt;github&lt;/a&gt;.&lt;/p&gt;</content><author><name>Alfred D'Souza</name><email>dsouzaalfred@gmail.com</email></author><summary type="html">Another magic trick that I love most is when objects disappear. Specially pretty ladies, I wonder what magicians do with them.</summary></entry><entry><title type="html">Dynamically Add content to DOM using JavaScript</title><link href="http://localhost:4000/blog/javascript/dynamically-add-content-to-dom-using-javascript/" rel="alternate" type="text/html" title="Dynamically Add content to DOM using JavaScript" /><published>2015-07-02T11:15:00+01:00</published><updated>2015-07-02T11:15:00+01:00</updated><id>http://localhost:4000/blog/javascript/dynamically-add-content-to-dom-using-javascript</id><content type="html" xml:base="http://localhost:4000/blog/javascript/dynamically-add-content-to-dom-using-javascript/">&lt;p&gt;We have seen how our wand (jQuery) can be used to &lt;a href=&quot;https://dsouzaalf.red/blog/jquery/dynamically-add-content-to-dom-using-jquery/&quot; title=&quot;Dynamically Add content to DOM using jQuery &quot;&gt;Dynamically Add content to DOM&lt;/a&gt;. But then there are powerful wizards who do not like to use wands for such small tricks. Here is how you perform the same trick with pure magic (JavaScript).&lt;/p&gt;
-
-&lt;p&gt;First things first, lets start with our HTML&lt;/p&gt;
-
-&lt;div class=&quot;language-html highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;cp&quot;&gt;&amp;lt;!DOCTYPE html&amp;gt;&lt;/span&gt;
-&lt;span class=&quot;nt&quot;&gt;&amp;lt;html&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;lang=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;en&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
-       &lt;span class=&quot;nt&quot;&gt;&amp;lt;head&amp;gt;&lt;/span&gt;
-              &lt;span class=&quot;nt&quot;&gt;&amp;lt;meta&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;charset=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;utf-8&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
-              &lt;span class=&quot;nt&quot;&gt;&amp;lt;title&amp;gt;&lt;/span&gt;Add textboxes&lt;span class=&quot;nt&quot;&gt;&amp;lt;/title&amp;gt;&lt;/span&gt;
-       &lt;span class=&quot;nt&quot;&gt;&amp;lt;/head&amp;gt;&lt;/span&gt;
-       &lt;span class=&quot;nt&quot;&gt;&amp;lt;body&amp;gt;&lt;/span&gt;
-              &lt;span class=&quot;nt&quot;&gt;&amp;lt;h1&amp;gt;&lt;/span&gt;Add Textboxes&lt;span class=&quot;nt&quot;&gt;&amp;lt;/h1&amp;gt;&lt;/span&gt;
-              &lt;span class=&quot;nt&quot;&gt;&amp;lt;div&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;id=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;div-add-textbox-here&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
-
-              &lt;span class=&quot;nt&quot;&gt;&amp;lt;/div&amp;gt;&lt;/span&gt;
-              &lt;span class=&quot;nt&quot;&gt;&amp;lt;button&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;id=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;btn-add-textbox&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;Add Textbox&lt;span class=&quot;nt&quot;&gt;&amp;lt;/button&amp;gt;&lt;/span&gt;
-       &lt;span class=&quot;nt&quot;&gt;&amp;lt;/body&amp;gt;&lt;/span&gt;
-&lt;span class=&quot;nt&quot;&gt;&amp;lt;/html&amp;gt;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;Simple HTML page. With an empty div (&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;div-add-textbox-here&lt;/code&gt;), textboxes will be added to this div. A button (&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;btn-add-textbox&lt;/code&gt;) to trigger the text box addition. And that’s about it.&lt;/p&gt;
-
-&lt;p&gt;Lets start with the magic.&lt;/p&gt;
-
-&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;getButton&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;document&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;getElementById&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;btn-add-textbox&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-&lt;span class=&quot;nx&quot;&gt;getButton&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;addEventListener&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;click&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(){&lt;/span&gt;
-
-&lt;span class=&quot;p&quot;&gt;});&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;First we summon the button (&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;btn-add-textbox&lt;/code&gt;) and then tell the button to listen for a &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;click&lt;/code&gt; using &lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener&quot; title=&quot;MDN addEventListener documentation&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;addEventListener&lt;/code&gt;&lt;/a&gt;. Next we will tell the button what to do when it hears a click.&lt;/p&gt;
-
-&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nx&quot;&gt;getButton&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;addEventListener&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;click&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(){&lt;/span&gt;
-       &lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;getDiv&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;document&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;getElementById&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;div-add-textbox-here&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-       &lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;newInput&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;document&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;createElement&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;input&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-       &lt;span class=&quot;nx&quot;&gt;newInput&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;type&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;text&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-       &lt;span class=&quot;nx&quot;&gt;newInput&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;className&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;magic-text-box&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-       &lt;span class=&quot;nx&quot;&gt;newInput&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;value&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;getDiv&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;children&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;length&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-
-       &lt;span class=&quot;nx&quot;&gt;getDiv&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;appendChild&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;newInput&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;});&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;We create a new element of type &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;input&lt;/code&gt; using &lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/API/Document/createElement&quot; title=&quot;MDN createElement documentation&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;createElement&lt;/code&gt;&lt;/a&gt;  and do the following :&lt;/p&gt;
-
-&lt;p&gt;We need an input box so  we tell the element that it will be of type &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;text&lt;/code&gt;.
-Then tell the element that will be of class &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;magic-text-box&lt;/code&gt; (this is just for styling).
-Lastly we tell the element what its value will be.&lt;/p&gt;
-
-&lt;p&gt;We use &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;getDiv.children.length&lt;/code&gt; to get a count of all elements inside &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;getDiv&lt;/code&gt; and add one to that count (&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;getDiv.children.length + 1&lt;/code&gt;).&lt;/p&gt;
-
-&lt;p&gt;So on the first click, there are zero elements inside &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;getDiv&lt;/code&gt;. Therefore &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;0 + 1 = 1&lt;/code&gt;, hence element will get value 1. So on and so forth.&lt;/p&gt;
-
-&lt;p&gt;Now we are done setting up our textbox, we add it to &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;getDiv&lt;/code&gt;.&lt;/p&gt;
-
-&lt;p&gt;And that’s it. Of-course we can do lot of things here. Like we can restrict a user to add only 10 textboxes.&lt;/p&gt;
-
-&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;getButton&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;document&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;getElementById&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;btn-add-textbox&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-&lt;span class=&quot;nx&quot;&gt;getButton&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;addEventListener&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;click&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(){&lt;/span&gt;
-       &lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;getDiv&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;document&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;getElementById&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;div-add-textbox-here&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-       &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;getDiv&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;children&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;length&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;){&lt;/span&gt;
-              &lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;newInput&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;document&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;createElement&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;input&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-              &lt;span class=&quot;nx&quot;&gt;newInput&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;type&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;text&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-              &lt;span class=&quot;nx&quot;&gt;newInput&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;className&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;magic-text-box&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-              &lt;span class=&quot;nx&quot;&gt;newInput&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;value&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;getDiv&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;children&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;length&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-
-              &lt;span class=&quot;nx&quot;&gt;getDiv&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;appendChild&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;newInput&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-       &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;});&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;Here before adding a textbox we check if the number of elements inside &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;getDiv&lt;/code&gt; (&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;getDiv.children.length&lt;/code&gt;) is less then 10 only then we add the textbox.&lt;/p&gt;
-
-&lt;p&gt;Get full code on &lt;a href=&quot;https://github.com/dsouzaalfred/blogdemos/blob/master/add_element/js.html&quot; title=&quot;Github link&quot;&gt;github&lt;/a&gt;.&lt;/p&gt;</content><author><name>Alfred D'Souza</name><email>dsouzaalfred@gmail.com</email></author><summary type="html">We have seen how our wand (jQuery) can be used to Dynamically Add content to DOM. But then there are powerful wizards who do not like to use wands for such small tricks. Here is how you perform the same trick with pure magic (JavaScript).</summary></entry></feed>
+&lt;p&gt;Get full code on &lt;a href=&quot;https://github.com/dsouzaalfred/blogdemos/blob/master/remove_element/jQuery.html&quot; title=&quot;Github link&quot;&gt;github&lt;/a&gt;.&lt;/p&gt;</content><author><name>Alfred D'Souza</name><email>dsouzaalfred@gmail.com</email></author><summary type="html">Another magic trick that I love most is when objects disappear. Specially pretty ladies, I wonder what magicians do with them.</summary></entry></feed>

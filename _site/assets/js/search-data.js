@@ -53,4 +53,9 @@ var store = [{
         "excerpt":"JavaScript has a lot of built in array methods. Let’s have a look at some that will help us in our journey with React. We will be looking at : .map() .filter() .reduce() .includes() .find() .findIndex() .some() .every()I love to eat and try to remember each method by associating it...","categories": ["blog","javascript"],
         "tags": [],
         "url": "http://localhost:4000/blog/javascript/a-foodies-guide-to-javascript-array-methods/"
+      },{
+        "title": "What is state",
+        "excerpt":"As frontend developers we keep hearing about state, and it can be confusing to begin with. When I started out I had no clue that such a thing existed. It took me sometime to figure out this state thing. In this post, let’s try and understand what is state. So...","categories": ["blog","react"],
+        "tags": [],
+        "url": "http://localhost:4000/blog/react/what-is-state/"
       }]
