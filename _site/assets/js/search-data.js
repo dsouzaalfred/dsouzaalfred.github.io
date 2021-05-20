@@ -58,4 +58,9 @@ var store = [{
         "excerpt":"As frontend developers we keep hearing about state, and it can be confusing to begin with. When I started out I had no clue that such a thing existed. It took me sometime to figure out this state thing. In this post, let’s try and understand what is state. So...","categories": ["blog","react"],
         "tags": [],
         "url": "http://localhost:4000/blog/react/what-is-state/"
+      },{
+        "title": "State Management",
+        "excerpt":"What is state management From the previous post we know what is state, now let’s try to understand what is state management. State management is how we manage the application state, that’s it! Why is state management difficult It’s important that whatever the source of this our state: It is...","categories": ["blog","react"],
+        "tags": [],
+        "url": "http://localhost:4000/blog/react/state-management/"
       }]
