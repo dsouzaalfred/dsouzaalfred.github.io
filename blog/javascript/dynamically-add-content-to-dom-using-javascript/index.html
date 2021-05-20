@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<!--
+    So Simple Jekyll Theme 3.2.0
+    Copyright 2013-2019 Michael Rose - mademistakes.com | @mmistakes
+    Free for personal and commercial use under the MIT license
+    https://github.com/mmistakes/so-simple-theme/blob/master/LICENSE
+-->
+<html lang="en-US" class="no-js">
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  
+
+  
+    
+    <!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>Dynamically Add content to DOM using JavaScript | Alfred D’Souza</title>
+<meta name="generator" content="Jekyll v3.9.0" />
+<meta property="og:title" content="Dynamically Add content to DOM using JavaScript" />
+<meta name="author" content="Alfred D'Souza" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="We have seen how our wand (jQuery) can be used to Dynamically Add content to DOM. But then there are powerful wizards who do not like to use wands for such small tricks. Here is how you perform the same trick with pure magic (JavaScript)." />
+<meta property="og:description" content="We have seen how our wand (jQuery) can be used to Dynamically Add content to DOM. But then there are powerful wizards who do not like to use wands for such small tricks. Here is how you perform the same trick with pure magic (JavaScript)." />
+<link rel="canonical" href="https://dsouzaalf.red//blog/javascript/dynamically-add-content-to-dom-using-javascript/" />
+<meta property="og:url" content="https://dsouzaalf.red//blog/javascript/dynamically-add-content-to-dom-using-javascript/" />
+<meta property="og:site_name" content="Alfred D’Souza" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2015-07-02T10:15:00+00:00" />
+<script type="application/ld+json">
+{"description":"We have seen how our wand (jQuery) can be used to Dynamically Add content to DOM. But then there are powerful wizards who do not like to use wands for such small tricks. Here is how you perform the same trick with pure magic (JavaScript).","headline":"Dynamically Add content to DOM using JavaScript","dateModified":"2015-07-02T10:15:00+00:00","datePublished":"2015-07-02T10:15:00+00:00","url":"https://dsouzaalf.red//blog/javascript/dynamically-add-content-to-dom-using-javascript/","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https://dsouzaalf.red//blog/javascript/dynamically-add-content-to-dom-using-javascript/"},"author":{"@type":"Person","name":"Alfred D'Souza"},"@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+
+  
+
+  <script>
+    /* Cut the mustard */
+    if ( 'querySelector' in document && 'addEventListener' in window ) {
+      document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + 'js';
+    }
+  </script>
+
+  <link rel="stylesheet" href="/assets/css/main.css">
+  <link rel="stylesheet" href="/assets/css/skins/default.css">
+  <link rel="alternate" type="application/atom+xml" title="Alfred D&#39;Souza" href="/atom.xml">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
+
+</head>
+
+
+  <body class="layout--post  dynamically-add-content-to-dom-using-javascript">
+    <nav class="skip-links">
+  <h2 class="screen-reader-text">Skip links</h2>
+  <ul>
+    <li><a href="#primary-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    
+  <div class="navigation-wrapper">
+    <a href="#menu-toggle" id="menu-toggle">Menu</a>
+    <nav id="primary-nav" class="site-nav animated drop">
+      <ul><li><a href="/">Home</a></li><li><a href="/blog/">Blog</a></li><li><a href="/search/">Search</a></li></ul>
+    </nav>
+  </div><!-- /.navigation-wrapper -->
+
+
+    <header class="masthead">
+  <div class="wrap">
+    
+    
+    
+      
+        <div class="site-title animated fadeIn"><a href="/">Alfred D'Souza</a></div>
+      
+      <p class="site-description animated fadeIn" itemprop="description">There is always something new to learn!</p>
+    
+  </div>
+</header><!-- /.masthead -->
+
+
+    <main id="main" class="main-content" aria-label="Content">
+  <article class="h-entry">
+    
+
+    <div class="page-wrapper">
+      <header class="page-header">
+        
+        
+          <h1 id="page-title" class="page-title p-name">Dynamically Add content to DOM using JavaScript
+</h1>
+        
+      </header>
+
+      <div class="page-sidebar">
+        <div class="page-author h-card p-author"><img src="/images/alfred-dsouza-photo.jpg" class="author-avatar u-photo" alt="Alfred D'Souza"><div class="author-info"><div class="author-name">
+        <span class="p-name">Alfred D'Souza</span>
+      </div><ul class="author-links"><li class="author-link">
+            <a class="u-url" rel="me" href="https://twitter.com/dsouzaalfred"><i class="fab fa-twitter-square fa-lg" title="Twitter"></i></a>
+          </li><li class="author-link">
+            <a class="u-url" rel="me" href="https://github.com/dsouzaalfred"><i class="fab fa-github-square fa-lg" title="GitHub"></i></a>
+          </li><li class="author-link">
+            <a class="u-url" rel="me" href="https://www.linkedin.com/in/dsouzaalfred/"><i class="fab fa-linkedin fa-lg" title="LinkedIn"></i></a>
+          </li></ul>
+
+<span class="read-time">1 min read</span>
+
+    <time class="page-date dt-published" datetime="2015-07-02T10:15:00+00:00"><a class="u-url" href="">July 2, 2015</a>
+</time>
+
+  </div>
+</div>
+
+        
+  <h3 class="page-taxonomies-title">Categories</h3>
+  <ul class="page-taxonomies"><li class="page-taxonomy"><a class="p-category" href="/categories/#blog" title="Pages filed under blog">blog</a></li><li class="page-taxonomy"><a class="p-category" href="/categories/#javascript" title="Pages filed under javascript">javascript</a></li>
+  </ul>
+
+
+        
+
+      </div>
+
+      <div class="page-content">
+        <div class="e-content">
+          <p>We have seen how our wand (jQuery) can be used to <a href="https://dsouzaalf.red/blog/jquery/dynamically-add-content-to-dom-using-jquery/" title="Dynamically Add content to DOM using jQuery ">Dynamically Add content to DOM</a>. But then there are powerful wizards who do not like to use wands for such small tricks. Here is how you perform the same trick with pure magic (JavaScript).</p>
+
+<p>First things first, lets start with our HTML</p>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="nt">&lt;html</span> <span class="na">lang=</span><span class="s">"en"</span><span class="nt">&gt;</span>
+       <span class="nt">&lt;head&gt;</span>
+              <span class="nt">&lt;meta</span> <span class="na">charset=</span><span class="s">"utf-8"</span><span class="nt">&gt;</span>
+              <span class="nt">&lt;title&gt;</span>Add textboxes<span class="nt">&lt;/title&gt;</span>
+       <span class="nt">&lt;/head&gt;</span>
+       <span class="nt">&lt;body&gt;</span>
+              <span class="nt">&lt;h1&gt;</span>Add Textboxes<span class="nt">&lt;/h1&gt;</span>
+              <span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">"div-add-textbox-here"</span><span class="nt">&gt;</span>
+
+              <span class="nt">&lt;/div&gt;</span>
+              <span class="nt">&lt;button</span> <span class="na">id=</span><span class="s">"btn-add-textbox"</span><span class="nt">&gt;</span>Add Textbox<span class="nt">&lt;/button&gt;</span>
+       <span class="nt">&lt;/body&gt;</span>
+<span class="nt">&lt;/html&gt;</span>
+</code></pre></div></div>
+
+<p>Simple HTML page. With an empty div (<code class="language-plaintext highlighter-rouge">div-add-textbox-here</code>), textboxes will be added to this div. A button (<code class="language-plaintext highlighter-rouge">btn-add-textbox</code>) to trigger the text box addition. And that’s about it.</p>
+
+<p>Lets start with the magic.</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">var</span> <span class="nx">getButton</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="dl">'</span><span class="s1">btn-add-textbox</span><span class="dl">'</span><span class="p">);</span>
+<span class="nx">getButton</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="dl">'</span><span class="s1">click</span><span class="dl">'</span><span class="p">,</span> <span class="kd">function</span><span class="p">(){</span>
+
+<span class="p">});</span>
+</code></pre></div></div>
+
+<p>First we summon the button (<code class="language-plaintext highlighter-rouge">btn-add-textbox</code>) and then tell the button to listen for a <code class="language-plaintext highlighter-rouge">click</code> using <a href="https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener" title="MDN addEventListener documentation"><code class="language-plaintext highlighter-rouge">addEventListener</code></a>. Next we will tell the button what to do when it hears a click.</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">getButton</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="dl">'</span><span class="s1">click</span><span class="dl">'</span><span class="p">,</span> <span class="kd">function</span><span class="p">(){</span>
+       <span class="kd">var</span> <span class="nx">getDiv</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="dl">'</span><span class="s1">div-add-textbox-here</span><span class="dl">'</span><span class="p">);</span>
+       <span class="kd">var</span> <span class="nx">newInput</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">createElement</span><span class="p">(</span><span class="dl">'</span><span class="s1">input</span><span class="dl">'</span><span class="p">);</span>
+       <span class="nx">newInput</span><span class="p">.</span><span class="nx">type</span> <span class="o">=</span> <span class="dl">"</span><span class="s2">text</span><span class="dl">"</span><span class="p">;</span>
+       <span class="nx">newInput</span><span class="p">.</span><span class="nx">className</span> <span class="o">=</span> <span class="dl">"</span><span class="s2">magic-text-box</span><span class="dl">"</span><span class="p">;</span>
+       <span class="nx">newInput</span><span class="p">.</span><span class="nx">value</span> <span class="o">=</span> <span class="nx">getDiv</span><span class="p">.</span><span class="nx">children</span><span class="p">.</span><span class="nx">length</span> <span class="o">+</span> <span class="mi">1</span><span class="p">;</span>
+
+       <span class="nx">getDiv</span><span class="p">.</span><span class="nx">appendChild</span><span class="p">(</span><span class="nx">newInput</span><span class="p">);</span>
+<span class="p">});</span>
+</code></pre></div></div>
+
+<p>We create a new element of type <code class="language-plaintext highlighter-rouge">input</code> using <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/createElement" title="MDN createElement documentation"><code class="language-plaintext highlighter-rouge">createElement</code></a>  and do the following :</p>
+
+<p>We need an input box so  we tell the element that it will be of type <code class="language-plaintext highlighter-rouge">text</code>.
+Then tell the element that will be of class <code class="language-plaintext highlighter-rouge">magic-text-box</code> (this is just for styling).
+Lastly we tell the element what its value will be.</p>
+
+<p>We use <code class="language-plaintext highlighter-rouge">getDiv.children.length</code> to get a count of all elements inside <code class="language-plaintext highlighter-rouge">getDiv</code> and add one to that count (<code class="language-plaintext highlighter-rouge">getDiv.children.length + 1</code>).</p>
+
+<p>So on the first click, there are zero elements inside <code class="language-plaintext highlighter-rouge">getDiv</code>. Therefore <code class="language-plaintext highlighter-rouge">0 + 1 = 1</code>, hence element will get value 1. So on and so forth.</p>
+
+<p>Now we are done setting up our textbox, we add it to <code class="language-plaintext highlighter-rouge">getDiv</code>.</p>
+
+<p>And that’s it. Of-course we can do lot of things here. Like we can restrict a user to add only 10 textboxes.</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">var</span> <span class="nx">getButton</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="dl">'</span><span class="s1">btn-add-textbox</span><span class="dl">'</span><span class="p">);</span>
+<span class="nx">getButton</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="dl">'</span><span class="s1">click</span><span class="dl">'</span><span class="p">,</span> <span class="kd">function</span><span class="p">(){</span>
+       <span class="kd">var</span> <span class="nx">getDiv</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="dl">'</span><span class="s1">div-add-textbox-here</span><span class="dl">'</span><span class="p">);</span>
+       <span class="k">if</span><span class="p">(</span> <span class="nx">getDiv</span><span class="p">.</span><span class="nx">children</span><span class="p">.</span><span class="nx">length</span> <span class="o">&lt;</span> <span class="mi">10</span> <span class="p">){</span>
+              <span class="kd">var</span> <span class="nx">newInput</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">createElement</span><span class="p">(</span><span class="dl">'</span><span class="s1">input</span><span class="dl">'</span><span class="p">);</span>
+              <span class="nx">newInput</span><span class="p">.</span><span class="nx">type</span> <span class="o">=</span> <span class="dl">"</span><span class="s2">text</span><span class="dl">"</span><span class="p">;</span>
+              <span class="nx">newInput</span><span class="p">.</span><span class="nx">className</span> <span class="o">=</span> <span class="dl">"</span><span class="s2">magic-text-box</span><span class="dl">"</span><span class="p">;</span>
+              <span class="nx">newInput</span><span class="p">.</span><span class="nx">value</span> <span class="o">=</span> <span class="nx">getDiv</span><span class="p">.</span><span class="nx">children</span><span class="p">.</span><span class="nx">length</span> <span class="o">+</span> <span class="mi">1</span><span class="p">;</span>
+
+              <span class="nx">getDiv</span><span class="p">.</span><span class="nx">appendChild</span><span class="p">(</span><span class="nx">newInput</span><span class="p">);</span>
+       <span class="p">}</span>
+<span class="p">});</span>
+</code></pre></div></div>
+
+<p>Here before adding a textbox we check if the number of elements inside <code class="language-plaintext highlighter-rouge">getDiv</code> (<code class="language-plaintext highlighter-rouge">getDiv.children.length</code>) is less then 10 only then we add the textbox.</p>
+
+<p>Get full code on <a href="https://github.com/dsouzaalfred/blogdemos/blob/master/add_element/js.html" title="Github link">github</a>.</p>
+
+        </div>
+
+        
+          <div class="page-share">
+  <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdsouzaalf.red%2F%2Fblog%2Fjavascript%2Fdynamically-add-content-to-dom-using-javascript%2F" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" class="btn btn--facebook btn--small"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i> <span>Share</span></a>
+  <a href="https://twitter.com/intent/tweet?text=Dynamically+Add+content+to+DOM+using+JavaScript%20https%3A%2F%2Fdsouzaalf.red%2F%2Fblog%2Fjavascript%2Fdynamically-add-content-to-dom-using-javascript%2F" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" class="btn btn--twitter btn--small"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i> <span>Tweet</span></a>
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Fdsouzaalf.red%2F%2Fblog%2Fjavascript%2Fdynamically-add-content-to-dom-using-javascript%2F" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" class="btn btn--linkedin btn--small"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i> <span>LinkedIn</span></a>
+  <a href="https://reddit.com/submit?title=Dynamically+Add+content+to+DOM+using+JavaScript&url=https%3A%2F%2Fdsouzaalf.red%2F%2Fblog%2Fjavascript%2Fdynamically-add-content-to-dom-using-javascript%2F" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" class="btn btn--reddit btn--small"><i class="fab fa-fw fa-reddit" aria-hidden="true"></i> <span>Reddit</span></a>
+</div>
+
+        
+
+        
+
+        <nav class="page-pagination" role="navigation">
+  
+    <a class="page-previous" href="/blog/jquery/dynamically-add-content-to-dom-using-jquery/">
+      <h4 class="page-pagination-label">Previous</h4>
+      <span class="page-pagination-title">
+        <i class="fas fa-arrow-left"></i> Dynamically Add content to DOM using jQuery
+
+      </span>
+    </a>
+  
+
+  
+    <a class="page-next" href="/blog/jquery/dynamically-remove-content-from-dom-using-jquery/">
+      <h4 class="page-pagination-label">Next</h4>
+      <span class="page-pagination-title">
+        Dynamically remove content from DOM using jQuery
+ <i class="fas fa-arrow-right"></i>
+      </span>
+    </a>
+  
+</nav>
+
+      </div>
+    </div>
+  </article>
+</main>
+
+
+    <footer id="footer" class="site-footer">
+  <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+<div class="social-icons"><a class="social-icon" href="https://twitter.com/dsouzaalfred"><i class="fab fa-twitter-square fa-2x" title="Twitter"></i></a><a class="social-icon" href="https://github.com/dsouzaalfred"><i class="fab fa-github-square fa-2x" title="GitHub"></i></a><a class="social-icon" href="https://www.linkedin.com/in/dsouzaalfred/"><i class="fab fa-linkedin fa-2x" title="LinkedIn"></i></a></div><div class="copyright">
+    
+      <p>&copy; 2021 Alfred D'Souza. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://github.com/mmistakes/so-simple-theme" rel="nofollow">So Simple</a>.</p>
+    
+  </div>
+</footer>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+  <script src="/assets/js/main.min.js"></script>
+  <script src="https://use.fontawesome.com/releases/v5.0.12/js/all.js"></script>
+
+
+  </body>
+
+</html>

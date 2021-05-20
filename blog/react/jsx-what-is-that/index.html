@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<!--
+    So Simple Jekyll Theme 3.2.0
+    Copyright 2013-2019 Michael Rose - mademistakes.com | @mmistakes
+    Free for personal and commercial use under the MIT license
+    https://github.com/mmistakes/so-simple-theme/blob/master/LICENSE
+-->
+<html lang="en-US" class="no-js">
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  
+
+  
+    
+    <!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>JSX - What is that? | Alfred D’Souza</title>
+<meta name="generator" content="Jekyll v3.9.0" />
+<meta property="og:title" content="JSX - What is that?" />
+<meta name="author" content="Alfred D'Souza" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="In the last post I briefly mentioned JSX. In this post we will have a detailed view of JSX. So what is JXS? JXS is like a template language or a form of markup like HTML that gets complied to JavaScript code by react. React components are all JavaScript, hence we need something that will help us with the markup for our UI that is where JSX comes in. JSX looks like HTML but is incredibly powerful since it is complied down to JavaScript." />
+<meta property="og:description" content="In the last post I briefly mentioned JSX. In this post we will have a detailed view of JSX. So what is JXS? JXS is like a template language or a form of markup like HTML that gets complied to JavaScript code by react. React components are all JavaScript, hence we need something that will help us with the markup for our UI that is where JSX comes in. JSX looks like HTML but is incredibly powerful since it is complied down to JavaScript." />
+<link rel="canonical" href="https://dsouzaalf.red//blog/react/jsx-what-is-that/" />
+<meta property="og:url" content="https://dsouzaalf.red//blog/react/jsx-what-is-that/" />
+<meta property="og:site_name" content="Alfred D’Souza" />
+<meta property="og:image" content="https://dsouzaalf.red//images/jsx-what-is-that-hero-image.jpg" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2020-09-02T10:50:00+00:00" />
+<script type="application/ld+json">
+{"description":"In the last post I briefly mentioned JSX. In this post we will have a detailed view of JSX. So what is JXS? JXS is like a template language or a form of markup like HTML that gets complied to JavaScript code by react. React components are all JavaScript, hence we need something that will help us with the markup for our UI that is where JSX comes in. JSX looks like HTML but is incredibly powerful since it is complied down to JavaScript.","headline":"JSX - What is that?","dateModified":"2020-09-02T10:50:00+00:00","datePublished":"2020-09-02T10:50:00+00:00","url":"https://dsouzaalf.red//blog/react/jsx-what-is-that/","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https://dsouzaalf.red//blog/react/jsx-what-is-that/"},"image":{"caption":"JSX - What is that?","url":"https://dsouzaalf.red//images/jsx-what-is-that-hero-image.jpg","@type":"imageObject"},"author":{"@type":"Person","name":"Alfred D'Souza"},"@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+
+  
+
+  <script>
+    /* Cut the mustard */
+    if ( 'querySelector' in document && 'addEventListener' in window ) {
+      document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + 'js';
+    }
+  </script>
+
+  <link rel="stylesheet" href="/assets/css/main.css">
+  <link rel="stylesheet" href="/assets/css/skins/default.css">
+  <link rel="alternate" type="application/atom+xml" title="Alfred D&#39;Souza" href="/atom.xml">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
+
+</head>
+
+
+  <body class="layout--post  jsx-what-is-that">
+    <nav class="skip-links">
+  <h2 class="screen-reader-text">Skip links</h2>
+  <ul>
+    <li><a href="#primary-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    
+  <div class="navigation-wrapper">
+    <a href="#menu-toggle" id="menu-toggle">Menu</a>
+    <nav id="primary-nav" class="site-nav animated drop">
+      <ul><li><a href="/">Home</a></li><li><a href="/blog/">Blog</a></li><li><a href="/search/">Search</a></li></ul>
+    </nav>
+  </div><!-- /.navigation-wrapper -->
+
+
+    <header class="masthead">
+  <div class="wrap">
+    
+    
+    
+  </div>
+</header><!-- /.masthead -->
+
+
+    <main id="main" class="main-content" aria-label="Content">
+  <article class="h-entry">
+    
+  
+  
+  
+
+  <div class="page-image">
+    <img src="/images/jsx-what-is-that-hero-image.jpg" class="entry-feature-image u-photo" alt="JSX - What is that?" style="margin-top: 0;">
+    
+      <div class="page-image-caption"><p>JSX - What is that?</p>
+</div>
+    
+  </div>
+
+
+    <div class="page-wrapper">
+      <header class="page-header">
+        
+        
+          <h1 id="page-title" class="page-title p-name">JSX - What is that?
+</h1>
+        
+      </header>
+
+      <div class="page-sidebar">
+        <div class="page-author h-card p-author"><img src="/images/alfred-dsouza-photo.jpg" class="author-avatar u-photo" alt="Alfred D'Souza"><div class="author-info"><div class="author-name">
+        <span class="p-name">Alfred D'Souza</span>
+      </div><ul class="author-links"><li class="author-link">
+            <a class="u-url" rel="me" href="https://twitter.com/dsouzaalfred"><i class="fab fa-twitter-square fa-lg" title="Twitter"></i></a>
+          </li><li class="author-link">
+            <a class="u-url" rel="me" href="https://github.com/dsouzaalfred"><i class="fab fa-github-square fa-lg" title="GitHub"></i></a>
+          </li><li class="author-link">
+            <a class="u-url" rel="me" href="https://www.linkedin.com/in/dsouzaalfred/"><i class="fab fa-linkedin fa-lg" title="LinkedIn"></i></a>
+          </li></ul>
+
+<span class="read-time">5 min read</span>
+
+    <time class="page-date dt-published" datetime="2020-09-02T10:50:00+00:00"><a class="u-url" href="">September 2, 2020</a>
+</time>
+
+  </div>
+</div>
+
+        
+  <h3 class="page-taxonomies-title">Categories</h3>
+  <ul class="page-taxonomies"><li class="page-taxonomy"><a class="p-category" href="/categories/#blog" title="Pages filed under blog">blog</a></li><li class="page-taxonomy"><a class="p-category" href="/categories/#react" title="Pages filed under react">react</a></li>
+  </ul>
+
+
+        
+
+      </div>
+
+      <div class="page-content">
+        <div class="e-content">
+          <p>In the <a href="/blog/react/getting-started-with-react/" title="Getting started with React">last post</a> I briefly mentioned JSX. In this post we will have a detailed view of JSX.
+So what is JXS? JXS is like a template language or a form of markup like HTML that gets complied to JavaScript code by react. React components are all JavaScript, hence we need something that will help us with the markup for our UI that is where JSX comes in. JSX looks like HTML but is incredibly powerful since it is complied down to JavaScript.</p>
+
+<p>You can write <a href="https://reactjs.org/docs/react-without-jsx.html" title="ReactJS page on JSX">React without using JSX</a> but that becomes complicated very fast and is not very intuitive.</p>
+
+<h2 id="getting-started">Getting started</h2>
+<p>A very simple example will be <code class="language-plaintext highlighter-rouge">FirstComponent</code> that we created in the <a href="/blog/react/getting-started-with-react/#our-first-component" title="First component">last post</a>.</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="nx">React</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">react</span><span class="dl">'</span><span class="p">;</span>
+
+<span class="kd">const</span> <span class="nx">FirstComponent</span> <span class="o">=</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="p">{</span>
+  <span class="k">return</span> <span class="o">&lt;</span><span class="nx">h1</span><span class="o">&gt;</span><span class="nx">This</span> <span class="nx">is</span> <span class="nx">my</span> <span class="nx">first</span> <span class="nx">component</span><span class="o">&lt;</span><span class="sr">/h1&gt;</span><span class="err">;
+</span><span class="p">};</span>
+
+<span class="k">export</span> <span class="k">default</span> <span class="nx">FirstComponent</span><span class="p">;</span>
+</code></pre></div></div>
+<p>This component will always render the same text: <em>This is my first component</em>.</p>
+
+<h2 id="math">Math</h2>
+<p>JSX is JavaScript expressions, which means we can do a lot more then just displaying static text. We can do math:</p>
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="nx">React</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">react</span><span class="dl">'</span><span class="p">;</span>
+
+<span class="kd">const</span> <span class="nx">MathAdd</span> <span class="o">=</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="p">{</span>
+  <span class="k">return</span> <span class="o">&lt;</span><span class="nx">h1</span><span class="o">&gt;</span><span class="p">{</span><span class="mi">3</span> <span class="o">+</span> <span class="mi">4</span><span class="p">}</span><span class="o">&lt;</span><span class="sr">/h1&gt;</span><span class="err">;
+</span><span class="p">};</span>
+
+<span class="k">export</span> <span class="k">default</span> <span class="nx">MathAdd</span><span class="p">;</span>
+</code></pre></div></div>
+
+<p>Or use JavaScript built-in functions like <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/random" title="MDN - Math.random">Math.random()</a> to display random number.</p>
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="nx">React</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">react</span><span class="dl">'</span><span class="p">;</span>
+
+<span class="kd">const</span> <span class="nx">MathRandom</span> <span class="o">=</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="p">{</span>
+  <span class="k">return</span> <span class="o">&lt;</span><span class="nx">h1</span><span class="o">&gt;</span><span class="p">{</span><span class="nb">Math</span><span class="p">.</span><span class="nx">random</span><span class="p">()}</span><span class="o">&lt;</span><span class="sr">/h1&gt;</span><span class="err">;
+</span><span class="p">};</span>
+
+<span class="k">export</span> <span class="k">default</span> <span class="nx">MathRandom</span><span class="p">;</span>
+</code></pre></div></div>
+
+<h2 id="strings">Strings</h2>
+<p>We can use JavaScript <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals" title="MDN - template literals">template literals</a> to display content in our component.</p>
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="nx">React</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">react</span><span class="dl">'</span><span class="p">;</span>
+
+<span class="kd">const</span> <span class="nx">StringLiterals</span> <span class="o">=</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="p">{</span>
+  <span class="k">return</span> <span class="o">&lt;</span><span class="nx">h1</span><span class="o">&gt;</span><span class="p">{</span><span class="s2">`Text using string literals`</span><span class="p">}</span><span class="o">&lt;</span><span class="sr">/h1&gt;</span><span class="err">;
+</span><span class="p">};</span>
+
+<span class="k">export</span> <span class="k">default</span> <span class="nx">StringLiterals</span><span class="p">;</span>
+</code></pre></div></div>
+<p>While this might look useless, it can be very powerful when you want to concatenate two strings or display a value stored in a variable.</p>
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="nx">React</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">react</span><span class="dl">'</span><span class="p">;</span>
+
+<span class="kd">const</span> <span class="nx">StringLiteralsTwo</span> <span class="o">=</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="p">{</span>
+  <span class="kd">const</span> <span class="nx">randomNumber</span> <span class="o">=</span> <span class="nb">Math</span><span class="p">.</span><span class="nx">random</span><span class="p">();</span>
+  <span class="k">return</span> <span class="o">&lt;</span><span class="nx">h1</span><span class="o">&gt;</span><span class="p">{</span><span class="s2">`The random number is </span><span class="p">${</span><span class="nx">randomNumber</span><span class="p">}</span><span class="s2">`</span><span class="p">}</span><span class="o">&lt;</span><span class="sr">/h1&gt;</span><span class="err">;
+</span><span class="p">};</span>
+
+<span class="k">export</span> <span class="k">default</span> <span class="nx">StringLiteralsTwo</span><span class="p">;</span>
+</code></pre></div></div>
+<p>Or use a JavaScript string methods, for example <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/toUpperCase" title="MDN - String.toUpperCase"><code class="language-plaintext highlighter-rouge">toUpperCase()</code></a>.</p>
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="nx">React</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">react</span><span class="dl">'</span><span class="p">;</span>
+
+<span class="kd">const</span> <span class="nx">StringLiteralsThree</span> <span class="o">=</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="p">{</span>
+  <span class="kd">const</span> <span class="nx">name</span> <span class="o">=</span> <span class="dl">'</span><span class="s1">alfred</span><span class="dl">'</span><span class="p">;</span>
+  <span class="k">return</span> <span class="o">&lt;</span><span class="nx">h1</span><span class="o">&gt;</span><span class="p">{</span><span class="s2">`Hello </span><span class="p">${</span><span class="nx">name</span><span class="p">.</span><span class="nx">toUpperCase</span><span class="p">()}</span><span class="s2">`</span><span class="p">}</span><span class="o">&lt;</span><span class="sr">/h1&gt;</span><span class="err">;
+</span><span class="p">};</span>
+
+<span class="k">export</span> <span class="k">default</span> <span class="nx">StringLiteralsThree</span><span class="p">;</span>
+</code></pre></div></div>
+
+<h2 id="conditions">Conditions</h2>
+<p>Want to display text based on some condition? we can do that too.</p>
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="nx">React</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">react</span><span class="dl">'</span><span class="p">;</span>
+
+<span class="kd">const</span> <span class="nx">Conditions</span> <span class="o">=</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="p">{</span>
+  <span class="kd">const</span> <span class="nx">getNow</span> <span class="o">=</span> <span class="k">new</span> <span class="nb">Date</span><span class="p">();</span>
+  <span class="kd">const</span> <span class="nx">getHour</span> <span class="o">=</span> <span class="nx">getNow</span><span class="p">.</span><span class="nx">getHours</span><span class="p">();</span>
+  <span class="k">return</span> <span class="o">&lt;</span><span class="nx">h1</span><span class="o">&gt;</span><span class="p">{</span><span class="nx">getHour</span> <span class="o">&lt;</span> <span class="mi">7</span> <span class="p">?</span> <span class="dl">'</span><span class="s1">Sleeping</span><span class="dl">'</span> <span class="p">:</span> <span class="dl">'</span><span class="s1">Awake</span><span class="dl">'</span><span class="p">}</span><span class="o">&lt;</span><span class="sr">/h1&gt;</span><span class="err">;
+</span><span class="p">};</span>
+
+<span class="k">export</span> <span class="k">default</span> <span class="nx">Conditions</span><span class="p">;</span>
+</code></pre></div></div>
+<p>In the above example we are checking what <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/getHours" title="MDN - Date.getHours">hour</a> it is and displaying a message accordingly, using a <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Conditional_Operator" title="MDN - Conditional operator">ternary operator</a>.</p>
+
+<h2 id="attributes">Attributes</h2>
+<p>We can also specify tag attributes.</p>
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="nx">React</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">react</span><span class="dl">'</span><span class="p">;</span>
+
+<span class="kd">const</span> <span class="nx">Attributes</span> <span class="o">=</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="p">{</span>
+  <span class="k">return</span> <span class="p">(</span>
+    <span class="o">&lt;</span><span class="nx">h1</span> <span class="nx">tabindex</span><span class="o">=</span><span class="dl">"</span><span class="s2">0</span><span class="dl">"</span> <span class="nx">id</span><span class="o">=</span><span class="dl">"</span><span class="s2">h1-tag</span><span class="dl">"</span><span class="o">&gt;</span>
+      <span class="nx">Arributes</span> <span class="nx">component</span>
+    <span class="o">&lt;</span><span class="sr">/h1</span><span class="err">&gt;
+</span>  <span class="p">);</span>
+<span class="p">};</span>
+
+<span class="k">export</span> <span class="k">default</span> <span class="nx">Attributes</span><span class="p">;</span>
+</code></pre></div></div>
+
+<p>The values for the attributes can also be set using expressions.</p>
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="nx">React</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">react</span><span class="dl">'</span><span class="p">;</span>
+
+<span class="kd">const</span> <span class="nx">AttributesTwo</span> <span class="o">=</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="p">{</span>
+  <span class="kd">const</span> <span class="nx">tabIndex</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+  <span class="k">return</span> <span class="p">(</span>
+    <span class="o">&lt;</span><span class="nx">h1</span> <span class="nx">tabindex</span><span class="o">=</span><span class="p">{</span><span class="nx">tabIndex</span><span class="p">}</span> <span class="nx">id</span><span class="o">=</span><span class="dl">"</span><span class="s2">h1-tag</span><span class="dl">"</span><span class="o">&gt;</span>
+      <span class="nx">AttributesTwo</span> <span class="nx">component</span>
+    <span class="o">&lt;</span><span class="sr">/h1</span><span class="err">&gt;
+</span>  <span class="p">);</span>
+<span class="p">};</span>
+
+<span class="k">export</span> <span class="k">default</span> <span class="nx">AttributesTwo</span><span class="p">;</span>
+</code></pre></div></div>
+<p>This is specially useful when we have the values coming from component props(we will cover it in future posts).</p>
+
+<h2 id="parent-node">Parent node</h2>
+<p>Till now we have been using just one tag in our component, what if we want to build a complex component with multiple tags. We can have as many tags/nodes as we want but the component should return only one tag/nodes hence most of the component have one parent tag/nodes that acts as a wrapper to other tags.</p>
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="nx">React</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">react</span><span class="dl">'</span><span class="p">;</span>
+
+<span class="kd">const</span> <span class="nx">ParentNode</span> <span class="o">=</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="p">{</span>
+  <span class="k">return</span> <span class="p">(</span>
+    <span class="o">&lt;</span><span class="nx">div</span><span class="o">&gt;</span>
+      <span class="o">&lt;</span><span class="nx">label</span><span class="o">&gt;</span><span class="nx">First</span> <span class="na">Name</span> <span class="p">:</span><span class="o">&lt;</span><span class="sr">/label</span><span class="err">&gt;
+</span>      <span class="o">&lt;</span><span class="nx">input</span> <span class="nx">type</span><span class="o">=</span><span class="dl">"</span><span class="s2">text</span><span class="dl">"</span> <span class="o">/&gt;</span>
+    <span class="o">&lt;</span><span class="sr">/div</span><span class="err">&gt;
+</span>  <span class="p">);</span>
+<span class="p">};</span>
+
+<span class="k">export</span> <span class="k">default</span> <span class="nx">ParentNode</span><span class="p">;</span>
+</code></pre></div></div>
+
+<p>But sometimes we don’t want an addition <code class="language-plaintext highlighter-rouge">div</code> or any other tag as a wrapper, in such cases we can use <a href="https://reactjs.org/docs/fragments.html" title="ReactJS - Fragments">react fragments</a>. Fragments are special react syntax(<code class="language-plaintext highlighter-rouge">&lt;&gt;&lt;/&gt;</code>) which will wrap the content and when the component is rendered only the content is shown and not the fragments.</p>
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="nx">React</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">react</span><span class="dl">'</span><span class="p">;</span>
+
+<span class="kd">const</span> <span class="nx">ParentNodeTwo</span> <span class="o">=</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="p">{</span>
+  <span class="k">return</span> <span class="p">(</span>
+    <span class="o">&lt;&gt;</span>
+      <span class="o">&lt;</span><span class="nx">label</span><span class="o">&gt;</span><span class="nx">Last</span> <span class="na">Name</span> <span class="p">:</span><span class="o">&lt;</span><span class="sr">/label</span><span class="err">&gt;
+</span>      <span class="o">&lt;</span><span class="nx">input</span> <span class="nx">type</span><span class="o">=</span><span class="dl">"</span><span class="s2">text</span><span class="dl">"</span> <span class="o">/&gt;</span>
+    <span class="o">&lt;</span><span class="sr">/</span><span class="err">&gt;
+</span>  <span class="p">);</span>
+<span class="p">};</span>
+
+<span class="k">export</span> <span class="k">default</span> <span class="nx">ParentNodeTwo</span><span class="p">;</span>
+</code></pre></div></div>
+
+<p>This also helps us when we have to handle complex conditions</p>
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="nx">React</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">react</span><span class="dl">'</span><span class="p">;</span>
+
+<span class="kd">const</span> <span class="nx">ParentNodeThree</span> <span class="o">=</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="p">{</span>
+  <span class="kd">const</span> <span class="nx">getNow</span> <span class="o">=</span> <span class="k">new</span> <span class="nb">Date</span><span class="p">();</span>
+  <span class="kd">const</span> <span class="nx">getHour</span> <span class="o">=</span> <span class="nx">getNow</span><span class="p">.</span><span class="nx">getHours</span><span class="p">();</span>
+  <span class="k">return</span> <span class="p">(</span>
+    <span class="o">&lt;&gt;</span>
+      <span class="p">{</span><span class="nx">getHour</span> <span class="o">&gt;=</span> <span class="mi">0</span> <span class="o">&amp;&amp;</span> <span class="nx">getHour</span> <span class="o">&lt;=</span> <span class="mi">7</span> <span class="o">&amp;&amp;</span> <span class="o">&lt;</span><span class="nx">h1</span><span class="o">&gt;</span><span class="nx">Sleeping</span><span class="o">&lt;</span><span class="sr">/h1&gt;</span><span class="err">}
+</span>      <span class="p">{</span><span class="nx">getHour</span> <span class="o">&gt;</span> <span class="mi">7</span> <span class="o">&amp;&amp;</span> <span class="nx">getHour</span> <span class="o">&lt;=</span> <span class="mi">9</span> <span class="o">&amp;&amp;</span> <span class="o">&lt;</span><span class="nx">h1</span><span class="o">&gt;</span><span class="nx">Morning</span> <span class="nx">routine</span><span class="o">&lt;</span><span class="sr">/h1&gt;</span><span class="err">}
+</span>      <span class="p">{</span><span class="nx">getHour</span> <span class="o">&gt;</span> <span class="mi">9</span> <span class="o">&amp;&amp;</span> <span class="nx">getHour</span> <span class="o">&lt;=</span> <span class="mi">13</span> <span class="o">&amp;&amp;</span> <span class="o">&lt;</span><span class="nx">h1</span><span class="o">&gt;</span><span class="nx">Work</span><span class="o">&lt;</span><span class="sr">/h1&gt;</span><span class="err">}
+</span>      <span class="p">{</span><span class="nx">getHour</span> <span class="o">&gt;</span> <span class="mi">13</span> <span class="o">&amp;&amp;</span> <span class="nx">getHour</span> <span class="o">&lt;=</span> <span class="mi">14</span> <span class="o">&amp;&amp;</span> <span class="o">&lt;</span><span class="nx">h1</span><span class="o">&gt;</span><span class="nx">Lunch</span><span class="o">&lt;</span><span class="sr">/h1&gt;</span><span class="err">}
+</span>      <span class="p">{</span><span class="nx">getHour</span> <span class="o">&gt;</span> <span class="mi">14</span> <span class="o">&amp;&amp;</span> <span class="nx">getHour</span> <span class="o">&lt;=</span> <span class="mi">18</span> <span class="o">&amp;&amp;</span> <span class="o">&lt;</span><span class="nx">h1</span><span class="o">&gt;</span><span class="nx">Work</span><span class="o">&lt;</span><span class="sr">/h1&gt;</span><span class="err">}
+</span>      <span class="p">{</span><span class="nx">getHour</span> <span class="o">&gt;</span> <span class="mi">18</span> <span class="o">&amp;&amp;</span> <span class="nx">getHour</span> <span class="o">&lt;=</span> <span class="mi">22</span> <span class="o">&amp;&amp;</span> <span class="o">&lt;</span><span class="nx">h1</span><span class="o">&gt;</span><span class="nx">Family</span> <span class="nx">Time</span><span class="o">&lt;</span><span class="sr">/h1&gt;</span><span class="err">}
+</span>      <span class="p">{</span><span class="nx">getHour</span> <span class="o">&gt;</span> <span class="mi">22</span> <span class="o">&amp;&amp;</span> <span class="o">&lt;</span><span class="nx">h1</span><span class="o">&gt;</span><span class="nx">Sleeping</span><span class="o">&lt;</span><span class="sr">/h1&gt;</span><span class="err">}
+</span>    <span class="o">&lt;</span><span class="sr">/</span><span class="err">&gt;
+</span>  <span class="p">);</span>
+<span class="p">};</span>
+
+<span class="k">export</span> <span class="k">default</span> <span class="nx">ParentNodeThree</span><span class="p">;</span>
+</code></pre></div></div>
+
+<h2 id="loops">Loops</h2>
+<p>The last thing we will cover is Loops. A lot of times we have display a list of something on the frontend and most of the times the data for the list will come from a service like an API or a JSON file, etc. Again, since we are using JavaScript we can take advantage of JavaScript array methods like <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map" title="MDN - Array.map"><code class="language-plaintext highlighter-rouge">map()</code></a> or <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter" title="MDN - Array.filter"><code class="language-plaintext highlighter-rouge">filter()</code></a>.</p>
+
+<h3 id="jsx-array-map">map()</h3>
+<p>We can use <code class="language-plaintext highlighter-rouge">map()</code> when you want to display every element in an array.</p>
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="nx">React</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">react</span><span class="dl">'</span><span class="p">;</span>
+
+<span class="kd">const</span> <span class="nx">LoopsMap</span> <span class="o">=</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="p">{</span>
+  <span class="kd">const</span> <span class="nx">data</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="p">{</span> <span class="na">id</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="na">label</span><span class="p">:</span> <span class="dl">'</span><span class="s1">One</span><span class="dl">'</span> <span class="p">},</span>
+    <span class="p">{</span> <span class="na">id</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span> <span class="na">label</span><span class="p">:</span> <span class="dl">'</span><span class="s1">Two</span><span class="dl">'</span> <span class="p">},</span>
+    <span class="p">{</span> <span class="na">id</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span> <span class="na">label</span><span class="p">:</span> <span class="dl">'</span><span class="s1">Three</span><span class="dl">'</span> <span class="p">},</span>
+    <span class="p">{</span> <span class="na">id</span><span class="p">:</span> <span class="mi">4</span><span class="p">,</span> <span class="na">label</span><span class="p">:</span> <span class="dl">'</span><span class="s1">Four</span><span class="dl">'</span> <span class="p">},</span>
+    <span class="p">{</span> <span class="na">id</span><span class="p">:</span> <span class="mi">5</span><span class="p">,</span> <span class="na">label</span><span class="p">:</span> <span class="dl">'</span><span class="s1">Five</span><span class="dl">'</span> <span class="p">},</span>
+  <span class="p">];</span>
+  <span class="k">return</span> <span class="p">(</span>
+    <span class="o">&lt;</span><span class="nx">ul</span><span class="o">&gt;</span>
+      <span class="p">{</span><span class="nx">data</span><span class="p">.</span><span class="nx">map</span><span class="p">((</span><span class="nx">item</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">(</span>
+        <span class="o">&lt;</span><span class="nx">li</span> <span class="nx">key</span><span class="o">=</span><span class="p">{</span><span class="nx">item</span><span class="p">.</span><span class="nx">id</span><span class="p">}</span><span class="o">&gt;</span><span class="p">{</span><span class="nx">item</span><span class="p">.</span><span class="nx">label</span><span class="p">}</span><span class="o">&lt;</span><span class="sr">/li</span><span class="err">&gt;
+</span>      <span class="p">))}</span>
+    <span class="o">&lt;</span><span class="sr">/ul</span><span class="err">&gt;
+</span>  <span class="p">);</span>
+<span class="p">};</span>
+
+<span class="k">export</span> <span class="k">default</span> <span class="nx">LoopsMap</span><span class="p">;</span>
+</code></pre></div></div>
+<p>Our component will display an un-order list. There is a lot going on in our component to achieve this :</p>
+<ul>
+  <li>We have a variable <code class="language-plaintext highlighter-rouge">data</code> that is an array of object, each object has a <code class="language-plaintext highlighter-rouge">id</code> and a <code class="language-plaintext highlighter-rouge">label</code>.</li>
+  <li>We loop over <code class="language-plaintext highlighter-rouge">data</code> using the <code class="language-plaintext highlighter-rouge">map()</code> method.</li>
+  <li>Each object is referred to as <code class="language-plaintext highlighter-rouge">item</code>, you can call it anything you want as it’s just a variable.</li>
+  <li>For each item we are returning an <code class="language-plaintext highlighter-rouge">li</code>. Note that there is no return statement since we are using <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions" title="MDN - Arrow functions">arrow function</a>.</li>
+  <li>Each tag/node that we return should have a unique <code class="language-plaintext highlighter-rouge">key</code>, we are using the <code class="language-plaintext highlighter-rouge">id</code> as key. We can use <code class="language-plaintext highlighter-rouge">index</code> as the key, while it works most of the time but you can run into bugs specially if you allow addition and deletion to you list.</li>
+</ul>
+
+<p>In the same way we can use the <code class="language-plaintext highlighter-rouge">filter()</code> method too.</p>
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="nx">React</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">react</span><span class="dl">'</span><span class="p">;</span>
+
+<span class="kd">const</span> <span class="nx">LoopsFilter</span> <span class="o">=</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="p">{</span>
+  <span class="kd">const</span> <span class="nx">data</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="p">{</span> <span class="na">id</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="na">label</span><span class="p">:</span> <span class="dl">'</span><span class="s1">One</span><span class="dl">'</span> <span class="p">},</span>
+    <span class="p">{</span> <span class="na">id</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span> <span class="na">label</span><span class="p">:</span> <span class="dl">'</span><span class="s1">Two</span><span class="dl">'</span> <span class="p">},</span>
+    <span class="p">{</span> <span class="na">id</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span> <span class="na">label</span><span class="p">:</span> <span class="dl">'</span><span class="s1">Three</span><span class="dl">'</span> <span class="p">},</span>
+    <span class="p">{</span> <span class="na">id</span><span class="p">:</span> <span class="mi">4</span><span class="p">,</span> <span class="na">label</span><span class="p">:</span> <span class="dl">'</span><span class="s1">Four</span><span class="dl">'</span> <span class="p">},</span>
+    <span class="p">{</span> <span class="na">id</span><span class="p">:</span> <span class="mi">5</span><span class="p">,</span> <span class="na">label</span><span class="p">:</span> <span class="dl">'</span><span class="s1">Five</span><span class="dl">'</span> <span class="p">},</span>
+  <span class="p">];</span>
+  <span class="k">return</span> <span class="p">(</span>
+    <span class="o">&lt;</span><span class="nx">ul</span><span class="o">&gt;</span>
+      <span class="p">{</span><span class="nx">data</span>
+        <span class="p">.</span><span class="nx">filter</span><span class="p">((</span><span class="nx">item</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="nx">item</span><span class="p">.</span><span class="nx">id</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">===</span> <span class="mi">0</span><span class="p">)</span>
+        <span class="p">.</span><span class="nx">map</span><span class="p">((</span><span class="nx">filteredData</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">(</span>
+          <span class="o">&lt;</span><span class="nx">li</span> <span class="nx">key</span><span class="o">=</span><span class="p">{</span><span class="nx">filteredData</span><span class="p">.</span><span class="nx">id</span><span class="p">}</span><span class="o">&gt;</span><span class="p">{</span><span class="nx">filteredData</span><span class="p">.</span><span class="nx">label</span><span class="p">}</span><span class="o">&lt;</span><span class="sr">/li</span><span class="err">&gt;
+</span>        <span class="p">))}</span>
+    <span class="o">&lt;</span><span class="sr">/ul</span><span class="err">&gt;
+</span>  <span class="p">);</span>
+<span class="p">};</span>
+
+<span class="k">export</span> <span class="k">default</span> <span class="nx">LoopsFilter</span><span class="p">;</span>
+</code></pre></div></div>
+<p>In the above example, we only want to print labels of values whose id’s are divisible by 2. So first we filter such values.  Since filter returns an array we map over the array and then print the values.</p>
+
+<p>Well that’s a lot for one post but I hope it helps you understand how to use JSX. In the next post we will cover props.</p>
+
+<p>You can find the code on <a href="https://github.com/dsouzaalfred/blogdemos/tree/master/jsx-what-is-that" title="Github repo link">GitHub</a></p>
+
+        </div>
+
+        
+          <div class="page-share">
+  <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdsouzaalf.red%2F%2Fblog%2Freact%2Fjsx-what-is-that%2F" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" class="btn btn--facebook btn--small"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i> <span>Share</span></a>
+  <a href="https://twitter.com/intent/tweet?text=JSX+-+What+is+that%3F%20https%3A%2F%2Fdsouzaalf.red%2F%2Fblog%2Freact%2Fjsx-what-is-that%2F" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" class="btn btn--twitter btn--small"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i> <span>Tweet</span></a>
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Fdsouzaalf.red%2F%2Fblog%2Freact%2Fjsx-what-is-that%2F" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" class="btn btn--linkedin btn--small"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i> <span>LinkedIn</span></a>
+  <a href="https://reddit.com/submit?title=JSX+-+What+is+that%3F&url=https%3A%2F%2Fdsouzaalf.red%2F%2Fblog%2Freact%2Fjsx-what-is-that%2F" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" class="btn btn--reddit btn--small"><i class="fab fa-fw fa-reddit" aria-hidden="true"></i> <span>Reddit</span></a>
+</div>
+
+        
+
+        
+
+        <nav class="page-pagination" role="navigation">
+  
+    <a class="page-previous" href="/blog/react/getting-started-with-react/">
+      <h4 class="page-pagination-label">Previous</h4>
+      <span class="page-pagination-title">
+        <i class="fas fa-arrow-left"></i> Getting started with React
+
+      </span>
+    </a>
+  
+
+  
+    <a class="page-next" href="/blog/react/react-props/">
+      <h4 class="page-pagination-label">Next</h4>
+      <span class="page-pagination-title">
+        React - Props
+ <i class="fas fa-arrow-right"></i>
+      </span>
+    </a>
+  
+</nav>
+
+      </div>
+    </div>
+  </article>
+</main>
+
+
+    <footer id="footer" class="site-footer">
+  <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+<div class="social-icons"><a class="social-icon" href="https://twitter.com/dsouzaalfred"><i class="fab fa-twitter-square fa-2x" title="Twitter"></i></a><a class="social-icon" href="https://github.com/dsouzaalfred"><i class="fab fa-github-square fa-2x" title="GitHub"></i></a><a class="social-icon" href="https://www.linkedin.com/in/dsouzaalfred/"><i class="fab fa-linkedin fa-2x" title="LinkedIn"></i></a></div><div class="copyright">
+    
+      <p>&copy; 2021 Alfred D'Souza. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://github.com/mmistakes/so-simple-theme" rel="nofollow">So Simple</a>.</p>
+    
+  </div>
+</footer>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+  <script src="/assets/js/main.min.js"></script>
+  <script src="https://use.fontawesome.com/releases/v5.0.12/js/all.js"></script>
+
+
+  </body>
+
+</html>

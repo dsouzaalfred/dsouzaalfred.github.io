@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<!--
+    So Simple Jekyll Theme 3.2.0
+    Copyright 2013-2019 Michael Rose - mademistakes.com | @mmistakes
+    Free for personal and commercial use under the MIT license
+    https://github.com/mmistakes/so-simple-theme/blob/master/LICENSE
+-->
+<html lang="en-US" class="no-js">
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  
+
+  
+    
+    <!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>Getting started with React | Alfred D’Souza</title>
+<meta name="generator" content="Jekyll v3.9.0" />
+<meta property="og:title" content="Getting started with React" />
+<meta name="author" content="Alfred D'Souza" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="What is react? React or ReactJS is a component-based JavaScript library for building user interfaces. It is one of the most popular JavaScript UI libraries. Component-based means a complex UI is broken down into small pieces called components. These small components can manage their own state and encapsulate their own logic." />
+<meta property="og:description" content="What is react? React or ReactJS is a component-based JavaScript library for building user interfaces. It is one of the most popular JavaScript UI libraries. Component-based means a complex UI is broken down into small pieces called components. These small components can manage their own state and encapsulate their own logic." />
+<link rel="canonical" href="https://dsouzaalf.red//blog/react/getting-started-with-react/" />
+<meta property="og:url" content="https://dsouzaalf.red//blog/react/getting-started-with-react/" />
+<meta property="og:site_name" content="Alfred D’Souza" />
+<meta property="og:image" content="https://dsouzaalf.red//images/getting-started-with-react-hero-image.jpg" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2020-08-26T10:15:00+00:00" />
+<script type="application/ld+json">
+{"description":"What is react? React or ReactJS is a component-based JavaScript library for building user interfaces. It is one of the most popular JavaScript UI libraries. Component-based means a complex UI is broken down into small pieces called components. These small components can manage their own state and encapsulate their own logic.","headline":"Getting started with React","dateModified":"2020-08-26T10:15:00+00:00","datePublished":"2020-08-26T10:15:00+00:00","url":"https://dsouzaalf.red//blog/react/getting-started-with-react/","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https://dsouzaalf.red//blog/react/getting-started-with-react/"},"image":{"caption":"Getting started with React","url":"https://dsouzaalf.red//images/getting-started-with-react-hero-image.jpg","@type":"imageObject"},"author":{"@type":"Person","name":"Alfred D'Souza"},"@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+
+  
+
+  <script>
+    /* Cut the mustard */
+    if ( 'querySelector' in document && 'addEventListener' in window ) {
+      document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + 'js';
+    }
+  </script>
+
+  <link rel="stylesheet" href="/assets/css/main.css">
+  <link rel="stylesheet" href="/assets/css/skins/default.css">
+  <link rel="alternate" type="application/atom+xml" title="Alfred D&#39;Souza" href="/atom.xml">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
+
+</head>
+
+
+  <body class="layout--post  getting-started-with-react">
+    <nav class="skip-links">
+  <h2 class="screen-reader-text">Skip links</h2>
+  <ul>
+    <li><a href="#primary-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    
+  <div class="navigation-wrapper">
+    <a href="#menu-toggle" id="menu-toggle">Menu</a>
+    <nav id="primary-nav" class="site-nav animated drop">
+      <ul><li><a href="/">Home</a></li><li><a href="/blog/">Blog</a></li><li><a href="/search/">Search</a></li></ul>
+    </nav>
+  </div><!-- /.navigation-wrapper -->
+
+
+    <header class="masthead">
+  <div class="wrap">
+    
+    
+    
+  </div>
+</header><!-- /.masthead -->
+
+
+    <main id="main" class="main-content" aria-label="Content">
+  <article class="h-entry">
+    
+  
+  
+  
+
+  <div class="page-image">
+    <img src="/images/getting-started-with-react-hero-image.jpg" class="entry-feature-image u-photo" alt="Getting started with React" style="margin-top: 0;">
+    
+      <div class="page-image-caption"><p>Getting started with React</p>
+</div>
+    
+  </div>
+
+
+    <div class="page-wrapper">
+      <header class="page-header">
+        
+        
+          <h1 id="page-title" class="page-title p-name">Getting started with React
+</h1>
+        
+      </header>
+
+      <div class="page-sidebar">
+        <div class="page-author h-card p-author"><img src="/images/alfred-dsouza-photo.jpg" class="author-avatar u-photo" alt="Alfred D'Souza"><div class="author-info"><div class="author-name">
+        <span class="p-name">Alfred D'Souza</span>
+      </div><ul class="author-links"><li class="author-link">
+            <a class="u-url" rel="me" href="https://twitter.com/dsouzaalfred"><i class="fab fa-twitter-square fa-lg" title="Twitter"></i></a>
+          </li><li class="author-link">
+            <a class="u-url" rel="me" href="https://github.com/dsouzaalfred"><i class="fab fa-github-square fa-lg" title="GitHub"></i></a>
+          </li><li class="author-link">
+            <a class="u-url" rel="me" href="https://www.linkedin.com/in/dsouzaalfred/"><i class="fab fa-linkedin fa-lg" title="LinkedIn"></i></a>
+          </li></ul>
+
+<span class="read-time">3 min read</span>
+
+    <time class="page-date dt-published" datetime="2020-08-26T10:15:00+00:00"><a class="u-url" href="">August 26, 2020</a>
+</time>
+
+  </div>
+</div>
+
+        
+  <h3 class="page-taxonomies-title">Categories</h3>
+  <ul class="page-taxonomies"><li class="page-taxonomy"><a class="p-category" href="/categories/#blog" title="Pages filed under blog">blog</a></li><li class="page-taxonomy"><a class="p-category" href="/categories/#react" title="Pages filed under react">react</a></li>
+  </ul>
+
+
+        
+
+      </div>
+
+      <div class="page-content">
+        <div class="e-content">
+          <h2 id="what-is-react">What is react?</h2>
+<p>React or ReactJS is a component-based JavaScript library for building user interfaces. It is one of the most popular JavaScript UI libraries.
+<em>Component-based</em> means a complex UI is broken down into small pieces called components. These small components can manage their own state and encapsulate their own logic.</p>
+
+<h2 id="cra---create-react-app">CRA - Create React App</h2>
+<p><a href="https://github.com/facebook/create-react-app" title="CRA GitHub page">Create React App</a> makes getting started with React very easy.
+You will need to have <a href="https://nodejs.org/en/" title="Node.js homepage"><strong>Node &gt;= 8.10 and npm &gt;= 5.6</strong></a> installed on your machine. If you don’t already have it installed on your machine you can head over to <a href="https://nodejs.org/en/">nodejs.org</a> and download &amp; install it before moving forward.</p>
+
+<p>Once you are done installing <code class="language-plaintext highlighter-rouge">Node</code>, you can either use the <code class="language-plaintext highlighter-rouge">npm</code> (comes bundled with node) or <code class="language-plaintext highlighter-rouge">yarn</code> package manager. I prefer <a href="https://www.npmjs.com/package/yarn" title="Yarn on npm"><code class="language-plaintext highlighter-rouge">yarn</code></a>, let’s go ahead and install it. Run the following command on your terminal/command line:</p>
+
+<p><code class="language-plaintext highlighter-rouge">npm install --global yarn</code></p>
+
+<p>Assuming that you have <a href="https://nodejs.org/en/" title="Node.js homepage"><code class="language-plaintext highlighter-rouge">Node &gt;= 8.10 and npm &gt;= 5.6</code></a> and <a href="https://www.npmjs.com/package/yarn" title="Yarn on npm"><code class="language-plaintext highlighter-rouge">yarn</code></a> installed on your machine, open terminal/command line and run the following command.</p>
+
+<p><code class="language-plaintext highlighter-rouge">npx create-react-app my-first-react-app</code></p>
+
+<p>This will install</p>
+<ul>
+  <li>create a folder called <em>my-first-react-app</em></li>
+  <li>install all the dependencies required</li>
+</ul>
+
+<p>Once the installation is complete run the following commands</p>
+
+<p><code class="language-plaintext highlighter-rouge">cd my-first-react-app</code></p>
+
+<p>To move into the newly created folder</p>
+
+<p><code class="language-plaintext highlighter-rouge">yarn start</code></p>
+
+<p>This will start a local dev server on your local host at port 3000 <code class="language-plaintext highlighter-rouge">http://localhost:3000/</code></p>
+
+<h2 id="our-first-component">Our first component</h2>
+<p>Open the <em>my-first-react-app</em> folder in your an editor of your choice. Under the <strong>src</strong> folder create a new file <code class="language-plaintext highlighter-rouge">FirstComponent.js</code>.</p>
+
+<p>Add the following code to this file and save it:</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="nx">React</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">react</span><span class="dl">'</span><span class="p">;</span>
+
+<span class="kd">const</span> <span class="nx">FirstComponent</span> <span class="o">=</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="p">{</span>
+  <span class="k">return</span> <span class="o">&lt;</span><span class="nx">h1</span><span class="o">&gt;</span><span class="nx">This</span> <span class="nx">is</span> <span class="nx">my</span> <span class="nx">first</span> <span class="nx">component</span><span class="o">&lt;</span><span class="sr">/h1&gt;</span><span class="err">;
+</span><span class="p">};</span>
+
+<span class="k">export</span> <span class="k">default</span> <span class="nx">FirstComponent</span><span class="p">;</span>
+</code></pre></div></div>
+<p>As you can see, the component code is all JavaScript. We are importing react as it is required to render the component. We are using <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions" title="MDN - Arrow functions">arrow function</a> in our code but you can use normal function syntax too.</p>
+
+<p>That HTML content we are returning from is <a href="https://reactjs.org/docs/introducing-jsx.html" title="ReactJS page on JSX">JSX</a>, it looks very much like HTML but it is not.</p>
+
+<p>Now open <code class="language-plaintext highlighter-rouge">App.js</code> and remove all the code in the file and replace it with the following code.</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="nx">React</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">react</span><span class="dl">'</span><span class="p">;</span>
+<span class="k">import</span> <span class="nx">FirstComponent</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">./FirstComponent</span><span class="dl">'</span><span class="p">;</span>
+<span class="k">import</span> <span class="dl">'</span><span class="s1">./App.css</span><span class="dl">'</span><span class="p">;</span>
+
+<span class="kd">function</span> <span class="nx">App</span><span class="p">()</span> <span class="p">{</span>
+  <span class="k">return</span> <span class="p">(</span>
+    <span class="o">&lt;</span><span class="nx">div</span> <span class="nx">className</span><span class="o">=</span><span class="dl">"</span><span class="s2">App</span><span class="dl">"</span><span class="o">&gt;</span>
+      <span class="o">&lt;</span><span class="nx">header</span> <span class="nx">className</span><span class="o">=</span><span class="dl">"</span><span class="s2">App-header</span><span class="dl">"</span><span class="o">&gt;</span>
+        <span class="o">&lt;</span><span class="nx">FirstComponent</span> <span class="o">/&gt;</span>
+      <span class="o">&lt;</span><span class="sr">/header</span><span class="err">&gt;
+</span>    <span class="o">&lt;</span><span class="sr">/div</span><span class="err">&gt;
+</span>  <span class="p">);</span>
+<span class="p">}</span>
+
+<span class="k">export</span> <span class="k">default</span> <span class="nx">App</span><span class="p">;</span>
+</code></pre></div></div>
+
+<p><code class="language-plaintext highlighter-rouge">import FirstComponent from './FirstComponent';</code> is used to import the component into the <code class="language-plaintext highlighter-rouge">App.js</code> file.
+<code class="language-plaintext highlighter-rouge">&lt;FirstComponent /&gt;</code> is how we use the component, basically telling react to render our component.</p>
+
+<p>Now if you visit <code class="language-plaintext highlighter-rouge">http://localhost:3000/</code> you should see <strong>This is my first component</strong> on the screen.</p>
+
+<p>Couple of things to note before we move forward:</p>
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">App</code> is also a component.</li>
+  <li>Both <code class="language-plaintext highlighter-rouge">App</code> and <code class="language-plaintext highlighter-rouge">FirstComponent</code> are function components.</li>
+</ul>
+
+<p>We can use the same component multiple times, add another <code class="language-plaintext highlighter-rouge">&lt;FirstComponent /&gt;</code> below the first one so our <code class="language-plaintext highlighter-rouge">App.js</code> file will look like this:</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="nx">React</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">react</span><span class="dl">'</span><span class="p">;</span>
+<span class="k">import</span> <span class="nx">FirstComponent</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">./FirstComponent</span><span class="dl">'</span><span class="p">;</span>
+<span class="k">import</span> <span class="dl">'</span><span class="s1">./App.css</span><span class="dl">'</span><span class="p">;</span>
+
+<span class="kd">function</span> <span class="nx">App</span><span class="p">()</span> <span class="p">{</span>
+  <span class="k">return</span> <span class="p">(</span>
+    <span class="o">&lt;</span><span class="nx">div</span> <span class="nx">className</span><span class="o">=</span><span class="dl">"</span><span class="s2">App</span><span class="dl">"</span><span class="o">&gt;</span>
+      <span class="o">&lt;</span><span class="nx">header</span> <span class="nx">className</span><span class="o">=</span><span class="dl">"</span><span class="s2">App-header</span><span class="dl">"</span><span class="o">&gt;</span>
+        <span class="o">&lt;</span><span class="nx">FirstComponent</span> <span class="o">/&gt;</span>
+        <span class="o">&lt;</span><span class="nx">FirstComponent</span> <span class="o">/&gt;</span>
+      <span class="o">&lt;</span><span class="sr">/header</span><span class="err">&gt;
+</span>    <span class="o">&lt;</span><span class="sr">/div</span><span class="err">&gt;
+</span>  <span class="p">);</span>
+<span class="p">}</span>
+
+<span class="k">export</span> <span class="k">default</span> <span class="nx">App</span><span class="p">;</span>
+</code></pre></div></div>
+
+<p>Our component is static as in it will show the same text everywhere, we can make dynamic by using <strong>props</strong>.</p>
+
+<h2 id="props">props</h2>
+<p>We can pass data to a component using props. In our case we want we would like our component to display some text that we want. Let’s update the <code class="language-plaintext highlighter-rouge">FirstComponent.js</code> file:</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="nx">React</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">react</span><span class="dl">'</span><span class="p">;</span>
+
+<span class="kd">const</span> <span class="nx">FirstComponent</span> <span class="o">=</span> <span class="p">({</span> <span class="nx">text</span> <span class="p">})</span> <span class="o">=&gt;</span> <span class="p">{</span>
+  <span class="k">return</span> <span class="o">&lt;</span><span class="nx">h1</span><span class="o">&gt;</span><span class="p">{</span><span class="nx">text</span><span class="p">}</span><span class="o">&lt;</span><span class="sr">/h1&gt;</span><span class="err">;
+</span><span class="p">};</span>
+
+<span class="k">export</span> <span class="k">default</span> <span class="nx">FirstComponent</span><span class="p">;</span>
+</code></pre></div></div>
+
+<p>Now our component will take a props called <strong>text</strong> and display the value that is passed to it within the <code class="language-plaintext highlighter-rouge">h1</code> tags.
+So let’s update <code class="language-plaintext highlighter-rouge">App.js</code> to reflect the changes we have made to <code class="language-plaintext highlighter-rouge">FirstComponent</code>.</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="nx">React</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">react</span><span class="dl">'</span><span class="p">;</span>
+<span class="k">import</span> <span class="nx">FirstComponent</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">./FirstComponent</span><span class="dl">'</span><span class="p">;</span>
+<span class="k">import</span> <span class="dl">'</span><span class="s1">./App.css</span><span class="dl">'</span><span class="p">;</span>
+
+<span class="kd">function</span> <span class="nx">App</span><span class="p">()</span> <span class="p">{</span>
+  <span class="k">return</span> <span class="p">(</span>
+    <span class="o">&lt;</span><span class="nx">div</span> <span class="nx">className</span><span class="o">=</span><span class="dl">"</span><span class="s2">App</span><span class="dl">"</span><span class="o">&gt;</span>
+      <span class="o">&lt;</span><span class="nx">header</span> <span class="nx">className</span><span class="o">=</span><span class="dl">"</span><span class="s2">App-header</span><span class="dl">"</span><span class="o">&gt;</span>
+        <span class="o">&lt;</span><span class="nx">FirstComponent</span> <span class="nx">text</span><span class="o">=</span><span class="dl">"</span><span class="s2">First Header</span><span class="dl">"</span> <span class="o">/&gt;</span>
+        <span class="o">&lt;</span><span class="nx">FirstComponent</span> <span class="nx">text</span><span class="o">=</span><span class="dl">"</span><span class="s2">Second Header</span><span class="dl">"</span> <span class="o">/&gt;</span>
+      <span class="o">&lt;</span><span class="sr">/header</span><span class="err">&gt;
+</span>    <span class="o">&lt;</span><span class="sr">/div</span><span class="err">&gt;
+</span>  <span class="p">);</span>
+<span class="p">}</span>
+
+<span class="k">export</span> <span class="k">default</span> <span class="nx">App</span><span class="p">;</span>
+</code></pre></div></div>
+<p>Now if you visit <code class="language-plaintext highlighter-rouge">http://localhost:3000/</code> you will see you different headings.</p>
+
+<p>In our next post we will have detailed look at <a href="/blog/react/jsx-what-is-that/" title="JSX - What is that?">JSX</a>.</p>
+
+<p>You can find the code on <a href="https://github.com/dsouzaalfred/blogdemos/tree/master/getting-started-with-react" title="Github repo link">GitHub</a></p>
+
+        </div>
+
+        
+          <div class="page-share">
+  <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdsouzaalf.red%2F%2Fblog%2Freact%2Fgetting-started-with-react%2F" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" class="btn btn--facebook btn--small"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i> <span>Share</span></a>
+  <a href="https://twitter.com/intent/tweet?text=Getting+started+with+React%20https%3A%2F%2Fdsouzaalf.red%2F%2Fblog%2Freact%2Fgetting-started-with-react%2F" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" class="btn btn--twitter btn--small"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i> <span>Tweet</span></a>
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Fdsouzaalf.red%2F%2Fblog%2Freact%2Fgetting-started-with-react%2F" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" class="btn btn--linkedin btn--small"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i> <span>LinkedIn</span></a>
+  <a href="https://reddit.com/submit?title=Getting+started+with+React&url=https%3A%2F%2Fdsouzaalf.red%2F%2Fblog%2Freact%2Fgetting-started-with-react%2F" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" class="btn btn--reddit btn--small"><i class="fab fa-fw fa-reddit" aria-hidden="true"></i> <span>Reddit</span></a>
+</div>
+
+        
+
+        
+
+        <nav class="page-pagination" role="navigation">
+  
+    <a class="page-previous" href="/blog/javascript/javascript-event-delegation/">
+      <h4 class="page-pagination-label">Previous</h4>
+      <span class="page-pagination-title">
+        <i class="fas fa-arrow-left"></i> JavaScript Event Delegation
+
+      </span>
+    </a>
+  
+
+  
+    <a class="page-next" href="/blog/react/jsx-what-is-that/">
+      <h4 class="page-pagination-label">Next</h4>
+      <span class="page-pagination-title">
+        JSX - What is that?
+ <i class="fas fa-arrow-right"></i>
+      </span>
+    </a>
+  
+</nav>
+
+      </div>
+    </div>
+  </article>
+</main>
+
+
+    <footer id="footer" class="site-footer">
+  <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+<div class="social-icons"><a class="social-icon" href="https://twitter.com/dsouzaalfred"><i class="fab fa-twitter-square fa-2x" title="Twitter"></i></a><a class="social-icon" href="https://github.com/dsouzaalfred"><i class="fab fa-github-square fa-2x" title="GitHub"></i></a><a class="social-icon" href="https://www.linkedin.com/in/dsouzaalfred/"><i class="fab fa-linkedin fa-2x" title="LinkedIn"></i></a></div><div class="copyright">
+    
+      <p>&copy; 2021 Alfred D'Souza. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://github.com/mmistakes/so-simple-theme" rel="nofollow">So Simple</a>.</p>
+    
+  </div>
+</footer>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+  <script src="/assets/js/main.min.js"></script>
+  <script src="https://use.fontawesome.com/releases/v5.0.12/js/all.js"></script>
+
+
+  </body>
+
+</html>

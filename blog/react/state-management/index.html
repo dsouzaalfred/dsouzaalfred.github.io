@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<!--
+    So Simple Jekyll Theme 3.2.0
+    Copyright 2013-2019 Michael Rose - mademistakes.com | @mmistakes
+    Free for personal and commercial use under the MIT license
+    https://github.com/mmistakes/so-simple-theme/blob/master/LICENSE
+-->
+<html lang="en-US" class="no-js">
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  
+
+  
+    
+    <!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>State Management | Alfred D’Souza</title>
+<meta name="generator" content="Jekyll v3.9.0" />
+<meta property="og:title" content="State Management" />
+<meta name="author" content="Alfred D'Souza" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="What is state management From the previous post we know what is state, now let’s try to understand what is state management." />
+<meta property="og:description" content="What is state management From the previous post we know what is state, now let’s try to understand what is state management." />
+<link rel="canonical" href="https://dsouzaalf.red//blog/react/state-management/" />
+<meta property="og:url" content="https://dsouzaalf.red//blog/react/state-management/" />
+<meta property="og:site_name" content="Alfred D’Souza" />
+<meta property="og:image" content="https://dsouzaalf.red//images/what-is-state-management.jpg" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2021-05-19T18:37:00+00:00" />
+<script type="application/ld+json">
+{"description":"What is state management From the previous post we know what is state, now let’s try to understand what is state management.","headline":"State Management","dateModified":"2021-05-19T18:37:00+00:00","datePublished":"2021-05-19T18:37:00+00:00","url":"https://dsouzaalf.red//blog/react/state-management/","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https://dsouzaalf.red//blog/react/state-management/"},"image":{"caption":"What is state management","url":"https://dsouzaalf.red//images/what-is-state-management.jpg","@type":"imageObject"},"author":{"@type":"Person","name":"Alfred D'Souza"},"@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+
+  
+
+  <script>
+    /* Cut the mustard */
+    if ( 'querySelector' in document && 'addEventListener' in window ) {
+      document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + 'js';
+    }
+  </script>
+
+  <link rel="stylesheet" href="/assets/css/main.css">
+  <link rel="stylesheet" href="/assets/css/skins/default.css">
+  <link rel="alternate" type="application/atom+xml" title="Alfred D&#39;Souza" href="/atom.xml">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
+
+</head>
+
+
+  <body class="layout--post  state-management">
+    <nav class="skip-links">
+  <h2 class="screen-reader-text">Skip links</h2>
+  <ul>
+    <li><a href="#primary-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    
+  <div class="navigation-wrapper">
+    <a href="#menu-toggle" id="menu-toggle">Menu</a>
+    <nav id="primary-nav" class="site-nav animated drop">
+      <ul><li><a href="/">Home</a></li><li><a href="/blog/">Blog</a></li><li><a href="/search/">Search</a></li></ul>
+    </nav>
+  </div><!-- /.navigation-wrapper -->
+
+
+    <header class="masthead">
+  <div class="wrap">
+    
+    
+    
+  </div>
+</header><!-- /.masthead -->
+
+
+    <main id="main" class="main-content" aria-label="Content">
+  <article class="h-entry">
+    
+  
+  
+  
+
+  <div class="page-image">
+    <img src="/images/what-is-state-management.jpg" class="entry-feature-image u-photo" alt="State Management" style="margin-top: 0;">
+    
+      <div class="page-image-caption"><p>What is state management</p>
+</div>
+    
+  </div>
+
+
+    <div class="page-wrapper">
+      <header class="page-header">
+        
+        
+          <h1 id="page-title" class="page-title p-name">State Management
+</h1>
+        
+      </header>
+
+      <div class="page-sidebar">
+        <div class="page-author h-card p-author"><img src="/images/alfred-dsouza-photo.jpg" class="author-avatar u-photo" alt="Alfred D'Souza"><div class="author-info"><div class="author-name">
+        <span class="p-name">Alfred D'Souza</span>
+      </div><ul class="author-links"><li class="author-link">
+            <a class="u-url" rel="me" href="https://twitter.com/dsouzaalfred"><i class="fab fa-twitter-square fa-lg" title="Twitter"></i></a>
+          </li><li class="author-link">
+            <a class="u-url" rel="me" href="https://github.com/dsouzaalfred"><i class="fab fa-github-square fa-lg" title="GitHub"></i></a>
+          </li><li class="author-link">
+            <a class="u-url" rel="me" href="https://www.linkedin.com/in/dsouzaalfred/"><i class="fab fa-linkedin fa-lg" title="LinkedIn"></i></a>
+          </li></ul>
+
+<span class="read-time">3 min read</span>
+
+    <time class="page-date dt-published" datetime="2021-05-19T18:37:00+00:00"><a class="u-url" href="">May 19, 2021</a>
+</time>
+
+  </div>
+</div>
+
+        
+  <h3 class="page-taxonomies-title">Categories</h3>
+  <ul class="page-taxonomies"><li class="page-taxonomy"><a class="p-category" href="/categories/#blog" title="Pages filed under blog">blog</a></li><li class="page-taxonomy"><a class="p-category" href="/categories/#react" title="Pages filed under react">react</a></li>
+  </ul>
+
+
+        
+
+      </div>
+
+      <div class="page-content">
+        <div class="e-content">
+          <h2 id="what-is-state-management">What is state management</h2>
+<p>From the previous <a href="https://dsouzaalf.red/blog/react/what-is-state/" title="What is state">post</a> we know what is state, now let’s try to understand what is state management.</p>
+
+<blockquote>
+  <p>State management is how we manage the application state, that’s it!</p>
+</blockquote>
+
+<h2 id="why-is-state-management-difficult">Why is state management difficult</h2>
+
+<p>It’s important that whatever the source of this our state:</p>
+<ul>
+  <li>It is always the single source of truth</li>
+  <li>It always has the latest values</li>
+  <li>UI and data are always in sync</li>
+</ul>
+
+<p>Handling these things in the most efficient way is complex. For a small app we maybe able to handle it without a library but as the application grows so does the state and the complexity of handling the state and keeping the UI &amp; state in sync.</p>
+
+<p>Things can become complicated and difficult very fast, that is why we have libraries like Redux, RxJs and others that help us implement state management.</p>
+
+<h2 id="react-and-state-management">React and state management</h2>
+<p>React(version 16.8 and above) provides us with tools like <code class="language-plaintext highlighter-rouge">useState</code> and <code class="language-plaintext highlighter-rouge">useReducer</code> that help us manage state. And most of the times these should get you a long way, but sometimes you will have to look at other options like Redux or Recoil or some other library.</p>
+
+<ul>
+  <li>Hooks like useState &amp; useReducer can only be used inside a function component.</li>
+</ul>
+
+<h2 id="example">Example</h2>
+<p>Let’s take a look at a simple example, we will have a div, with two buttons. One button will show/hide the div and the second button will start rotating the div.</p>
+
+<p>First the html:</p>
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c">&lt;!-- example.html--&gt;</span>
+<span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="nt">&lt;html</span> <span class="na">lang=</span><span class="s">"en"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;head&gt;</span>
+    <span class="nt">&lt;title&gt;</span>Example<span class="nt">&lt;/title&gt;</span>
+    <span class="nt">&lt;style </span><span class="na">media=</span><span class="s">"screen"</span><span class="nt">&gt;</span>
+      <span class="nf">#content</span> <span class="p">{</span>
+        <span class="nl">margin</span><span class="p">:</span> <span class="m">20px</span><span class="p">;</span>
+        <span class="nl">width</span><span class="p">:</span> <span class="m">100px</span><span class="p">;</span>
+        <span class="nl">height</span><span class="p">:</span> <span class="m">100px</span><span class="p">;</span>
+        <span class="nl">background</span><span class="p">:</span> <span class="m">#d99e9e</span><span class="p">;</span>
+        <span class="nl">padding</span><span class="p">:</span> <span class="m">10px</span><span class="p">;</span>
+      <span class="p">}</span>
+      <span class="nc">.content-show</span> <span class="p">{</span>
+        <span class="nl">display</span><span class="p">:</span> <span class="nb">block</span><span class="p">;</span>
+      <span class="p">}</span>
+      <span class="nc">.content-hide</span> <span class="p">{</span>
+        <span class="nl">display</span><span class="p">:</span> <span class="nb">none</span><span class="p">;</span>
+      <span class="p">}</span>
+      <span class="nc">.spinner</span> <span class="p">{</span>
+        <span class="nl">animation-name</span><span class="p">:</span> <span class="n">spin</span><span class="p">;</span>
+        <span class="nl">animation-duration</span><span class="p">:</span> <span class="m">4000ms</span><span class="p">;</span>
+        <span class="nl">animation-iteration-count</span><span class="p">:</span> <span class="n">infinite</span><span class="p">;</span>
+        <span class="nl">animation-timing-function</span><span class="p">:</span> <span class="n">linear</span><span class="p">;</span>
+      <span class="p">}</span>
+      <span class="k">@keyframes</span> <span class="n">spin</span> <span class="p">{</span>
+        <span class="nt">from</span> <span class="p">{</span> <span class="nl">transform</span><span class="p">:</span><span class="n">rotate</span><span class="p">(</span><span class="m">0deg</span><span class="p">);</span> <span class="p">}</span>
+        <span class="nt">to</span> <span class="p">{</span> <span class="nl">transform</span><span class="p">:</span><span class="n">rotate</span><span class="p">(</span><span class="m">360deg</span><span class="p">);</span> <span class="p">}</span>
+      <span class="p">}</span>
+    <span class="nt">&lt;/style&gt;</span>
+  <span class="nt">&lt;/head&gt;</span>
+  <span class="nt">&lt;body&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">"buttons"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;button</span> <span class="na">id=</span><span class="s">"toggler"</span> <span class="na">onclick=</span><span class="s">"handleToggle();"</span><span class="nt">&gt;</span>Toggle Content<span class="nt">&lt;/button&gt;</span>
+      <span class="nt">&lt;button</span> <span class="na">id=</span><span class="s">"spinner"</span> <span class="na">onclick=</span><span class="s">"handleSpin();"</span><span class="nt">&gt;</span>Toggle Spin<span class="nt">&lt;/button&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">"content"</span> <span class="na">class=</span><span class="s">"content-show"</span><span class="nt">&gt;</span>
+      This will be toggled.
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/body&gt;</span>
+<span class="nt">&lt;/html&gt;</span>
+</code></pre></div></div>
+<p>We have two buttons, first button to show/hide the <code class="language-plaintext highlighter-rouge">content</code> div and the second button to spin the <code class="language-plaintext highlighter-rouge">content</code> div. We call some function <code class="language-plaintext highlighter-rouge">onclick</code> (we will add these functions in a moment).
+We also have a bit of styles going for the <code class="language-plaintext highlighter-rouge">content</code> div and then a <code class="language-plaintext highlighter-rouge">.spinner</code> class to add the spinning animation.</p>
+
+<p>Next let’s add some <em>state</em>. Just before the body tag ends, we add a script tag. In there we define a variable called <code class="language-plaintext highlighter-rouge">state</code> and this <code class="language-plaintext highlighter-rouge">state</code> is an object.</p>
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c">&lt;!-- example.html--&gt;</span>
+<span class="nt">&lt;script </span><span class="na">type=</span><span class="s">"text/javascript"</span><span class="nt">&gt;</span>
+  <span class="kd">var</span> <span class="nx">state</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="na">isContentHidden</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
+    <span class="na">isSpinning</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
+  <span class="p">}</span>
+<span class="nt">&lt;/script&gt;</span>
+</code></pre></div></div>
+<p>We are using an object as our state store and we call it <code class="language-plaintext highlighter-rouge">state</code>. Our object has two keys <code class="language-plaintext highlighter-rouge">isContentHidden</code> and <code class="language-plaintext highlighter-rouge">isSpinning</code> to track if the content div is visibility and if it is spinning.</p>
+
+<p>Next let’s add a function to show hide the content.</p>
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c">&lt;!-- example.html--&gt;</span>
+<span class="nt">&lt;script </span><span class="na">type=</span><span class="s">"text/javascript"</span><span class="nt">&gt;</span>
+  <span class="kd">function</span> <span class="nx">handleToggle</span><span class="p">()</span> <span class="p">{</span>
+    <span class="c1">// get content div</span>
+    <span class="kd">var</span> <span class="nx">content</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="dl">'</span><span class="s1">content</span><span class="dl">'</span><span class="p">);</span>
+
+    <span class="k">if</span><span class="p">(</span><span class="nx">state</span><span class="p">.</span><span class="nx">isContentHidden</span><span class="p">)</span> <span class="p">{</span>
+      <span class="c1">// show content</span>
+      <span class="nx">content</span><span class="p">.</span><span class="nx">classList</span><span class="p">.</span><span class="nx">remove</span><span class="p">(</span><span class="dl">'</span><span class="s1">content-hide</span><span class="dl">'</span><span class="p">);</span>
+    <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+      <span class="c1">// hide content</span>
+      <span class="nx">content</span><span class="p">.</span><span class="nx">classList</span><span class="p">.</span><span class="nx">add</span><span class="p">(</span><span class="dl">'</span><span class="s1">content-hide</span><span class="dl">'</span><span class="p">);</span>
+    <span class="p">}</span>
+
+    <span class="nx">state</span><span class="p">.</span><span class="nx">isContentHidden</span> <span class="o">=</span> <span class="o">!</span><span class="nx">state</span><span class="p">.</span><span class="nx">isContentHidden</span><span class="p">;</span>
+  <span class="p">}</span>
+<span class="nt">&lt;/script&gt;</span>
+</code></pre></div></div>
+<p>In this function we are checking the value of <code class="language-plaintext highlighter-rouge">state.isContentHidden</code> and depending on the current value we add or remove the <code class="language-plaintext highlighter-rouge">content-hide</code> class on the <code class="language-plaintext highlighter-rouge">content</code> div.
+And on the last line we are updating the value in our state.</p>
+
+<p>Next let’s handle spinning our content.</p>
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c">&lt;!-- example.html--&gt;</span>
+<span class="nt">&lt;script </span><span class="na">type=</span><span class="s">"text/javascript"</span><span class="nt">&gt;</span>
+  <span class="kd">function</span> <span class="nx">handleSpin</span><span class="p">()</span> <span class="p">{</span>
+    <span class="c1">// get content div</span>
+    <span class="kd">var</span> <span class="nx">content</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="dl">'</span><span class="s1">content</span><span class="dl">'</span><span class="p">);</span>
+    <span class="c1">// get the spinner button</span>
+    <span class="kd">var</span> <span class="nx">spinner</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="dl">'</span><span class="s1">spinner</span><span class="dl">'</span><span class="p">);</span>
+
+    <span class="k">if</span><span class="p">(</span><span class="nx">state</span><span class="p">.</span><span class="nx">isSpinning</span><span class="p">)</span> <span class="p">{</span>
+      <span class="c1">// remove class</span>
+      <span class="nx">content</span><span class="p">.</span><span class="nx">classList</span><span class="p">.</span><span class="nx">remove</span><span class="p">(</span><span class="dl">'</span><span class="s1">spinner</span><span class="dl">'</span><span class="p">);</span>
+      <span class="c1">// change button label</span>
+      <span class="nx">spinner</span><span class="p">.</span><span class="nx">innerText</span> <span class="o">=</span> <span class="dl">'</span><span class="s1">Start spinning</span><span class="dl">'</span><span class="p">;</span>
+    <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+      <span class="c1">// add class</span>
+      <span class="nx">content</span><span class="p">.</span><span class="nx">classList</span><span class="p">.</span><span class="nx">add</span><span class="p">(</span><span class="dl">'</span><span class="s1">spinner</span><span class="dl">'</span><span class="p">);</span>
+      <span class="c1">// change button label</span>
+      <span class="nx">spinner</span><span class="p">.</span><span class="nx">innerText</span> <span class="o">=</span> <span class="dl">'</span><span class="s1">Reset</span><span class="dl">'</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="nx">state</span><span class="p">.</span><span class="nx">isSpinning</span> <span class="o">=</span> <span class="o">!</span><span class="nx">state</span><span class="p">.</span><span class="nx">isSpinning</span><span class="p">;</span>
+  <span class="p">}</span>
+<span class="nt">&lt;/script&gt;</span>
+</code></pre></div></div>
+<p>Just like our previous function here too we perform some action depending on the value in state. In this function we check the value of <code class="language-plaintext highlighter-rouge">state.isSpinning</code> and then if it is <code class="language-plaintext highlighter-rouge">true</code> we add the <code class="language-plaintext highlighter-rouge">spinner</code> class and if it is <code class="language-plaintext highlighter-rouge">false</code> we remove the <code class="language-plaintext highlighter-rouge">spinner</code> class.</p>
+
+<p>This is a very simple and small example but hopefully you see how state management works.</p>
+
+<p>Next time we will have a look at <code class="language-plaintext highlighter-rouge">useState</code>.</p>
+
+<hr />
+
+<blockquote>
+  <p>Photo by <a href="https://unsplash.com/@robsonhmorgan?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Robson Hatsukami Morgan</a> on <a href="https://unsplash.com/">Unsplash</a></p>
+</blockquote>
+
+        </div>
+
+        
+          <div class="page-share">
+  <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdsouzaalf.red%2F%2Fblog%2Freact%2Fstate-management%2F" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" class="btn btn--facebook btn--small"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i> <span>Share</span></a>
+  <a href="https://twitter.com/intent/tweet?text=State+Management%20https%3A%2F%2Fdsouzaalf.red%2F%2Fblog%2Freact%2Fstate-management%2F" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" class="btn btn--twitter btn--small"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i> <span>Tweet</span></a>
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Fdsouzaalf.red%2F%2Fblog%2Freact%2Fstate-management%2F" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" class="btn btn--linkedin btn--small"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i> <span>LinkedIn</span></a>
+  <a href="https://reddit.com/submit?title=State+Management&url=https%3A%2F%2Fdsouzaalf.red%2F%2Fblog%2Freact%2Fstate-management%2F" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" class="btn btn--reddit btn--small"><i class="fab fa-fw fa-reddit" aria-hidden="true"></i> <span>Reddit</span></a>
+</div>
+
+        
+
+        
+
+        <nav class="page-pagination" role="navigation">
+  
+    <a class="page-previous" href="/blog/react/what-is-state/">
+      <h4 class="page-pagination-label">Previous</h4>
+      <span class="page-pagination-title">
+        <i class="fas fa-arrow-left"></i> What is state
+
+      </span>
+    </a>
+  
+
+  
+</nav>
+
+      </div>
+    </div>
+  </article>
+</main>
+
+
+    <footer id="footer" class="site-footer">
+  <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+<div class="social-icons"><a class="social-icon" href="https://twitter.com/dsouzaalfred"><i class="fab fa-twitter-square fa-2x" title="Twitter"></i></a><a class="social-icon" href="https://github.com/dsouzaalfred"><i class="fab fa-github-square fa-2x" title="GitHub"></i></a><a class="social-icon" href="https://www.linkedin.com/in/dsouzaalfred/"><i class="fab fa-linkedin fa-2x" title="LinkedIn"></i></a></div><div class="copyright">
+    
+      <p>&copy; 2021 Alfred D'Souza. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://github.com/mmistakes/so-simple-theme" rel="nofollow">So Simple</a>.</p>
+    
+  </div>
+</footer>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+  <script src="/assets/js/main.min.js"></script>
+  <script src="https://use.fontawesome.com/releases/v5.0.12/js/all.js"></script>
+
+
+  </body>
+
+</html>
